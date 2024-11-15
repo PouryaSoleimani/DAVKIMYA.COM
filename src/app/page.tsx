@@ -99,4 +99,3 @@ export default function Home() {
     </div>
   );
 }
-// amin dare porije mizane
