@@ -1,12 +1,9 @@
+"use client";
 import Link from "next/link";
-import { useTranslation } from "../../i18n";
+import { useTranslation } from "@/core/i18n/client";
 
-export default async function SecondPage({
-  params: { lng },
-}: {
-  params: { lng: string };
-}) {
-  const { t } = await useTranslation();
+export default function SecondPage({ lng }: { lng: string }) {
+  const { t } = useTranslation();
   return (
     <>
       <h1>{t("title")}</h1>

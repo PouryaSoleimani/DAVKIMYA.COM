@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useTranslation } from "../i18n/client";
+import { useTranslation } from "../../core/i18n/client";
+import { useParams } from "next/navigation";
 
-const Page = ({ params: { lng } }: { params: { lng: string } }) => {
+const Page = () => {
+  const { lng } = useParams();
   const { t } = useTranslation();
-  console.log(t("title"));
 
   return (
     <>
