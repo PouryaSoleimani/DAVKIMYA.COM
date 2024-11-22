@@ -1,5 +1,5 @@
 import { dir } from "i18next";
-import { languages } from "../i18n/settings";
+import { languages } from "../../core/i18n/settings";
 import { ReactNode } from "react";
 
 interface paramsProps {
