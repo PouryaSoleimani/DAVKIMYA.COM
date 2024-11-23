@@ -1,6 +1,7 @@
 import { dir } from "i18next";
 import { languages } from "../../core/i18n/settings";
 import { ReactNode } from "react";
+import { MainProvider } from "@/core/providers/mainProvider";
 
 interface paramsProps {
   lng: string;
@@ -21,7 +22,9 @@ const RootLayout = ({ children, params: { lng } }: PageProps) => {
   return (
     <html lang={lng} dir={dir(lng)}>
       <head />
-      <body>{children}</body>
+      <MainProvider>
+        <body>{children}</body>
+      </MainProvider>
     </html>
   );
 };
