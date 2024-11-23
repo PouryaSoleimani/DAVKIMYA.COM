@@ -43,7 +43,6 @@ export function useTranslation(
   const { lng } = useLang();
 
   const ret = useTranslationOrg("common", options);
-  console.log(ret);
   const { i18n } = ret;
   if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
     i18n.changeLanguage(lng);

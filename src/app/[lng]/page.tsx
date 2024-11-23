@@ -1,327 +1,105 @@
 "use client";
-import Link from "next/link";
 import { useTranslation } from "../../core/i18n/client";
 import { useParams } from "next/navigation";
-import Image from "next/image";
 
 const Page = () => {
   const { lng } = useParams();
   const { t } = useTranslation();
 
+  // a header to test bootstrap functionality
   return (
-    <>
-      <header>
-        {/* <!-- contact --> */}
-        <div className="border-bottom">
-          <div className="d-flex flex-wrap gap-4 align-items-center justify-content-md-between justify-content-center container py-3">
-            {/* <!-- address --> */}
-            <div className="d-flex flex-wrap align-items-center justify-content-center gap-md-5 gap-3">
-              <div className="d-flex align-items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="19"
-                  fill="currentColor"
-                  className="bi bi-telephone-forward primary-color"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z" />
-                </svg>
-                <span className="secondary-color">+905346879096</span>
-              </div>
-              <div className="d-flex align-items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="19"
-                  fill="currentColor"
-                  className="bi bi-telephone-forward primary-color"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z" />
-                </svg>
-                <span className="secondary-color">+905065034338</span>
-              </div>
-              <div className="d-flex align-items-center gap-2">
-                <svg
-                  viewBox="0 0 8 6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20px"
-                  fill="#C3EB40"
-                >
-                  <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" />
-                </svg>
-                <span className="secondary-color">info@davkimya.com</span>
-              </div>
-            </div>
-            {/* <!-- socials --> */}
-            <div className="d-flex align-items-center gap-2">
-              <a
-                href="https://davkimya.com/tr"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center"
-              >
-                <Image
-                  // height={}
-                  src="https://davkimya.com/assets/uploads/setting/lang/1402-07-10/photos/photo-516e634f97d149d0c0c9c63a015feabf.png"
-                  className="lang_menu"
-                  alt="tr"
-                  width={30}
-                />
-              </a>
-              <a
-                href="https://davkimya.com/ru"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center"
-              >
-                <Image
-                  // height={}
-                  src="https://davkimya.com/assets/uploads/setting/lang/1402-07-10/photos/photo-8145613ec7e208ce472f6b03919d735d.png"
-                  className="lang_menu"
-                  alt="ru"
-                  width={30}
-                />
-              </a>
-              <a
-                href="https://davkimya.com/ar"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center"
-              >
-                <Image
-                  // height={}
-                  src="https://davkimya.com/assets/uploads/setting/lang/1402-07-03/photos/photo-20c6d9c335931b0b7f0245da907846d7.png"
-                  className="lang_menu"
-                  alt="ar"
-                  width={30}
-                />
-              </a>
-
-              <a
-                href="https://www.facebook.com/dav"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="19"
-                  fill="currentColor"
-                  className="bi bi-facebook text-white"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                </svg>
-              </a>
-              <a
-                href="https://twitter.com/dav"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="19"
-                  fill="currentColor"
-                  className="bi bi-twitter text-white"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/dav/"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="19"
-                  fill="currentColor"
-                  className="bi bi-instagram text-white"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.youtube.com/@dav"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="50"
-                  height="50"
-                  viewBox="0,0,256,256"
-                  style={{ fill: "#000000" }}
-                >
-                  <g
-                    fill="#ffffff"
-                    fill-rule="nonzero"
-                    stroke="none"
-                    stroke-width="1"
-                    stroke-linecap="butt"
-                    stroke-linejoin="miter"
-                    stroke-miterlimit="10"
-                    stroke-dasharray=""
-                    stroke-dashoffset="0"
-                    font-family="none"
-                    font-weight="none"
-                    font-size="none"
-                    text-anchor="none"
-                    style={{ mixBlendMode: "normal" }}
-                  >
-                    <g transform="scale(5.12,5.12)">
-                      <path d="M44.89844,14.5c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.29687,-0.69922 -9.39844,-1.19922 -16,-1.19922c-6.59766,0 -12.79687,0.5 -16.09766,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.40234,2.5 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.5,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.60156,-0.5 16.10156,-1.19922c2.19922,-0.5 4.09766,-2 4.5,-4.30078c0.39844,-2.5 0.89844,-6.10156 1,-10.5c-0.20312,-4.5 -0.70312,-8 -1.20312,-10.5zM19,32v-14l12.19922,7z"></path>
-                    </g>
-                  </g>
-                </svg>
-              </a>
-            </div>
+    <div>
+      {/* navbar */}
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            Navbar
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Contact-us
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  About Us
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Link
+                </a>
+              </li>
+            </ul>
+            <form className="d-flex" role="search">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
         </div>
-        {/* <!-- menu && logo --> */}
-        <div>
-          {/* <!-- menu --> */}
-          <nav className="navbar navbar-expand-lg bg-body-tertiary container">
-            <div className="container-fluid">
-              {/* <!-- logo --> */}
-              <a className="navbar-brand" href="https://davkimya.com/en">
-                <Image
-                  // height={}
-                  src="https://davkimya.com/assets/uploads/setting/1402-05-05/photos/logo-a9f658ded85a4459a0b427967ef706fc.png"
-                  alt="daav"
-                  className="img-fluid"
-                  width="100"
-                />
-              </a>
-              <div className="d-flex align-items-center gap-3">
-                <button
-                  className="navbar-toggler primary-border"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    fill="currentColor"
-                    className="bi bi-list primary-color"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                    />
-                  </svg>
-                </button>
-                <form
-                  className="d-flex d-lg-none ms-4 cursor"
-                  role="search"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    fill="currentColor"
-                    className="bi bi-search text-white"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-                </form>
-              </div>
-              <div
-                className="collapse navbar-collapse"
-                id="navbarSupportedContent"
-              >
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link primary-color active"
-                      aria-current="page"
-                      href="https://davkimya.com/en"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link primary-color"
-                      href="https://davkimya.com/en/about-us"
-                    >
-                      About us
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link primary-color"
-                      href="https://davkimya.com/en/product"
-                    >
-                      Product
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a
-                      className="nav-link primary-color"
-                      href="https://davkimya.com/en/service"
-                    >
-                      R&amp;D Services
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link primary-color"
-                      href="https://davkimya.com/en/faqs"
-                    >
-                      Faqs
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link primary-color"
-                      href="https://davkimya.com/en/blogs"
-                    >
-                      Event &amp; News
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a
-                      className="nav-link primary-color"
-                      href="https://davkimya.com/en/contact-us"
-                    >
-                      Contact us
-                    </a>
-                  </li>
-                </ul>
-                <form
-                  className="d-none d-lg-flex cursor ms-4"
-                  role="search"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    fill="currentColor"
-                    className="bi bi-search text-white"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-                </form>
-              </div>
-            </div>
-          </nav>
-          {/* <!-- </nav> --> */}
+      </nav>
+      <h2 className="text-center text-bg-primary m-2 p-2">
+        Bootstrap 5 with Next.js
+      </h2>
+      <div className="container-fluid m-2 border border-success text-center">
+        <h4>Components</h4>{" "}
+        <div className="row m-2 ">
+          <div className="col-sm">First Component</div>
+          <div className="col-sm">Second Component</div>
+          <div className="col-sm">Third Component</div>
         </div>
-      </header>
-    </>
+      </div>
+      <div className="container-fluid m-2 border text-center">
+        <h4>Buttons</h4>
+        <div className="row m-2 justify-content-between ">
+          <div className="col-sm-auto">
+            <button type="button" className="btn btn-primary">
+              Primary
+            </button>
+          </div>
+          <div className="col-sm-auto">
+            <button type="button" className="btn btn-secondary">
+              Secondary
+            </button>
+          </div>
+          <div className="col-sm-auto">
+            <button type="button" className="btn btn-success">
+              Success
+            </button>
+          </div>
+          <div className="col-sm-auto">
+            <button type="button" className="btn btn-danger">
+              Danger
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
