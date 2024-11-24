@@ -27,6 +27,7 @@
     "splide-nextjs": "^2.4.23"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/bootstrap": "^5.2.10",
     "@types/node": "^20",
     "@types/react": "^18",
