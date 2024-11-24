@@ -2,7 +2,7 @@ import { dir } from "i18next";
 import { languages } from "../../core/i18n/settings";
 import { ReactNode } from "react";
 import { MainProvider } from "@/core/providers/mainProvider";
-import "bootstrap/dist/css/bootstrap.min.css"
+import '@/app/[lng]/globals.css'
 
 interface paramsProps {
   lng: string;

@@ -17,5 +17,672 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "TitilliumWeb-Regular";
+  user-select: none;
+}
+
+/* DAVKIMYA WEBSITE STYLES */
+@font-face {
+  font-family: "TitilliumWeb-Light";
+  src: url("/src/assets/fonts/TitilliumWeb-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Bold";
+  src: url("/src/assets/fonts/TitilliumWeb-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Regular";
+  src: url("/src/assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+}
+
+.primary-color {
+  color: #c3eb40 !important;
+}
+.secondary-color {
+  color: #b5b5b5;
+}
+
+.primary-bg {
+  background-color: #c3eb40;
+}
+
+.secondary-bg {
+  background-color: #b5b5b5;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-black2 {
+  background-color: #222222;
+}
+
+.bg-gray {
+  background-color: #f1f1f1;
+}
+
+.primary-border {
+  border: 2px solid #c3eb40;
+}
+
+.transition {
+  transition: all 0.4s;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* header */
+header,
+footer {
+  background-color: #474841;
+}
+
+header img[alt="logo"] {
+  width: 187px;
+}
+
+header > div:first-child {
+  font-family: "TitilliumWeb-Bold";
+}
+
+header > div:first-child a {
+  width: 28px;
+  height: 28px;
+}
+
+header > div:first-child a:hover {
+  background-color: transparent;
+}
+header nav ul > li a.active {
+  color: white;
+}
+header nav ul > li ul li a.active {
+  color: #1e2125;
+  background-color: #e9ecef;
+}
+/* banner */
+#banner .swiper.banner .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 65vh;
+}
+
+#banner .swiper.banner .swiper-slide.first {
+  background-image: url("/images/banner/SLIDE___1.jpg");
+}
+
+#banner .swiper.banner .swiper-slide.second {
+  background-image: url("/images/banner/SLIDE___2.jpg");
+}
+
+#banner .swiper.banner .swiper-slide.third {
+  background-image: url("/images/banner/SLIDE___1.jpg");
+}
+
+#banner .swiper.banner .swiper-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #00000057;
+}
+
+#banner .swiper.banner .swiper-slide > div > span,
+#about span.h3,
+#choose-us span.h3,
+#Services span.h3,
+#projects span.h4,
+#faqs span.h3,
+#articles span.h3,
+#contact span.h3,
+footer span.h3 {
+  border-bottom: 2px solid #c3eb40;
+  font-weight: bold;
+}
+
+#banner .swiper.banner .swiper-slide h1,
+#about h4,
+#company h4,
+#choose-us .box h2,
+#choose-us .box span,
+h1,
+.experience,
+.ceo h3,
+#Services .box h3,
+#projects .box a.h3,
+#statistics p,
+#statistics h4,
+#description h4,
+#faqs form h6,
+#articles .box a,
+footer span.h3,
+footer .col-lg-3 a,
+#single-service h2,
+#contact h3,
+#contact form h4,
+#single-service a.h4,
+#single-service h3 {
+  font-family: "TitilliumWeb-Bold";
+}
+
+#banner .swiper.banner .swiper-slide a,
+#about a,
+#faqs a,
+.previous {
+  width: 240px;
+}
+
+#banner .swiper.banner .swiper-slide a:hover,
+#about a:hover,
+#faqs a:hover,
+.previous:hover {
+  background-color: black;
+  transform: scale(0.9);
+}
+
+/* about */
+#about ul {
+  font-family: "TitilliumWeb-Bold";
+  left: -22px;
+  top: 41px;
+}
+
+#about ul li:hover span,
+#about .play:hover,
+#projects .row > .col-lg-4 a:hover,
+footer .col-lg-3 a {
+  color: white;
+}
+
+#about .play {
+  width: 70px;
+  height: 70px;
+}
+
+/* company */
+#company .line,
+#statistics .line {
+  height: 3px;
+  width: 120px;
+  background-color: #c3eb40;
+}
+
+/* choose-us */
+#choose-us,
+#statistics,
+#faqs form,
+#faqs2,
+.index_form form,
+#contact form {
+  /* background-image: url("../img/Bg-Black-Liquid-1.png"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#choose-us::before,
+#statistics::before,
+#faqs2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffffffe3;
+}
+
+#choose-us .box,
+#Services .box,
+#projects .box,
+#statistics,
+#articles .box,
+#error404-title span {
+  border-top: 2px solid #c3eb40;
+  border-left: 2px solid #c3eb40;
+  box-shadow: 8px 8px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+#choose-us .box span,
+#Services .box span {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  background-color: #c3eb40;
+  color: white;
+  font-weight: bold;
+  border-radius: 100%;
+  font-size: 41px;
+  top: -35px;
+}
+
+#choose-us .experience .circle {
+  background-color: black;
+  border-radius: 100%;
+  width: 57px;
+  height: 57px;
+  margin-right: -43px;
+}
+
+#choose-us .ceo {
+  background-color: #c3eb40;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+
+#choose-us img[alt="choose-us"] {
+  bottom: 0;
+  width: 212px;
+  left: -17px;
+}
+
+/* services */
+#Services .box img {
+  width: 84px;
+  bottom: -53px;
+  right: 45px;
+  filter: opacity(0%);
+}
+
+#Services .box:hover img {
+  bottom: 19px;
+  filter: opacity(38%);
+}
+
+#Services .box a:hover,
+#projects .box a,
+#articles .box a,
+#single-service a.h4 {
+  color: black;
+}
+
+#articles .box a {
+  max-height: 251px;
+}
+
+/* projects */
+#projects {
+  /* background-image: url("../img/oil-refineries-PQLV96Y.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  padding-bottom: 177px;
+}
+
+#projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(33, 32, 32, 0.8);
+}
+
+#projects .box a:hover,
+#articles .box a.h4:hover,
+footer .col-lg-3 a:hover,
+#single-service a.h4:hover {
+  color: gray;
+}
+
+#projects .box img {
+  height: 113px;
+  width: 100%;
+}
+
+/* statistics */
+#statistics {
+  bottom: -297px;
+}
+
+/* description */
+#description {
+  margin-top: 222px;
+}
+
+#description .swiper-slide,
+#faqs .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#description .swiper-slide:first-child {
+  /* background-image: url("../img/oil-refinery-factory-TCWZBZ3.jpg"); */
+}
+
+#description .swiper-slide:last-child {
+  /* background-image: url("../img/petrochemical-storage-tank-with-oil-refinery-backg-77LN7G2.jpg"); */
+}
+
+/* faqs */
+#faqs .swiper-slide {
+  height: 45vh;
+}
+
+#faqs .swiper-slide:first-child {
+  /* background-image: url("../img/oil-engineer-with-a-laptop-standing-next-to-an-oil-DLZ7RBS-1.jpg"); */
+}
+
+#faqs .swiper-slide:nth-child(2) {
+  /* background-image: url("../img/rear-view-of-young-engineer-wearing-white-safety-h-C3CDA2Z-1.jpg"); */
+}
+
+#faqs .swiper-slide:nth-child(3) {
+  /* background-image: url("../img/oil-refineries-PRQY6EN.jpg"); */
+}
+
+#faqs form::before,
+.index_form form::before,
+#contact form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #c3eb4094;
+}
+
+#faqs form button:hover,
+#contact form button:hover {
+  background-color: rgb(32, 32, 32);
+}
+
+/* article */
+#articles .box:hover img {
+  transform: scale(1.1);
+}
+
+/* about page */
+
+#about-title {
+  /* background-image: url("../img/crude-oil-storage-tank-terminal-port-oil-terminal-L2G2QRB.jpg"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#about-title::before,
+#project-title::before,
+#faqs-title::before,
+#article-title::before,
+#error404-title::before,
+#contact-title::before,
+#post-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000000d6;
+}
+
+#about img[alt="thumbnail-about"] {
+  width: 281px;
+  bottom: -36px;
+  right: -55px;
+}
+
+.about-faqs {
+  margin-top: 134px;
+}
+
+/* project page */
+
+#project-title {
+  /* background-image: url("../img/oil-refineries-PQLV96Y.jpg"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* faqs page */
+#faqs-title {
+  /* background-image: url("../img/oil-refinery-plant-from-industry-zone-oil-and-gas-E5HABQN-e1676866622808.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* article page */
+#article-title,
+#post-title {
+  /* background-image: url("../img/2.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 404-page */
+#error404-title {
+  /* background-image: url("../img/construction-of-pipeline-of-oil-refinery-power-pla-7EVLEAV2.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#error404-title span {
+  font-size: 178px;
+}
+
+/* contact page */
+#contact-title {
+  /* background-image: url("../img/1.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.socials a:hover {
+  background-color: black;
+  transform: scale(0.9);
+}
+
+/* footer */
+footer img {
+  width: 200px;
+}
+
+@media only screen and (max-width: 992px) {
+  #statistics {
+    bottom: -532px;
+  }
+
+  #description {
+    margin-top: 417px;
+  }
+
+  #description .row .col-lg-6:first-child {
+    height: 70vh;
+  }
+  .about-faqs {
+    margin-top: 337px;
+  }
+  #faqs .swiper-slide {
+    height: 74vh;
+  }
+
+  #articles .box a {
+    max-height: 529px;
+  }
+  #projects .box img {
+    height: auto;
+    max-height: 102px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #about img[alt="thumbnail-about"] {
+    right: 0;
+    width: 194px;
+  }
+  #projects .box img {
+    height: auto;
+    max-height: 282px;
+  }
+}
+
+/* ///////////kh/////// */
+section {
+  overflow-x: hidden;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.transition {
+  transition: all 0.4s;
+}
+
+/* banner */
+.swiper-button-prev,
+.swiper-button-next {
+  background: #ffffff85;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+/* box */
+.box-kh {
+  margin-top: -190px;
+  z-index: 99;
+  position: relative;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 992px) {
+  .box-kh {
+    margin-top: 0;
+  }
+  .box-kh .col-lg-4 {
+    height: 222px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.max-h-200px {
+  max-height: 200px;
+  overflow: hidden;
+}
+.text-category {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.text-category .more_btn_category {
+  /* color: ; */
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  transform: translateX(50%);
+}
+.text-category:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 200px;
+  width: 100%;
+  background: rgb(230, 231, 250);
+  background: linear-gradient(0deg, #fff 0%, rgba(252, 253, 213, 0) 35%);
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-13 {
+  font-size: 13px;
+}
+.hr_cat {
+  background: #c3eb40;
+}
+
+.list_cat .fs-16 {
+  font-size: 16px !important;
+  color: #000 !important;
+}
+.list_cat .fs-14 {
+  font-size: 13px !important;
+  color: #444 !important;
+}
+.list_cat .fs-12 {
+  font-size: 11px !important;
+  color: #777 !important;
+}
+.card_category > div.pos {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.card_category {
+  position: relative;
+  box-shadow: 0 0 10px 0 #666;
+  border-radius: 3px;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  padding: 15px 10px;
+  min-height: 150px;
+}
+.card_category:hover {
+  margin-top: -2px;
+  box-shadow: 0 0 2px 0 #666;
+}
+.card_category .title_h1,
+.product_name_h1 a {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  overflow: hidden;
+  background: linear-gradient(to right, #c3eb40, #c3eb40 50%, #000 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 1000ms ease;
+  text-decoration: none;
+}
+.card_category .title_h5 {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  color: #666;
+  overflow: hidden;
+  background: linear-gradient(to right, #c3eb40, #c3eb40 50%, #666 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 1000ms ease;
+  text-decoration: none;
+}
+.card_category .title_h1:hover,
+.card_category .title_h5:hover,
+.product_name_h1 a:hover {
+  background-position: 0 100%;
+}
+.product_name_h5 {
+  font-size: 30px;
+  color: #000;
 }

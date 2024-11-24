@@ -11,7 +11,7 @@ const HomePage = () => {
 
   // a header to test bootstrap functionality
   return (
-    <div className=".d-flex align-items-center justify-content-center text-center mt-30  ">
+    <div>
       <Header />
     </div>
   );
