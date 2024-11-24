@@ -15,13 +15,14 @@ import WHYCHOOSEUS from "./../../../../public/images/whychooseus/WHYCHOOSEUS.jpg
 // * SPLIDE
 import { Splide, SplideSlide } from "react-splide-ts";
 import "react-splide-ts/css";
-
+import { useEffect } from "react";
+import AOS from 'aos'
 // COMPONENT
 const HomePage = () => {
   const { lng } = useParams();
   const { t } = useTranslation();
+  useEffect(() => { AOS.init(); }, [])
 
-  // a header to test bootstrap functionality
   return (
     <>
       {/* <!-- BANNER --> */}
@@ -40,25 +41,25 @@ const HomePage = () => {
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX1} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href="https://davkimya.com/en/product/35" className="btn btn-primary mx-auto d-table">Polymeric Emulsion System</a>
+              <a href="https://davkimya.com/en/product/35" className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">Polymeric Emulsion System</a>
             </div>
           </div>
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX2} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href="https://davkimya.com/en/product/40" className="btn btn-primary mx-auto d-table">Polyurethanes</a>
+              <a href="https://davkimya.com/en/product/40" className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">Polyurethanes</a>
             </div>
           </div>
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX3} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href="https://davkimya.com/en/product/53" className="btn btn-primary mx-auto d-table">Engineered Polymeric Compounds</a>
+              <a href="https://davkimya.com/en/product/53" className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">Engineered Polymeric Compounds</a>
             </div>
           </div>
         </div>
       </section>
       {/* <!-- WHY CHOOSE US --> */}
-      <section id="choose-us" className="my-5 top py-5 position-relative visible opacity-0" data-sr-id="0" style={{ transform: "matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,-100,0,1)" }}>
+      <section id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
         <div className="container my-5">
           <div className="row g-4">
             <div className="col-lg-7">
