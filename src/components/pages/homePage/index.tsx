@@ -16,6 +16,7 @@ import WHYCHOOSEUS from "./../../../../public/images/whychooseus/WHYCHOOSEUS.jpg
 import { Splide, SplideSlide } from "react-splide-ts";
 import "react-splide-ts/css";
 import { useEffect } from "react";
+// @ts-ignore type is not declared
 import AOS from 'aos'
 // COMPONENT
 const HomePage = () => {
