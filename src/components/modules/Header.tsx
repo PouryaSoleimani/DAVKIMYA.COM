@@ -26,7 +26,7 @@ const Header = () => {
         window.addEventListener('resize', handleResize);
         return () => { window.removeEventListener('resize', handleResize); };
     }, []);
-    
+
     useEffect(() => {
         if (windowWidth > 1000) { setshowMenu(true) } else { setshowMenu(false) }
     }, [windowWidth]);
