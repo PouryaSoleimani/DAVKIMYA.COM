@@ -11,7 +11,7 @@ const HomePage = () => {
 
   // a header to test bootstrap functionality
   return (
-    <div>
+    <div className="h-screen">
       <Header />
     </div>
   );
