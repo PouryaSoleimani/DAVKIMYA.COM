@@ -1,6 +1,8 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaInstagram, FaMailBulk, FaPhone, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { LuMenuSquare } from 'react-icons/lu'
 
 const Header = () => {
     return (
@@ -29,13 +31,13 @@ const Header = () => {
                     <div className="d-flex align-items-center gap-2">
                         {/* LANGUAGES */}
                         <a href="https://davkimya.com/tr" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <Image src="Home_files/photo-516e634f97d149d0c0c9c63a015feabf.png" className="lang_menu" alt="tr" width={30} height={30} />
+                            <Image src="/images/flags/TURKIYE__FLAG.bmp" className="lang_menu" alt="tr" width={30} height={30} />
                         </a>
                         <a href="https://davkimya.com/ru" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <Image src="Home_files/photo-8145613ec7e208ce472f6b03919d735d.png" className="lang_menu" alt="ru" width={30} height={30} />
+                            <Image src="/images/flags/RUSSIA__FLAG.webp" className="lang_menu" alt="ru" width={30} height={30} />
                         </a>
                         <a href="https://davkimya.com/ar" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <Image src="Home_files/photo-20c6d9c335931b0b7f0245da907846d7.png" className="lang_menu" alt="ar" width={30} height={30} />
+                            <Image src="/images/flags/ARABIA__FLAG.bmp" className="lang_menu" alt="ar" width={30} height={30} />
                         </a>
                         {/* SOCIAL MEIDAS  */}
                         <a href="https://www.facebook.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
@@ -59,16 +61,12 @@ const Header = () => {
                 <nav className="navbar navbar-expand-lg bg-body-tertiary container">
                     <div className="container-fluid">
                         {/* <!-- logo --> */}
-                        <a className="navbar-brand" href="https://davkimya.com/en">
-                            <Image src="Home_files/logo-a9f658ded85a4459a0b427967ef706fc.png" alt="daav" className="img-fluid" width={100} height={100} />
-                        </a>
+                        <Link className="navbar-brand" href="/">
+                            <Image src="/images/HOME__PAGE__LOGO.webp" alt="daav" className="img-fluid" width={100} height={100} />
+                        </Link>
                         <div className="d-flex align-items-center gap-3">
                             <button className="navbar-toggler primary-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-list primary-color" viewBox="0 0 16 16">
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
-                                </svg>
+                                <LuMenuSquare className="w-32 h-32 bi bi-list primary-color" />
                             </button>
                             <form className="d-flex d-lg-none ms-4 cursor" role="search" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <svg
