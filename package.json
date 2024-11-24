@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "accept-language": "^3.0.20",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "cookies-next": "^5.0.2",
     "i18next": "^23.16.5",
@@ -19,7 +21,10 @@
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-i18next": "^15.1.1",
-    "recoil": "^0.7.7"
+    "react-icons": "^5.3.0",
+    "react-splide-ts": "^0.7.14",
+    "recoil": "^0.7.7",
+    "splide-nextjs": "^2.4.23"
   },
   "devDependencies": {
     "@types/bootstrap": "^5.2.10",

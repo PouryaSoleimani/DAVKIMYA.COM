@@ -2,6 +2,9 @@ import { dir } from "i18next";
 import { languages } from "../../core/i18n/settings";
 import { ReactNode } from "react";
 import { MainProvider } from "@/core/providers/mainProvider";
+import './../../../globals.css'
+import Header from "@/components/modules/Header";
+import Footer from "@/components/modules/Footer";
 
 interface paramsProps {
   lng: string;
@@ -20,10 +23,14 @@ export { generateStaticParams };
 
 const RootLayout = ({ children, params: { lng } }: PageProps) => {
   return (
-    <html lang={lng} dir={dir(lng)}>
+    <html lang={lng} dir={dir(lng)} >
       <head />
       <MainProvider>
-        <body>{children}</body>
+        <body className="overflow-x-hidden">
+          <Header />
+          {children}
+          <Footer />
+        </body>
       </MainProvider>
     </html>
   );
