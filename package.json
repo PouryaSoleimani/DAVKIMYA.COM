@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "accept-language": "^3.0.20",
     "bootstrap": "^5.3.3",
     "cookies-next": "^5.0.2",

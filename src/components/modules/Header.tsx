@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from 'next/image'
@@ -10,6 +11,8 @@ import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
 import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
 import RussianFlag from '../../../public/Home_files/RUSSIAN__FLAG.png'
 import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
+
+
 // COMPONENT
 const Header = () => {
     return (
@@ -49,16 +52,16 @@ const Header = () => {
                         </Link>
                         {/* SOCIAL MEIDAS  */}
                         <Link href="https://www.facebook.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <FaFacebook className='w-8 h-8' />
+                            <FaFacebook className='w-8 h-8 text-white' />
                         </Link>
                         <Link href="https://twitter.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <FaTwitter className='w-8 h-8' />
+                            <FaTwitter className='w-8 h-8 text-white' />
                         </Link>
                         <Link href="https://www.instagram.com/dav/" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <FaInstagram className='w-8 h-8' />
+                            <FaInstagram className='w-8 h-8 text-white' />
                         </Link>
                         <Link href="https://www.youtube.com/@dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <FaYoutube className='w-8 h-8' />
+                            <FaYoutube className='w-8 h-8 text-white' />
                         </Link>
                     </div>
                 </div>
@@ -66,17 +69,18 @@ const Header = () => {
 
 
             {/* <!-- menu && logo --> */}
-            <div>
+            <div className='bg-[#474841]'>
                 {/* <!-- menu --> */}
-                <nav className="navbar navbar-expand-lg bg-body-tertiary container">
-                    <div className="container-fluid">
+                <nav className="navbar navbar-expand-lg bg-body-tertiary container p-0 bg-[#474841]">
+                    <div className="container-fluid bg-[#474841] ">
                         {/* <!-- logo --> */}
                         <Link className="navbar-brand" href="/">
-                            <Image src={HeaderLogo} alt="daav" className="img-fluid" width={100} height={100} />
+                            <Image src={HeaderLogo} alt="daav" className="img-fluid py-2" width={90} height={90} />
                         </Link>
+
                         <div className="d-flex align-items-center gap-3">
                             <button className="navbar-toggler primary-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <LuMenuSquare className="w-32 h-32 bi bi-list primary-color" />
+                                <LuMenuSquare className="w-10 h-10 bi bi-list primary-color" />
                             </button>
                             <form className="d-flex d-lg-none ms-4 cursor" role="search" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <svg
@@ -91,47 +95,34 @@ const Header = () => {
                                 </svg>
                             </form>
                         </div>
+
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
-                                    <Link
-                                        className="nav-link primary-color active"
-                                        aria-current="page"
-                                        href="https://davkimya.com/en">Home</Link>
+                                    <a className="nav-link primary-color active" aria-current="page" href="/">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/about-us">About us</Link>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/about-us">About us</a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/product">Product</Link>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/product">Product</a>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/service">R&amp;D Services</Link>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/service">R&amp;D Services</a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/faqs">Faqs</Link>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/faqs">Faqs</a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/blogs">Event &amp; News</Link>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/blogs">Event &amp; News</a>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/contact-us">Contact us</Link>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/contact-us">Contact us</a>
                                 </li>
                             </ul>
+
                             <form
                                 className="d-none d-lg-flex cursor ms-4"
                                 role="search"
@@ -149,6 +140,7 @@ const Header = () => {
                                 </svg>
                             </form>
                         </div>
+
                     </div>
                 </nav>
                 {/* <!-- </nav> --> */}
