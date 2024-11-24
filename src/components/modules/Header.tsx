@@ -1,10 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { LuMail, LuMenuSquare, LuPhoneForwarded } from 'react-icons/lu'
-
+// IMAGES
+import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
+import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
+import RussianFlag from '../../../public/Home_files/RUSSIAN__FLAG.png'
+import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
+// COMPONENT
 const Header = () => {
     return (
         <header>
@@ -12,7 +18,7 @@ const Header = () => {
             <div className="border-bottom">
                 <div
                     className="d-flex flex-wrap gap-4 align-items-center justify-content-md-between justify-content-center container py-3">
-                    {/* <!-- address --> */}
+                    {/* <!-- CONTACT INFOS --> */}
                     <div
                         className="d-flex flex-wrap align-items-center justify-content-center gap-md-5 gap-3">
                         <div className="d-flex align-items-center gap-2">
@@ -28,17 +34,18 @@ const Header = () => {
                             <span className="secondary-color">info@davkimya.com</span>
                         </div>
                     </div>
-                    {/* <!-- socials --> */}
+
+                    {/* <!-- SOCIALS AND LANGUAGES --> */}
                     <div className="d-flex align-items-center gap-2">
                         {/* LANGUAGES */}
-                        <Link href="https://davkimya.com/tr" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <Image src="/images/flags/TURKIYE__FLAG.bmp" className="lang_menu" alt="tr" width={30} height={30} />
+                        <Link href="https://davkimya.com/tr" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                            <Image src={TurkishFlag} className="lang_menu " alt="tr" width={50} height={50} />
                         </Link>
-                        <Link href="https://davkimya.com/ru" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <Image src="/images/flags/RUSSIA__FLAG.webp" className="lang_menu" alt="ru" width={30} height={30} />
+                        <Link href="https://davkimya.com/ru" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                            <Image src={RussianFlag} className="lang_menu" alt="ru" width={30} height={30} />
                         </Link>
-                        <Link href="https://davkimya.com/ar" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <Image src="/images/flags/ARABIA__FLAG.bmp" className="lang_menu" alt="ar" width={30} height={30} />
+                        <Link href="https://davkimya.com/ar" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                            <Image src={ArabicFlag} className="lang_menu " alt="tr" width={50} height={50} />
                         </Link>
                         {/* SOCIAL MEIDAS  */}
                         <Link href="https://www.facebook.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
@@ -56,6 +63,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
+
             {/* <!-- menu && logo --> */}
             <div>
                 {/* <!-- menu --> */}
@@ -63,7 +72,7 @@ const Header = () => {
                     <div className="container-fluid">
                         {/* <!-- logo --> */}
                         <Link className="navbar-brand" href="/">
-                            <Image src="/images/HOME__PAGE__LOGO.webp" alt="daav" className="img-fluid" width={100} height={100} />
+                            <Image src={HeaderLogo} alt="daav" className="img-fluid" width={100} height={100} />
                         </Link>
                         <div className="d-flex align-items-center gap-3">
                             <button className="navbar-toggler primary-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

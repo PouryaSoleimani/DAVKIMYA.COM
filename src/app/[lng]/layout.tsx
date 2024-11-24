@@ -21,7 +21,7 @@ export { generateStaticParams };
 
 const RootLayout = ({ children, params: { lng } }: PageProps) => {
   return (
-    <html lang={lng} dir={dir(lng)}>
+    <html lang={lng} dir={dir(lng)} className="overflow-x-hidden">
       <head />
       <MainProvider>
         <body>{children}</body>
