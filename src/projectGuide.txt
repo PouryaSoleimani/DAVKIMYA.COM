@@ -25,8 +25,3 @@ git branches:
     bade har page ye pull request bede be dev man merge esh mikonam,
     harvaghtam ke khasti kar koni avval az dev fetch mikoni age chizi bood pull mikoni va dar akhar merge branch into current branch mizani ke ba branch e dev sync bashi va age manam taghirati ro zade boodam roo dev begiri
 }
-
-TEST FOR COMMITS AND PUSH ( POURYA )
- 
-
- TEST2

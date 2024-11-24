@@ -3,6 +3,8 @@ import { languages } from "../../core/i18n/settings";
 import { ReactNode } from "react";
 import { MainProvider } from "@/core/providers/mainProvider";
 import './../../../globals.css'
+import Header from "@/components/modules/Header";
+import Footer from "@/components/modules/Footer";
 
 interface paramsProps {
   lng: string;
@@ -25,7 +27,9 @@ const RootLayout = ({ children, params: { lng } }: PageProps) => {
       <head />
       <MainProvider>
         <body className="overflow-x-hidden">
+          <Header />
           {children}
+          <Footer />
         </body>
       </MainProvider>
     </html>
