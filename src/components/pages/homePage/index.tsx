@@ -4,6 +4,7 @@
 import Header from "@/components/modules/Header";
 import { useTranslation } from "./../../../core/i18n/client";
 import { useParams } from "next/navigation";
+import Footer from "@/components/modules/Footer";
 
 const HomePage = () => {
   const { lng } = useParams();
@@ -13,6 +14,8 @@ const HomePage = () => {
   return (
     <div className="h-screen">
       <Header />
+      <main className="h-screen"></main>
+      <Footer />
     </div>
   );
 };
