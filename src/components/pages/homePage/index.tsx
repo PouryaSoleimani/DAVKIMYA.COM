@@ -16,11 +16,14 @@ import "react-splide-ts/css";
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 // COMPONENT =================================================================================================================================================
 const HomePage = () => {
+
   const { lng } = useParams();
   const { t } = useTranslation();
-  useEffect(() => { AOS.init(); }, [])
+
+  useEffect(() => { AOS.init(); }, []);
 
 
   return (
@@ -58,6 +61,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
       {/* <!-- WHY CHOOSE US --> */}
       <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
         <div className="container my-5">
@@ -137,13 +141,12 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* <!-- FAQS --> */}
 
+      {/* <!-- FAQS --> */}
       <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
         <div className="row g-4">
           <div className="col-lg-4">
-            <div
-              className="container px-0 position-relative text-center text-lg-start">
+            <div className="container px-0 position-relative text-center text-lg-start">
               <span className="h3 text-3xl">Faqs</span>
               <h1 className="my-3 text-4xl">Frequently Asked Question</h1>
             </div>
@@ -334,11 +337,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
+
     </>
   );
 };
 export default HomePage;
-
-
-// style={"transition-duration: 1000ms;   transform: translate3d(-1589px, 0px, 0px);"}
