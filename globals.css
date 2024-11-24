@@ -2101,3 +2101,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   bottom: 0;
   left: auto;
 }
+.footer_img {
+  max-height: 80px;
+  object-fit: contain;
+}
