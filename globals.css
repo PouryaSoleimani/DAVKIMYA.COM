@@ -17,17 +17,17 @@
 /* DAVKIMYA WEBSITE STYLES */
 @font-face {
   font-family: "TitilliumWeb-Light";
-  src: url("/src/assets/fonts/TitilliumWeb-Light.ttf") format("truetype");
+  src: url("public/new-fonts/TitilliumWeb-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "TitilliumWeb-Bold";
-  src: url("/src/assets/fonts/TitilliumWeb-Bold.ttf") format("truetype");
+  src: url("public/new-fonts/TitilliumWeb-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "TitilliumWeb-Regular";
-  src: url("/src/assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  src: url("public/new-fonts/TitilliumWeb-Regular.ttf") format("truetype");
 }
 body {
   /* color: var(--foreground); */

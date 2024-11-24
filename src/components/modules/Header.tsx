@@ -96,7 +96,7 @@ const Header = () => {
                             </form>
                         </div>
 
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div className="max-[1000px]:collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
                                     <a className="nav-link primary-color active" aria-current="page" href="/">Home</a>
