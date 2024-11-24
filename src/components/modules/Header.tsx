@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { LuMail, LuMenuSquare, LuPhoneForwarded } from 'react-icons/lu'
 // IMAGES
@@ -16,6 +16,8 @@ import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
 // COMPONENT
 const Header = () => {
 
+    const [showMenu, setshowMenu] = useState(false)
+    const showMenuHandler = () => { setshowMenu(prev => !prev) }
     return (
         <header>
             {/*  contact  */}
@@ -81,22 +83,22 @@ const Header = () => {
 
                         {/* //* NAVBAR */}
                         <div className="d-flex align-items-center gap-3">
-                            
-                            <button className="navbar-toggler primary-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                            <button onClick={showMenuHandler} className="navbar-toggler primary-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-list primary-color" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                                    <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
                                 </svg>
                             </button>
 
-                            <form className="d-flex d-lg-none ms-4 cursor" role="search" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button className="d-flex d-lg-none ms-4 cursor" role="search" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-search text-white" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                                 </svg>
-                            </form>
+                            </button>
 
                         </div>
 
-                        <div className="navbar-collapse translate-y-2" id="navbarSupportedContent">
+                        <div className={`${showMenu === true ? "collapse" : ""} navbar-collapse translate-y-2" id="navbarSupportedContent`}>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
                                     <a
