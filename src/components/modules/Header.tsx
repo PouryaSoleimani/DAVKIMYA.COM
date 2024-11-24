@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { LuMail, LuMenuSquare, LuPhoneForwarded } from 'react-icons/lu'
 // IMAGES
@@ -17,7 +17,21 @@ import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
 const Header = () => {
 
     const [showMenu, setshowMenu] = useState(false)
-    const showMenuHandler = () => { setshowMenu(prev => !prev) }
+    const [windowWidth, setWindowWidth] = useState(0);
+    const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
+    const handleResize = () => { setWindowWidth(window.innerWidth); };
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => { window.removeEventListener('resize', handleResize); };
+    }, []);
+    
+    useEffect(() => {
+        if (windowWidth > 1000) { setshowMenu(true) } else { setshowMenu(false) }
+    }, [windowWidth]);
+
+
     return (
         <header>
             {/*  contact  */}
@@ -98,45 +112,30 @@ const Header = () => {
 
                         </div>
 
-                        <div className={`${showMenu === true ? "collapse" : ""} navbar-collapse translate-y-2" id="navbarSupportedContent`}>
+                        <div className={`${showMenu === false ? "collapse" : ""} navbar-collapse translate-y-2 lg:translate-y-3`}>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
-                                    <a
-                                        className="nav-link primary-color active"
-                                        aria-current="page"
-                                        href="https://davkimya.com/en">Home</a>
+                                    <a className="nav-link primary-color active" aria-current="page" href="https://davkimya.com/en">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/about-us">About us</a>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/about-us">About us</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/product">Product</a>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/product">Product</a>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/service">R&amp;D Services</a>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/service">R&amp;D Services</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/faqs">Faqs</a>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/faqs">Faqs</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/blogs">Event &amp; News</a>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/blogs">Event &amp; News</a>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a
-                                        className="nav-link primary-color"
-                                        href="https://davkimya.com/en/contact-us">Contact us</a>
+                                    <a className="nav-link primary-color" href="https://davkimya.com/en/contact-us">Contact us</a>
                                 </li>
                             </ul>
                             <form
