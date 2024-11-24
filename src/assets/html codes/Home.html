@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+  <link type="text/css" id="dark-mode" rel="stylesheet" href />
+  <style type="text/css" id="dark-mode-custom-style"></style>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!--required meta tags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--twitter og-->
+    <meta name="twitter:title" content="daav" />
+    <meta name="twitter:keywords" content="daav" />
+    <meta name="twitter:description" content="daav" />
+    <meta name="twitter:image" content="https://davkimya.com/assets/uploads/setting/1402-05-05/photos/icon-5e2b477b74162c0eb08291dfc1ca0c05.png" />
+
+    <!--facebook og-->
+    <meta property="og:url" content="https://davkimya.com/en" />
+    <meta name="twitter:title" content="daav" />
+    <meta property="og:keywords" content="daav" />
+    <meta property="og:description" content="daav" />
+    <meta property="og:image" content="https://davkimya.com/assets/uploads/setting/1402-05-05/photos/icon-5e2b477b74162c0eb08291dfc1ca0c05.png" />
+
+    <!--meta-->
+    <meta name="keywords" content="daav" />
+    <meta name="description" content="daav" />
+    <meta name="author" content="adib-it" />
+
+    <!--favicon icon-->
+    <link rel="icon" href="https://davkimya.com/assets/uploads/setting/1402-05-05/photos/icon-5e2b477b74162c0eb08291dfc1ca0c05.png" type="image/png" sizes="16x16" />
+
+    <!-- datetimepicker jQuery CDN -->
+    <script src="Home_files/jquery.datetimepicker.full.min.js"></script>
+
+    <link rel="stylesheet" href="Home_files/swiper-bundle.min.css" />
+    <link href="https://davkimya.com/assets/front/css/swiper-bundle.min.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="Home_files/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Home_files/styles.css" />
+
+    <link href="https://davkimya.com/assets/front/css/swiper.min.css" />
+    <title>Home</title>
+
+    <style>
+      .paginate nav {
+        display: inline-block;
+      }
+
+      .img_product_standard {
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
+    <style>
+      .swal2-popup.swal2-toast {
+        flex-direction: column;
+        align-items: stretch;
+        width: auto;
+        padding: 1.25em;
+        overflow-y: hidden;
+        background: #fff;
+        box-shadow: 0 0 0.625em #d9d9d9;
+      }
+      .swal2-popup.swal2-toast .swal2-header {
+        flex-direction: row;
+        padding: 0;
+      }
+      .swal2-popup.swal2-toast .swal2-title {
+        flex-grow: 1;
+        justify-content: flex-start;
+        margin: 0 0.625em;
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-loading {
+        justify-content: center;
+      }
+      .swal2-popup.swal2-toast .swal2-input {
+        height: 2em;
+        margin: 0.3125em auto;
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-validation-message {
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-footer {
+        margin: 0.5em 0 0;
+        padding: 0.5em 0 0;
+        font-size: 0.8em;
+      }
+      .swal2-popup.swal2-toast .swal2-close {
+        position: static;
+        width: 0.8em;
+        height: 0.8em;
+        line-height: 0.8;
+      }
+      .swal2-popup.swal2-toast .swal2-content {
+        justify-content: flex-start;
+        margin: 0 0.625em;
+        padding: 0;
+        font-size: 1em;
+        text-align: initial;
+      }
+      .swal2-popup.swal2-toast .swal2-html-container {
+        padding: 0.625em 0 0;
+      }
+      .swal2-popup.swal2-toast .swal2-html-container:empty {
+        padding: 0;
+      }
+      .swal2-popup.swal2-toast .swal2-icon {
+        width: 2em;
+        min-width: 2em;
+        height: 2em;
+        margin: 0 0.5em 0 0;
+      }
+      .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+        display: flex;
+        align-items: center;
+        font-size: 1.8em;
+        font-weight: 700;
+      }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+          font-size: 0.25em;
+        }
+      }
+      .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"] {
+        top: 0.875em;
+        width: 1.375em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"][class$="left"] {
+        left: 0.3125em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"][class$="right"] {
+        right: 0.3125em;
+      }
+      .swal2-popup.swal2-toast .swal2-actions {
+        flex: 1;
+        flex-basis: auto !important;
+        align-self: stretch;
+        width: auto;
+        height: 2.2em;
+        height: auto;
+        margin: 0 0.3125em;
+        margin-top: 0.3125em;
+        padding: 0;
+      }
+      .swal2-popup.swal2-toast .swal2-styled {
+        margin: 0.125em 0.3125em;
+        padding: 0.3125em 0.625em;
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-styled:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(100, 150, 200, 0.5);
+      }
+      .swal2-popup.swal2-toast .swal2-success {
+        border-color: #a5dc86;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"] {
+        position: absolute;
+        width: 1.6em;
+        height: 3em;
+        transform: rotate(45deg);
+        border-radius: 50%;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"][class$="left"] {
+        top: -0.8em;
+        left: -0.5em;
+        transform: rotate(-45deg);
+        transform-origin: 2em 2em;
+        border-radius: 4em 0 0 4em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"][class$="right"] {
+        top: -0.25em;
+        left: 0.9375em;
+        transform-origin: 0 1.5em;
+        border-radius: 0 4em 4em 0;
+      }
+      .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em;
+      }
+      .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+        top: 0;
+        left: 0.4375em;
+        width: 0.4375em;
+        height: 2.6875em;
+      }
+      .swal2-popup.swal2-toast .swal2-success [class^="swal2-success-line"] {
+        height: 0.3125em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-line"][class$="tip"] {
+        top: 1.125em;
+        left: 0.1875em;
+        width: 0.75em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-line"][class$="long"] {
+        top: 0.9375em;
+        right: 0.1875em;
+        width: 1.375em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success.swal2-icon-show
+        .swal2-success-line-tip {
+        -webkit-animation: swal2-toast-animate-success-line-tip 0.75s;
+        animation: swal2-toast-animate-success-line-tip 0.75s;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success.swal2-icon-show
+        .swal2-success-line-long {
+        -webkit-animation: swal2-toast-animate-success-line-long 0.75s;
+        animation: swal2-toast-animate-success-line-long 0.75s;
+      }
+      .swal2-popup.swal2-toast.swal2-show {
+        -webkit-animation: swal2-toast-show 0.5s;
+        animation: swal2-toast-show 0.5s;
+      }
+      .swal2-popup.swal2-toast.swal2-hide {
+        -webkit-animation: swal2-toast-hide 0.1s forwards;
+        animation: swal2-toast-hide 0.1s forwards;
+      }
+      .swal2-container {
+        display: flex;
+        position: fixed;
+        z-index: 1060;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0.625em;
+        overflow-x: hidden;
+        transition: background-color 0.1s;
+        -webkit-overflow-scrolling: touch;
+      }
+      .swal2-container.swal2-backdrop-show,
+      .swal2-container.swal2-noanimation {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      .swal2-container.swal2-backdrop-hide {
+        background: 0 0 !important;
+      }
+      .swal2-container.swal2-top {
+        align-items: flex-start;
+      }
+      .swal2-container.swal2-top-left,
+      .swal2-container.swal2-top-start {
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .swal2-container.swal2-top-end,
+      .swal2-container.swal2-top-right {
+        align-items: flex-start;
+        justify-content: flex-end;
+      }
+      .swal2-container.swal2-center {
+        align-items: center;
+      }
+      .swal2-container.swal2-center-left,
+      .swal2-container.swal2-center-start {
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .swal2-container.swal2-center-end,
+      .swal2-container.swal2-center-right {
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .swal2-container.swal2-bottom {
+        align-items: flex-end;
+      }
+      .swal2-container.swal2-bottom-left,
+      .swal2-container.swal2-bottom-start {
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+      .swal2-container.swal2-bottom-end,
+      .swal2-container.swal2-bottom-right {
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+      .swal2-container.swal2-bottom-end > :first-child,
+      .swal2-container.swal2-bottom-left > :first-child,
+      .swal2-container.swal2-bottom-right > :first-child,
+      .swal2-container.swal2-bottom-start > :first-child,
+      .swal2-container.swal2-bottom > :first-child {
+        margin-top: auto;
+      }
+      .swal2-container.swal2-grow-fullscreen > .swal2-modal {
+        display: flex !important;
+        flex: 1;
+        align-self: stretch;
+        justify-content: center;
+      }
+      .swal2-container.swal2-grow-row > .swal2-modal {
+        display: flex !important;
+        flex: 1;
+        align-content: center;
+        justify-content: center;
+      }
+      .swal2-container.swal2-grow-column {
+        flex: 1;
+        flex-direction: column;
+      }
+      .swal2-container.swal2-grow-column.swal2-bottom,
+      .swal2-container.swal2-grow-column.swal2-center,
+      .swal2-container.swal2-grow-column.swal2-top {
+        align-items: center;
+      }
+      .swal2-container.swal2-grow-column.swal2-bottom-left,
+      .swal2-container.swal2-grow-column.swal2-bottom-start,
+      .swal2-container.swal2-grow-column.swal2-center-left,
+      .swal2-container.swal2-grow-column.swal2-center-start,
+      .swal2-container.swal2-grow-column.swal2-top-left,
+      .swal2-container.swal2-grow-column.swal2-top-start {
+        align-items: flex-start;
+      }
+      .swal2-container.swal2-grow-column.swal2-bottom-end,
+      .swal2-container.swal2-grow-column.swal2-bottom-right,
+      .swal2-container.swal2-grow-column.swal2-center-end,
+      .swal2-container.swal2-grow-column.swal2-center-right,
+      .swal2-container.swal2-grow-column.swal2-top-end,
+      .swal2-container.swal2-grow-column.swal2-top-right {
+        align-items: flex-end;
+      }
+      .swal2-container.swal2-grow-column > .swal2-modal {
+        display: flex !important;
+        flex: 1;
+        align-content: center;
+        justify-content: center;
+      }
+      .swal2-container.swal2-no-transition {
+        transition: none !important;
+      }
+      .swal2-container:not(.swal2-top):not(.swal2-top-start):not(
+          .swal2-top-end
+        ):not(.swal2-top-left):not(.swal2-top-right):not(
+          .swal2-center-start
+        ):not(.swal2-center-end):not(.swal2-center-left):not(
+          .swal2-center-right
+        ):not(.swal2-bottom):not(.swal2-bottom-start):not(
+          .swal2-bottom-end
+        ):not(.swal2-bottom-left):not(.swal2-bottom-right):not(
+          .swal2-grow-fullscreen
+        )
+        > .swal2-modal {
+        margin: auto;
+      }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .swal2-container .swal2-modal {
+          margin: 0 !important;
+        }
+      }
+      .swal2-popup {
+        display: none;
+        position: relative;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        width: 32em;
+        max-width: 100%;
+        padding: 1.25em;
+        border: none;
+        border-radius: 5px;
+        background: #fff;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+      .swal2-popup:focus {
+        outline: 0;
+      }
+      .swal2-popup.swal2-loading {
+        overflow-y: hidden;
+      }
+      .swal2-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1.8em;
+      }
+      .swal2-title {
+        position: relative;
+        max-width: 100%;
+        margin: 0 0 0.4em;
+        padding: 0;
+        color: #595959;
+        font-size: 1.875em;
+        font-weight: 600;
+        text-align: center;
+        text-transform: none;
+        word-wrap: break-word;
+      }
+      .swal2-actions {
+        display: flex;
+        z-index: 1;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 1.25em auto 0;
+        padding: 0;
+      }
+      .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
+        opacity: 0.4;
+      }
+      .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.1)
+        );
+      }
+      .swal2-actions:not(.swal2-loading) .swal2-styled:active {
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        );
+      }
+      .swal2-loader {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 2.2em;
+        height: 2.2em;
+        margin: 0 1.875em;
+        -webkit-animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+        animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+        border-width: 0.25em;
+        border-style: solid;
+        border-radius: 100%;
+        border-color: #2778c4 transparent #2778c4 transparent;
+      }
+      .swal2-styled {
+        margin: 0.3125em;
+        padding: 0.625em 1.1em;
+        box-shadow: none;
+        font-weight: 500;
+      }
+      .swal2-styled:not([disabled]) {
+        cursor: pointer;
+      }
+      .swal2-styled.swal2-confirm {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #2778c4;
+        color: #fff;
+        font-size: 1em;
+      }
+      .swal2-styled.swal2-deny {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #d14529;
+        color: #fff;
+        font-size: 1em;
+      }
+      .swal2-styled.swal2-cancel {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #757575;
+        color: #fff;
+        font-size: 1em;
+      }
+      .swal2-styled:focus {
+        outline: 0;
+        box-shadow: 0 0 0 3px rgba(100, 150, 200, 0.5);
+      }
+      .swal2-styled::-moz-focus-inner {
+        border: 0;
+      }
+      .swal2-footer {
+        justify-content: center;
+        margin: 1.25em 0 0;
+        padding: 1em 0 0;
+        border-top: 1px solid #eee;
+        color: #545454;
+        font-size: 1em;
+      }
+      .swal2-timer-progress-bar-container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 0.25em;
+        overflow: hidden;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .swal2-timer-progress-bar {
+        width: 100%;
+        height: 0.25em;
+        background: rgba(0, 0, 0, 0.2);
+      }
+      .swal2-image {
+        max-width: 100%;
+        margin: 1.25em auto;
+      }
+      .swal2-close {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+        width: 1.2em;
+        height: 1.2em;
+        padding: 0;
+        overflow: hidden;
+        transition: color 0.1s ease-out;
+        border: none;
+        border-radius: 5px;
+        background: 0 0;
+        color: #ccc;
+        font-family: serif;
+        font-size: 2.5em;
+        line-height: 1.2;
+        cursor: pointer;
+      }
+      .swal2-close:hover {
+        transform: none;
+        background: 0 0;
+        color: #f27474;
+      }
+      .swal2-close:focus {
+        outline: 0;
+        box-shadow: inset 0 0 0 3px rgba(100, 150, 200, 0.5);
+      }
+      .swal2-close::-moz-focus-inner {
+        border: 0;
+      }
+      .swal2-content {
+        z-index: 1;
+        justify-content: center;
+        margin: 0;
+        padding: 0 1.6em;
+        color: #545454;
+        font-size: 1.125em;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        word-wrap: break-word;
+      }
+      .swal2-checkbox,
+      .swal2-file,
+      .swal2-input,
+      .swal2-radio,
+      .swal2-select,
+      .swal2-textarea {
+        margin: 1em auto;
+      }
+      .swal2-file,
+      .swal2-input,
+      .swal2-textarea {
+        box-sizing: border-box;
+        width: 100%;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        border: 1px solid #d9d9d9;
+        border-radius: 0.1875em;
+        background: inherit;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+        color: inherit;
+        font-size: 1.125em;
+      }
+      .swal2-file.swal2-inputerror,
+      .swal2-input.swal2-inputerror,
+      .swal2-textarea.swal2-inputerror {
+        border-color: #f27474 !important;
+        box-shadow: 0 0 2px #f27474 !important;
+      }
+      .swal2-file:focus,
+      .swal2-input:focus,
+      .swal2-textarea:focus {
+        border: 1px solid #b4dbed;
+        outline: 0;
+        box-shadow: 0 0 0 3px rgba(100, 150, 200, 0.5);
+      }
+      .swal2-file::-moz-placeholder,
+      .swal2-input::-moz-placeholder,
+      .swal2-textarea::-moz-placeholder {
+        color: #ccc;
+      }
+      .swal2-file:-ms-input-placeholder,
+      .swal2-input:-ms-input-placeholder,
+      .swal2-textarea:-ms-input-placeholder {
+        color: #ccc;
+      }
+      .swal2-file::placeholder,
+      .swal2-input::placeholder,
+      .swal2-textarea::placeholder {
+        color: #ccc;
+      }
+      .swal2-range {
+        margin: 1em auto;
+        background: #fff;
+      }
+      .swal2-range input {
+        width: 80%;
+      }
+      .swal2-range output {
+        width: 20%;
+        color: inherit;
+        font-weight: 600;
+        text-align: center;
+      }
+      .swal2-range input,
+      .swal2-range output {
+        height: 2.625em;
+        padding: 0;
+        font-size: 1.125em;
+        line-height: 2.625em;
+      }
+      .swal2-input {
+        height: 2.625em;
+        padding: 0 0.75em;
+      }
+      .swal2-input[type="number"] {
+        max-width: 10em;
+      }
+      .swal2-file {
+        background: inherit;
+        font-size: 1.125em;
+      }
+      .swal2-textarea {
+        height: 6.75em;
+        padding: 0.75em;
+      }
+      .swal2-select {
+        min-width: 50%;
+        max-width: 100%;
+        padding: 0.375em 0.625em;
+        background: inherit;
+        color: inherit;
+        font-size: 1.125em;
+      }
+      .swal2-checkbox,
+      .swal2-radio {
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        color: inherit;
+      }
+      .swal2-checkbox label,
+      .swal2-radio label {
+        margin: 0 0.6em;
+        font-size: 1.125em;
+      }
+      .swal2-checkbox input,
+      .swal2-radio input {
+        flex-shrink: 0;
+        margin: 0 0.4em;
+      }
+      .swal2-input-label {
+        display: flex;
+        justify-content: center;
+        margin: 1em auto;
+      }
+      .swal2-validation-message {
+        align-items: center;
+        justify-content: center;
+        margin: 0 -2.7em;
+        padding: 0.625em;
+        overflow: hidden;
+        background: #f0f0f0;
+        color: #666;
+        font-size: 1em;
+        font-weight: 300;
+      }
+      .swal2-validation-message::before {
+        content: "!";
+        display: inline-block;
+        width: 1.5em;
+        min-width: 1.5em;
+        height: 1.5em;
+        margin: 0 0.625em;
+        border-radius: 50%;
+        background-color: #f27474;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-align: center;
+      }
+      .swal2-icon {
+        position: relative;
+        box-sizing: content-box;
+        justify-content: center;
+        width: 5em;
+        height: 5em;
+        margin: 1.25em auto 1.875em;
+        border: 0.25em solid transparent;
+        border-radius: 50%;
+        border-color: #000;
+        font-family: inherit;
+        line-height: 5em;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .swal2-icon .swal2-icon-content {
+        display: flex;
+        align-items: center;
+        font-size: 3.75em;
+      }
+      .swal2-icon.swal2-error {
+        border-color: #f27474;
+        color: #f27474;
+      }
+      .swal2-icon.swal2-error .swal2-x-mark {
+        position: relative;
+        flex-grow: 1;
+      }
+      .swal2-icon.swal2-error [class^="swal2-x-mark-line"] {
+        display: block;
+        position: absolute;
+        top: 2.3125em;
+        width: 2.9375em;
+        height: 0.3125em;
+        border-radius: 0.125em;
+        background-color: #f27474;
+      }
+      .swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="left"] {
+        left: 1.0625em;
+        transform: rotate(45deg);
+      }
+      .swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="right"] {
+        right: 1em;
+        transform: rotate(-45deg);
+      }
+      .swal2-icon.swal2-error.swal2-icon-show {
+        -webkit-animation: swal2-animate-error-icon 0.5s;
+        animation: swal2-animate-error-icon 0.5s;
+      }
+      .swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark {
+        -webkit-animation: swal2-animate-error-x-mark 0.5s;
+        animation: swal2-animate-error-x-mark 0.5s;
+      }
+      .swal2-icon.swal2-warning {
+        border-color: #facea8;
+        color: #f8bb86;
+      }
+      .swal2-icon.swal2-info {
+        border-color: #9de0f6;
+        color: #3fc3ee;
+      }
+      .swal2-icon.swal2-question {
+        border-color: #c9dae1;
+        color: #87adbd;
+      }
+      .swal2-icon.swal2-success {
+        border-color: #a5dc86;
+        color: #a5dc86;
+      }
+      .swal2-icon.swal2-success [class^="swal2-success-circular-line"] {
+        position: absolute;
+        width: 3.75em;
+        height: 7.5em;
+        transform: rotate(45deg);
+        border-radius: 50%;
+      }
+      .swal2-icon.swal2-success
+        [class^="swal2-success-circular-line"][class$="left"] {
+        top: -0.4375em;
+        left: -2.0635em;
+        transform: rotate(-45deg);
+        transform-origin: 3.75em 3.75em;
+        border-radius: 7.5em 0 0 7.5em;
+      }
+      .swal2-icon.swal2-success
+        [class^="swal2-success-circular-line"][class$="right"] {
+        top: -0.6875em;
+        left: 1.875em;
+        transform: rotate(-45deg);
+        transform-origin: 0 3.75em;
+        border-radius: 0 7.5em 7.5em 0;
+      }
+      .swal2-icon.swal2-success .swal2-success-ring {
+        position: absolute;
+        z-index: 2;
+        top: -0.25em;
+        left: -0.25em;
+        box-sizing: content-box;
+        width: 100%;
+        height: 100%;
+        border: 0.25em solid rgba(165, 220, 134, 0.3);
+        border-radius: 50%;
+      }
+      .swal2-icon.swal2-success .swal2-success-fix {
+        position: absolute;
+        z-index: 1;
+        top: 0.5em;
+        left: 1.625em;
+        width: 0.4375em;
+        height: 5.625em;
+        transform: rotate(-45deg);
+      }
+      .swal2-icon.swal2-success [class^="swal2-success-line"] {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        height: 0.3125em;
+        border-radius: 0.125em;
+        background-color: #a5dc86;
+      }
+      .swal2-icon.swal2-success [class^="swal2-success-line"][class$="tip"] {
+        top: 2.875em;
+        left: 0.8125em;
+        width: 1.5625em;
+        transform: rotate(45deg);
+      }
+      .swal2-icon.swal2-success [class^="swal2-success-line"][class$="long"] {
+        top: 2.375em;
+        right: 0.5em;
+        width: 2.9375em;
+        transform: rotate(-45deg);
+      }
+      .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
+        -webkit-animation: swal2-animate-success-line-tip 0.75s;
+        animation: swal2-animate-success-line-tip 0.75s;
+      }
+      .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
+        -webkit-animation: swal2-animate-success-line-long 0.75s;
+        animation: swal2-animate-success-line-long 0.75s;
+      }
+      .swal2-icon.swal2-success.swal2-icon-show
+        .swal2-success-circular-line-right {
+        -webkit-animation: swal2-rotate-success-circular-line 4.25s ease-in;
+        animation: swal2-rotate-success-circular-line 4.25s ease-in;
+      }
+      .swal2-progress-steps {
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 0 1.25em;
+        padding: 0;
+        background: inherit;
+        font-weight: 600;
+      }
+      .swal2-progress-steps li {
+        display: inline-block;
+        position: relative;
+      }
+      .swal2-progress-steps .swal2-progress-step {
+        z-index: 20;
+        flex-shrink: 0;
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+        background: #2778c4;
+        color: #fff;
+        line-height: 2em;
+        text-align: center;
+      }
+      .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+        background: #2778c4;
+      }
+      .swal2-progress-steps
+        .swal2-progress-step.swal2-active-progress-step
+        ~ .swal2-progress-step {
+        background: #add8e6;
+        color: #fff;
+      }
+      .swal2-progress-steps
+        .swal2-progress-step.swal2-active-progress-step
+        ~ .swal2-progress-step-line {
+        background: #add8e6;
+      }
+      .swal2-progress-steps .swal2-progress-step-line {
+        z-index: 10;
+        flex-shrink: 0;
+        width: 2.5em;
+        height: 0.4em;
+        margin: 0 -1px;
+        background: #2778c4;
+      }
+      [class^="swal2"] {
+        -webkit-tap-highlight-color: transparent;
+      }
+      .swal2-show {
+        -webkit-animation: swal2-show 0.3s;
+        animation: swal2-show 0.3s;
+      }
+      .swal2-hide {
+        -webkit-animation: swal2-hide 0.15s forwards;
+        animation: swal2-hide 0.15s forwards;
+      }
+      .swal2-noanimation {
+        transition: none;
+      }
+      .swal2-scrollbar-measure {
+        position: absolute;
+        top: -9999px;
+        width: 50px;
+        height: 50px;
+        overflow: scroll;
+      }
+      .swal2-rtl .swal2-close {
+        right: auto;
+        left: 0;
+      }
+      .swal2-rtl .swal2-timer-progress-bar {
+        right: 0;
+        left: auto;
+      }
+      @supports (-ms-accelerator: true) {
+        .swal2-range input {
+          width: 100% !important;
+        }
+        .swal2-range output {
+          display: none;
+        }
+      }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .swal2-range input {
+          width: 100% !important;
+        }
+        .swal2-range output {
+          display: none;
+        }
+      }
+      @-webkit-keyframes swal2-toast-show {
+        0% {
+          transform: translateY(-0.625em) rotateZ(2deg);
+        }
+        33% {
+          transform: translateY(0) rotateZ(-2deg);
+        }
+        66% {
+          transform: translateY(0.3125em) rotateZ(2deg);
+        }
+        100% {
+          transform: translateY(0) rotateZ(0);
+        }
+      }
+      @keyframes swal2-toast-show {
+        0% {
+          transform: translateY(-0.625em) rotateZ(2deg);
+        }
+        33% {
+          transform: translateY(0) rotateZ(-2deg);
+        }
+        66% {
+          transform: translateY(0.3125em) rotateZ(2deg);
+        }
+        100% {
+          transform: translateY(0) rotateZ(0);
+        }
+      }
+      @-webkit-keyframes swal2-toast-hide {
+        100% {
+          transform: rotateZ(1deg);
+          opacity: 0;
+        }
+      }
+      @keyframes swal2-toast-hide {
+        100% {
+          transform: rotateZ(1deg);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes swal2-toast-animate-success-line-tip {
+        0% {
+          top: 0.5625em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 0.125em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 0.625em;
+          left: -0.25em;
+          width: 1.625em;
+        }
+        84% {
+          top: 1.0625em;
+          left: 0.75em;
+          width: 0.5em;
+        }
+        100% {
+          top: 1.125em;
+          left: 0.1875em;
+          width: 0.75em;
+        }
+      }
+      @keyframes swal2-toast-animate-success-line-tip {
+        0% {
+          top: 0.5625em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 0.125em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 0.625em;
+          left: -0.25em;
+          width: 1.625em;
+        }
+        84% {
+          top: 1.0625em;
+          left: 0.75em;
+          width: 0.5em;
+        }
+        100% {
+          top: 1.125em;
+          left: 0.1875em;
+          width: 0.75em;
+        }
+      }
+      @-webkit-keyframes swal2-toast-animate-success-line-long {
+        0% {
+          top: 1.625em;
+          right: 1.375em;
+          width: 0;
+        }
+        65% {
+          top: 1.25em;
+          right: 0.9375em;
+          width: 0;
+        }
+        84% {
+          top: 0.9375em;
+          right: 0;
+          width: 1.125em;
+        }
+        100% {
+          top: 0.9375em;
+          right: 0.1875em;
+          width: 1.375em;
+        }
+      }
+      @keyframes swal2-toast-animate-success-line-long {
+        0% {
+          top: 1.625em;
+          right: 1.375em;
+          width: 0;
+        }
+        65% {
+          top: 1.25em;
+          right: 0.9375em;
+          width: 0;
+        }
+        84% {
+          top: 0.9375em;
+          right: 0;
+          width: 1.125em;
+        }
+        100% {
+          top: 0.9375em;
+          right: 0.1875em;
+          width: 1.375em;
+        }
+      }
+      @-webkit-keyframes swal2-show {
+        0% {
+          transform: scale(0.7);
+        }
+        45% {
+          transform: scale(1.05);
+        }
+        80% {
+          transform: scale(0.95);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes swal2-show {
+        0% {
+          transform: scale(0.7);
+        }
+        45% {
+          transform: scale(1.05);
+        }
+        80% {
+          transform: scale(0.95);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @-webkit-keyframes swal2-hide {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+      }
+      @keyframes swal2-hide {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes swal2-animate-success-line-tip {
+        0% {
+          top: 1.1875em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 1.0625em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 2.1875em;
+          left: -0.375em;
+          width: 3.125em;
+        }
+        84% {
+          top: 3em;
+          left: 1.3125em;
+          width: 1.0625em;
+        }
+        100% {
+          top: 2.8125em;
+          left: 0.8125em;
+          width: 1.5625em;
+        }
+      }
+      @keyframes swal2-animate-success-line-tip {
+        0% {
+          top: 1.1875em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 1.0625em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 2.1875em;
+          left: -0.375em;
+          width: 3.125em;
+        }
+        84% {
+          top: 3em;
+          left: 1.3125em;
+          width: 1.0625em;
+        }
+        100% {
+          top: 2.8125em;
+          left: 0.8125em;
+          width: 1.5625em;
+        }
+      }
+      @-webkit-keyframes swal2-animate-success-line-long {
+        0% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        65% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        84% {
+          top: 2.1875em;
+          right: 0;
+          width: 3.4375em;
+        }
+        100% {
+          top: 2.375em;
+          right: 0.5em;
+          width: 2.9375em;
+        }
+      }
+      @keyframes swal2-animate-success-line-long {
+        0% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        65% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        84% {
+          top: 2.1875em;
+          right: 0;
+          width: 3.4375em;
+        }
+        100% {
+          top: 2.375em;
+          right: 0.5em;
+          width: 2.9375em;
+        }
+      }
+      @-webkit-keyframes swal2-rotate-success-circular-line {
+        0% {
+          transform: rotate(-45deg);
+        }
+        5% {
+          transform: rotate(-45deg);
+        }
+        12% {
+          transform: rotate(-405deg);
+        }
+        100% {
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes swal2-rotate-success-circular-line {
+        0% {
+          transform: rotate(-45deg);
+        }
+        5% {
+          transform: rotate(-45deg);
+        }
+        12% {
+          transform: rotate(-405deg);
+        }
+        100% {
+          transform: rotate(-405deg);
+        }
+      }
+      @-webkit-keyframes swal2-animate-error-x-mark {
+        0% {
+          margin-top: 1.625em;
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        50% {
+          margin-top: 1.625em;
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        80% {
+          margin-top: -0.375em;
+          transform: scale(1.15);
+        }
+        100% {
+          margin-top: 0;
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-animate-error-x-mark {
+        0% {
+          margin-top: 1.625em;
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        50% {
+          margin-top: 1.625em;
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        80% {
+          margin-top: -0.375em;
+          transform: scale(1.15);
+        }
+        100% {
+          margin-top: 0;
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes swal2-animate-error-icon {
+        0% {
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        100% {
+          transform: rotateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-animate-error-icon {
+        0% {
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        100% {
+          transform: rotateX(0);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes swal2-rotate-loading {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes swal2-rotate-loading {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+        overflow: hidden;
+      }
+      body.swal2-height-auto {
+        height: auto !important;
+      }
+      body.swal2-no-backdrop .swal2-container {
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        max-width: calc(100% - 0.625em * 2);
+        background-color: transparent !important;
+      }
+      body.swal2-no-backdrop .swal2-container > .swal2-modal {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-top {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-top-left,
+      body.swal2-no-backdrop .swal2-container.swal2-top-start {
+        top: 0;
+        left: 0;
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-top-end,
+      body.swal2-no-backdrop .swal2-container.swal2-top-right {
+        top: 0;
+        right: 0;
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-center-left,
+      body.swal2-no-backdrop .swal2-container.swal2-center-start {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-center-end,
+      body.swal2-no-backdrop .swal2-container.swal2-center-right {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-bottom {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-bottom-left,
+      body.swal2-no-backdrop .swal2-container.swal2-bottom-start {
+        bottom: 0;
+        left: 0;
+      }
+      body.swal2-no-backdrop .swal2-container.swal2-bottom-end,
+      body.swal2-no-backdrop .swal2-container.swal2-bottom-right {
+        right: 0;
+        bottom: 0;
+      }
+      @media print {
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+          overflow-y: scroll !important;
+        }
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)
+          > [aria-hidden="true"] {
+          display: none;
+        }
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)
+          .swal2-container {
+          position: static !important;
+        }
+      }
+      body.swal2-toast-shown .swal2-container {
+        background-color: transparent;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top {
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top-end,
+      body.swal2-toast-shown .swal2-container.swal2-top-right {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top-left,
+      body.swal2-toast-shown .swal2-container.swal2-top-start {
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 0;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center-left,
+      body.swal2-toast-shown .swal2-container.swal2-center-start {
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center {
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center-end,
+      body.swal2-toast-shown .swal2-container.swal2-center-right {
+        top: 50%;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        transform: translateY(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom-left,
+      body.swal2-toast-shown .swal2-container.swal2-bottom-start {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom-end,
+      body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+      }
+    </style>
+  </head>
+
+  <body style="height: 100%">
+    <!-- search modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-header border-0">
+            <svg xmlns="http://www.w3.org/2000/svg" data-bs-dismiss="modal" aria-label="Close" width="32" height="32" fill="currentColor" class="bi bi-x-lg ms-auto cursor text-white" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"></path>
+            </svg>
+          </div>
+          <div class="modal-body">
+            <form class="d-flex ms-4 cursor rounded-pill search-modal-form position-relative" role="search" action="https://davkimya.com/en/search">
+              <input type="search" class="rounded-pill text-white w-100 fw-bold form-control border-white bg-transparent" placeholder="search" name="q" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" onclick="document.querySelector('form').submit()" class="bi bi-search text-white position-absolute" style="right: 14px; top: 8px" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+              </svg>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- play video modal -->
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 70%">
+        <div class="modal-content bg-black">
+          <div class="modal-body">
+            <video controls="controls" class="w-100">
+              <source
+                src="Home_files/vecteezy_oil-and-gas-refinery-plant-factory-industry-petrole.mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+
+    <header>
+      <!-- contact -->
+      <div class="border-bottom">
+        <div
+          class="d-flex flex-wrap gap-4 align-items-center justify-content-md-between justify-content-center container py-3">
+          <!-- address -->
+          <div
+            class="d-flex flex-wrap align-items-center justify-content-center gap-md-5 gap-3">
+            <div class="d-flex align-items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-telephone-forward primary-color" viewBox="0 0 16 16">
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z"></path>
+              </svg>
+              <span class="secondary-color">+905346879096</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-telephone-forward primary-color" viewBox="0 0 16 16">
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z"></path>
+              </svg>
+              <span class="secondary-color">+905065034338</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" width="20px" fill="#C3EB40">
+                <path
+                  d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z"></path>
+              </svg>
+              <span class="secondary-color">info@davkimya.com</span>
+            </div>
+          </div>
+          <!-- socials -->
+          <div class="d-flex align-items-center gap-2">
+            <a href="https://davkimya.com/tr" class="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              <img src="Home_files/photo-516e634f97d149d0c0c9c63a015feabf.png" class="lang_menu" alt="tr" width="30px" />
+            </a>
+            <a href="https://davkimya.com/ru" class="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              <img src="Home_files/photo-8145613ec7e208ce472f6b03919d735d.png" class="lang_menu" alt="ru" width="30px" />
+            </a>
+            <a href="https://davkimya.com/ar" class="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              <img src="Home_files/photo-20c6d9c335931b0b7f0245da907846d7.png" class="lang_menu" alt="ar" width="30px" />
+            </a>
+
+            <a href="https://www.facebook.com/dav" class="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-facebook text-white" viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com/dav" class="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-twitter text-white" viewBox="0 0 16 16">
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/dav/" class="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-instagram text-white" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@dav" class="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256" style="fill: #000000">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                  <g transform="scale(5.12,5.12)">
+                    <path
+                      d="M44.89844,14.5c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.29687,-0.69922 -9.39844,-1.19922 -16,-1.19922c-6.59766,0 -12.79687,0.5 -16.09766,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.40234,2.5 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.5,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.60156,-0.5 16.10156,-1.19922c2.19922,-0.5 4.09766,-2 4.5,-4.30078c0.39844,-2.5 0.89844,-6.10156 1,-10.5c-0.20312,-4.5 -0.70312,-8 -1.20312,-10.5zM19,32v-14l12.19922,7z"></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- menu && logo -->
+      <div>
+        <!-- menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary container">
+          <div class="container-fluid">
+            <!-- logo -->
+            <a class="navbar-brand" href="https://davkimya.com/en">
+              <img src="Home_files/logo-a9f658ded85a4459a0b427967ef706fc.png" alt="daav" class="img-fluid" width="100" />
+            </a>
+            <div class="d-flex align-items-center gap-3">
+              <button class="navbar-toggler primary-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list primary-color" viewBox="0 0 16 16">
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                </svg>
+              </button>
+              <form
+                class="d-flex d-lg-none ms-4 cursor"
+                role="search"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  fill="currentColor"
+                  class="bi bi-search text-white"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                </svg>
+              </form>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
+                <li class="nav-item">
+                  <a
+                    class="nav-link primary-color active"
+                    aria-current="page"
+                    href="https://davkimya.com/en">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link primary-color"
+                    href="https://davkimya.com/en/about-us">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link primary-color"
+                    href="https://davkimya.com/en/product">Product</a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link primary-color"
+                    href="https://davkimya.com/en/service">R&amp;D Services</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link primary-color"
+                    href="https://davkimya.com/en/faqs">Faqs</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link primary-color"
+                    href="https://davkimya.com/en/blogs">Event &amp; News</a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link primary-color"
+                    href="https://davkimya.com/en/contact-us">Contact us</a>
+                </li>
+              </ul>
+              <form
+                class="d-none d-lg-flex cursor ms-4"
+                role="search"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  fill="currentColor"
+                  class="bi bi-search text-white"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                </svg>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <!-- </nav> -->
+      </div>
+    </header>
+
+    <!-- main -->
+
+    <main>
+      <!-- banner -->
+      <section id="banner" class="bottom">
+        <div
+          class="swiper banner swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+          <div
+            class="swiper-wrapper"
+            style="
+              transition-duration: 1000ms;
+              transform: translate3d(-1589px, 0px, 0px);
+            "
+            id="swiper-wrapper-4358a92b5b61468c"
+            aria-live="off">
+            <div
+              class="swiper-slide swiper-slide-next swiper-slide-prev"
+              style="width: 1589px"
+              role="group"
+              aria-label="1 / 2"
+              data-swiper-slide-index="0">
+              <img
+                src="Home_files/photo-17ee7b11900de071a6ca81f4ead407ae.jpg"
+                alt
+                class="img-fluid w-100" />
+            </div>
+            <div
+              class="swiper-slide swiper-slide-visible swiper-slide-active"
+              style="width: 1589px"
+              role="group"
+              aria-label="2 / 2"
+              data-swiper-slide-index="1">
+              <img
+                src="Home_files/photo-86773d8e776d454ec302a618d7279eb4.jpg"
+                alt
+                class="img-fluid w-100" />
+            </div>
+          </div>
+          <!--<div class="swiper-button-next">-->
+          <!--</div>-->
+          <!--<div class="swiper-button-prev">-->
+          <!--</div>-->
+          <span
+            class="swiper-notification"
+            aria-live="assertive"
+            aria-atomic="true"></span>
+        </div>
+      </section>
+
+      <!-- box -->
+      <section class="container-lg overflow-visible right box-kh">
+        <div class="row g-4">
+          <div class="col-lg-4 position-relative">
+            <img
+              alt="box"
+              src="Home_files/photo-e881bd382ab3d7de8399cbed4a879d5a.jpg"
+              class="img-fluid h-100 w-100" />
+            <div class="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
+              <a
+                href="https://davkimya.com/en/product/35"
+                class="btn btn-primary mx-auto d-table">Polymeric Emulsion System</a>
+            </div>
+          </div>
+          <div class="col-lg-4 position-relative">
+            <img
+              alt="box"
+              src="Home_files/photo-0efdad051049bdd9af0683d4e67771b1.jpg"
+              class="img-fluid h-100 w-100" />
+            <div class="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
+              <a
+                href="https://davkimya.com/en/product/40"
+                class="btn btn-primary mx-auto d-table">Polyurethanes</a>
+            </div>
+          </div>
+          <div class="col-lg-4 position-relative">
+            <img
+              alt="box"
+              src="Home_files/photo-f8776e1d18d461d694d2f0630524d17f.jpg"
+              class="img-fluid h-100 w-100" />
+            <div class="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
+              <a
+                href="https://davkimya.com/en/product/53"
+                class="btn btn-primary mx-auto d-table">Engineered Polymeric Compounds</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+
+      <!-- company -->
+      <!-- choose us -->
+
+      <section
+        id="choose-us"
+        class="my-5 top py-5 position-relative"
+        data-sr-id="0"
+        style="
+          visibility: visible;
+          opacity: 0;
+          transform: matrix3d(
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -100,
+            0,
+            1
+          );
+        ">
+        <div class="container my-5">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="row g-4">
+                <div class="col-md-6 mt-5 mt-md-0">
+                  <div class="position-relative box bg-white p-4">
+                    <span
+                      class="d-flex align-items-center justify-content-center">01</span>
+                    <h2 class="mt-4 mb-3">offer innovative</h2>
+                    <p class="text-muted">
+                      of high-performance acrylic emulsion, polyester polyols,
+                      polyurethane insulation raw materials, Engineered plastic
+                      compounds, and Mastic and sealants
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                  <div class="position-relative box bg-white p-4">
+                    <span
+                      class="d-flex align-items-center justify-content-center">02</span>
+                    <h2 class="mt-4 mb-3">specialize in the production</h2>
+                    <p class="text-muted">
+                      of high-performance acrylic emulsion, polyester polyols,
+                      polyurethane insulation raw materials, Engineered plastic
+                      compounds, and Mastic and sealants
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-5 mt-md-0">
+                  <div class="position-relative box bg-white p-4">
+                    <span
+                      class="d-flex align-items-center justify-content-center">03</span>
+                    <h2 class="mt-4 mb-3">Respectful</h2>
+                    <p class="text-muted">
+                      we have developed a series of PP compounds for LED cover
+                      applications with unique properties that can bring several
+                      benefits through reduced weight, design freedom, and
+                      economic advantages
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                  <div class="position-relative box bg-white p-4">
+                    <span
+                      class="d-flex align-items-center justify-content-center">04</span>
+                    <h2 class="mt-4 mb-3">produce mastic and sealants</h2>
+                    <p class="text-muted">
+                      cartridges as our special finish&nbsp;products with
+                      tailor-made properties by a combination of different raw
+                      materials such as specific acrylic copolymers, silicon
+                      precursors, and silane-modified polymers
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="text-center text-md-start position-relative">
+                <span class="h3"> Why Choose Us </span>
+                <p class="text-muted"></p>
+                <p>
+                  <span style="font-size: 20px"><strong><span style="background-color: white"><span style="font-family: Calibri, sans-serif"><span style="color: #222222">Welcome to DavKimya- where innovation meets
+                            sustainability</span></span></span></strong></span>
+                </p>
+                <img
+                  alt="choose-us"
+                  src="Home_files/pic-569df63f61bd3b770df5f37f4582c298.jpg"
+                  class="w-100 img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+
+      <!-- projects -->
+
+      <!-- description -->
+
+      <!-- faqs -->
+
+      <section
+        id="faqs"
+        class="my-5 py-5 top container"
+        data-sr-id="2"
+        style="
+          visibility: visible;
+          opacity: 0;
+          transform: matrix3d(
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -100,
+            0,
+            1
+          );
+        ">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div
+              class="container px-0 position-relative text-center text-lg-start">
+              <span class="h3">Faqs</span>
+              <h1 class="my-3">Frequently Asked Question</h1>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="mb-3">
+                  <h5 class="bg-black p-3 fw-bold mb-0 primary-color">
+                    How does your company ensure the quality and consistency of
+                    your products?
+                  </h5>
+                  <p
+                    class="short_answer short_answer_0 text-muted bg-gray p-3 mb-0">
+                    Our company places a strong emphasis on quality control and
+                    consistency in the manufacture of our wide range of products
+                    with different applications. ...
+                    <a
+                      href="javascript:void(0)"
+                      class="primary-color"
+                      onclick="more_faq(0,'open')"
+                      data-id="0">More</a>
+                  </p>
+                  <div
+                    class="answer answer_0 d-none text-muted bg-gray p-3 mb-0">
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <strong><span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><span style="font-size: 12pt">Here's how we ensure quality:</span></span></span></strong>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong>Raw Material Selection:</strong><span style="font-size: 12pt">
+                            We carefully source raw materials from reputable
+                            suppliers to ensure they meet our stringent quality
+                            standards. This includes selecting high-quality
+                            acrylate monomers, surfactants, glycols, and
+                            etc</span></span></span>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong>Quality Testing:</strong><span style="font-size: 12pt">
+                            Our state-of-the-art quality control laboratories
+                            conduct rigorous testing at various stages of
+                            production. This includes testing for chemical
+                            purity, viscosity, solid content, and other critical
+                            parameters.</span></span></span>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong>Production Process Control:</strong><span style="font-size: 12pt">
+                            We maintain tight control over our manufacturing
+                            processes, employing advanced automation and process
+                            monitoring systems to minimize variations and ensure
+                            batch-to-batch consistency.</span></span></span>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong>Technical Support:</strong><span style="font-size: 12pt">
+                            Our team of technical experts works closely with
+                            customers to understand their specific requirements
+                            and provide guidance on the selection and
+                            application of our products.</span></span></span>
+                    </p>
+
+                    <a
+                      href="javascript:void(0)"
+                      class="primary-color"
+                      onclick="more_faq(0,'close')"
+                      data-id="0">Close</a>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <h5 class="bg-black p-3 fw-bold mb-0 primary-color">
+                    What are the primary industries or applications that benefit
+                    from your emulsion resin offerings?
+                  </h5>
+                  <p
+                    class="short_answer short_answer_1 text-muted bg-gray p-3 mb-0">
+                    Our emulsion resin products find applications across various
+                    industries, including: ...
+                    <a
+                      href="javascript:void(0)"
+                      class="primary-color"
+                      onclick="more_faq(1,'open')"
+                      data-id="1">More</a>
+                  </p>
+                  <div
+                    class="answer answer_1 d-none text-muted bg-gray p-3 mb-0">
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong><span style="font-size: 12pt">Coatings and Paints:</span></strong><span style="font-size: 12pt">
+                            Our emulsion resins are widely used in the
+                            formulation of high-quality water-based coatings and
+                            paints for architectural, automotive, and industrial
+                            applications. They provide excellent adhesion,
+                            durability, and low environmental impact.</span></span></span>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong><span style="font-size: 12pt">Adhesives and Sealants:</span></strong><span style="font-size: 12pt">
+                            We offer emulsion resins suitable for formulating
+                            adhesives and sealants with exceptional bonding
+                            properties, making them ideal for construction,
+                            packaging, and assembly applications.</span></span></span>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong><span style="font-size: 12pt">Textiles and Nonwovens:</span></strong><span style="font-size: 12pt">
+                            Our emulsion resins enhance the performance of
+                            textiles and nonwoven materials, providing
+                            attributes such as water repellency, flame
+                            resistance, and improved fabric stability.</span></span></span>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong><span style="font-size: 12pt">Paper and Packaging:</span></strong><span style="font-size: 12pt">
+                            We provide specialized emulsion resins for paper and
+                            packaging applications, including coatings,
+                            laminations, and inks, which improve print quality,
+                            barrier properties, and recyclability.</span></span></span>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><strong><span style="font-size: 12pt">Construction and Building Materials:</span></strong><span style="font-size: 12pt">
+                            Our emulsion resins are used in the production of
+                            construction materials like architectural coatings,
+                            concrete admixtures, and waterproofing compounds,
+                            ensuring long-lasting and sustainable building
+                            solutions.</span></span></span>
+                    </p>
+
+                    <p
+                      style="
+                        margin-left: 0cm;
+                        margin-right: 0cm;
+                        text-align: justify;
+                      ">
+                      <span style="font-size: 11pt"><span style="font-family: Calibri, sans-serif"><span style="font-size: 12pt">Our commitment to delivering consistent quality and
+                            technical support ensures that our emulsion resin
+                            products meet the diverse needs of customers across
+                            these industries, helping them achieve superior
+                            performance and environmental compliance in their
+                            applications.</span></span></span>
+                    </p>
+
+                    <a
+                      href="javascript:void(0)"
+                      class="primary-color"
+                      onclick="more_faq(1,'close')"
+                      data-id="1">Close</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- articles -->
+    </main>
+
+    <!-- footer -->
+    <style>
+      .footer_img {
+        max-height: 80px;
+        object-fit: contain;
+      }
+    </style>
+    <footer class="pt-5 text-white">
+      <div class="container mt-5">
+        <div class="row g-4">
+          <div class="col-lg-7 col-md-6">
+            <img
+              alt="daav"
+              src="Home_files/logo-a9f658ded85a4459a0b427967ef706fc.png"
+              class="img-fluid footer_img" />
+            <p class="mt-4 text-white-50"></p>
+            <p>
+              Dav Kimya company is an innovative company focused on the
+              production of advanced polymeric materials. At Dav Kimya, our
+              mission is to offer innovative and cutting-edge formulations that
+              offer superior performance and environmental sustainability.
+            </p>
+            <p></p>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <span class="pb-2 h3">Quick Links</span>
+                <ul class="list-unstyled p-0 m-0 mt-4">
+                  <li class="mb-2">
+                    <a
+                      href="https://davkimya.com/en"
+                      class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1"
+                        viewBox="0 0 16 16">
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                      </svg>
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="https://davkimya.com/en/about-us"
+                      class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1"
+                        viewBox="0 0 16 16">
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                      </svg>
+                      <span>About us</span>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="https://davkimya.com/en/service"
+                      class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1"
+                        viewBox="0 0 16 16">
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                      </svg>
+                      <span>R&amp;D Services</span>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="https://davkimya.com/en/faqs"
+                      class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1"
+                        viewBox="0 0 16 16">
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                      </svg>
+                      <span>Faqs</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <span class="pb-2 h3">R&amp;D Services</span>
+                <ul class="list-unstyled p-0 m-0 mt-4">
+                  <li class="mb-2">
+                    <a
+                      class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"
+                      href="https://davkimya.com/en/service/show/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1"
+                        viewBox="0 0 16 16">
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                      </svg>
+                      <span>We invite you to explore the possibilities of our
+                        customized products</span>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"
+                      href="https://davkimya.com/en/service/show/1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1"
+                        viewBox="0 0 16 16">
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                      </svg>
+                      <span>At Davkimya our Research and Development (R&amp;D)
+                        team</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top mt-5">
+        <div
+          class="d-flex flex-wrap container align-items-center justify-content-center justify-content-lg-between gap-4 py-3">
+          <p class="mb-0 fw-bold text-white-50 text-center col-12">
+            Copyright 2023 © All Right Reserved for DAV / Website Designed by
+            <a href="https://adib.com.tr/" target="_blank" class="text-white">
+              Adib It Group
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="Home_files/jquery-3.7.1.js"></script>
+    <script src="Home_files/swiper-bundle.min.js"></script>
+    <script src="Home_files/swiper-bundle.min_002.js"></script>
+    <script src="Home_files/scrollreveal.min.js"></script>
+    <script src="Home_files/scripts.js"></script>
+    <script src="Home_files/bootstrap.bundle.min.js"></script>
+    <script src="Home_files/swiper.min.js"></script>
+
+    <!-- sweetalert2 js-->
+    <script src="Home_files/sweetalert2@10"></script>
+    <script>
+      // if ($('#exampleModal')[0]) {
+      //     $(document).ready(function () {
+      //         $("#exampleModal").modal('show');
+      //     });
+      // }
+      // if ($('#orderdatamodal')[0]) {
+      //     document.getElementById("orderdatabtn").addEventListener("click", function () {
+      //         $("#orderdatamodal").modal('show');
+      //     });
+      // }
+    </script>
+
+    <!--<div class="wat_sapp wat_sapp1 d-none-print">-->
+    <!--  <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=+900000000000">-->
+    <!--    <img class="social_img" src="https://davkimya.com/assets/front/img/whatss.png" alt="...">-->
+    <!--  </a>-->
+    <!--</div>-->
+  </body>
+
+</html>
