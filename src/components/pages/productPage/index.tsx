@@ -29,88 +29,88 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <a href="https://davkimya.com/en/product/35" className="title_h1">
+                  <Link href="https://davkimya.com/en/product/35" className="title_h1">
                     Polymeric Emulsion System
-                  </a>
+                  </Link>
                   <hr />
-                  <a href="https://davkimya.com/en/product/36" className="title_h5">
+                  <Link href="https://davkimya.com/en/product/36" className="title_h5">
                     Adhesives and sealants
-                  </a>
-                  <a href="https://davkimya.com/en/product/37" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/37" className="title_h5">
                     Paint and coating application
-                  </a>
-                  <a href="https://davkimya.com/en/product/38" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/38" className="title_h5">
                     Tape and label
-                  </a>
-                  <a href="https://davkimya.com/en/product/39" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/39" className="title_h5">
                     Textile application
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <a href="https://davkimya.com/en/product/40" className="title_h1">
+                  <Link href="https://davkimya.com/en/product/40" className="title_h1">
                     Polyurethanes
-                  </a>
+                  </Link>
                   <hr />
-                  <a href="https://davkimya.com/en/product/41" className="title_h5">
+                  <Link href="https://davkimya.com/en/product/41" className="title_h5">
                     Polyester polyols
-                  </a>
-                  <a href="https://davkimya.com/en/product/42" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/42" className="title_h5">
                     Spray polyurethane system
-                  </a>
-                  <a href="https://davkimya.com/en/product/43" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/43" className="title_h5">
                     High-Density PU Foams
-                  </a>
-                  <a href="https://davkimya.com/en/product/44" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/44" className="title_h5">
                     Rigid PU and PIR for Composite Panel Insulation
-                  </a>
-                  <a href="https://davkimya.com/en/product/45" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/45" className="title_h5">
                     Industrial Insulation Foams
-                  </a>
-                  <a href="https://davkimya.com/en/product/46" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/46" className="title_h5">
                     Bio-based Polyurethanes
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <a href="https://davkimya.com/en/product/53" className="title_h1">
+                  <Link href="https://davkimya.com/en/product/53" className="title_h1">
                     Engineered Polymeric Compounds
-                  </a>
+                  </Link>
                   <hr />
-                  <a href="https://davkimya.com/en/product/54" className="title_h5">
+                  <Link href="https://davkimya.com/en/product/54" className="title_h5">
                     Plastics for the Lighting Industry
-                  </a>
-                  <a href="https://davkimya.com/en/product/59" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/59" className="title_h5">
                     Electronic and Electrical Industry
-                  </a>
-                  <a href="https://davkimya.com/en/product/62" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/62" className="title_h5">
                     Household Appliances and Automobile Industry
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <a href="https://davkimya.com/en/product/66" className="title_h1">
+                  <Link href="https://davkimya.com/en/product/66" className="title_h1">
                     Mastic and sealants
-                  </a>
+                  </Link>
                   <hr />
-                  <a href="https://davkimya.com/en/product/67" className="title_h5">
+                  <Link href="https://davkimya.com/en/product/67" className="title_h5">
                     Acrylic copolymer sealants
-                  </a>
-                  <a href="https://davkimya.com/en/product/68" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/68" className="title_h5">
                     Similar silicon sealants
-                  </a>
-                  <a href="https://davkimya.com/en/product/69" className="title_h5">
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/69" className="title_h5">
                     MS polymer-based sealants
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
