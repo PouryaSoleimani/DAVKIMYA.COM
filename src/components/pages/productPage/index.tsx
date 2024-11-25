@@ -8,7 +8,7 @@ const ProductPage = () => {
   useEffect(() => { AOS.init(); AOS.refresh() }, []);
   return (
     <>
-      {/* ARTICLE TITLE */}
+      {/* TITLE */}
       <section data-aos="fade-down" data-aos-duration="2500" id="article-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" data-sr-id="0" >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1">Our Product</h1>
@@ -22,7 +22,7 @@ const ProductPage = () => {
         </div>
       </section >
 
-
+      {/* BOXES */}
       <section data-aos="fade-right" data-aos-duration="2500" id="articles" className="mt-5 py-5 left" data-sr-id="2" >
         <div className="container">
           <div className="text-center">
