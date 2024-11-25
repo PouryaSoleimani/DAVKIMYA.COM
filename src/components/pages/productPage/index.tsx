@@ -4,7 +4,7 @@ const ProductPage = () => {
   return (
     <>
       {/* ARTICLE TITLE */}
-      <section id="article-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" data-sr-id="0" style={{ visibility: "visible", opacity: "1", transform: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)", transition: "opacity 2s ease-out 0.5s transform 2s ease-out 0.5s" }}>
+      <section  data-aos="fade-down" id="article-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" data-sr-id="0" style={{ visibility: "visible", opacity: "1", transform: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)", transition: "opacity 2s ease-out 0.5s transform 2s ease-out 0.5s" }}>
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1">Our Product</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
