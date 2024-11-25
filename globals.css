@@ -449,6 +449,7 @@ footer .col-lg-3 a:hover,
 #article-title,
 #post-title {
   /* background-image: url("../img/2.jpg"); */
+  background-image: url("./public/images/products__page/products__header.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
