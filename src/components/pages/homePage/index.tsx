@@ -13,7 +13,7 @@ import WHYCHOOSEUS from "./../../../../public/images/whychooseus/WHYCHOOSEUS.jpg
 // * SPLIDE
 import { Splide, SplideSlide } from "react-splide-ts";
 import "react-splide-ts/css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
