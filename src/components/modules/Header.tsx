@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { LuMail,  LuPhoneForwarded } from 'react-icons/lu'
+import { LuMail, LuPhoneForwarded } from 'react-icons/lu'
 // IMAGES
 import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
 import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
@@ -28,7 +28,7 @@ const Header = () => {
     useEffect(() => {
         if (windowWidth > 1000) { setshowMenu(true) } else { setshowMenu(false) }
     }, [windowWidth]);
- 
+
 
     return (
         <header>
@@ -39,10 +39,6 @@ const Header = () => {
                     {/* <!-- CONTACT INFOS --> */}
                     <div
                         className="d-flex flex-wrap align-items-center justify-content-center  gap-3">
-                        <div className="d-flex align-items-center gap-2">
-                            <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
-                            <span className="secondary-color">+905346879096</span>
-                        </div>
                         <div className="d-flex align-items-center gap-2">
                             <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
                             <span className="secondary-color">+905346879096</span>
@@ -112,13 +108,13 @@ const Header = () => {
                         <div className={`${showMenu === false ? "collapse" : ""} navbar-collapse translate-y-2 lg:translate-y-3`}>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color active" aria-current="page" href="/">Home</Link>
+                                    <Link className="nav-link primary-color active" aria-current="page" href="/en/">Home</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href="https://davkimya.com/en/about-us">About us</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/product">Product</Link>
+                                    <Link className="nav-link primary-color" href="/en/product">Product</Link>
                                 </li>
 
                                 <li className="nav-item">
