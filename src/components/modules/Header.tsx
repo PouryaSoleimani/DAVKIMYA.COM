@@ -45,6 +45,10 @@ const Header = () => {
                         </div>
                         <div className="d-flex align-items-center gap-2">
                             <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
+                            <span className="secondary-color">+905340433646</span>
+                        </div>
+                        <div className="d-flex align-items-center gap-2">
+                            <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
                             <span className="secondary-color">+905065034338</span>
                         </div>
                         <div className="d-flex align-items-center gap-2">
