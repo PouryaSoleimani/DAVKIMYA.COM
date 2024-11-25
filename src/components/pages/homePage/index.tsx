@@ -14,10 +14,9 @@ import WHYCHOOSEUS from "./../../../../public/images/whychooseus/WHYCHOOSEUS.jpg
 import { Splide, SplideSlide } from "react-splide-ts";
 import "react-splide-ts/css";
 import { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-// COMPONENT =================================================================================================================================================
+// @ts-ignore type is not declared
+import AOS from 'aos'
+// COMPONENT
 const HomePage = () => {
 
   const { lng } = useParams();

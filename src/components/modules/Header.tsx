@@ -38,7 +38,11 @@ const Header = () => {
                     className="d-flex flex-wrap gap-4 align-items-center justify-content-md-between justify-content-center container py-3">
                     {/* <!-- CONTACT INFOS --> */}
                     <div
-                        className="d-flex flex-wrap align-items-center justify-content-center gap-md-5 gap-3">
+                        className="d-flex flex-wrap align-items-center justify-content-center  gap-3">
+                        <div className="d-flex align-items-center gap-2">
+                            <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
+                            <span className="secondary-color">+905346879096</span>
+                        </div>
                         <div className="d-flex align-items-center gap-2">
                             <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
                             <span className="secondary-color">+905346879096</span>
@@ -152,7 +156,7 @@ const Header = () => {
                 </nav>
             </div>
             {/* <!-- SEARCH MODAL --> */}
-            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered ">
                     <div className="modal-content border border-lime-400">
                         <div className="modal-header ">
