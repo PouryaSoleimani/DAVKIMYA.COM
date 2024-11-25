@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ProductPage = () => {
   return (
     <>
@@ -6,11 +8,11 @@ const ProductPage = () => {
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1">Our Product</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
-            <a href="https://davkimya.com/en" className="d-block primary-color fw-bold text-decoration-none">Home</a>
+            <Link href="/en/" className="d-block primary-color fw-bold text-decoration-none">Home</Link>
             <span>/</span>
-            <a href="https://davkimya.com/en/product" className="text-white-50">
+            <Link href="/en/product" className="text-white-50">
               Product
-            </a>
+            </Link>
           </div>
         </div>
       </section >
