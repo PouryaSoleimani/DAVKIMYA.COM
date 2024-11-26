@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// ^ HOME PAGE COMPONENT =======================================================================================================================
 "use client";
-import Header from "@/components/modules/Header";
+// ^ HOME PAGE COMPONENT =====================================================================================================================================
 import { useTranslation } from "./../../../core/i18n/client";
 import { useParams } from "next/navigation";
-import Footer from "@/components/modules/Footer";
 import Image from "next/image";
 import SLIDE1 from "./../../../../public/images/banner/SLIDE___1.jpg"
 import SLIDE2 from "./../../../../public/images/banner/SLIDE___2.jpg"
@@ -15,23 +13,30 @@ import WHYCHOOSEUS from "./../../../../public/images/whychooseus/WHYCHOOSEUS.jpg
 // * SPLIDE
 import { Splide, SplideSlide } from "react-splide-ts";
 import "react-splide-ts/css";
-import { useEffect } from "react";
-import AOS from 'aos'
-// COMPONENT
+import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// COMPONENT =================================================================================================================================================
 const HomePage = () => {
+
   const { lng } = useParams();
   const { t } = useTranslation();
-  useEffect(() => { AOS.init(); }, [])
+  const [showFAQ, setShowFAQ] = useState(false)
+  const [showFAQ2, setShowFAQ2] = useState(false)
+  useEffect(() => { AOS.init(); }, []);
+  function showFaqHandler() { setShowFAQ(prev => !prev) }
+  function showFaqHandler2() { setShowFAQ2(prev => !prev) }
 
   return (
     <>
       {/* <!-- BANNER --> */}
       <Splide options={{ rewind: true, rewindByDrag: true, arrows: false, autoplay: true, loop: true, drag: true, }} aria-label="React Splide Example">
         <SplideSlide className="w-screen">
-          <Image src={SLIDE1} alt="Image 1" width={1500} height={920} />
+          <Image src={SLIDE1} alt="Image 1" width={1500} height={920} className="w-screen" />
         </SplideSlide>
         <SplideSlide>
-          <Image src={SLIDE2} alt="Image 2" width={1500} height={920} />
+          <Image src={SLIDE2} alt="Image 2" width={1500} height={920} className="w-screen" />
         </SplideSlide>
       </Splide>
 
@@ -58,18 +63,19 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
       {/* <!-- WHY CHOOSE US --> */}
-      <section id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
+      <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
         <div className="container my-5">
           <div className="row g-4">
             <div className="col-lg-7">
               <div className="row g-4">
                 <div className="col-md-6 mt-5 mt-md-0">
-                  <div className="position-relative box bg-white p-4">
+                  <div className="position-relative box bg-white p-4 shadow-xl shadow-zinc-800">
                     <span
                       className="d-flex align-items-center justify-content-center">01</span>
-                    <h2 className="mt-4 mb-3">offer innovative</h2>
-                    <p className="text-muted">
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">offer innovative</h2>
+                    <p className="text-muted text-lg">
                       of high-performance acrylic emulsion, polyester polyols,
                       polyurethane insulation raw materials, Engineered plastic
                       compounds, and Mastic and sealants
@@ -80,8 +86,8 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">02</span>
-                    <h2 className="mt-4 mb-3">specialize in the production</h2>
-                    <p className="text-muted">
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight ">specialize in the production</h2>
+                    <p className="text-muted text-lg">
                       of high-performance acrylic emulsion, polyester polyols,
                       polyurethane insulation raw materials, Engineered plastic
                       compounds, and Mastic and sealants
@@ -92,8 +98,8 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">03</span>
-                    <h2 className="mt-4 mb-3">Respectful</h2>
-                    <p className="text-muted">
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Respectful</h2>
+                    <p className="text-muted text-lg">
                       we have developed a series of PP compounds for LED cover
                       applications with unique properties that can bring several
                       benefits through reduced weight, design freedom, and
@@ -105,8 +111,8 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">04</span>
-                    <h2 className="mt-4 mb-3">produce mastic and sealants</h2>
-                    <p className="text-muted">
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">produce mastic and sealants</h2>
+                    <p className="text-muted text-lg">
                       cartridges as our special finish&nbsp;products with
                       tailor-made properties by a combination of different raw
                       materials such as specific acrylic copolymers, silicon
@@ -118,35 +124,38 @@ const HomePage = () => {
             </div>
             <div className="col-lg-5">
               <div className="text-center text-md-start position-relative">
-                <span className="h3"> Why Choose Us </span>
+                <span className="h3 underline decoration-4 -underline-offset-4 decoration-lime-400"> Why Choose Us </span>
                 <p className="text-muted"></p>
                 <p>
                   <span className="text-[20px]">
                     <strong>
-                      <span className="bg-white"><span className="font-mono">
-                        <span className="text-[#2222]">Welcome to DavKimya- where innovation meets sustainability</span>
-                      </span>
+                      <span className="bg-white mt-4">
+                        <span>
+                          <span className="text-zinc-700 tracking-tighter text-[17px] font-sans">Welcome to DavKimya- where innovation meets sustainability</span>
+                        </span>
                       </span>
                     </strong>
                   </span>
                 </p>
-                <Image alt="choose-us" src={WHYCHOOSEUS} className="w-100 img-fluid" />
+                <Image alt="choose-us" src={WHYCHOOSEUS} className="w-100 mt-4 img-fluid" />
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* <!-- FAQS --> */}
-      <section id="faqs" className="my-5 py-5 top container" data-sr-id="2" style={{ visibility: "visible", opacity: "0", transform: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -100, 0, 1)" }}>
+      <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
         <div className="row g-4">
-          <div className="col-lg-4">
-            <div
-              className="container px-0 position-relative text-center text-lg-start">
-              <span className="h3">Faqs</span>
-              <h1 className="my-3">Frequently Asked Question</h1>
+
+          <div id="FAQ____TITLE" className="col-lg-4">
+            <div className="container px-0 position-relative text-center text-lg-start">
+              <span className="h3 text-3xl">Faqs</span>
+              <h1 className="my-3 text-4xl">Frequently Asked Question</h1>
             </div>
           </div>
-          <div className="col-lg-8">
+
+          <div id="FAQ__ACCORDIONS" className="col-lg-8">
             <div className="row">
               <div className="col-lg-8">
                 <div className="mb-3">
@@ -154,15 +163,14 @@ const HomePage = () => {
                     How does your company ensure the quality and consistency of
                     your products?
                   </h5>
-                  <p
-                    className="short_answer short_answer_0 text-muted bg-gray p-3 mb-0">
+                  <p className="short_answer short_answer_0 text-muted bg-gray p-3 mb-0">
                     Our company places a strong emphasis on quality control and
                     consistency in the manufacture of our wide range of products
                     with different applications. ...
-                    <a href="javascript:void(0)" className="primary-color" data-id="0">More</a>
+
+                    <button className="primary-color" onClick={showFaqHandler}>More</button>
                   </p>
-                  <div
-                    className="answer answer_0 d-none text-muted bg-gray p-3 mb-0">
+                  <div id="COLLAPSE__TEXT__1" className={`${showFAQ ? "block" : "hidden"} text-muted bg-gray p-3 mb-0`}>
                     <p className="text-justify mx-0">
                       <strong>
                         <span className="text-[11pt]">
@@ -185,12 +193,17 @@ const HomePage = () => {
                     </p>
 
                     <p className="mx-0 text-justify">
-                      <span className="text-[11pt]"><span className="font-mono"><strong>Quality Testing:</strong><span className="text-[12pt]">
-                        Our state-of-the-art quality control laboratories
-                        conduct rigorous testing at various stages of
-                        production. This includes testing for chemical
-                        purity, viscosity, solid content, and other critical
-                        parameters.</span></span></span>
+                      <span className="text-[11pt]">
+                        <span className="font-mono">
+                          <strong>Quality Testing:</strong>
+                          <span className="text-[12pt]">
+                            Our state-of-the-art quality control laboratories
+                            conduct rigorous testing at various stages of
+                            production. This includes testing for chemical
+                            purity, viscosity, solid content, and other critical
+                            parameters.</span>
+                        </span>
+                      </span>
                     </p>
 
                     <p className="mx-0 text-justify">
@@ -233,10 +246,9 @@ const HomePage = () => {
                     className="short_answer short_answer_1 text-muted bg-gray p-3 mb-0">
                     Our emulsion resin products find applications across various
                     industries, including: ...
-                    <a href="javascript:void(0)" className="primary-color" data-id="1">More</a>
+                    <button className="primary-color" onClick={showFaqHandler2}>More</button>
                   </p>
-                  <div
-                    className="answer answer_1 d-none text-muted bg-gray p-3 mb-0">
+                  <div id="COLLAPSE__TEXT__2" className={`${showFAQ2 ? "block" : "hidden"} text-muted bg-gray p-3 mb-0`}>
                     <p className="mx-0 text-justify">
                       <span className="text-[11pt]"><span className="font-mono"><strong><span className="text-[12pt]">Coatings and Paints:</span></strong><span className="text-[12pt]">
                         Our emulsion resins are widely used in the
@@ -280,6 +292,7 @@ const HomePage = () => {
                         </span>
                       </span>
                     </p>
+
 
                     <p className="mx-0 text-justify">
                       <span className="text-[11pt]">
@@ -326,7 +339,7 @@ const HomePage = () => {
                       </span>
                     </p>
 
-                    <a href="javascript:void(0)" className="primary-color" data-id="1">Close</a>
+                    <button onClick={showFaqHandler2} className="primary-color" data-id="1">Close</button>
                   </div>
                 </div>
               </div>
@@ -334,10 +347,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
     </>
   );
 };
 export default HomePage;
-
-
-// style={"transition-duration: 1000ms;   transform: translate3d(-1589px, 0px, 0px);"}

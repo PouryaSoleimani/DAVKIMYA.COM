@@ -3,17 +3,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { LuMail,  LuPhoneForwarded } from 'react-icons/lu'
+import { LuMail, LuPhoneForwarded } from 'react-icons/lu'
 // IMAGES
 import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
 import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
 import RussianFlag from '../../../public/Home_files/RUSSIAN__FLAG.png'
 import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
+import { useLang } from '@/core/providers/langProvider'
 
 
 // COMPONENT
 const Header = () => {
-
+const {lng}= useLang()
     const [showMenu, setshowMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
     const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
@@ -28,7 +29,7 @@ const Header = () => {
     useEffect(() => {
         if (windowWidth > 1000) { setshowMenu(true) } else { setshowMenu(false) }
     }, [windowWidth]);
- 
+
 
     return (
         <header>
@@ -38,7 +39,7 @@ const Header = () => {
                     className="d-flex flex-wrap gap-4 align-items-center justify-content-md-between justify-content-center container py-3">
                     {/* <!-- CONTACT INFOS --> */}
                     <div
-                        className="d-flex flex-wrap align-items-center justify-content-center gap-md-5 gap-3">
+                        className="d-flex flex-wrap align-items-center justify-content-center  gap-3">
                         <div className="d-flex align-items-center gap-2">
                             <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
                             <span className="secondary-color">+905346879096</span>
@@ -56,13 +57,13 @@ const Header = () => {
                     {/* <!-- SOCIALS AND LANGUAGES --> */}
                     <div className="d-flex align-items-center gap-2">
                         {/* LANGUAGES */}
-                        <Link href="https://davkimya.com/tr" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                        <Link href="/tr" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
                             <Image src={TurkishFlag} className="lang_menu " alt="tr" width={50} height={50} />
                         </Link>
-                        <Link href="https://davkimya.com/ru" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                        <Link href="/ru" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
                             <Image src={RussianFlag} className="lang_menu" alt="ru" width={30} height={30} />
                         </Link>
-                        <Link href="https://davkimya.com/ar" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                        <Link href="/ar" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
                             <Image src={ArabicFlag} className="lang_menu " alt="tr" width={50} height={50} />
                         </Link>
                         {/* SOCIAL MEIDAS  */}
@@ -108,27 +109,27 @@ const Header = () => {
                         <div className={`${showMenu === false ? "collapse" : ""} navbar-collapse translate-y-2 lg:translate-y-3`}>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color active" aria-current="page" href="/">Home</Link>
+                                    <Link className="nav-link primary-color active" aria-current="page" href={`/${lng}`}>Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/about-us">About us</Link>
+                                    <Link className="nav-link primary-color" href="/en/about-us">About us</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/product">Product</Link>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/service">R&amp;D Services</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/faqs">Faqs</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/blogs">Event &amp; News</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/product`}>Product</Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/contact-us">Contact us</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/service`}>R&amp;D Services</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link primary-color" href={`/${lng}/faqs`}>Faqs</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link primary-color" href={`/${lng}/blogs`}>Event &amp; News</Link>
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>Contact us</Link>
                                 </li>
                             </ul>
                             <form
@@ -152,7 +153,7 @@ const Header = () => {
                 </nav>
             </div>
             {/* <!-- SEARCH MODAL --> */}
-            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered ">
                     <div className="modal-content border border-lime-400">
                         <div className="modal-header ">

@@ -5,6 +5,7 @@ import { MainProvider } from "@/core/providers/mainProvider";
 import './../../../globals.css'
 import Header from "@/components/modules/Header";
 import Footer from "@/components/modules/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface paramsProps {
   lng: string;
@@ -15,7 +16,7 @@ interface PageProps {
   params: paramsProps;
 }
 
-const generateStaticParams = () => {
+const   generateStaticParams = async() => {
   return languages.map((lng) => ({ lng }));
 };
 
