@@ -431,7 +431,7 @@ footer .col-lg-3 a:hover,
 /* project page */
 
 #project-title {
-  /* background-image: url("../img/oil-refineries-PQLV96Y.jpg"); */
+  background-image: url("./public/images/servicesPage/header.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -448,7 +448,6 @@ footer .col-lg-3 a:hover,
 /* article page */
 #article-title,
 #post-title {
-  /* background-image: url("../img/2.jpg"); */
   background-image: url("./public/images/products__page/products__header.jpg");
   background-size: cover;
   background-position: center;
