@@ -9,11 +9,12 @@ import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
 import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
 import RussianFlag from '../../../public/Home_files/RUSSIAN__FLAG.png'
 import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
+import { useLang } from '@/core/providers/langProvider'
 
 
 // COMPONENT
 const Header = () => {
-
+const {lng}= useLang()
     const [showMenu, setshowMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
     const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
@@ -108,17 +109,17 @@ const Header = () => {
                         <div className={`${showMenu === false ? "collapse" : ""} navbar-collapse translate-y-2 lg:translate-y-3`}>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color active" aria-current="page" href="/en/">Home</Link>
+                                    <Link className="nav-link primary-color active" aria-current="page" href={`/${lng}`}>Home</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href="https://davkimya.com/en/about-us">About us</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="/en/product">Product</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/product`}>Product</Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/service">R&amp;D Services</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/service`}>R&amp;D Services</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href="https://davkimya.com/en/faqs">Faqs</Link>
