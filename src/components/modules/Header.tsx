@@ -57,13 +57,13 @@ const {lng}= useLang()
                     {/* <!-- SOCIALS AND LANGUAGES --> */}
                     <div className="d-flex align-items-center gap-2">
                         {/* LANGUAGES */}
-                        <Link href="https://davkimya.com/tr" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                        <Link href="/tr" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
                             <Image src={TurkishFlag} className="lang_menu " alt="tr" width={50} height={50} />
                         </Link>
-                        <Link href="https://davkimya.com/ru" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                        <Link href="/ru" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
                             <Image src={RussianFlag} className="lang_menu" alt="ru" width={30} height={30} />
                         </Link>
-                        <Link href="https://davkimya.com/ar" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
+                        <Link href="/ar" className="d-block primary-bg transition rounded-circle d-flex align-items-center justify-content-center">
                             <Image src={ArabicFlag} className="lang_menu " alt="tr" width={50} height={50} />
                         </Link>
                         {/* SOCIAL MEIDAS  */}
@@ -112,7 +112,7 @@ const {lng}= useLang()
                                     <Link className="nav-link primary-color active" aria-current="page" href={`/${lng}`}>Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/about-us">About us</Link>
+                                    <Link className="nav-link primary-color" href="/en/about-us">About us</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/product`}>Product</Link>
@@ -122,14 +122,14 @@ const {lng}= useLang()
                                     <Link className="nav-link primary-color" href={`/${lng}/service`}>R&amp;D Services</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/faqs">Faqs</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/faqs`}>Faqs</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/blogs">Event &amp; News</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/blogs`}>Event &amp; News</Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://davkimya.com/en/contact-us">Contact us</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>Contact us</Link>
                                 </li>
                             </ul>
                             <form
