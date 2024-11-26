@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import item1 from "@/../public/images/servicesPage/item1.jpg";
 import item2 from "@/../public/images/servicesPage/item2.jpg";
@@ -6,7 +7,7 @@ import { useLang } from "@/core/providers/langProvider";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-// @ts-ignore
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -49,8 +50,8 @@ const BlogDetailsPage = () => {
             {blogId === "1"
               ? serviceData[0].title
               : blogId === "2"
-              ? serviceData[1].title
-              : ""}
+                ? serviceData[1].title
+                : ""}
           </h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
             <Link
@@ -83,8 +84,8 @@ const BlogDetailsPage = () => {
                   blogId === "1"
                     ? serviceData[0].image
                     : blogId === "2"
-                    ? serviceData[1].image
-                    : ""
+                      ? serviceData[1].image
+                      : ""
                 }
                 alt={t("lorem")}
                 className="img-fluid w-[100%]"
@@ -94,15 +95,15 @@ const BlogDetailsPage = () => {
               {blogId === "1"
                 ? serviceData[0].title
                 : blogId === "2"
-                ? serviceData[1].title
-                : ""}
+                  ? serviceData[1].title
+                  : ""}
             </h1>
             <p className="text-secondary">
               {blogId === "1"
                 ? serviceData[0].text
                 : blogId === "2"
-                ? serviceData[1].text
-                : ""}
+                  ? serviceData[1].text
+                  : ""}
             </p>
           </div>
           <div className="col-lg-4">
@@ -144,8 +145,8 @@ const BlogDetailsPage = () => {
                   {blogId === "1"
                     ? serviceData[0].title
                     : blogId === "2"
-                    ? serviceData[1].title
-                    : ""}
+                      ? serviceData[1].title
+                      : ""}
                 </Link>
               </div>
             </div>
