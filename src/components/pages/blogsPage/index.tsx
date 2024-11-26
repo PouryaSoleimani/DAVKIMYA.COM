@@ -9,10 +9,19 @@ import item5 from "@/../public/images/blogs/item5.jpg";
 import item6 from "@/../public/images/blogs/item6.jpg";
 import { useLang } from "@/core/providers/langProvider";
 import { useTranslation } from "@/core/i18n/client";
+// @ts-ignore
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const BlogsPage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const { t } = useTranslation();
   const { lng } = useLang();
+  const imgArr = [item1, item2, item3, item4, item5, item6];
   return (
     <>
       <section
@@ -42,8 +51,8 @@ const BlogsPage = () => {
         data-aos="fade-right"
         data-aos-duration="2500"
         id="articles"
-        className="mt-5 py-5 left"
         data-sr-id="2"
+        className="mt-5 py-5 left"
       >
         <div className="container">
           <div className="text-center">
@@ -52,371 +61,73 @@ const BlogsPage = () => {
           </div>
 
           <div className="row g-4 mt-5 text-center">
-            <div className="col-lg-4">
-              <div className="box p-3 bg-white">
-                <Link
-                  href={`/${lng}/blogs/1}`}
-                  className="d-block overflow-hidden"
-                >
-                  <Image
-                    width={710}
-                    height={710}
-                    src={item1}
-                    alt="What is Lorem Ipsum?"
-                    className="w-100 transition"
-                  />
-                </Link>
-                <div className="d-flex align-items-center justify-content-center gap-4 my-3">
-                  <Link
-                    href={`/${lng}/blogs/1}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      className="bi bi-person-fill text-muted"
-                      viewBox="0 0 16 16"
+            {imgArr.map((item, index: number) => {
+              return (
+                <div className="col-lg-4" key={index}>
+                  <div className="box p-3 bg-white">
+                    <Link
+                      href={`/${lng}/blogs/${index + 1}}`}
+                      className="d-block overflow-hidden"
                     >
-                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    </svg>
-                    <span className="primary-color fw-bold">developer</span>
-                  </Link>
-                  <Link
-                    href={`/${lng}/blogs/1}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-calendar-fill text-muted"
-                      viewBox="0 0 16 16"
+                      <Image
+                        width={710}
+                        height={710}
+                        src={item}
+                        alt="What is Lorem Ipsum?"
+                        className="w-100 transition"
+                      />
+                    </Link>
+                    <div className="d-flex align-items-center justify-content-center gap-4 my-3">
+                      <Link
+                        href={`/${lng}/blogs/${index + 1}}`}
+                        className="d-flex align-items-center gap-1 text-decoration-none"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          className="bi bi-person-fill text-muted"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                        </svg>
+                        <span className="primary-color fw-bold">
+                          {t("admin")}
+                        </span>
+                      </Link>
+                      <Link
+                        href={`/${lng}/blogs/${index + 1}}`}
+                        className="d-flex align-items-center gap-1 text-decoration-none"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          className="bi bi-calendar-fill text-muted"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
+                        </svg>
+                        <span className="primary-color fw-bold">
+                          Apr 5, 2023
+                        </span>
+                      </Link>
+                    </div>
+                    <Link
+                      href={`/${lng}/blogs/${index + 1}}`}
+                      className="h4 text-decoration-none transition"
                     >
-                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
-                    </svg>
-                    <span className="primary-color fw-bold">Jul 26, 2023</span>
-                  </Link>
+                      {t("lorem")}
+                    </Link>
+                    <p className="text-muted mt-3">
+                      {t("loremIpsum").slice(0, 92)}...
+                    </p>
+                  </div>
                 </div>
-                <Link
-                  href={`/${lng}/blogs/1}`}
-                  className="h4 text-decoration-none transition"
-                >
-                  What is Lorem Ipsum?
-                </Link>
-                <p className="text-muted mt-3">
-                  What is Lorem Ipsum? Lorem Ipsum&nbsp;is simply dummy text of
-                  the printing and typesetting indust...
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="box p-3 bg-white">
-                <Link
-                  href={`/${lng}/blogs/2}`}
-                  className="d-block overflow-hidden"
-                >
-                  <Image
-                    width={710}
-                    height={710}
-                    src={item2}
-                    alt="What is Lorem Ipsum?"
-                    className="w-100 transition"
-                  />
-                </Link>
-                <div className="d-flex align-items-center justify-content-center gap-4 my-3">
-                  <Link
-                    href={`/${lng}/blogs/2}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      className="bi bi-person-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    </svg>
-                    <span className="primary-color fw-bold">admin</span>
-                  </Link>
-                  <Link
-                    href={`/${lng}/blogs/2}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-calendar-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
-                    </svg>
-                    <span className="primary-color fw-bold">Apr 5, 2023</span>
-                  </Link>
-                </div>
-                <Link
-                  href={`/${lng}/blogs/2}`}
-                  className="h4 text-decoration-none transition"
-                >
-                  What is Lorem Ipsum?
-                </Link>
-                <p className="text-muted mt-3">
-                  What is Lorem Ipsum? Lorem Ipsum&nbsp;is simply dummy text of
-                  the printing and typesetting indust...
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="box p-3 bg-white">
-                <Link
-                  href={`/${lng}/blogs/3}`}
-                  className="d-block overflow-hidden"
-                >
-                  <Image
-                    width={710}
-                    height={710}
-                    src={item3}
-                    alt="What is Lorem Ipsum?"
-                    className="w-100 transition"
-                  />
-                </Link>
-                <div className="d-flex align-items-center justify-content-center gap-4 my-3">
-                  <Link
-                    href={`/${lng}/blogs/3}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      className="bi bi-person-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    </svg>
-                    <span className="primary-color fw-bold">admin</span>
-                  </Link>
-                  <Link
-                    href={`/${lng}/blogs/3}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-calendar-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
-                    </svg>
-                    <span className="primary-color fw-bold">Oct 29, 2022</span>
-                  </Link>
-                </div>
-                <Link
-                  href={`/${lng}/blogs/3}`}
-                  className="h4 text-decoration-none transition"
-                >
-                  What is Lorem Ipsum?
-                </Link>
-                <p className="text-muted mt-3">
-                  What is Lorem Ipsum? Lorem Ipsum&nbsp;is simply dummy text of
-                  the printing and typesetting indust...
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="box p-3 bg-white">
-                <Link
-                  href={`/${lng}/blogs/4}`}
-                  className="d-block overflow-hidden"
-                >
-                  <Image
-                    width={710}
-                    height={710}
-                    src={item4}
-                    alt="What is Lorem Ipsum?"
-                    className="w-100 transition"
-                  />
-                </Link>
-                <div className="d-flex align-items-center justify-content-center gap-4 my-3">
-                  <Link
-                    href={`/${lng}/blogs/4}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      className="bi bi-person-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    </svg>
-                    <span className="primary-color fw-bold">admin</span>
-                  </Link>
-                  <Link
-                    href={`/${lng}/blogs/4}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-calendar-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
-                    </svg>
-                    <span className="primary-color fw-bold">Oct 29, 2022</span>
-                  </Link>
-                </div>
-                <Link
-                  href={`/${lng}/blogs/4}`}
-                  className="h4 text-decoration-none transition"
-                >
-                  What is Lorem Ipsum?
-                </Link>
-                <p className="text-muted mt-3">
-                  What is Lorem Ipsum?Lorem Ipsum&nbsp;is simply dummy text of
-                  the printing and typesetting indust...
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="box p-3 bg-white">
-                <Link
-                  href={`/${lng}/blogs/5}`}
-                  className="d-block overflow-hidden"
-                >
-                  <Image
-                    width={710}
-                    height={710}
-                    src={item5}
-                    alt="What is Lorem Ipsum?"
-                    className="w-100 transition"
-                  />
-                </Link>
-                <div className="d-flex align-items-center justify-content-center gap-4 my-3">
-                  <Link
-                    href={`/${lng}/blogs/5}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      className="bi bi-person-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    </svg>
-                    <span className="primary-color fw-bold">admin</span>
-                  </Link>
-                  <Link
-                    href={`/${lng}/blogs/5}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-calendar-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
-                    </svg>
-                    <span className="primary-color fw-bold">Oct 29, 2022</span>
-                  </Link>
-                </div>
-                <Link
-                  href={`/${lng}/blogs/5}`}
-                  className="h4 text-decoration-none transition"
-                >
-                  What is Lorem Ipsum?
-                </Link>
-                <p className="text-muted mt-3">
-                  What is Lorem Ipsum? Lorem Ipsum&nbsp;is simply dummy text of
-                  the printing and typesetting indust...
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="box p-3 bg-white">
-                <Link
-                  href={`/${lng}/blogs/6}`}
-                  className="d-block overflow-hidden"
-                >
-                  <Image
-                    width={710}
-                    height={710}
-                    src={item6}
-                    alt="What is Lorem Ipsum?"
-                    className="w-100 transition"
-                  />
-                </Link>
-                <div className="d-flex align-items-center justify-content-center gap-4 my-3">
-                  <Link
-                    href={`/${lng}/blogs/6}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      className="bi bi-person-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    </svg>
-                    <span className="primary-color fw-bold">admin</span>
-                  </Link>
-                  <Link
-                    href={`/${lng}/blogs/6}`}
-                    className="d-flex align-items-center gap-1 text-decoration-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-calendar-fill text-muted"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
-                    </svg>
-                    <span className="primary-color fw-bold">Oct 29, 2022</span>
-                  </Link>
-                </div>
-                <Link
-                  href={`/${lng}/blogs/6}`}
-                  className="h4 text-decoration-none transition"
-                >
-                  What is Lorem Ipsum?
-                </Link>
-                <p className="text-muted mt-3">
-                  What is Lorem Ipsum? Lorem Ipsum&nbsp;is simply dummy text of
-                  the printing and typesetting indust...
-                </p>
-              </div>
-            </div>
+              );
+            })}
 
             <div className="col-12 text-center paginate"></div>
           </div>
@@ -426,3 +137,6 @@ const BlogsPage = () => {
   );
 };
 export default BlogsPage;
+{
+  /*  */
+}

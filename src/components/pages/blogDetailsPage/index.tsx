@@ -5,11 +5,21 @@ import item3 from "@/../public/images/blogs/item3.jpg";
 import item4 from "@/../public/images/blogs/item4.jpg";
 import item5 from "@/../public/images/blogs/item5.jpg";
 import item6 from "@/../public/images/blogs/item6.jpg";
+import { useTranslation } from "@/core/i18n/client";
 import Image from "next/image";
 import Link from "next/link";
+// @ts-ignore
+import AOS from "aos";
 import { useParams } from "next/navigation";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const BlogDetailsPage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+  const { t } = useTranslation();
   const { id } = useParams();
   const blogId = id ? id[0] : undefined;
   const imgArr = [item1, item2, item3, item4, item5, item6];
@@ -30,7 +40,7 @@ const BlogDetailsPage = () => {
         className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative"
       >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
-          <h1 className="display-1"> What is Lorem Ipsum?</h1>
+          <h1 className="display-1"> {t("lorem")}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
             <Link
               href="/"
@@ -39,13 +49,19 @@ const BlogDetailsPage = () => {
               Home
             </Link>
             <span>/</span>
-            <span className="text-white-50">Event &amp; News</span>
+            <span className="text-white-50">{t("eventAnNews")}</span>
           </div>
         </div>
       </section>
 
       {/* <!-- single service --> */}
-      <section id="single-service" className="container my-5 left">
+      <section
+        data-aos="fade-right"
+        data-aos-duration="2500"
+        id="single-service"
+        data-sr-id="10"
+        className="container my-5 left"
+      >
         <div className="row g-4">
           <div className="col-lg-8">
             <div>
@@ -57,47 +73,8 @@ const BlogDetailsPage = () => {
                 className="img-fluid w-[100%]"
               />
             </div>
-            <h1 className="fw-bold my-3">What is Lorem Ipsum?</h1>
-            <p className="text-secondary">
-              What is Lorem Ipsum? Lorem Ipsum&nbsp;is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry&#39;s standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum. Why do we use it? It is a long
-              established fact that a reader will be distracted by the readable
-              content of a page when looking at its layout. The point of using
-              Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using &#39;Content here, content here&#39;,
-              making it look like readable English. Many desktop publishing
-              packages and web page editors now use Lorem Ipsum as their default
-              model text, and a search for &#39;lorem ipsum&#39; will uncover
-              many web sites still in their infancy. Various versions have
-              evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like). &nbsp; Where does it come
-              from? Contrary to popular belief, Lorem Ipsum is not simply random
-              text. It has roots in a piece of classical Latin literature from
-              45 BC, making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in classical
-              literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et
-              Malorum&quot; (The Extremes of Good and Evil) by Cicero, written
-              in 45 BC. This book is a treatise on the theory of ethics, very
-              popular during the Renaissance. The first line of Lorem Ipsum,
-              &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in
-              section 1.10.32. The standard chunk of Lorem Ipsum used since the
-              1500s is reproduced below for those interested. Sections 1.10.32
-              and 1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by
-              Cicero are also reproduced in their exact original form,
-              accompanied by English versions from the 1914 translation by H.
-              Rackham.
-            </p>
+            <h1 className="fw-bold my-3">{t("lorem")}</h1>
+            <p className="text-secondary">{t("loremIpsum")}</p>
           </div>
           <div className="col-lg-4">
             <form className="position-relative">
@@ -116,66 +93,28 @@ const BlogDetailsPage = () => {
               </div>
             </form>
             <div className="mt-5">
-              <h2 className="fw-bold h2">Recent Articles</h2>
+              <h2 className="fw-bold h2">{t("recentArticles")}</h2>
+              {Array.from({ length: 5 }, () => {
+                return (
+                  <div className="mt-4" key={Math.random()}>
+                    <div className="mb-4">
+                      <Link
+                        href="/"
+                        className="d-block h4 cursor text-decoration-none transition fw-bold"
+                      >
+                        {t("lorem")}
+                      </Link>
+                      <span className="primary-color fw-bold h5">
+                        Jul 26, 2023
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
 
-              <div className="mt-4">
-                <div className="mb-4">
-                  <Link
-                    href="/"
-                    className="d-block h4 cursor text-decoration-none transition fw-bold"
-                  >
-                    What is Lorem Ipsum?
-                  </Link>
-                  <span className="primary-color fw-bold h5">Jul 26, 2023</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <div className="mb-4">
-                  <Link
-                    href="/"
-                    className="d-block h4 cursor text-decoration-none transition fw-bold"
-                  >
-                    What is Lorem Ipsum?
-                  </Link>
-                  <span className="primary-color fw-bold h5">Jul 26, 2023</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <div className="mb-4">
-                  <Link
-                    href="/"
-                    className="d-block h4 cursor text-decoration-none transition fw-bold"
-                  >
-                    What is Lorem Ipsum?
-                  </Link>
-                  <span className="primary-color fw-bold h5">Jul 26, 2023</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <div className="mb-4">
-                  <Link
-                    href="/"
-                    className="d-block h4 cursor text-decoration-none transition fw-bold"
-                  >
-                    What is Lorem Ipsum?
-                  </Link>
-                  <span className="primary-color fw-bold h5">Jul 26, 2023</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <div className="mb-4">
-                  <Link
-                    href="/"
-                    className="d-block h4 cursor text-decoration-none transition fw-bold"
-                  >
-                    What is Lorem Ipsum?
-                  </Link>
-                  <span className="primary-color fw-bold h5">Jul 26, 2023</span>
-                </div>
-              </div>
               {/* Repeat similar blocks for other articles */}
               <h3 className="fw-bold mt-4 text-center text-lg-start">
-                Follow Us On
+                {t("followUs")}
               </h3>
               <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mt-3 socials">
                 <Link

@@ -6,6 +6,10 @@ import { useLang } from "@/core/providers/langProvider";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+// @ts-ignore
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 type serviceData = {
   id: number;
@@ -19,12 +23,16 @@ const BlogDetailsPage = () => {
   const { lng } = useLang();
   const { t } = useTranslation();
   const blogId = id ? id[0] : undefined;
-  console.log(blogId);
 
   const serviceData: serviceData[] = [
     { id: 1, image: item1, title: t("serviceTitle1"), text: t("serviceText1") },
     { id: 2, image: item2, title: t("serviceTitle2"), text: t("serviceText2") },
   ];
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <main>
@@ -58,7 +66,13 @@ const BlogDetailsPage = () => {
       </section>
 
       {/* <!-- single service --> */}
-      <section id="single-service" className="container my-5 left">
+      <section
+        data-aos="fade-right"
+        data-aos-duration="2500"
+        data-sr-id="2"
+        id="single-service"
+        className="container my-5 left"
+      >
         <div className="row g-4">
           <div className="col-lg-8">
             <div>
@@ -123,7 +137,7 @@ const BlogDetailsPage = () => {
                     viewBox="0 0 16 16"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                     />
                   </svg>
@@ -140,7 +154,7 @@ const BlogDetailsPage = () => {
 
               {Array.from({ length: 5 }, (index: number) => {
                 return (
-                  <div className="mt-4" key={index}>
+                  <div className="mt-4" key={Math.random()}>
                     <div className="mb-4">
                       <Link
                         href="/"
