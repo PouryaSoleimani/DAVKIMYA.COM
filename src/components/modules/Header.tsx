@@ -14,12 +14,11 @@ import { useLang } from '@/core/providers/langProvider'
 
 // COMPONENT
 const Header = () => {
-const {lng}= useLang()
+    const { lng } = useLang()
     const [showMenu, setshowMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
     const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
     const handleResize = () => { setWindowWidth(window.innerWidth); };
-
     useEffect(() => {
         setWindowWidth(window.innerWidth);
         window.addEventListener('resize', handleResize);
@@ -113,10 +112,10 @@ const {lng}= useLang()
                         <div className={`${showMenu === false ? "collapse" : ""} navbar-collapse translate-y-2 lg:translate-y-3`}>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color active" aria-current="page" href={`/${lng}`}>Home</Link>
+                                    <Link className="nav-link primary-color active" aria-current="page" href={`/${lng}/`}>Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="/en/about-us">About us</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/about-us`}>About us</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/product`}>Product</Link>
