@@ -16,7 +16,7 @@ interface PageProps {
   params: paramsProps;
 }
 
-const generateStaticParams = () => {
+const   generateStaticParams = async() => {
   return languages.map((lng) => ({ lng }));
 };
 
