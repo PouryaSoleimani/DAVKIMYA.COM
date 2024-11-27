@@ -11,6 +11,11 @@ import BOTTOMLOGO from "@/../public/images/about-us/BOTTOM__LOGO.webp"
 import Link from "next/link";
 import { useEffect } from "react";
 import { ImEarth } from "react-icons/im";
+import { Splide, SplideSlide } from "react-splide-ts";
+import SLIDE1 from '@/../public/images/about-us/SLIDER__1.webp'
+import SLIDE2 from '@/../public/images/about-us/SLIDER__2.webp'
+import "react-splide-ts/css";
+
 // ^ COMPONENT
 const AboutUsPage = () => {
   console.log(i18next.language);
@@ -105,15 +110,21 @@ const AboutUsPage = () => {
       <div id="description" data-aos="fade-down" data-aos-duration="3000" className="my-5 py-5 top ">
         <div className="row mt-5 mx-0">
           <div className="col-lg-6 px-0">
+            <Splide options={{ autoWidth: true, autoHeight: true, autoplay: true, arrows: false, pagination: false, padding: "0", type: "loop", drag: false }} aria-label="React Splide Example" className="h-full description">
+              <SplideSlide>
+                <Image src={SLIDE1} alt="Image 1" width={2000} height={2000} className="object-cover" />
+              </SplideSlide>
+              <SplideSlide>
+                <Image src={SLIDE2} alt="Image 2" width={2000} height={2000} className="object-cover" />
+              </SplideSlide>
+            </Splide>
             {/* <!-- swiper --> */}
-            <div className="swiper description h-100">
+            {/* <div className="swiper description h-100">
               <div className="swiper-wrapper">
-                {/* <!-- slide --> */}
                 <div className="swiper-slide"></div>
-                {/* <!-- slide --> */}
                 <div className="swiper-slide"></div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="col-lg-6 px-0">
             <div className="bg-black2 p-5 text-white">

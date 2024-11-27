@@ -356,13 +356,13 @@ footer .col-lg-3 a:hover,
   height: 100%;
 }
 
-#description .swiper-slide:first-child {
-  /* background-image: url("../img/oil-refinery-factory-TCWZBZ3.jpg"); */
+/* #description .swiper-slide:first-child {
+  background-image: url("./public/images/about-us/SLIDER__1.webp");
 }
 
 #description .swiper-slide:last-child {
-  /* background-image: url("../img/petrochemical-storage-tank-with-oil-refinery-backg-77LN7G2.jpg"); */
-}
+  background-image: url("./public/images/about-us/SLIDER__2.webp");
+} */
 
 /* faqs */
 #faqs .swiper-slide {
