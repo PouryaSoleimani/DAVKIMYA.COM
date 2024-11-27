@@ -15,9 +15,10 @@ const AboutUsPage = () => {
   const { t } = useTranslation();
   const { lng } = useLang();
   useEffect(() => { AOS.init(); AOS.refresh() }, []);
-  
+
   return (
     <section data-aos="fade-down" data-aos-duration="3000">
+
       {/* BANNER */}
       <div id="about-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
@@ -31,8 +32,10 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
+
+
       {/* MAIN */}
-      <section id="about" className="my-5 top">
+      <div id="about" className="my-5 top">
         <div className="container">
           <div className="row g-4 align-items-center">
             <div className="col-lg-5 position-relative">
@@ -47,11 +50,9 @@ const AboutUsPage = () => {
                     <span className="text-[22px]">
                       <strong>
                         <span className="bg-white">
-                          <span className="font-sans">
-                            <span className="text-[#2222]">
-                              Dav Kimya company
-                            </span>
-                          </span>
+                          <p className="text-[#22222] my-3 tracking-tight font-bold font-sans">
+                            Dav Kimya company
+                          </p>
                         </span>
                       </strong>
                     </span>
@@ -59,15 +60,13 @@ const AboutUsPage = () => {
                   <div>
 
                     <span className="text-[#2ecc71]">
-                      <span className="text-[16px]">
-                        <strong>&rdquo; </strong>
+                      <span className="text-[12px] font-mono tracking-tight">
+                        <strong>&rdquo;</strong>
                       </span>
                       <span className="text-[11pt]">
                         <span className="bg-white">
-                          <span className="font-serif">
-                            <span className="text-[14pt]">
-                              is an innovative company focused on the production
-                            </span>
+                          <span className="text-[14pt] tracking-tight leading-[3rem] font-[500] ">
+                            is an innovative company focused on the production
                           </span>
                         </span>
                       </span>
@@ -77,33 +76,29 @@ const AboutUsPage = () => {
                     </span>
                   </div>
 
-                  <p>
-                    <span className="text-[11pt]">
-                      <span className="bg-white">
-                        <span className="font-serif">
-                          <span className="text-[14pt]">
-                            <span className="text-[#2222]">
-                              of advanced polymeric materials. At Dav Kimya, our
-                              mission is to offer innovative and cutting-edge
-                              formulations that offer superior performance and
-                              environmental sustainability. We specialize in the
-                              production of high-performance acrylic emulsion,
-                              polyester polyols, polyurethane insulation raw
-                              materials, Engineered plastic compounds, and
-                              Mastic and sealants.
-                            </span>
-                          </span>
+                  <div className="mt-3">
+                    <span className="bg-white">
+                      <span className="text-[13pt]">
+                        <span className="text-[#22222] tracking-tighter" style={{ wordSpacing: "8px", fontWeight: "600" }}>
+                          of advanced polymeric materials. At Dav Kimya, our
+                          mission is to offer innovative and cutting-edge
+                          formulations that offer superior performance and
+                          environmental sustainability. We specialize in the
+                          production of high-performance acrylic emulsion,
+                          polyester polyols, polyurethane insulation raw
+                          materials, Engineered plastic compounds, and
+                          Mastic and sealants.
                         </span>
                       </span>
                     </span>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section id="description" className="my-5 py-5 top ">
+      </div>
+      <div id="description" className="my-5 py-5 top ">
         <div className="row mt-5 mx-0">
           <div className="col-lg-6 px-0">
             {/* <!-- swiper --> */}
@@ -187,7 +182,7 @@ const AboutUsPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </section>
   );
 };
