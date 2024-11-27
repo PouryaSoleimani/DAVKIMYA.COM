@@ -29,6 +29,10 @@
   font-family: "TitilliumWeb-Regular";
   src: url("public/new-fonts/TitilliumWeb-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Calibri";
+  src: url("public/new-fonts/Calibri.ttf") format("truetype");
+}
 body {
   /* color: var(--foreground); */
   /* background: var(--background); */
@@ -2104,4 +2108,8 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 .footer_img {
   max-height: 80px;
   object-fit: contain;
+}
+
+.aboutGreenText {
+  font-family: Calibri;
 }

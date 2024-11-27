@@ -6,7 +6,8 @@ import i18next from "i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import IMAGE from "@/../public/images/banner/SLIDE___1.jpg";
+import TOPIMAGE from "@/../public/images/about-us/TOP.jpg";
+import BOTTOMLOGO from"@/../public/images/about-us/BOTTOM_LOGO.jpg"
 import Link from "next/link";
 import { useEffect } from "react";
 // ^ COMPONENT
@@ -39,7 +40,7 @@ const AboutUsPage = () => {
         <div className="container">
           <div className="row g-4 align-items-center">
             <div className="col-lg-5 position-relative">
-              <Image src={IMAGE} alt="About Us" className="img-fluid" width={800} height={600} />
+              <Image src={TOPIMAGE} alt="About Us" className="img-fluid" width={800} height={600} />
             </div>
             <div className="col-1"></div>
             <div className="col-lg-6">
@@ -60,7 +61,7 @@ const AboutUsPage = () => {
                   <div>
 
                     <span className="text-[#2ecc71]">
-                      <span className="text-[12px] font-mono tracking-tight">
+                      <span className="aboutGreenText text-[12px] font-semibold tracking-tight">
                         <strong>&rdquo;</strong>
                       </span>
                       <span className="text-[11pt]">
@@ -79,7 +80,7 @@ const AboutUsPage = () => {
                   <div className="mt-3">
                     <span className="bg-white">
                       <span className="text-[13pt]">
-                        <span className="text-[#22222] tracking-tighter" style={{ wordSpacing: "8px", fontWeight: "600" }}>
+                        <span className="text-[#22222] tracking-tight font-thin " style={{ wordSpacing: "8px", fontWeight: "550" }}>
                           of advanced polymeric materials. At Dav Kimya, our
                           mission is to offer innovative and cutting-edge
                           formulations that offer superior performance and
@@ -113,7 +114,7 @@ const AboutUsPage = () => {
           </div>
           <div className="col-lg-6 px-0">
             <div className="bg-black2 p-5 text-white">
-              <Image alt="desc" src={IMAGE} width={800} height={600} />
+              <Image alt="desc" src={BOTTOMLOGO} width={800} height={600} />
               <div className="text-justify">
                 <p className="mx-0">
                   <strong>
