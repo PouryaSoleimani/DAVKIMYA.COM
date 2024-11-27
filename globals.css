@@ -356,13 +356,18 @@ footer .col-lg-3 a:hover,
   height: 100%;
 }
 
-/* #description .swiper-slide:first-child {
-  background-image: url("./public/images/about-us/SLIDER__1.webp");
+#description .swiper-slide:first-child {
+  background-image: url("/images/about-us/SLIDER__1.webp");
 }
-
 #description .swiper-slide:last-child {
-  background-image: url("./public/images/about-us/SLIDER__2.webp");
-} */
+  background-image: url("/images/about-us/SLIDER__2.webp");
+}
+#description .ABOUTSLIDE:first-child {
+  background-image: url("/images/about-us/SLIDER__1.webp");
+}
+#description .ABOUTSLIDE:last-child {
+  background-image: url("/images/about-us/SLIDER__2.webp");
+}
 
 /* faqs */
 #faqs .swiper-slide {
