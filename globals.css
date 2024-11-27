@@ -31,7 +31,7 @@
 }
 @font-face {
   font-family: "Calibri";
-  src: url("public/new-fonts/Calibri.ttf") format("truetype");
+  src: url("public/new-fonts/calibrib.ttf") format("truetype");
 }
 body {
   /* color: var(--foreground); */

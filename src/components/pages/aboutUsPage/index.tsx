@@ -19,10 +19,10 @@ const AboutUsPage = () => {
   useEffect(() => { AOS.init(); AOS.refresh() }, []);
 
   return (
-    <section data-aos="fade-down" data-aos-duration="3000">
+    <section >
 
       {/* BANNER */}
-      <div id="about-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" >
+      <div data-aos="fade-down" data-aos-duration="3000" id="about-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1"> About us</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
@@ -37,19 +37,20 @@ const AboutUsPage = () => {
 
 
       {/* MAIN */}
-      <div id="about" className="my-5 top">
+
+      <div id="about" data-aos="fade-down" data-aos-duration="3000" className="my-5 top">
         <div className="container">
           <div className="row g-4 align-items-center">
             <div className="col-lg-5 position-relative">
-              <Image src={TOPIMAGE} alt="About Us" className="img-fluid" width={800} height={600} />
+              <Image src={TOPIMAGE} alt="About Us" className="img-fluid" width={1100} height={800} />
             </div>
             <div className="col-1"></div>
             <div className="col-lg-6">
               <div className="text-justify">
-                <span className="h3">About us</span>
+                <span className="h3 text-3xl">About us</span>
                 <div className="text-muted">
                   <h2>
-                    <span className="text-[22px]">
+                    <span className="text-[24px] text-zinc-900">
                       <strong>
                         <span className="bg-white">
                           <p className="text-[#22222] my-3 tracking-tight font-bold font-sans">
@@ -81,7 +82,7 @@ const AboutUsPage = () => {
                   <div className="mt-3">
                     <span className="bg-white">
                       <span className="text-[13pt]">
-                        <span className="text-[#22222] tracking-tight font-thin " style={{ wordSpacing: "8px", fontWeight: "550" }}>
+                        <span className="text-zinc-800 tracking-tight " style={{ wordSpacing: "8px", fontWeight: "550" }}>
                           of advanced polymeric materials. At Dav Kimya, our
                           mission is to offer innovative and cutting-edge
                           formulations that offer superior performance and
@@ -100,7 +101,8 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
-      <div id="description" className="my-5 py-5 top ">
+
+      <div id="description" data-aos="fade-down" data-aos-duration="3000" className="my-5 py-5 top ">
         <div className="row mt-5 mx-0">
           <div className="col-lg-6 px-0">
             {/* <!-- swiper --> */}
