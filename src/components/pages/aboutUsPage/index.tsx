@@ -112,19 +112,12 @@ const AboutUsPage = () => {
           <div className="col-lg-6 px-0">
             <Splide options={{ autoplay: true, arrows: false, pagination: false, padding: "0", type: "loop", drag: false, height: "inherit" }} aria-label="React Splide Example" className="description">
               <SplideSlide className="h-full ">
-                {/* <Image src={SLIDE1} alt="Image 1" width={2000} height={2000} className="object-fill" /> */}
+                <Image src={SLIDE1} alt="Image 1" width={2000} height={2000} className="object-fill min-h-[111.2lvh]" />
               </SplideSlide>
               <SplideSlide className="h-full">
-                <Image src={SLIDE2} alt="Image 2" width={2000} height={2000} className="object-fill" />
+                <Image src={SLIDE2} alt="Image 2" width={2000} height={2000} className="object-fill min-h-[111.2lvh]" />
               </SplideSlide>
             </Splide>
-            {/* <!-- swiper --> */}
-            {/* <div className="swiper description h-100">
-              <div className="swiper-wrapper">
-                <div className="swiper-slide"></div>
-                <div className="swiper-slide"></div>
-              </div>
-            </div> */}
           </div>
           <div className="col-lg-6 px-0">
             <div className="bg-black2 p-5 text-white">

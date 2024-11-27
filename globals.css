@@ -2118,3 +2118,15 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 .aboutGreenText {
   font-family: Calibri;
 }
+.SPLIDE__SLIDE__1 {
+  background-image: url("/images/banner/SLIDE___1.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.SPLIDE__SLIDE__2 {
+  background-image: url("/images/about-us/SLIDER__2.webp");
+}
