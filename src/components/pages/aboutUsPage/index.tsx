@@ -133,11 +133,7 @@ const AboutUsPage = () => {
                     {t('aboutUsBottomSubDesc3')}
                     <br />
                     <br />
-                    We also produce mastic and sealants cartridges as our
-                    special finish&nbsp;products with tailor-made properties by
-                    a combination of different raw materials such as specific
-                    acrylic copolymers, silicon precursors, and silane-modified
-                    polymers.
+                    {t('aboutUsBottomSubDesc4')}
                   </strong>
                 </p>
               </div>
@@ -147,12 +143,7 @@ const AboutUsPage = () => {
               <div>
                 <p className="mx-0 text-justify">
                   <strong>
-                    We are committed to developing and delivering
-                    high-performance products that are both environmentally
-                    friendly and technologically advanced. Our state-of-the-art
-                    laboratory is dedicated to formulating breakthrough
-                    solutions that meet high standards of quality and
-                    performance.
+                    {t('aboutUsBottomSubDesFooter')}
                     <br />
                     <br />
                     Welcome to DavKimya- where innovation meets sustainability.
