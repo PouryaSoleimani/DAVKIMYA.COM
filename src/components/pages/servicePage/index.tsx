@@ -36,7 +36,7 @@ const ServicePage = () => {
             className={"d-flex align-items-center justify-content-center gap-1"}
           >
             <Link href={`/${lng}`} className={"d-block primary-color fw-bold text-decoration-none"} >
-              Home
+              {t("home")}
             </Link>
             <span>/</span>
             <span className={"text-white-50"}>{t("rAndD")}</span>
