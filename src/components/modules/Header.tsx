@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import { LuMail, LuPhoneForwarded } from "react-icons/lu";
 // IMAGES
 import ArabicFlag from "./../../../public/Home_files/ARABIC__FLAG.png";
@@ -117,7 +117,7 @@ const Header = () => {
               href="https://twitter.com/dav"
               className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center"
             >
-              <FaTwitter className="w-8 h-8 text-white" />
+              <FaLinkedin className="w-8 h-8 text-white" />
             </Link>
             <Link
               href="https://www.instagram.com/dav/"
