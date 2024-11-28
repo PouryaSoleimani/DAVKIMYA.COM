@@ -111,13 +111,10 @@ const AboutUsPage = () => {
         <div className="row mt-5 mx-0">
 
           <div className="col-lg-6 px-0">
-
-            {/* <Swiper className="description swipper-wrapper h-100" autoplay={true} draggable={false} spaceBetween={0} slidesPerView={1} allowTouchMove={false} > */}
             <Swiper spaceBetween={1} slidesPerView={1} loop={true} autoplay={{ delay: 5500, disableOnInteraction: false, }} pagination={false} navigation={false} modules={[Autoplay,]} className="description swipper-wrapper h-100" draggable={false}    >
               <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
               <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
             </Swiper>
-
           </div>
 
           <div className="col-lg-6 px-0 h-100">
