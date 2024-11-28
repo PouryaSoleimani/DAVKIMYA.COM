@@ -27,6 +27,9 @@ const FaqPage = () => {
 
       <section
         id="faqs-title"
+        data-aos="fade-down"
+        data-aos-duration="2500"
+        data-sr-id="0"
         className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative"
       >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
@@ -46,7 +49,13 @@ const FaqPage = () => {
 
       {/* <!-- faqs --> */}
 
-      <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
+      <section
+        id="faqs"
+        data-aos-duration="2500"
+        data-sr-id="2"
+        data-aos="fade-right"
+        className="my-5 py-5 top container"
+      >
         <div className="row g-4">
           <div id="FAQ____TITLE" className="col-lg-2">
             <div className="container px-0 position-relative text-center text-lg-start">

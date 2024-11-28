@@ -1,8 +1,13 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import LOGO from '@/../public/images/logo/HOME__PAGE__LOGO.webp'
+import { useTranslation } from '@/core/i18n/client'
+import { useLang } from '@/core/providers/langProvider'
 const Footer = () => {
+    const {lng} = useLang()
+    const {t} = useTranslation()
     return (
         <footer className="pt-5 text-white">
             <div className="container mt-5">
@@ -29,6 +34,14 @@ const Footer = () => {
                                                 <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                                             </svg>
                                             <span>Home</span>
+                                        </Link>
+                                    </li>
+                                    <li className="mb-2">
+                                        <Link href={`/${lng}/product`} className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1" viewBox="0 0 16 16">
+                                                <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                            </svg>
+                                            <span>{t("product")}</span>
                                         </Link>
                                     </li>
                                     <li className="mb-2">
@@ -66,7 +79,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                             <div className="col-lg-6">
-                                <span className="pb-2 h3">R&amp;D Services</span>
+                                <span className="pb-2 h3">{t("contactUs")}</span>
                                 <ul className="list-unstyled p-0 m-0 mt-4">
                                     <li className="mb-2">
                                         <Link
@@ -76,8 +89,7 @@ const Footer = () => {
                                                 <path fillRule="evenodd"
                                                     d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                                             </svg>
-                                            <span>We invite you to explore the possibilities of our
-                                                customized products</span>
+                                            <span>+90 534 043 36 46</span>
                                         </Link>
                                     </li>
                                     <li className="mb-2">
@@ -85,8 +97,31 @@ const Footer = () => {
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1" viewBox="0 0 16 16">
                                                 <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                                             </svg>
-                                            <span>At Davkimya our Research and Development (R&amp;D)
-                                                team</span>
+                                            <span>+90 534 687 90 96</span>
+                                        </Link>
+                                    </li>
+                                    <li className="mb-2">
+                                        <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href="https://davkimya.com/en/service/show/1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1" viewBox="0 0 16 16">
+                                                <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                            </svg>
+                                            <span>+90 506 503 43 38</span>
+                                        </Link>
+                                    </li>
+                                    <li className="mb-2">
+                                        <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href="https://davkimya.com/en/service/show/1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1" viewBox="0 0 16 16">
+                                                <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                            </svg>
+                                            <span>+90 506 503 43 38</span>
+                                        </Link>
+                                    </li>
+                                    <li className="mb-2">
+                                        <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href="https://davkimya.com/en/service/show/1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="flex-shrink-0 bi bi-arrow-right-short primary-color mt-1" viewBox="0 0 16 16">
+                                                <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                            </svg>
+                                            <span>info@davkimya.com</span>
                                         </Link>
                                     </li>
                                 </ul>
