@@ -1,0 +1,55 @@
+                       Polymeric Emulsion System
+                  <Link href="https://davkimya.com/en/product/36" className="title_h5">
+                    Adhesives and sealants
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/37" className="title_h5">
+                    Paint and coating application
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/38" className="title_h5">
+                    Tape and label
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/39" className="title_h5">
+                    Textile application
+                  </Link>
+                  ===========================================================================================================================================
+                  Polyurethanes
+                                    <Link href="https://davkimya.com/en/product/41" className="title_h5">
+                    Polyester polyols
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/42" className="title_h5">
+                    Spray polyurethane system
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/43" className="title_h5">
+                    High-Density PU Foams
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/44" className="title_h5">
+                    Rigid PU and PIR for Composite Panel Insulation
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/45" className="title_h5">
+                    Industrial Insulation Foams
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/46" className="title_h5">
+                    Bio-based Polyurethanes
+                  </Link>
+                  ===========================================================================================================================================
+                  Engineered Polymeric Compounds
+                                    <Link href="https://davkimya.com/en/product/54" className="title_h5">
+                    Plastics for the Lighting Industry
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/59" className="title_h5">
+                    Electronic and Electrical Industry
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/62" className="title_h5">
+                    Household Appliances and Automobile Industry
+                  </Link>
+                  ===========================================================================================================================================
+                        Mastic and sealants
+                                          <Link href="https://davkimya.com/en/product/67" className="title_h5">
+                    Acrylic copolymer sealants
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/68" className="title_h5">
+                    Similar silicon sealants
+                  </Link>
+                  <Link href="https://davkimya.com/en/product/69" className="title_h5">
+                    MS polymer-based sealants
+                  </Link>
