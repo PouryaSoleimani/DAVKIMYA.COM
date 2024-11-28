@@ -121,9 +121,7 @@ const AboutUsPage = () => {
                     </span>
                     <br />
                     <br />
-                    duces various grades of pure acrylic and styrene-acrylic
-                    emulsion systems designed for mastics, sealants, adhesives,
-                    PSA, paints, textiles, construction, etc.&nbsp;&nbsp;&nbsp;
+                    {t('aboutUsBottomSubDesc1')}
                     <br />
                     <br />
                     Our polyurethane sector is focusing on producing
