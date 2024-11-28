@@ -11,10 +11,9 @@ import BOTTOMLOGO from "@/../public/images/about-us/BOTTOM__LOGO.webp"
 import Link from "next/link";
 import { useEffect } from "react";
 import { ImEarth } from "react-icons/im";
-import { Splide, SplideSlide } from "react-splide-ts";
-import SLIDE1 from '@/../public/images/about-us/SLIDER__1.webp'
-import SLIDE2 from '@/../public/images/about-us/SLIDER__2.webp'
-import "react-splide-ts/css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 // ^ COMPONENT
 const AboutUsPage = () => {
@@ -108,18 +107,17 @@ const AboutUsPage = () => {
       </div>
 
       <div id="description" data-aos="fade-down" data-aos-duration="3000" className="my-5 py-5 top ">
+
         <div className="row mt-5 mx-0">
+
           <div className="col-lg-6 px-0">
-            <Splide options={{ autoplay: true, arrows: false, pagination: false, padding: "0", type: "loop", drag: false, height: "inherit" }} aria-label="React Splide Example" className="description">
-              <SplideSlide className="h-full ">
-                <Image src={SLIDE1} alt="Image 1" width={2000} height={2000} className="object-fill min-h-[111.2lvh]" />
-              </SplideSlide>
-              <SplideSlide className="h-full">
-                <Image src={SLIDE2} alt="Image 2" width={2000} height={2000} className="object-fill min-h-[111.2lvh]" />
-              </SplideSlide>
-            </Splide>
+            <Swiper spaceBetween={1} slidesPerView={1} loop={true} autoplay={{ delay: 5500, disableOnInteraction: false, }} pagination={false} navigation={false} modules={[Autoplay,]} className="description swipper-wrapper h-100" draggable={false}    >
+              <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
+              <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
+            </Swiper>
           </div>
-          <div className="col-lg-6 px-0">
+
+          <div className="col-lg-6 px-0 h-100">
             <div className="bg-black2 p-5 text-white">
               <Image alt="desc" src={BOTTOMLOGO} width={90} height={600} />
               <div className="text-justify">
@@ -187,9 +185,11 @@ const AboutUsPage = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
-    </section>
+
+    </section >
   );
 };
 export default AboutUsPage;
