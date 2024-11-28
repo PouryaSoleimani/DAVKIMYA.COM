@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+// ^ ABOUT US PAGE =========================================================================================================================================
 "use client";
-import { useTranslation } from "react-i18next";
 import { useLang } from "@/core/providers/langProvider";
-import i18next from "i18next";
+import { useTranslation } from "@/core/i18n/client";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
@@ -15,26 +15,28 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-// ^ COMPONENT
+// ^ COMPONENT =========================================================================================================================================
 const AboutUsPage = () => {
-  console.log(i18next.language);
+
   const { t } = useTranslation();
   const { lng } = useLang();
+
   useEffect(() => { AOS.init(); AOS.refresh() }, []);
 
+  //  RETURN ==============================================================================================================================================
   return (
     <section >
 
-      {/* TOP BANNER */}
+      {/* TOPBANNER */}
       <div data-aos="fade-down" data-aos-duration="3000" id="about-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
-          <h1 className="display-1"> About us</h1>
+          <h1 className="display-1"> {t("aboutUs")}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
             <Link href="http://davkimya.com" className="d-block primary-color fw-bold text-decoration-none" >
               Home
             </Link>
             <span>/</span>
-            <span className="text-white-50"> About us</span>
+            <span className="text-white-50"> {t("aboutUs")}</span>
           </div>
         </div>
       </div>
@@ -49,14 +51,14 @@ const AboutUsPage = () => {
             <div className="col-1"></div>
             <div className="col-lg-6">
               <div className="text-justify">
-                <span className="h3 text-3xl">About us</span>
+                <span className="h3 text-3xl"> {t("aboutUs")}</span>
                 <div className="text-muted">
                   <h2>
                     <span className="text-[24px] text-zinc-900">
                       <strong>
                         <span className="bg-white">
                           <p className="text-[#22222] my-3 tracking-tight font-bold font-sans">
-                            Dav Kimya company
+                            {t("davKimyaCompany")}
                           </p>
                         </span>
                       </strong>
@@ -71,7 +73,7 @@ const AboutUsPage = () => {
                       <span className="text-[11pt]">
                         <span className="bg-white">
                           <span className="text-[14pt] tracking-tight leading-[3rem] font-[500] ">
-                            is an innovative company focused on the production
+                            {t("aboutUsAnnouncement")}
                           </span>
                         </span>
                       </span>
