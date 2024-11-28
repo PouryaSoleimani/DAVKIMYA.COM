@@ -5,7 +5,7 @@ tasks:
      2- productPage - DONE ✔
      3- productCategoryPage 
      4- productDetailsPage
-     5- aboutUsPage
+     5- aboutUsPage - DONE ✔
 
     Amin:
         sevrvicePage

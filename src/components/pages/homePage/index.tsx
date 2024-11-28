@@ -154,7 +154,7 @@ const HomePage = () => {
                     How does your company ensure the quality and consistency of
                     your products?
                   </h5>
-                  <p className="short_answer short_answer_0 text-muted bg-gray p-3 mb-0">
+                  <p className={`short_answer short_answer_0 text-muted bg-gray p-3 mb-0 ${showFAQ ? " hidden" : "block"}`}>
                     Our company places a strong emphasis on quality control and
                     consistency in the manufacture of our wide range of products
                     with different applications. ...
@@ -225,7 +225,7 @@ const HomePage = () => {
                       </span>
                     </p>
 
-                    <a href="javascript:void(0)" className="primary-color" data-id="0">Close</a>
+                    <button onClick={showFaqHandler} className="primary-color" data-id="1">Close</button>
                   </div>
                 </div>
                 <div className="mb-3">
@@ -234,7 +234,7 @@ const HomePage = () => {
                     from your emulsion resin offerings?
                   </h5>
                   <p
-                    className="short_answer short_answer_1 text-muted bg-gray p-3 mb-0">
+                    className={`short_answer short_answer_1 text-muted bg-gray p-3 mb-0 ${showFAQ2 ? " hidden" : "block"}`}>
                     Our emulsion resin products find applications across various
                     industries, including: ...
                     <button className="primary-color" onClick={showFaqHandler2}>More</button>
