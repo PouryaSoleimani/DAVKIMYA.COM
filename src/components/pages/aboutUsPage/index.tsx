@@ -27,7 +27,7 @@ const AboutUsPage = () => {
   return (
     <section >
 
-      {/* TOPBANNER */}
+      {/* TOPBANNER PART */}
       <div data-aos="fade-down" data-aos-duration="3000" id="about-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1"> {t("aboutUs")}</h1>
@@ -41,7 +41,7 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-      {/* CENTER */}
+      {/* MIDDLE PART */}
       <div id="about" data-aos="fade-down" data-aos-duration="3000" className="my-5 top">
         <div className="container">
           <div className="row g-4 align-items-center">
@@ -117,7 +117,7 @@ const AboutUsPage = () => {
                 <p className="mx-0">
                   <strong>
                     <span className="text-[22pt]">
-                      Our polymeric emulsion department pro
+                      {t("aboutUsBottomDescription")}
                     </span>
                     <br />
                     <br />
