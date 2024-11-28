@@ -146,7 +146,7 @@ const AboutUsPage = () => {
                     {t('aboutUsBottomSubDesFooter')}
                     <br />
                     <br />
-                    Welcome to DavKimya- where innovation meets sustainability.
+                    {t('aboutUsBottomSubDesMoto')}
                   </strong>
                 </p>
               </div>
