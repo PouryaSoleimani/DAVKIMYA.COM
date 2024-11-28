@@ -118,7 +118,7 @@ const Header = () => {
                                     <Link className="nav-link primary-color" href={`/${lng}/about-us`}>About us</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href={`/${lng}/product`}>Product</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/product`}>Products</Link>
                                 </li>
 
                                 <li className="nav-item">
