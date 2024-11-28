@@ -124,28 +124,13 @@ const AboutUsPage = () => {
                     {t('aboutUsBottomSubDesc1')}
                     <br />
                     <br />
-                    Our polyurethane sector is focusing on producing
-                    polyurethane raw materials for the building and insulation
-                    industry such as polyester polyols for rigid polyurethane
-                    foams, spray polyurethane, and pour-in-place pipe insulation
-                    systems. We also recently produced a series of renewable and
-                    bio-based polyols for the PU raw industry.&nbsp;&nbsp;Our
-                    bio-based materials are designed to offer comparable, or
-                    even enhanced properties compared to conventional products,
-                    without compromising on efficiency or effectiveness.
+                    {t('aboutUsBottomSubDesc2')}
                   </strong>
                 </p>
-
+                <br />
                 <p className="mx-0">
                   <strong>
-                    In the compounding department, we are producing engineered
-                    polymeric compounds for the lighting industry, electrical
-                    and electronic, household appliances, and automobile
-                    industries. By integrating nanotechnology into our
-                    compound&#39;s formulation, we have developed a series of PP
-                    compounds for LED cover applications with unique properties
-                    that can bring several benefits through reduced weight,
-                    design freedom, and economic advantages.
+                    {t('aboutUsBottomSubDesc3')}
                     <br />
                     <br />
                     We also produce mastic and sealants cartridges as our
