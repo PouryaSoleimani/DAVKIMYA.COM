@@ -360,7 +360,7 @@ footer .col-lg-3 a:hover,
   background-image: url("./public/images/about-us/SLIDER__1.webp");
 }
 #description .swiper-slide:last-child {
-  background-image: url("/images/about-us/SLIDER__2.webp");
+  background-image: url("./public/images/about-us/SLIDER__2.webp");
 }
 
 /* faqs */

@@ -11,11 +11,9 @@ import BOTTOMLOGO from "@/../public/images/about-us/BOTTOM__LOGO.webp"
 import Link from "next/link";
 import { useEffect } from "react";
 import { ImEarth } from "react-icons/im";
-import { Splide, SplideSlide, SplideTrack } from "react-splide-ts";
-import SLIDE1 from '@/../public/images/about-us/SLIDER__1.webp'
-import SLIDE2 from '@/../public/images/about-us/SLIDER__2.webp'
-import "react-splide-ts/css";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 // ^ COMPONENT
 const AboutUsPage = () => {
@@ -114,17 +112,11 @@ const AboutUsPage = () => {
 
           <div className="col-lg-6 px-0">
 
-            <Splide options={{ arrows: false, pagination: false, autoplay: true, }} className="h-full">
-
-              <SplideSlide className="bg-black h-[100%]  text-white" >
-                <Image src={SLIDE1} alt="Image 1" width={1000} height={2000} className="object-cover  h-full" />
-              </SplideSlide>
-
-              <SplideSlide className="bg-black h-[100%]  text-white" >
-                <Image src={SLIDE2} alt="Image 1" width={1000} height={2000} className="object-cover  h-full" />
-              </SplideSlide>
-
-            </Splide>
+            {/* <Swiper className="description swipper-wrapper h-100" autoplay={true} draggable={false} spaceBetween={0} slidesPerView={1} allowTouchMove={false} > */}
+            <Swiper spaceBetween={1} slidesPerView={1} loop={true} autoplay={{ delay: 5500, disableOnInteraction: false, }} pagination={false} navigation={false} modules={[Autoplay,]} className="description swipper-wrapper h-100" draggable={false}    >
+              <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
+              <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
+            </Swiper>
 
           </div>
 
