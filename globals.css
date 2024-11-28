@@ -357,15 +357,9 @@ footer .col-lg-3 a:hover,
 }
 
 #description .swiper-slide:first-child {
-  background-image: url("/images/about-us/SLIDER__1.webp");
+  background-image: url("./public/images/about-us/SLIDER__1.webp");
 }
 #description .swiper-slide:last-child {
-  background-image: url("/images/about-us/SLIDER__2.webp");
-}
-#description .ABOUTSLIDE:first-child {
-  background-image: url("/images/about-us/SLIDER__1.webp");
-}
-#description .ABOUTSLIDE:last-child {
   background-image: url("/images/about-us/SLIDER__2.webp");
 }
 
@@ -2117,16 +2111,4 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 
 .aboutGreenText {
   font-family: Calibri;
-}
-.SPLIDE__SLIDE__1 {
-  background-image: url("/images/banner/SLIDE___1.jpg");
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.SPLIDE__SLIDE__2 {
-  background-image: url("/images/about-us/SLIDER__2.webp");
 }
