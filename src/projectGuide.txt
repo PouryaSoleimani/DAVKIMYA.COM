@@ -1,11 +1,11 @@
 tasks:
 {
     Pouria:
-        homePage - DONE ✔
-        productPage - DONE ✔
-        productCategoryPage 
-        productDetailsPage
-        aboutUsPage
+     1- homePage - DONE ✔
+     2- productPage - DONE ✔
+     3- productCategoryPage 
+     4- productDetailsPage
+     5- aboutUsPage
 
     Amin:
         sevrvicePage
