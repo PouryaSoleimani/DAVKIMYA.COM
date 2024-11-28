@@ -87,14 +87,7 @@ const AboutUsPage = () => {
                     <span className="bg-white">
                       <span className="text-[13pt]">
                         <span className="text-zinc-800 tracking-tight " style={{ wordSpacing: "8px", fontWeight: "550" }}>
-                          of advanced polymeric materials. At Dav Kimya, our
-                          mission is to offer innovative and cutting-edge
-                          formulations that offer superior performance and
-                          environmental sustainability. We specialize in the
-                          production of high-performance acrylic emulsion,
-                          polyester polyols, polyurethane insulation raw
-                          materials, Engineered plastic compounds, and
-                          Mastic and sealants.
+                          {t("of advanced polymeric materials. At Dav Kimya, our  mission is to offer innovative and cutting-edge  formulations that offer superior performance and  environmental sustainability. We specialize in the  production of high-performance acrylic emulsion,  polyester polyols, polyurethane insulation raw  materials, Engineered plastic compounds, and  Mastic and sealants.")}
                         </span>
                       </span>
                     </span>
