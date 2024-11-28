@@ -25,7 +25,7 @@ const AboutUsPage = () => {
   return (
     <section >
 
-      {/* BANNER */}
+      {/* TOP BANNER */}
       <div data-aos="fade-down" data-aos-duration="3000" id="about-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1"> About us</h1>
@@ -39,9 +39,7 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-
-      {/* MAIN */}
-
+      {/* CENTER */}
       <div id="about" data-aos="fade-down" data-aos-duration="3000" className="my-5 top">
         <div className="container">
           <div className="row g-4 align-items-center">
@@ -106,17 +104,17 @@ const AboutUsPage = () => {
         </div>
       </div>
 
+      {/* BOTTOM */}
       <div id="description" data-aos="fade-down" data-aos-duration="3000" className="my-5 py-5 top ">
-
         <div className="row mt-5 mx-0">
-
+          {/* SLIDER */}
           <div className="col-lg-6 px-0">
             <Swiper spaceBetween={1} slidesPerView={1} loop={true} autoplay={{ delay: 5500, disableOnInteraction: false, }} pagination={false} navigation={false} modules={[Autoplay,]} className="description swipper-wrapper h-100" draggable={false}    >
               <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
               <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
             </Swiper>
           </div>
-
+          {/* DESCRIPTIONS */}
           <div className="col-lg-6 px-0 h-100">
             <div className="bg-black2 p-5 text-white">
               <Image alt="desc" src={BOTTOMLOGO} width={90} height={600} />
