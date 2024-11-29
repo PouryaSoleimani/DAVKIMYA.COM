@@ -136,8 +136,8 @@ const ContactUsPage = () => {
                 </tbody>
               </Table>
             </div>
-            {/* //^ MAP ^// */}
           </div>
+          {/* //^ MAP ^// */}
           <div className="col-lg-4 col-12">
 
             <div style={{ width: "100%", margin: "0 1rem" }}>

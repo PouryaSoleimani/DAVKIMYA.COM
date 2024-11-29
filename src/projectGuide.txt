@@ -7,10 +7,12 @@ tasks:
     4- FOOTER LOCATION : https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya
     5- HEADER DROPDOWN : DONE ✔
     6- WHATSAPP LINK FIXED :  
-    7- CONTACT US EMAILS TABLE  : 
-           Export@davkimya.com      ->     International sales manager
+    7- CONTACT US EMAILS TABLE  :  DONE ✔
+           [        
+            Export@davkimya.com      ->     International sales manager
             'putech@davkimya.com'   ->    Chief scientific officer-Polyurethane department
             'wbresin@davkimya.com' ->     R&D manager /Emulsion resin department
+            ]
     8 - HOME PAGE => DOWNLOAD CATALOGUE => DONWLOAD PDF                    
 }
 

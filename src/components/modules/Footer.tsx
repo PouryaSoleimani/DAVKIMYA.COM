@@ -16,12 +16,12 @@ const Footer = () => {
       <div className="container mt-5">
         {/* FOOTER MAIN */}
         <div className="row g-4">
-          {/*  */}
+
           {/* LOGO AND DESC */}
-          <div className="col-lg-7 col-md-6">
-            <Image alt="daav" src={LOGO} className="img-fluid footer_img" width={120} height={50} />
+          <div className="col-lg-4 col-md-6">
+            <Image alt="daav" src={LOGO} className="img-fluid footer_img" width={130} height={50} />
             <p className="mt-4 text-white-50"></p>
-            <p>
+            <p className="text-xl">
               Dav Kimya company is an innovative company focused on the
               production of advanced polymeric materials. At Dav Kimya, our
               mission is to offer innovative and cutting-edge formulations that
@@ -29,8 +29,18 @@ const Footer = () => {
             </p>
             <p></p>
           </div>
+
+          {/* MAP */}
+          <div className="col-lg-4">
+            <div style={{ width: "100%" }}>
+              <iframe width="100%" height="300" frameBorder="0" scrolling="no" marginHeight={0} marginWidth={0} src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=41%C2%B016'04.7%22N%2027%C2%B056'26.5%22E+(Dav%20Kimya)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                {/* <a href="https://www.gps.ie/">gps systems</a> */}
+              </iframe>
+            </div>
+          </div>
+
           {/* LINKS AND NUMBERS */}
-          <div className="col-lg-5 col-md-6">
+          <div className="col-lg-4 col-md-6">
 
             <div className="row g-4">
 
@@ -110,8 +120,6 @@ const Footer = () => {
           </div>
 
         </div>
-
-
 
 
       </div>
