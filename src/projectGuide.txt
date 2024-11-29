@@ -4,9 +4,9 @@ tasks:
      1- homePage - DONE ✔
      2- productPage - DONE ✔ safheye productCategory va productPage hardo dakhele box ha balaye matn ye ax ba aspect ratio e 1:1 dashte bashan
      3- aboutUsPage - DONE ✔
-    4- FOOTER LOCATION : https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya - DONE ✔
+    4- FOOTER LOCATION :  DONE ✔ ( https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya ) 
     5- HEADER DROPDOWN : DONE ✔
-    6- WHATSAPP LINK FIXED :  
+    6- WHATSAPP LINK FIXED :  DONE ✔
     7- CONTACT US EMAILS TABLE  :  DONE ✔
            [        
             Export@davkimya.com      ->     International sales manager
