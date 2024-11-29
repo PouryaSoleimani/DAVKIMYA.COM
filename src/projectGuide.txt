@@ -1,23 +1,21 @@
 tasks:
-    Pouria:
+    Pouria: ==============================================================================================================================================
 {
      1- homePage - DONE ✔
      2- productPage - DONE ✔ safheye productCategory va productPage hardo dakhele box ha balaye matn ye ax ba aspect ratio e 1:1 dashte bashan
-     3- aboutUsPage
-    4- در فوتر سایت  لوکیشین کارخانه قرار داده شود  https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya
-    5- header: ایتم product در قسمت بالای سایت دارای کشوی بازشو برای انتخاب دسته بندی محصولات باشد.
-    6-  افزونه واتس آپ به سایت در تمامی صفحات اضافه شود.
-    7-  contact us  -> لطفا جدول ایمیل ها در صفحه تماس با ما اضافه شود. Contact-us
-ایمیل :
-Export@davkimya.com
-International sales manager
-'putech@davkimya.com'
-Chief scientific officer-Polyurethane department
-'wbresin@davkimya.com'
-R&D manager /Emulsion resin department
+     3- aboutUsPage - DONE ✔
+
+    4- FOOTER LOCATION : https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya
+    5- HEADER DROPDOWN :
+    6- WHATSAPP LINK FIXED :  
+    7- CONTACT US EMAILS TABLE  : 
+           Export@davkimya.com      ->     International sales manager
+            'putech@davkimya.com'   ->    Chief scientific officer-Polyurethane department
+            'wbresin@davkimya.com' ->     R&D manager /Emulsion resin department
+    8 - HOME PAGE => DOWNLOAD CATALOGUE => DONWLOAD PDF                    
 }
----------------------------------------------------------------------------------------------------------------------------------------------------------
-    Amin:
+
+    Amin: ==============================================================================================================================================
     {
     1  sevrvicePage done
     2  serviceDetailsPage done

@@ -2,7 +2,6 @@
 "use client"
 // ^ OUR PRODUCTS PAGE =========================================================================================================================
 import Link from "next/link";
-// @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
