@@ -88,7 +88,7 @@ const ContactUsPage = () => {
                 <div className="row">
                   <div className="col-12">
                     <input className="form-control my-3" placeholder={t("formSubject")}  {...register("Subject")} />
-                    {errors.Subject && <span className="text-red-800 pl-2  bg-red-100 px-3 rounded-lg py-1">Subject is not Valid</span>}
+                    {errors.Subject && <span className="text-red-800 pl-2  bg-red-100 px-3 rounded-lg py-1">{t("formSubjectNotValid")}</span>}
                   </div>
                 </div>
                 <div className="row mt-3">
