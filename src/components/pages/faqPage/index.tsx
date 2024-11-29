@@ -71,7 +71,11 @@ const FaqPage = () => {
                   <h5 className="bg-black p-3 fw-bold mb-0 primary-color">
                     {t("questionOne")}
                   </h5>
-                  <p className="short_answer short_answer_0 text-muted bg-gray p-3 mb-0">
+                  <p
+                    className={`short_answer short_answer_0 text-muted bg-gray p-3 mb-0 ${
+                      showFAQ ? " hidden" : "block"
+                    }`}
+                  >
                     {t("shortAnswerOne")}
                     <button className="primary-color" onClick={showFaqHandler}>
                       {t("more")}
@@ -149,13 +153,13 @@ const FaqPage = () => {
                       </span>
                     </p>
 
-                    <a
-                      href="javascript:void(0)"
+                    <button
+                      onClick={showFaqHandler}
                       className="primary-color"
-                      data-id="0"
+                      data-id="1"
                     >
                       Close
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -165,7 +169,11 @@ const FaqPage = () => {
                     What are the primary industries or applications that benefit
                     from your emulsion resin offerings?
                   </h5>
-                  <p className="short_answer short_answer_1 text-muted bg-gray p-3 mb-0">
+                  <p
+                    className={`short_answer short_answer_1 text-muted bg-gray p-3 mb-0 ${
+                      showFAQ2 ? " hidden" : "block"
+                    }`}
+                  >
                     Our emulsion resin products find applications across various
                     industries, including: ...
                     <button className="primary-color" onClick={showFaqHandler2}>

@@ -29,5 +29,18 @@ R&D manager /Emulsion resin department
     8 productDetailsPdfPage  -> mesle davkimya.com faghat breadcrump esh kamel bashe dashte bashe 
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+catalog = مورد 6 – قرار دادن  فایل کاتالوگ سایت فایل PDF  کاتالوگ در صفحه Home به صورت یک گزینه قابل کلیک قرار داده شود.
 
-مورد 6 – قرار دادن  فایل کاتالوگ سایت فایل PDF  کاتالوگ در صفحه Home به صورت یک گزینه قابل کلیک قرار داده شود.
+leftovers:{
+    1. catalog
+    2.whatsapp
+    3.map footer
+    4.emails table in contact-us
+    5.breadCrumps
+    6.build
+    7.deploy on host
+    8.fixing build issues
+    9.complete form logics
+    10.check and fix changing language functionality
+    11.add images
+}
