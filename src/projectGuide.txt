@@ -1,36 +1,13 @@
 tasks:
-{
     Pouria:
+{
      1- homePage - DONE ✔
-     2- productPage - DONE ✔ --> REFACTORED 
-     3- productCategoryPage 
-     4- productDetailsPage
-     5- aboutUsPage - DONE ✔ 
-     6- contactUsPage -
-
-    Amin:
-        sevrvicePage
-        serviceDetailsPage
-        blogsPage
-        blogDetailsPage
-        faqPage
-
-    Together: chon mikham ye form behem begi chejoori bezanam
-        contactUsPage
-}
-
-// jquery kar nemikone js esho che kar kardi?
-
-
-مورد ۱ - لطفا در بخش های تماس با ما و فوتر و هدر سایت اطلاعات تماس آپدیت شود و افزونه واتس آپ به سایت در تمامی صفحات اضافه شود.
-لوکیشن
-https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9  / Dav kimya
----------------------------------------------------------------------------------------------------------------------------------------------------------
-شماره تماس
-این شماره به شماره تماس های دیگر اضافه شود.
-+90 534 043 36 46 --> ✔ DONE
----------------------------------------------------------------------------------------------------------------------------------------------------------
-لطفا جدول ایمیل ها در صفحه تماس با ما اضافه شود.
+     2- productPage - DONE ✔ safheye productCategory va productPage hardo dakhele box ha balaye matn ye ax ba aspect ratio e 1:1 dashte bashan
+     3- aboutUsPage
+    4- در فوتر سایت  لوکیشین کارخانه قرار داده شود  https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya
+    5- header: ایتم product در قسمت بالای سایت دارای کشوی بازشو برای انتخاب دسته بندی محصولات باشد.
+    6-  افزونه واتس آپ به سایت در تمامی صفحات اضافه شود.
+    7-  contact us  -> لطفا جدول ایمیل ها در صفحه تماس با ما اضافه شود. Contact-us
 ایمیل :
 Export@davkimya.com
 International sales manager
@@ -38,39 +15,32 @@ International sales manager
 Chief scientific officer-Polyurethane department
 'wbresin@davkimya.com'
 R&D manager /Emulsion resin department
+}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-مورد ۲ – 
-لطفا در صفحه About us متن به صورت یکپارچه قرار داده شود.
-
-مورد ۳-
-در فوتر سایت اطلاعات تماس و لوکیشین کارخانه قرار داده شود
-https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya
-
-R&D Services در فوتر حذف شود.
-Quick link در لیست صفحه محصولات اضافه شود.
+    Amin:
+    {
+    1  sevrvicePage done
+    2  serviceDetailsPage done
+    3  blogsPage done
+    4  blogDetailsPage done
+    5  faqPage done
+    6 productCategoryPage  -> mesle davkimya.com faghat breadcrump esh kamel bashe dashte bashe ,  safheye productCategory va productPage hardo dakhele box ha balaye matn ye ax ba aspect ratio e 1:1 dashte bashan
+    7 productDetailsPage  -> mesle davkimya.com faghat breadcrump esh kamel bashe dashte bashe 
+    8 productDetailsPdfPage  -> mesle davkimya.com faghat breadcrump esh kamel bashe dashte bashe 
+}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
- مورد 4- 
-در دسته بندی اولیه محصولات به جای متن عکس گذاشته شود. 
-برای هر دسته محصول عکس جداگانه قرار داده شود.
-در داخل هر محصول صفحه ای برای آن محصول طراحی شود که شامل : عکس . جدول . و میانبار به صفحه دسته بندی باشد.
-ایتم product در قسمت بالای سایت دارای کشوی بازشو برای انتخاب دسته بندی محصولات باشد.
----------------------------------------------------------------------------------------------------------------------------------------------------------
-مورد 5 -  اصلاح Home page
-قرار دادن 4 تا ایتم زیر به جای متن های آیتم 1 تا 4
-1. High-Quality, Consistent Products
-Detail: We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
-2. Innovative Solutions
-Detail: Our dedicated R&D team stays at the forefront of technological advancements to develop custom solutions that meet your evolving needs. We push the boundaries to help your products stand out in the market.
-3. Sustainable Practices
-Detail: We are committed to environmentally responsible production. Our processes minimize waste and incorporate eco-friendly practices, making us a partner in your sustainable supply chain.
-4. Expert Support & Customer Service
-Detail: Our experienced team is always available to offer technical assistance and guidance. From product selection to after-sales support, we ensure a seamless and satisfying experience.
----------------------------------------------------------------------------------------------------------------------------------------------------------
-مورد 6 – قرار دادن  فایل کاتالوگ سایت
-فایل PDF  کاتالوگ در صفحه Home به صورت یک گزینه قابل کلیک قرار داده شود.
+catalog = مورد 6 – قرار دادن  فایل کاتالوگ سایت فایل PDF  کاتالوگ در صفحه Home به صورت یک گزینه قابل کلیک قرار داده شود.
 
-safhe service details chera hey fade mishe?
-
-
-To Ask:
-link e faza haaye majazi,
+leftovers:{
+    1. catalog
+    2.whatsapp
+    3.map footer
+    4.emails table in contact-us
+    5.breadCrumps
+    6.build
+    7.deploy on host
+    8.fixing build issues
+    9.complete form logics
+    10.check and fix changing language functionality
+    11.add images
+}

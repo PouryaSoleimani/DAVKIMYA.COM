@@ -27,6 +27,9 @@ const FaqPage = () => {
 
       <section
         id="faqs-title"
+        data-aos="fade-down"
+        data-aos-duration="2500"
+        data-sr-id="0"
         className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative"
       >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
@@ -46,7 +49,13 @@ const FaqPage = () => {
 
       {/* <!-- faqs --> */}
 
-      <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
+      <section
+        id="faqs"
+        data-aos-duration="2500"
+        data-sr-id="2"
+        data-aos="fade-right"
+        className="my-5 py-5 top container"
+      >
         <div className="row g-4">
           <div id="FAQ____TITLE" className="col-lg-2">
             <div className="container px-0 position-relative text-center text-lg-start">
@@ -62,7 +71,11 @@ const FaqPage = () => {
                   <h5 className="bg-black p-3 fw-bold mb-0 primary-color">
                     {t("questionOne")}
                   </h5>
-                  <p className="short_answer short_answer_0 text-muted bg-gray p-3 mb-0">
+                  <p
+                    className={`short_answer short_answer_0 text-muted bg-gray p-3 mb-0 ${
+                      showFAQ ? " hidden" : "block"
+                    }`}
+                  >
                     {t("shortAnswerOne")}
                     <button className="primary-color" onClick={showFaqHandler}>
                       {t("more")}
@@ -140,13 +153,13 @@ const FaqPage = () => {
                       </span>
                     </p>
 
-                    <a
-                      href="javascript:void(0)"
+                    <button
+                      onClick={showFaqHandler}
                       className="primary-color"
-                      data-id="0"
+                      data-id="1"
                     >
                       Close
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -156,7 +169,11 @@ const FaqPage = () => {
                     What are the primary industries or applications that benefit
                     from your emulsion resin offerings?
                   </h5>
-                  <p className="short_answer short_answer_1 text-muted bg-gray p-3 mb-0">
+                  <p
+                    className={`short_answer short_answer_1 text-muted bg-gray p-3 mb-0 ${
+                      showFAQ2 ? " hidden" : "block"
+                    }`}
+                  >
                     Our emulsion resin products find applications across various
                     industries, including: ...
                     <button className="primary-color" onClick={showFaqHandler2}>
