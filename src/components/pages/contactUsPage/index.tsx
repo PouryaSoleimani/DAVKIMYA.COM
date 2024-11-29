@@ -10,6 +10,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import Table from 'react-bootstrap/Table';
 
 type Inputs = { Name: string, Email: string, Phone: number, Subject: string, Message: string, }
 
@@ -38,8 +39,8 @@ const ContactUsPage = () => {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="container my-5 left">
+      {/*//^ CONTACT INFOS ^//*/}
+      <section id="contact" className="px-10 my-5 left">
         <div className="row g-4">
           <div className="col-lg-3 col-md-6">
             <div className="container px-0 position-relative text-center text-lg-start">
@@ -48,7 +49,6 @@ const ContactUsPage = () => {
                 DAV {t("petroChemichal")}
               </h1>
               <SlLocationPin className="w-6 h-8 text-lime-400" />
-
               <p className="fw-bold border-bottom pb-3">DAV {t("petroChemichal")}</p>
               <LuPhoneForwarded className='text-lime-400 my-3 w-6 h-6' />
               <p className="fw-bold mt-3">
@@ -61,6 +61,7 @@ const ContactUsPage = () => {
               <LuMail className='text-lime-400 my-3  w-6 h-6' />
               <p className="fw-bold mt-3"> info@davkimya.com</p>
             </div>
+
           </div>
           <div className="col-lg-5 col-md-6 ">
 
@@ -105,8 +106,37 @@ const ContactUsPage = () => {
                 </button>
               </div>
             </form>
-
-
+            {/* TABLE */}
+            <div className="mt-6  px-2 " >
+              <h2 className="text-center font-bold my-2 text-lg underline underline-offset-4 decoration-2 decoration-lime-400 ">Emails Table</h2>
+              <Table striped bordered hover responsive className="whitespace-nowrap text-sm contactUsEmailsTable">
+                <thead className="bg-zinc-500 ">
+                  <tr>
+                    <th>#</th>
+                    <th>Email Address</th>
+                    <th>Target</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td> Export@davkimya.com  </td>
+                    <td>International sales manager</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>  putech@davkimya.com </td>
+                    <td>Chief scientific officer-Polyurethane department</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>wbresin@davkimya.com</td>
+                    <td> R&D manager /Emulsion resin department</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
+            {/* //^ MAP ^// */}
           </div>
           <div className="col-lg-4 col-12">
 
@@ -116,6 +146,7 @@ const ContactUsPage = () => {
               </iframe>
             </div>
 
+            {/* //^ FOLLOW US  ^// */}
             <h3 className="fw-bold mt-4 text-center text-lg-start">
               {t("contactUsFollow")}
             </h3>
