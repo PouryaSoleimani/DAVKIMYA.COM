@@ -48,5 +48,8 @@
   "formPhoneNotValid": "Phone is not Valid",
   "formSubject": "Subject",
   "formSubjectNotValid": "Subject is not Valid",
-  "formMessage": "Message"
+  "formMessage": "Message",
+  "formMessageNotValid" : "Message is not Valid",
+  "formSend" : "Send Form",
+  "contactUsFollow" : "Follow us on"
 }

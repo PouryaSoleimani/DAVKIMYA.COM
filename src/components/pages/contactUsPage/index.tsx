@@ -20,6 +20,7 @@ const ContactUsPage = () => {
   const { register, handleSubmit, reset, formState: { errors }, } = useForm({ resolver: yupResolver(schema), });
   //* ON SUBMIT
   const onSubmit: SubmitHandler<Inputs> = (data) => { console.log(data); reset() }
+
   // RETURN =================================================================================================================================================================
   return (
     <>
@@ -94,11 +95,11 @@ const ContactUsPage = () => {
                 <div className="row mt-3">
                   <div className="col-12">
                     <textarea rows={7} className="form-control" placeholder={t("formMessage")}  {...register("Message")}></textarea>
-                    {errors.Message && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1 pt-10 ">Message is not Valid</span>}
+                    {errors.Message && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1 pt-10 ">{t("formMessageNotValid")}</span>}
                   </div>
                 </div>
                 <button type="submit" className="d-flex bg-black align-items-center mt-3 justify-content-center w-100 fw-bold gap-1 border-0 py-2 text-white transition text-decoration-none" >
-                  <span className="h6 mb-0">Send Form</span>
+                  <span className="h6 mb-0">{t("formSend")}</span>
                   <FaArrowRight className="w-5 h-5 m-2" />
                 </button>
               </div>
@@ -107,21 +108,20 @@ const ContactUsPage = () => {
 
           </div>
           <div className="col-lg-4 col-12">
+
             <iframe
               className="w-100 border-none"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12035.468090317363!2d28.948459!3d41.050037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x62c25433d16d6951!2zNDHCsDAzJzAwLjEiTiAyOMKwNTYnN"
               height="400" allowFullScreen loading="lazy"
               referrerPolicy="no-referrer-when-downgrade">
             </iframe>
+
             <h3 className="fw-bold mt-4 text-center text-lg-start">
-              Follow Us On
+              {t("contactUsFollow")}
             </h3>
-            <div
-              className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mt-3 socials">
-              <a href="https://www.facebook.com/dav"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
-                  className="bi bi-facebook text-white" viewBox="0 0 16 16">
+            <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mt-3 socials">
+              <a href="https://www.facebook.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" className="bi bi-facebook text-white" viewBox="0 0 16 16">
                   <path
                     d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                 </svg>

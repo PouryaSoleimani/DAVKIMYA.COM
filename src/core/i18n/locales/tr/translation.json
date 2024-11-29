@@ -49,5 +49,8 @@
   "formPhoneNotValid": "Телефон недействителен",
   "formSubject": "Ders",
   "formSubjectNotValid": "Sobajka NetFlaid",
-  "formMessage": "Mesaj"
+  "formMessage": "Mesaj",
+  "formMessageNotValid": "Mesaj Geçerli Değil",
+  "formSend": "formGönder",
+  "contactUsFollow" : "Bizi takip edin"
 }
