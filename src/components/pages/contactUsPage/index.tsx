@@ -93,7 +93,7 @@ const ContactUsPage = () => {
                 </div>
                 <div className="row mt-3">
                   <div className="col-12">
-                    <textarea rows={7} className="form-control" placeholder="Message"  {...register("Message")}></textarea>
+                    <textarea rows={7} className="form-control" placeholder={t("formMessage")}  {...register("Message")}></textarea>
                     {errors.Message && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1 pt-10 ">Message is not Valid</span>}
                   </div>
                 </div>
