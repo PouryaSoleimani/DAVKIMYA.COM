@@ -110,15 +110,12 @@ const ContactUsPage = () => {
           </div>
           <div className="col-lg-4 col-12">
 
-            {/* <iframe
-              className="w-100 border-none"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12035.468090317363!2d28.948459!3d41.050037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x62c25433d16d6951!2zNDHCsDAzJzAwLjEiTiAyOMKwNTYnN"
-              height="400" allowFullScreen loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade">
-            </iframe> */}
-            <div style={{ width: "100%" , margin : "0 1rem" }}>
+            <div style={{ width: "100%", margin: "0 1rem" }}>
               <iframe width="100%" height="428" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(DavKimya%20Co.)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                <a href="https://www.gps.ie/">gps vehicle tracker</a></iframe></div>
+                <Link href="https://www.gps.ie/">gps vehicle tracker</Link>
+              </iframe>
+            </div>
+
             <h3 className="fw-bold mt-4 text-center text-lg-start">
               {t("contactUsFollow")}
             </h3>
