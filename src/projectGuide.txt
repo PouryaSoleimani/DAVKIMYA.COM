@@ -6,8 +6,8 @@ tasks:
      ✔3- aboutUsPage - DONE 
      ✔4- FOOTER LOCATION :  DONE  ===>    ( https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya ) 
      ✔5- HEADER DROPDOWN : DONE
-     ✔ 6- WHATSAPP LINK FIXED :  DONE 
-     ✔ 7- CONTACT US EMAILS TABLE  :  DONE  ===>  [Export@davkimya.com===> International sales manager ||  'putech@davkimya.com' ===>Chief scientific officer-Polyurethane department ||  'wbresin@davkimya.com' ===> R&D manager /Emulsion resin department ||  ]
+     ✔6- WHATSAPP LINK FIXED :  DONE 
+     ✔7- CONTACT US EMAILS TABLE  :  DONE  ===>  [Export@davkimya.com===> International sales manager ||  'putech@davkimya.com' ===>Chief scientific officer-Polyurethane department ||  'wbresin@davkimya.com' ===> R&D manager /Emulsion resin department ||  ]
      ✔8 - HOME PAGE => DOWNLOAD CATALOGUE ===> DONWLOAD PDF   - DONE             
 }
 
@@ -26,10 +26,10 @@ tasks:
 catalog = مورد 6 – قرار دادن  فایل کاتالوگ سایت فایل PDF  کاتالوگ در صفحه Home به صورت یک گزینه قابل کلیک قرار داده شود.
 
 leftovers:{
-    1. catalog
-    2.whatsapp
-    3.map footer
-    4.emails table in contact-us
+   ✔ 1. catalog
+   ✔ 2.whatsapp
+   ✔ 3.map footer
+   ✔ 4.emails table in contact-us
     5.breadCrumps
     6.build
     7.deploy on host
