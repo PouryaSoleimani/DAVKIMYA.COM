@@ -122,8 +122,10 @@ const Header = () => {
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu >
                                         <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'> All {t("product")} </Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2" className='hover:bg-zinc-300 px-4 py-2'>Link 2</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3" className='hover:bg-zinc-300 px-4 py-2'>Link 3</Dropdown.Item>
+                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleOne")}</Dropdown.Item>
+                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleTwo")}</Dropdown.Item>
+                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleThree")}</Dropdown.Item>
+                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleFour")}</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
 
