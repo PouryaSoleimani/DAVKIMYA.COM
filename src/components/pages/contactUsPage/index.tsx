@@ -71,23 +71,23 @@ const ContactUsPage = () => {
                 </h4>
                 <div className="row">
                   <div className="col-md-6">
-                    <input className="form-control my-3" placeholder="Name" {...register("Name")} />
-                    {errors.Name && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1">Name is not Valid</span>}
+                    <input className="form-control my-3" placeholder={t("formName")} {...register("Name")} />
+                    {errors.Name && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1">{t("formNameNotValid")}</span>}
                   </div>
                   <div className="col-md-6">
-                    <input type="email" className="form-control my-3" placeholder="Email"  {...register("Email")} />
-                    {errors.Email && <span className="text-red-800 pl-2  bg-red-100 px-3 rounded-lg py-1">Email is not Valid</span>}
+                    <input type="email" className="form-control my-3" placeholder={t("formEmail")}  {...register("Email")} />
+                    {errors.Email && <span className="text-red-800 pl-2  bg-red-100 px-3 rounded-lg py-1">{t("formEmailNotValid")}</span>}
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-12">
-                    <input type="tel" className="form-control my-3" placeholder="Phone"   {...register("Phone")} />
-                    {errors.Phone && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1 ">Phone is not Valid</span>}
+                    <input type="tel" className="form-control my-3" placeholder={t("formPhone")}   {...register("Phone")} />
+                    {errors.Phone && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1 ">{t("formPhoneNotValid")}</span>}
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-12">
-                    <input className="form-control my-3" placeholder="Subject"  {...register("Subject")} />
+                    <input className="form-control my-3" placeholder={t("formSubject")}  {...register("Subject")} />
                     {errors.Subject && <span className="text-red-800 pl-2  bg-red-100 px-3 rounded-lg py-1">Subject is not Valid</span>}
                   </div>
                 </div>

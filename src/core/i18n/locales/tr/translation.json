@@ -40,5 +40,13 @@
   "ourProductsTitle": "Ürünlerimiz",
   "product": "ürün",
   "petroChemichal": "Petrokimya",
-  "formTitle": "Tüm sorularınız için bugün bizi arayın."
+  "formTitle": "Tüm sorularınız için bugün bizi arayın.",
+  "formName": "İsim",
+  "formNameNotValid": "Ad Geçerli Değil",
+  "formEmail": "E-posta",
+  "formEmailNotValid": "E-posta geçerli değil",
+  "formPhone": "Telefon",
+  "formPhoneNotValid": "Телефон недействителен",
+  "formSubject": "Ders",
+  "formSubjectNotValid": "الموضوع ليس وليد"
 }

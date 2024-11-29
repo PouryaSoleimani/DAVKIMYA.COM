@@ -39,5 +39,13 @@
   "ourProductsTitle": "Our Products",
   "product": "Product",
   "petroChemichal": "Petrochemichal",
-  "formTitle": "Call us for all your questions today."
+  "formTitle": "Call us for all your questions today.",
+  "formName": "Name",
+  "formNameNotValid": "Name is not Valid",
+  "formEmail": "Email",
+  "formEmailNotValid": "Email is not Valid",
+  "formPhone": "Phone",
+  "formPhoneNotValid": "Phone is not Valid",
+  "formSubject": "Subject",
+  "formSubjectNotValid" : "Subject is not Valid"
 }

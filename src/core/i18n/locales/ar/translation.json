@@ -17,5 +17,13 @@
   "ourProductsTitle": "منتجاتنا",
   "product": "منتج",
   "petroChemichal": "البتروكيماويات",
-  "formTitle": "اتصل بنا لجميع أسئلتك اليوم."
+  "formTitle": "اتصل بنا لجميع أسئلتك اليوم.",
+  "formName": "اسم",
+  "formNameNotValid": "الاسم غير صالح",
+  "formEmail": "بريد إلكتروني",
+  "formEmailNotValid": "البريد الإلكتروني غير صالح",
+  "formPhone": "هاتف",
+  "formPhoneNotValid": "الهاتف غير صالح",
+   "formSubject": "موضوع",
+     "formSubjectNotValid" : "الموضوع ليس وليد"
 }

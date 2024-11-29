@@ -40,5 +40,13 @@
   "ourProductsTitle": "Наши продукты",
   "product": "Продукт",
   "petroChemichal": "нефтехимическая",
-  "formTitle": "Позвоните нам по всем вашим вопросам сегодня.."
+  "formTitle": "Позвоните нам по всем вашим вопросам сегодня..",
+  "formName": "Имя",
+  "formNameNotValid": "Имя недействительно",
+  "formEmail": "Электронная почта",
+  "formEmailNotValid": "Электронная почта недействительна",
+  "formPhone": "Телефон",
+  "formPhoneNotValid": "Телефон недействителен",
+  "formSubject": "Предмет",
+  "formSubjectNotValid": "الموضوع ليس وليد"
 }
