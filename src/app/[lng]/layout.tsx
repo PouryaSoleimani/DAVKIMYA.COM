@@ -6,6 +6,8 @@ import './../../../globals.css'
 import Header from "@/components/modules/Header";
 import Footer from "@/components/modules/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import WhatsAppLink from "@/components/modules/WhatsAppLink";
+
 
 interface paramsProps {
   lng: string;
@@ -16,7 +18,7 @@ interface PageProps {
   params: paramsProps;
 }
 
-const   generateStaticParams = async() => {
+const generateStaticParams = async () => {
   return languages.map((lng) => ({ lng }));
 };
 
@@ -30,6 +32,7 @@ const RootLayout = ({ children, params: { lng } }: PageProps) => {
         <body className="overflow-x-hidden">
           <Header />
           {children}
+          <WhatsAppLink />
           <Footer />
         </body>
       </MainProvider>
