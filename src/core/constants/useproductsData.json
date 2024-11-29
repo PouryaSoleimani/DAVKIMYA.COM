@@ -1,0 +1,38 @@
+[
+  {
+    "title": "productTitleOne",
+    "subtitles": [
+      "titleOneSubTitleOne",
+      "titleOneSubTitleTwo",
+      "titleOneSubTitleThree",
+      "titleOneSubTitleFour"
+    ]
+  },
+  {
+    "title": "productTitleTwo",
+    "subtitles": [
+      "titleTwoSubTitleOne",
+      "titleTwoSubTitleTwo",
+      "titleTwoSubTitleThree",
+      "titleTwoSubTitleFour",
+      "titleTwoSubTitleFive",
+      "titleTwoSubTitleSix"
+    ]
+  },
+  {
+    "title": "productTitleThree",
+    "subtitles": [
+      "titleThreeSubTitleOne",
+      "titleThreeSubTitleTwo",
+      "titleThreeSubTitleThree"
+    ]
+  },
+  {
+    "title": "productTitleFour",
+    "subtitles": [
+      "titleFourSubTitleOne",
+      "titleFourSubTitleTwo",
+      "titleFourSubTitleThree"
+    ]
+  }
+]

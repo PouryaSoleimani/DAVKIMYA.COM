@@ -64,8 +64,8 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <Link href="https://davkimya.com/en/product/35" className="title_h1 tracking-tighter">
-                    Polymeric Emulsion System
+                  <Link href={`product/${t("productTitleOne")}`}  className="title_h1 tracking-tighter">
+                  {t("productTitleOne")}
                   </Link>
                   <hr />
                   <Image src={SAMPLEIMAGE} width={600} height={600} alt="image" className="mt-3" />
@@ -75,8 +75,8 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <Link href="https://davkimya.com/en/product/40" className="title_h1 tracking-tighter">
-                    Polyurethanes
+                  <Link href={`product/${t("productTitleTwo")}`} className="title_h1 tracking-tighter">
+                  {t("productTitleTwo")}
                   </Link>
                   <hr />
                   <Image src={SAMPLEIMAGE} width={600} height={600} alt="image" className="mt-3" />
@@ -86,8 +86,8 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <Link href="https://davkimya.com/en/product/53" className="title_h1 whitespace-nowrap tracking-tighter">
-                    Engineered Polymeric Compounds
+                  <Link href={`product/${t("productTitleThree")}`}  className="title_h1 whitespace-nowrap tracking-tighter">
+                  {t("productTitleThree")}
                   </Link>
                   <hr />
                   <Image src={SAMPLEIMAGE} width={600} height={600} alt="image" className="mt-3" />
@@ -97,8 +97,8 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <Link href="https://davkimya.com/en/product/66" className="title_h1 tracking-tighter">
-                    Mastic and sealants
+                  <Link href={`product/${t("productTitleFour")}`}  className="title_h1 tracking-tighter">
+                  {t("productTitleFour")}
                   </Link>
                   <hr />
                   <Image src={SAMPLEIMAGE} width={600} height={600} alt="image" className="mt-3" />

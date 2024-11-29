@@ -1,43 +1,40 @@
-import Link from "next/link"
-
-const WithSubTitleBox = ()=>{
-    return(
-        <div className="col-xxl-3 col-md-4 col-sm-6">
-        <div className="card_category">
-          <div>
-            <Link
-              href="https://davkimya.com/en/product/35"
-              className="title_h1"
-            >
-              Polymeric Emulsion System
-            </Link>
-            <hr />
-            <Link
-              href="https://davkimya.com/en/product/36"
-              className="title_h5"
-            >
-              Adhesives and sealants
-            </Link>
-            <Link
-              href="https://davkimya.com/en/product/37"
-              className="title_h5"
-            >
-              Paint and coating application
-            </Link>
-            <Link
-              href="https://davkimya.com/en/product/38"
-              className="title_h5"
-            >
-              Tape and label
-            </Link>
-            <Link
-              href="https://davkimya.com/en/product/39"
-              className="title_h5"
-            >
-              Textile application
-            </Link>
-          </div>
-        </div>
-      </div>)
+import { useTranslation } from "@/core/i18n/client";
+import Link from "next/link";
+import productData from "@/core/constants/useSubTitlesData.json";
+import { useEffect, useState } from "react";
+interface WithSubTitleBoxProps {
+  title: string;
 }
-export {WithSubTitleBox}
+const WithSubTitleBox = ({ title }: WithSubTitleBoxProps) => {
+  const { t } = useTranslation();
+  const [selectedTitle, setSelectedTitle] = useState<string[]>();
+  useEffect(() => {
+    productData.map(
+      (item) => item.title === title && setSelectedTitle(item.subtitles)
+    );
+  }, []);
+  return (
+    <div className="col-xxl-3 col-md-4 col-sm-6">
+      <div className="card_category">
+        <div>
+          <Link href="https://davkimya.com/en/product/35" className="title_h1">
+            {t(title)}
+          </Link>
+          <hr />
+          {selectedTitle?.map((item, index) => {
+            return (
+              <Link
+                href="https://davkimya.com/en/product/36"
+                className="title_h5"
+                key={index}
+              >
+                {t(item) || ""}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+export { WithSubTitleBox };

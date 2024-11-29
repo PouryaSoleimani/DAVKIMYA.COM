@@ -1,15 +1,40 @@
 "use client";
 import Link from "next/link";
-// @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/core/i18n/client";
+import { WithSubTitleBox } from "./components/withSubTitleBox";
+import { NoSubTitleBox } from "./components/noSubTitleBox";
+import productsData from "../../../core/constants/useproductsData.json";
+import { useLang } from "@/core/providers/langProvider";
+
+export type selectedTitle = {
+  title: string;
+  subtitles: string[];
+};
 const ProductCategoryPage = () => {
+  const { t } = useTranslation();
+  const { title } = useParams();
+  const { lng } = useLang();
+
+  const productTitle = title
+    ? typeof title === "string"
+      ? title.split("%20").join(" ").toString()
+      : title
+    : "";
+
+  const [selectedTitle, setSelectedTitle] = useState<selectedTitle>();
 
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    productsData.map((item) => {
+      t(item.title) === productTitle && setSelectedTitle(item);
+    });
   }, []);
+
   return (
     <>
       {/* TITLE */}
@@ -47,121 +72,22 @@ const ProductCategoryPage = () => {
       >
         <div className="container">
           <div className="text-center">
-            <span className="h3">Our Product</span>
+            <span className="h3">{productTitle}</span>
           </div>
           <div className="row g-4 mt-5">
-          
-            <div className="col-xxl-3 col-md-4 col-sm-6">
-              <div className="card_category">
-                <div>
-                  <Link
-                    href="https://davkimya.com/en/product/40"
-                    className="title_h1"
-                  >
-                    Polyurethanes
-                  </Link>
-                  <hr />
-                  <Link
-                    href="https://davkimya.com/en/product/41"
-                    className="title_h5"
-                  >
-                    Polyester polyols
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/42"
-                    className="title_h5"
-                  >
-                    Spray polyurethane system
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/43"
-                    className="title_h5"
-                  >
-                    High-Density PU Foams
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/44"
-                    className="title_h5"
-                  >
-                    Rigid PU and PIR for Composite Panel Insulation
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/45"
-                    className="title_h5"
-                  >
-                    Industrial Insulation Foams
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/46"
-                    className="title_h5"
-                  >
-                    Bio-based Polyurethanes
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xxl-3 col-md-4 col-sm-6">
-              <div className="card_category">
-                <div>
-                  <Link
-                    href="https://davkimya.com/en/product/53"
-                    className="title_h1"
-                  >
-                    Engineered Polymeric Compounds
-                  </Link>
-                  <hr />
-                  <Link
-                    href="https://davkimya.com/en/product/54"
-                    className="title_h5"
-                  >
-                    Plastics for the Lighting Industry
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/59"
-                    className="title_h5"
-                  >
-                    Electronic and Electrical Industry
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/62"
-                    className="title_h5"
-                  >
-                    Household Appliances and Automobile Industry
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xxl-3 col-md-4 col-sm-6">
-              <div className="card_category">
-                <div>
-                  <Link
-                    href="https://davkimya.com/en/product/66"
-                    className="title_h1"
-                  >
-                    Mastic and sealants
-                  </Link>
-                  <hr />
-                  <Link
-                    href="https://davkimya.com/en/product/67"
-                    className="title_h5"
-                  >
-                    Acrylic copolymer sealants
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/68"
-                    className="title_h5"
-                  >
-                    Similar silicon sealants
-                  </Link>
-                  <Link
-                    href="https://davkimya.com/en/product/69"
-                    className="title_h5"
-                  >
-                    MS polymer-based sealants
-                  </Link>
-                </div>
-              </div>
-            </div>
+            {productTitle === t("productTitleThree")
+              ? selectedTitle?.subtitles.map((item) => {
+                  return <WithSubTitleBox title={item} key={Math.random()} />;
+                })
+              : selectedTitle?.subtitles.map((item, index) => {
+                  return (
+                    <NoSubTitleBox
+                      id={index}
+                      title={item}
+                      key={Math.random()}
+                    />
+                  );
+                })}
             <div className="col-md-12"></div>
           </div>
         </div>
