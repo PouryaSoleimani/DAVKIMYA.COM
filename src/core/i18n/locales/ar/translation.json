@@ -2,6 +2,7 @@
   "title": "سلام",
   "to-second-page": "صفحعه بعد",
   "aboutUs": "درباره ی ما",
+  "contactUs": "اتصل بنا",
   "home": "بيت",
   "davKimyaCompany": "شركة داف كيميا",
   "aboutUsAnnouncement": "هي شركة مبتكرة تركز على الإنتاج",
@@ -14,5 +15,19 @@
   "aboutUsBottomSubDesFooter": "نحن ملتزمون بتطوير وتقديم منتجات عالية الأداء وصديقة للبيئة ومتقدمة تقنيًا. مختبرنا المتطور مخصص لصياغة حلول مذهلة تلبي معايير الجودة والأداء العالية.",
   "aboutUsBottomSubDesMoto": "مرحبًا بكم في DavKimya - حيث يلتقي الابتكار بالاستدامة.",
   "ourProductsTitle": "منتجاتنا",
-  "product": "منتج"
+  "product": "منتج",
+  "petroChemichal": "البتروكيماويات",
+  "formTitle": "اتصل بنا لجميع أسئلتك اليوم.",
+  "formName": "اسم",
+  "formNameNotValid": "الاسم غير صالح",
+  "formEmail": "بريد إلكتروني",
+  "formEmailNotValid": "البريد الإلكتروني غير صالح",
+  "formPhone": "هاتف",
+  "formPhoneNotValid": "الهاتف غير صالح",
+  "formSubject": "موضوع",
+  "formSubjectNotValid": "الموضوع ليس وليد",
+  "formMessage": "رسالة",
+  "formMessageNotValid" : "الرسالة غير صالحة",
+  "formSend" : "إرسال النموذج",
+  "contactUsFollow" : "تابعونا على"
 }
