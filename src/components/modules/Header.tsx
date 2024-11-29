@@ -1,9 +1,9 @@
-"use client"
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { LuMail, LuPhoneForwarded } from 'react-icons/lu'
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { LuMail, LuPhoneForwarded } from "react-icons/lu";
 // IMAGES
 import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
 import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
@@ -27,10 +27,13 @@ const Header = () => {
         return () => { window.removeEventListener('resize', handleResize); };
     }, []);
 
-    useEffect(() => {
-        if (windowWidth > 1000) { setshowMenu(true) } else { setshowMenu(false) }
-    }, [windowWidth]);
-
+  useEffect(() => {
+    if (windowWidth > 1000) {
+      setshowMenu(true);
+    } else {
+      setshowMenu(false);
+    }
+  }, [windowWidth]);
 
     return (
         <header className='relative top-0 left-0 z-10'>
@@ -75,7 +78,7 @@ const Header = () => {
                             <FaFacebook className='w-8 h-8 text-white' />
                         </Link>
                         <Link href="https://twitter.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <FaTwitter className='w-8 h-8 text-white' />
+                            <FaLinkedin className='w-8 h-8 text-white' />
                         </Link>
                         <Link href="https://www.instagram.com/dav/" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
                             <FaInstagram className='w-8 h-8 text-white' />
@@ -177,4 +180,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;

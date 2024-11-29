@@ -14,6 +14,7 @@ import WHYCHOOSEUS from "./../../../../public/images/whychooseus/WHYCHOOSEUS.jpg
 import { Splide, SplideSlide } from "react-splide-ts";
 import "react-splide-ts/css";
 import { useEffect, useState } from "react";
+// @ts-ignore
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -74,11 +75,9 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4 shadow-xl shadow-zinc-800">
                     <span
                       className="d-flex align-items-center justify-content-center">01</span>
-                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">offer innovative</h2>
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight"> High-Quality, Consistent Products</h2>
                     <p className="text-muted text-lg">
-                      of high-performance acrylic emulsion, polyester polyols,
-                      polyurethane insulation raw materials, Engineered plastic
-                      compounds, and Mastic and sealants
+                     We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
                     </p>
                   </div>
                 </div>
@@ -86,11 +85,9 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">02</span>
-                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight ">specialize in the production</h2>
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight ">Innovative Solutions</h2>
                     <p className="text-muted text-lg">
-                      of high-performance acrylic emulsion, polyester polyols,
-                      polyurethane insulation raw materials, Engineered plastic
-                      compounds, and Mastic and sealants
+                    Our dedicated R&D team stays at the forefront of technological advancements to develop custom solutions that meet your evolving needs. We push the boundaries to help your products stand out in the market.
                     </p>
                   </div>
                 </div>
@@ -98,12 +95,9 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">03</span>
-                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Respectful</h2>
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Sustainable Practices</h2>
                     <p className="text-muted text-lg">
-                      we have developed a series of PP compounds for LED cover
-                      applications with unique properties that can bring several
-                      benefits through reduced weight, design freedom, and
-                      economic advantages
+                    We are committed to environmentally responsible production. Our processes minimize waste and incorporate eco-friendly practices, making us a partner in your sustainable supply chain.
                     </p>
                   </div>
                 </div>
@@ -111,12 +105,9 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">04</span>
-                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">produce mastic and sealants</h2>
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Expert Support & Customer Service</h2>
                     <p className="text-muted text-lg">
-                      cartridges as our special finish&nbsp;products with
-                      tailor-made properties by a combination of different raw
-                      materials such as specific acrylic copolymers, silicon
-                      precursors, and silane-modified polymers
+                    Our experienced team is always available to offer technical assistance and guidance. From product selection to after-sales support, we ensure a seamless and satisfying experience.
                     </p>
                   </div>
                 </div>

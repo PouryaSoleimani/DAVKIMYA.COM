@@ -442,7 +442,7 @@ footer .col-lg-3 a:hover,
 
 /* faqs page */
 #faqs-title {
-  /* background-image: url("../img/oil-refinery-plant-from-industry-zone-oil-and-gas-E5HABQN-e1676866622808.jpg"); */
+  background-image: url("./public/images/faq/headerPic.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
