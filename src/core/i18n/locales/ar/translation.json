@@ -24,6 +24,7 @@
   "formEmailNotValid": "البريد الإلكتروني غير صالح",
   "formPhone": "هاتف",
   "formPhoneNotValid": "الهاتف غير صالح",
-   "formSubject": "موضوع",
-     "formSubjectNotValid" : "الموضوع ليس وليد"
+  "formSubject": "موضوع",
+  "formSubjectNotValid": "الموضوع ليس وليد",
+  "formMessage": "رسالة"
 }
