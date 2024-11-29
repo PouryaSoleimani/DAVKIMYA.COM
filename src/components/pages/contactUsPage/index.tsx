@@ -17,9 +17,9 @@ type Inputs = { Name: string, Email: string, Phone: number, Subject: string, Mes
 const ContactUsPage = () => {
   const { t } = useTranslation()
   const schema = yup.object().shape({ Name: yup.string().required(), Email: yup.string().email().required(), Phone: yup.number().min(7).required(), Subject: yup.string().required(), Message: yup.string().required() }).required();
-  const { register, handleSubmit, formState: { errors }, } = useForm({ resolver: yupResolver(schema), });
+  const { register, handleSubmit, reset, formState: { errors }, } = useForm({ resolver: yupResolver(schema), });
   //* ON SUBMIT
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<Inputs> = (data) => { console.log(data); reset() }
   // RETURN =================================================================================================================================================================
   return (
     <>
@@ -72,28 +72,29 @@ const ContactUsPage = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <input className="form-control my-3" placeholder="Name" {...register("Name")} />
+                    {errors.Name && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1">Name is not Valid</span>}
                   </div>
                   <div className="col-md-6">
                     <input type="email" className="form-control my-3" placeholder="Email"  {...register("Email")} />
-                    {errors.Email && <span className="text-red-800">Email is not Valid</span>}
+                    {errors.Email && <span className="text-red-800 pl-2  bg-red-100 px-3 rounded-lg py-1">Email is not Valid</span>}
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-12">
                     <input type="tel" className="form-control my-3" placeholder="Phone"   {...register("Phone")} />
-                    {errors.Phone && <span className="text-red-800">Phone is not Valid</span>}
+                    {errors.Phone && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1 ">Phone is not Valid</span>}
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-12">
                     <input className="form-control my-3" placeholder="Subject"  {...register("Subject")} />
-                    {errors.Subject && <span className="text-red-800">Subject is not Valid</span>}
+                    {errors.Subject && <span className="text-red-800 pl-2  bg-red-100 px-3 rounded-lg py-1">Subject is not Valid</span>}
                   </div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-12">
                     <textarea rows={7} className="form-control" placeholder="Message"  {...register("Message")}></textarea>
-                    {errors.Message && <span className="text-red-800">Message is not Valid</span>}
+                    {errors.Message && <span className="text-red-800 pl-2 bg-red-100 px-3 rounded-lg py-1 pt-10 ">Message is not Valid</span>}
                   </div>
                 </div>
                 <button type="submit" className="d-flex bg-black align-items-center mt-3 justify-content-center w-100 fw-bold gap-1 border-0 py-2 text-white transition text-decoration-none" >
