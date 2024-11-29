@@ -357,10 +357,10 @@ footer .col-lg-3 a:hover,
 }
 
 #description .swiper-slide:first-child {
-  background-image: url("/images/about-us/SLIDER__1.webp");
+  background-image: url("./public/images/about-us/SLIDER__1.jpg");
 }
 #description .swiper-slide:last-child {
-  background-image: url("/images/about-us/SLIDER__2.webp");
+  background-image: url("./public/images/about-us/SLIDER__2.jpg");
 }
 
 /* faqs */

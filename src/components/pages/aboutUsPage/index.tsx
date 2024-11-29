@@ -116,9 +116,7 @@ const AboutUsPage = () => {
               <div className="text-justify">
                 <p className="mx-0">
                   <strong>
-                    <span className="text-[22pt]">
-                      {t("aboutUsBottomDescription")}
-                    </span>
+                    <span className="text-[22pt]">   {t("aboutUsBottomDescription")}</span>
                     <br />
                     <br />
                     {t('aboutUsBottomSubDesc1')}
