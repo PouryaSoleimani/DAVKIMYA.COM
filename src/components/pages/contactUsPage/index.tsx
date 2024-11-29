@@ -1,18 +1,26 @@
 "use client"
-// ^ CONTACT US PAGE ===========================================================================================================================
+// ^ CONTACT US PAGE =========================================================================================================================================================
 
 import { useTranslation } from "@/core/i18n/client";
 import Link from "next/link";
 import { LuMail, LuPhoneForwarded } from "react-icons/lu";
 import { SlLocationPin } from "react-icons/sl";
+import { FaArrowRight } from "react-icons/fa6";
+import { useForm, SubmitHandler } from "react-hook-form"
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+type Inputs = { Name: string, Email: string, Phone: number, Subject: string, Message: string, }
 
 
-
-
-
-//  COMPONENT ================================================================================================================================
+//  COMPONENT =============================================================================================================================================================
 const ContactUsPage = () => {
   const { t } = useTranslation()
+  const schema = yup.object().shape({ Name: yup.string().required(), Email: yup.string().email().required(), Phone: yup.number().min(7).required(), Subject: yup.string().required(), Message: yup.string().required() }).required();
+  const { register, handleSubmit, formState: { errors }, } = useForm({ resolver: yupResolver(schema), });
+  //* ON SUBMIT
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  // RETURN =================================================================================================================================================================
   return (
     <>
       {/* TITLE */}
@@ -53,46 +61,49 @@ const ContactUsPage = () => {
             </div>
           </div>
           <div className="col-lg-5 col-md-6 ">
-            <form className="p-4 position-relative" action="http://davkimya.com/en/contact-us/post" method="post">
+
+            {/* //^ FORM ^// */}
+            <form className="p-4 position-relative" onSubmit={handleSubmit(onSubmit)}>
               <input type="hidden" name="_token" value="TemgBZMxpotKu8QhcNPF49QQFQ00aW1XK4SZw77f" />
               <div className="position-relative">
-                <h4 className="fw-bold">
-                  Call us for all your questions today.
+                <h4 className="fw-bold text-2xl py-1">
+                  {t("formTitle")}
                 </h4>
                 <div className="row">
                   <div className="col-md-6">
-                    <input className="form-control my-3" name="name" placeholder="Name" />
+                    <input className="form-control my-3" placeholder="Name" {...register("Name")} />
                   </div>
                   <div className="col-md-6">
-                    <input type="email" name="email" className="form-control my-3" placeholder="Email" />
+                    <input type="email" className="form-control my-3" placeholder="Email"  {...register("Email")} />
+                    {errors.Email && <span className="text-red-800">Email is not Valid</span>}
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-12">
-                    <input type="tel" name="phone" className="form-control my-3" placeholder="Phone" />
+                    <input type="tel" className="form-control my-3" placeholder="Phone"   {...register("Phone")} />
+                    {errors.Phone && <span className="text-red-800">Phone is not Valid</span>}
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-12">
-                    <input className="form-control my-3" name="subject" placeholder="Subject" />
+                    <input className="form-control my-3" placeholder="Subject"  {...register("Subject")} />
+                    {errors.Subject && <span className="text-red-800">Subject is not Valid</span>}
                   </div>
                 </div>
                 <div className="row mt-3">
                   <div className="col-12">
-                    <textarea rows={7} name="message" className="form-control" placeholder="Message"></textarea>
+                    <textarea rows={7} className="form-control" placeholder="Message"  {...register("Message")}></textarea>
+                    {errors.Message && <span className="text-red-800">Message is not Valid</span>}
                   </div>
                 </div>
-                <button type="submit"
-                  className="d-flex bg-black align-items-center mt-3 justify-content-center w-100 fw-bold gap-1 border-0 py-2 text-white transition text-decoration-none">
+                <button type="submit" className="d-flex bg-black align-items-center mt-3 justify-content-center w-100 fw-bold gap-1 border-0 py-2 text-white transition text-decoration-none" >
                   <span className="h6 mb-0">Send Form</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
-                    className="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                    <path fillRule="evenodd"
-                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                  </svg>
+                  <FaArrowRight className="w-5 h-5 m-2" />
                 </button>
               </div>
             </form>
+
+
           </div>
           <div className="col-lg-4 col-12">
             <iframe
