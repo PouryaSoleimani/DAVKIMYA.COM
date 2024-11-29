@@ -112,7 +112,7 @@ const ContactUsPage = () => {
 
             <div style={{ width: "100%", margin: "0 1rem" }}>
               <iframe width="100%" height="428" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(DavKimya%20Co.)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                <Link href="https://www.gps.ie/">gps vehicle tracker</Link>
+                {/* <Link href="https://www.gps.ie/">gps vehicle tracker</Link> */}
               </iframe>
             </div>
 

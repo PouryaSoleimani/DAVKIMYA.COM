@@ -3,10 +3,10 @@ tasks:
     Pouria:
      1- homePage - DONE ✔
      2- productPage - DONE ✔ --> REFACTORED 
-     3- productCategoryPage 
-     4- productDetailsPage
-     5- aboutUsPage - DONE ✔ 
-     6- contactUsPage -
+     3- aboutUsPage - DONE ✔ 
+     4- contactUsPage - DONE ✔
+     5- header dropdown -
+     6- footer google map
 
     Amin:
         sevrvicePage
@@ -16,7 +16,7 @@ tasks:
         faqPage
 
     Together: chon mikham ye form behem begi chejoori bezanam
-        contactUsPage
+        contactUsPage - DONE ✔
 }
 
 // jquery kar nemikone js esho che kar kardi?
@@ -27,7 +27,7 @@ tasks:
 https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9  / Dav kimya
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 شماره تماس
-این شماره به شماره تماس های دیگر اضافه شود.
+این شماره به شماره تماس های دیگر اضافه شود. ✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
 +90 534 043 36 46 --> ✔ DONE
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 لطفا جدول ایمیل ها در صفحه تماس با ما اضافه شود.

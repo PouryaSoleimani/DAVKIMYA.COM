@@ -10,11 +10,13 @@ import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
 import RussianFlag from '../../../public/Home_files/RUSSIAN__FLAG.png'
 import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
 import { useLang } from '@/core/providers/langProvider'
-
+import { useTranslation } from '@/core/i18n/client'
+import Dropdown from 'react-bootstrap/Dropdown';
 
 // COMPONENT
 const Header = () => {
     const { lng } = useLang()
+    const { t } = useTranslation()
     const [showMenu, setshowMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
     const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
@@ -37,8 +39,7 @@ const Header = () => {
                 <div
                     className="d-flex flex-wrap gap-4 align-items-center justify-content-md-between justify-content-center container py-3">
                     {/* <!-- CONTACT INFOS --> */}
-                    <div
-                        className="d-flex flex-wrap align-items-center justify-content-center  gap-3">
+                    <div className="d-flex flex-wrap align-items-center justify-content-center  gap-3">
                         <div className="d-flex align-items-center gap-2">
                             <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
                             <span className="secondary-color">+905346879096</span>
@@ -85,6 +86,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
             {/* <!-- MENU AND LOGO --> */}
             <div className='bg-[#474841]'>
                 {/* <!-- MENU --> */}
@@ -112,43 +114,41 @@ const Header = () => {
                         <div className={`${showMenu === false ? "collapse" : ""} navbar-collapse translate-y-2 lg:translate-y-3`}>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color active" aria-current="page" href={`/${lng}/`}>Home</Link>
+                                    <Link className="nav-link primary-color active" aria-current="page" href={`/${lng}/`}>{t("home")}</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href={`/${lng}/about-us`}>About us</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/about-us`}>{t("aboutUs")}</Link>
+                                </li>
+                                <Dropdown className='z-50'>
+
+                                    <Dropdown.Toggle variant="none" id="dropdown-basic" className='flex items-center justify-center m-0 p-0 z-10 focus:outline-none px-1'>
+                                        <Link className="nav-link primary-color" href={`/${lng}/product`}>{t("product")}</Link>
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu >
+                                        <Dropdown.Item href="#/action-1" className='hover:bg-zinc-300 px-4 py-2'>Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2" className='hover:bg-zinc-300 px-4 py-2'>Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3" className='hover:bg-zinc-300 px-4 py-2'>Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+
+                                <li className="nav-item">
+                                    <Link className="nav-link primary-color" href={`/${lng}/service`}>{t("rAndD")}</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href={`/${lng}/product`}>Products</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/faqs`}>{t("faqs")}</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link primary-color" href={`/${lng}/blogs`}>{t("eventAnNews")}</Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href={`/${lng}/service`}>R&amp;D Services</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link primary-color" href={`/${lng}/faqs`}>Faqs</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link primary-color" href={`/${lng}/blogs`}>Event &amp; News</Link>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>Contact us</Link>
+                                    <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>{t("contactUs")}</Link>
                                 </li>
                             </ul>
-                            <form
-                                className="d-none d-lg-flex cursor ms-4"
-                                role="search"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="22"
-                                    height="22"
-                                    fill="currentColor"
-                                    className="bi bi-search text-white"
-                                    viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                            <form className="d-none d-lg-flex cursor ms-4" role="search" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-search text-white" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                                 </svg>
                             </form>
                         </div>
