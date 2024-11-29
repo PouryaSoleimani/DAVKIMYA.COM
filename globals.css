@@ -13,7 +13,19 @@
     --foreground: #ededed;
   }
 }
+::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+  background-color: black;
+}
 
+::-webkit-scrollbar-track {
+  background-color: #b0aeae;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c3eb3f;
+}
 /* DAVKIMYA WEBSITE STYLES */
 @font-face {
   font-family: "TitilliumWeb-Light";
@@ -357,10 +369,10 @@ footer .col-lg-3 a:hover,
 }
 
 #description .swiper-slide:first-child {
-  background-image: url("/images/about-us/SLIDER__1.webp");
+  background-image: url("./public/images/about-us/SLIDER__1.jpg");
 }
 #description .swiper-slide:last-child {
-  background-image: url("/images/about-us/SLIDER__2.webp");
+  background-image: url("./public/images/about-us/SLIDER__2.jpg");
 }
 
 /* faqs */
