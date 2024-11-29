@@ -13,7 +13,6 @@ const WhatsAppLink = () => {
             </span>
          </Link>
       </section>
-
    )
 }
 
