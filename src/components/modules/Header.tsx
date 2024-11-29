@@ -27,13 +27,7 @@ const Header = () => {
         return () => { window.removeEventListener('resize', handleResize); };
     }, []);
 
-    useEffect(() => {
-        if (windowWidth > 1000) {
-            setshowMenu(true);
-        } else {
-            setshowMenu(false);
-        }
-    }, [windowWidth]);
+    useEffect(() => { if (windowWidth > 1000) { setshowMenu(true); } else { setshowMenu(false); } }, [windowWidth]);
 
     return (
         <header className='relative top-0 left-0 z-10'>
@@ -127,9 +121,7 @@ const Header = () => {
                                         <Link className="nav-link primary-color" href={`/${lng}/product`}>{t("product")}</Link>
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu >
-                                        <Dropdown.Item href="#/action-1" className='hover:bg-zinc-300 px-4 py-2'>
-                                            <Link href={`/${lng}/product`}>All {t("product")}</Link>
-                                        </Dropdown.Item>
+                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'> All {t("product")} </Dropdown.Item>
                                         <Dropdown.Item href="#/action-2" className='hover:bg-zinc-300 px-4 py-2'>Link 2</Dropdown.Item>
                                         <Dropdown.Item href="#/action-3" className='hover:bg-zinc-300 px-4 py-2'>Link 3</Dropdown.Item>
                                     </Dropdown.Menu>
