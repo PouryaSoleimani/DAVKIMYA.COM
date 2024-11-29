@@ -225,7 +225,7 @@ footer .col-lg-3 a {
 #faqs2,
 .index_form form,
 #contact form {
-  /* background-image: url("../img/Bg-Black-Liquid-1.png"); */
+  background-image: url("./public/images/contact-us/form-background-pattern.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
