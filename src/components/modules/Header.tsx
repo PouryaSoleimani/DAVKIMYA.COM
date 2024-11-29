@@ -33,7 +33,7 @@ const Header = () => {
 
 
     return (
-        <header>
+        <header className='relative top-0 left-0 z-10'>
             {/*  CONTACT INFO  */}
             <div className="border-bottom">
                 <div
@@ -120,15 +120,15 @@ const Header = () => {
                                     <Link className="nav-link primary-color" href={`/${lng}/about-us`}>{t("aboutUs")}</Link>
                                 </li>
                                 <Dropdown className='z-50'>
-
                                     <Dropdown.Toggle variant="none" id="dropdown-basic" className='flex items-center justify-center m-0 p-0 z-10 focus:outline-none px-1'>
                                         <Link className="nav-link primary-color" href={`/${lng}/product`}>{t("product")}</Link>
                                     </Dropdown.Toggle>
-
                                     <Dropdown.Menu >
-                                        <Dropdown.Item href="#/action-1" className='hover:bg-zinc-300 px-4 py-2'>Action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2" className='hover:bg-zinc-300 px-4 py-2'>Another action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3" className='hover:bg-zinc-300 px-4 py-2'>Something else</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1" className='hover:bg-zinc-300 px-4 py-2'>
+                                            <Link href={`/${lng}/product`}>All {t("product")}</Link>
+                                        </Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2" className='hover:bg-zinc-300 px-4 py-2'>Link 2</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3" className='hover:bg-zinc-300 px-4 py-2'>Link 3</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
 

@@ -5,7 +5,7 @@ tasks:
      2- productPage - DONE ✔ --> REFACTORED 
      3- aboutUsPage - DONE ✔ 
      4- contactUsPage - DONE ✔
-     5- header dropdown -
+     5- header dropdown - DONE ✔
      6- footer google map
 
     Amin:
