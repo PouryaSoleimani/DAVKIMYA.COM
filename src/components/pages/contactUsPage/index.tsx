@@ -1,4 +1,8 @@
+"use client"
 // ^ CONTACT US PAGE ===========================================================================================================================
+
+import { useTranslation } from "@/core/i18n/client";
+import Link from "next/link";
 
 
 
@@ -7,18 +11,18 @@
 
 //  COMPONENT ================================================================================================================================
 const ContactUsPage = () => {
+  const { t } = useTranslation()
   return (
     <>
       {/* TITLE */}
 
-      <section id="contact-title"
-        className="d-flex align-items-center top justify-content-center py-5 px-2 position-relative">
+      <section id="contact-title" className="d-flex align-items-center top justify-content-center py-5 px-2 position-relative">
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
-          <h1 className="display-1"> Contact us</h1>
+          <h1 className="display-1"> {t("contactUs")}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
-            <a href="http://davkimya.com/en" className="d-block primary-color fw-bold text-decoration-none">Home</a>
+            <Link href="/" className="d-block primary-color fw-bold text-decoration-none">{t("home")}</Link>
             <span>/</span>
-            <span className="text-white-50"> Contact us</span>
+            <span className="text-white-50"> {t("contactUs")}</span>
           </div>
         </div>
       </section>
@@ -28,7 +32,7 @@ const ContactUsPage = () => {
         <div className="row g-4">
           <div className="col-lg-3 col-md-6">
             <div className="container px-0 position-relative text-center text-lg-start">
-              <span className="h3"> Contact us</span>
+              <span className="h3"> {t("contactUs")}</span>
               <h1 className="my-3">
                 DAV Petrochemichal
               </h1>

@@ -472,7 +472,7 @@ footer .col-lg-3 a:hover,
 
 /* contact page */
 #contact-title {
-  /* background-image: url("../img/1.jpg"); */
+  background-image: url("./public/images/contact-us/contact-us-header.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
