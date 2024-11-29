@@ -2,7 +2,6 @@
 "use client"
 // ^ OUR PRODUCTS PAGE =========================================================================================================================
 import Link from "next/link";
-// @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -20,13 +19,7 @@ const ProductPage = () => {
   return (
     <>
       {/* TITLE */}
-      <section
-        data-aos="fade-down"
-        data-aos-duration="2500"
-        id="article-title"
-        className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative"
-        data-sr-id="0"
-      >
+      <section data-aos="fade-down" data-aos-duration="2500" id="article-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative -z-10" data-sr-id="0" >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1">{t("ourProductsTitle")}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
