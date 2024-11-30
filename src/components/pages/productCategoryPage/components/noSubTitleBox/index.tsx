@@ -3,18 +3,19 @@ import Link from "next/link";
 import SAMPLEIMAGE from "@/../public/images/boxes/BOX1.jpg";
 import { useTranslation } from "@/core/i18n/client";
 interface NoSubTitleBoxProps {
+  mainTitle: string;
   title: string;
   id: number;
   src?: string;
 }
-const NoSubTitleBox = ({ title, id, src }: NoSubTitleBoxProps) => {
+const NoSubTitleBox = ({ mainTitle, title, id, src }: NoSubTitleBoxProps) => {
   const { t } = useTranslation();
   return (
     <div className="col-xxl-3 col-md-4 col-sm-6">
       <div className="card_category">
         <div>
           <Link
-            href={`/product/${title}/${id}`}
+            href={`${t(mainTitle)}/${id}`}
             className="title_h1 tracking-tighter"
           >
             {t(title)}

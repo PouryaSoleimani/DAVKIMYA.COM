@@ -34,7 +34,7 @@ const ProductDetailsPage = () => {
               <Image
                 width={100}
                 height={100}
-                src="http://davkimya.com/assets/uploads/blog/article/1402-05-04/photos/photo-4f03f977c88c4d062995dd2af019baee.jpg"
+                // src="http://davkimya.com/assets/uploads/blog/article/1402-05-04/photos/photo-4f03f977c88c4d062995dd2af019baee.jpg"
                 alt="What is Lorem Ipsum?"
                 className="img-fluid"
               />

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client"
 // ^ OUR PRODUCTS PAGE =========================================================================================================================
 import Link from "next/link";
@@ -8,7 +8,10 @@ import { useEffect } from "react";
 import { useLang } from "@/core/providers/langProvider";
 import { useTranslation } from "@/core/i18n/client";
 import Image from "next/image";
-import SAMPLEIMAGE from '@/../public/images/boxes/BOX1.jpg'
+import compunds from "@/../public/images/products__page/compunds.webp"
+import emulation from "@/../public/images/products__page/emulationSystem.webp"
+import poly from "@/../public/images/products__page/poly.webp"
+import sealant from "@/../public/images/products__page/sealant.webp"
 // COMPONENT =================================================================================================================================
 const ProductPage = () => {
   const { t } = useTranslation();
@@ -61,7 +64,7 @@ const ProductPage = () => {
                   {t("productTitleOne")}
                   </Link>
                   <hr />
-                  <Image src={SAMPLEIMAGE} width={600} height={600} alt="image" className="mt-3" />
+                  <Image src={emulation} width={600} height={600} alt="image" className="mt-3" />
                 </div>
               </div>
             </div>
@@ -72,7 +75,7 @@ const ProductPage = () => {
                   {t("productTitleTwo")}
                   </Link>
                   <hr />
-                  <Image src={SAMPLEIMAGE} width={600} height={600} alt="image" className="mt-3" />
+                  <Image src={poly} width={600} height={600} alt="image" className="mt-3" />
                 </div>
               </div>
             </div>
@@ -83,7 +86,7 @@ const ProductPage = () => {
                   {t("productTitleThree")}
                   </Link>
                   <hr />
-                  <Image src={SAMPLEIMAGE} width={600} height={600} alt="image" className="mt-3" />
+                  <Image src={compunds} width={600} height={600} alt="image" className="mt-3" />
                 </div>
               </div>
             </div>
@@ -94,7 +97,7 @@ const ProductPage = () => {
                   {t("productTitleFour")}
                   </Link>
                   <hr />
-                  <Image src={SAMPLEIMAGE} width={600} height={600} alt="image" className="mt-3" />
+                  <Image src={sealant} width={600} height={600} alt="image" className="mt-3" />
                 </div>
               </div>
             </div>

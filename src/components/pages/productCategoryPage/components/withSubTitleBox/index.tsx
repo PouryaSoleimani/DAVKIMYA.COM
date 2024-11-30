@@ -24,7 +24,7 @@ const WithSubTitleBox = ({ title }: WithSubTitleBoxProps) => {
           {selectedTitle?.map((item, index) => {
             return (
               <Link
-                href="https://davkimya.com/en/product/36"
+                href={`/product/${t(title)}/${id}`}
                 className="title_h5"
                 key={index}
               >

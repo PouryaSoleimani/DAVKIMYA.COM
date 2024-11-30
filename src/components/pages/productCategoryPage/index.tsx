@@ -22,7 +22,7 @@ const ProductCategoryPage = () => {
   const productTitle = title
     ? typeof title === "string"
       ? title.split("%20").join(" ").toString()
-      : title
+      : title[0]
     : "";
 
   const [selectedTitle, setSelectedTitle] = useState<selectedTitle>();
@@ -82,6 +82,7 @@ const ProductCategoryPage = () => {
               : selectedTitle?.subtitles.map((item, index) => {
                   return (
                     <NoSubTitleBox
+                      mainTitle={productTitle}
                       id={index}
                       title={item}
                       key={Math.random()}
