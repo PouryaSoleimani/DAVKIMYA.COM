@@ -14,9 +14,9 @@ import WHYCHOOSEUS from "./../../../../public/images/whychooseus/WHYCHOOSEUS.jpg
 import { Splide, SplideSlide } from "react-splide-ts";
 import "react-splide-ts/css";
 import { useEffect, useState } from "react";
-// @ts-ignore
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import DownloadButton from "@/components/modules/DownloadButton";
 
 // COMPONENT =================================================================================================================================================
 const HomePage = () => {
@@ -77,7 +77,7 @@ const HomePage = () => {
                       className="d-flex align-items-center justify-content-center">01</span>
                     <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight"> High-Quality, Consistent Products</h2>
                     <p className="text-muted text-lg">
-                     We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+                      We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
                     </p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ const HomePage = () => {
                       className="d-flex align-items-center justify-content-center">02</span>
                     <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight ">Innovative Solutions</h2>
                     <p className="text-muted text-lg">
-                    Our dedicated R&D team stays at the forefront of technological advancements to develop custom solutions that meet your evolving needs. We push the boundaries to help your products stand out in the market.
+                      Our dedicated R&D team stays at the forefront of technological advancements to develop custom solutions that meet your evolving needs. We push the boundaries to help your products stand out in the market.
                     </p>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const HomePage = () => {
                       className="d-flex align-items-center justify-content-center">03</span>
                     <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Sustainable Practices</h2>
                     <p className="text-muted text-lg">
-                    We are committed to environmentally responsible production. Our processes minimize waste and incorporate eco-friendly practices, making us a partner in your sustainable supply chain.
+                      We are committed to environmentally responsible production. Our processes minimize waste and incorporate eco-friendly practices, making us a partner in your sustainable supply chain.
                     </p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const HomePage = () => {
                       className="d-flex align-items-center justify-content-center">04</span>
                     <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Expert Support & Customer Service</h2>
                     <p className="text-muted text-lg">
-                    Our experienced team is always available to offer technical assistance and guidance. From product selection to after-sales support, we ensure a seamless and satisfying experience.
+                      Our experienced team is always available to offer technical assistance and guidance. From product selection to after-sales support, we ensure a seamless and satisfying experience.
                     </p>
                   </div>
                 </div>
@@ -338,7 +338,11 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
+      {/* DOWNLOAD CATALOGUE */}
+      <div id="DonwloadCatalogue" className="flex flex-wrap items-center justify-center gap-x-10 font-bold bg-zinc-300 w-fit h-fit mx-auto my-10 px-4 py-2 rounded-xl shadow ">
+        Download Our Products Catalogue
+        <DownloadButton />
+      </div>
     </>
   );
 };
