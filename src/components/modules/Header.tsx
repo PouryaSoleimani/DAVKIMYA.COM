@@ -141,7 +141,6 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/blogs`}>{t("eventAnNews")}</Link>
                                 </li>
-
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>{t("contactUs")}</Link>
                                 </li>
