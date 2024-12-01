@@ -3,24 +3,21 @@
 import React from 'react'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-
+import Form from 'react-bootstrap/Form';
 // COMPONENT ========================================================================================================================================================
 const SearchModal = (props: any | null) => {
    return (
       <>
-         <Modal     {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered >
-            <Modal.Header closeButton>
+         <Modal   {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered >
+            <Modal.Header closeButton className='bg-zinc-300 border-b-4 border-lime-400'>
                <Modal.Title id="contained-modal-title-vcenter">
-                  Modal heading
+                  Search
                </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-               <h4>Centered Modal</h4>
-               <p>
-                  Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                  dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                  consectetur ac, vestibulum at eros.
-               </p>
+               <Form.Group className="mb-3" controlId="formGroupEmail">
+                  <Form.Control type="search" placeholder="Search Here ..." />
+               </Form.Group>
             </Modal.Body>
             <Modal.Footer>
                <Button onClick={props.onHide}>Close</Button>
