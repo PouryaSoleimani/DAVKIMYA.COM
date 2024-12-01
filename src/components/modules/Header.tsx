@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaSearch, FaYoutube } from "react-icons/fa";
 import { LuMail, LuPhoneForwarded } from "react-icons/lu";
 // IMAGES
 import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
@@ -12,8 +12,10 @@ import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
 import { useLang } from '@/core/providers/langProvider'
 import { useTranslation } from '@/core/i18n/client'
 import Dropdown from 'react-bootstrap/Dropdown';
+import Button from 'react-bootstrap/Button';
+import SearchModal from "./SearchModal";
 
-// COMPONENT
+// COMPONENT =====================================================================================================================================================
 const Header = () => {
     const { lng } = useLang()
     const { t } = useTranslation()
@@ -26,6 +28,8 @@ const Header = () => {
         window.addEventListener('resize', handleResize);
         return () => { window.removeEventListener('resize', handleResize); };
     }, []);
+
+    const [modalShow, setModalShow] = useState(false);
 
     useEffect(() => { if (windowWidth > 1000) { setshowMenu(true); } else { setshowMenu(false); } }, [windowWidth]);
 
@@ -143,17 +147,21 @@ const Header = () => {
                                     <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>{t("contactUs")}</Link>
                                 </li>
                             </ul>
-                            <form className="d-none d-lg-flex cursor ms-4" role="search" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            {/* <form className="d-none d-lg-flex cursor ms-4" role="search" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-search text-white" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                                 </svg>
-                            </form>
+                            </form> */}
+                            <Button variant="ghost" onClick={() => setModalShow(true)} className="flex items-center justify-center">
+                                <FaSearch className="text-white w-7 h-7 cursor-pointer translate-y-0" />
+                            </Button>
+                            <SearchModal show={modalShow} onHide={() => setModalShow(false)} />
                         </div>
                     </div>
                 </nav>
             </div>
             {/* <!-- SEARCH MODAL --> */}
-            <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
+            {/* <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered ">
                     <div className="modal-content border border-lime-400">
                         <div className="modal-header ">
@@ -169,7 +177,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </header >
     )
 }
