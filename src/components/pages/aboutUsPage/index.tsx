@@ -1,4 +1,160 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// ^ ABOUT US PAGE =========================================================================================================================================
+"use client";
+import { useLang } from "@/core/providers/langProvider";
+import { useTranslation } from "@/core/i18n/client";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Image from "next/image";
+import TOPIMAGE from "@/../public/images/about-us/TOP.jpg";
+import BOTTOMLOGO from "@/../public/images/about-us/BOTTOM__LOGO.webp"
+import Link from "next/link";
+import { useEffect } from "react";
+import { ImEarth } from "react-icons/im";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+
+// ^ COMPONENT =========================================================================================================================================
 const AboutUsPage = () => {
-  return <></>;
+
+  const { t } = useTranslation();
+  const { lng } = useLang();
+
+  useEffect(() => { AOS.init(); AOS.refresh() }, []);
+
+  //  RETURN ==============================================================================================================================================
+  return (
+    <section >
+
+      {/* TOPBANNER PART */}
+      <div data-aos="fade-down" data-aos-duration="3000" id="about-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative" >
+        <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
+          <h1 className="display-1"> {t("aboutUs")}</h1>
+          <div className="d-flex align-items-center justify-content-center gap-1">
+            <Link href={`/`} className="d-block primary-color fw-bold text-decoration-none" >
+              Home
+            </Link>
+            <span>/</span>
+            <span className="text-white-50"> {t("aboutUs")}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* MIDDLE PART */}
+      <div id="about" data-aos="fade-down" data-aos-duration="3000" className="my-5 top">
+        <div className="container">
+          <div className="row g-4 align-items-center">
+            <div className="col-lg-5 position-relative">
+              <Image src={TOPIMAGE} alt="About Us" className="img-fluid" width={1100} height={800} />
+            </div>
+            <div className="col-1"></div>
+            <div className="col-lg-6">
+              <div className="text-justify">
+                <span className="h3 text-3xl"> {t("aboutUs")}</span>
+                <div className="text-muted">
+                  <h2>
+                    <span className="text-[24px] text-zinc-900">
+                      <strong>
+                        <span className="bg-white">
+                          <p className="text-[#22222] my-3 tracking-tight font-bold font-sans">
+                            {t("davKimyaCompany")}
+                          </p>
+                        </span>
+                      </strong>
+                    </span>
+                  </h2>
+                  <div>
+
+                    <span className="text-[#2ecc71]">
+                      <span className="aboutGreenText text-[12px] font-semibold tracking-tight">
+                        <strong>&rdquo;</strong>
+                      </span>
+                      <span className="text-[11pt]">
+                        <span className="bg-white">
+                          <span className="text-[14pt] tracking-tight leading-[3rem] font-[500] ">
+                            {t("aboutUsAnnouncement")}
+                          </span>
+                        </span>
+                      </span>
+                      <span className="text-[16px]">
+                        <strong> &ldquo;</strong>
+                      </span>
+                    </span>
+                  </div>
+
+                  <div className="mt-3">
+                    <span className="bg-white">
+                      <span className="text-[13pt]">
+                        <span className="text-zinc-800 tracking-tight " style={{ wordSpacing: "8px", fontWeight: "550" }}>
+                          {t("aboutUsTopDescription")}
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTTOM */}
+      <div id="description" data-aos="fade-down" data-aos-duration="3000" className="my-5 py-5 top ">
+        <div className="row mt-5 mx-0">
+          {/* SLIDER */}
+          <div className="col-lg-6 px-0">
+            <Swiper spaceBetween={1} slidesPerView={1} loop={true} autoplay={{ delay: 5500, disableOnInteraction: false, }} pagination={false} navigation={false} modules={[Autoplay,]} className="description swipper-wrapper h-100" draggable={false}    >
+              <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
+              <SwiperSlide className="swiper-slide h-full"></SwiperSlide>
+            </Swiper>
+          </div>
+          {/* DESCRIPTIONS */}
+          <div className="col-lg-6 px-0 h-100">
+            <div className="bg-black2 p-5 text-white">
+              <Image alt="desc" src={BOTTOMLOGO} width={90} height={600} />
+              <div className="text-justify">
+                <p className="mx-0">
+                  <strong>
+                    <span className="text-[22pt]">   {t("aboutUsBottomDescription")}</span>
+                    <br />
+                    <br />
+                    {t('aboutUsBottomSubDesc1')}
+                    <br />
+                    <br />
+                    {t('aboutUsBottomSubDesc2')}
+                  </strong>
+                </p>
+                <br />
+                <p className="mx-0">
+                  <strong>
+                    {t('aboutUsBottomSubDesc3')}
+                    <br />
+                    <br />
+                    {t('aboutUsBottomSubDesc4')}
+                  </strong>
+                </p>
+              </div>
+            </div>
+            <div className="primary-bg px-5 pt-4 pb-5 text-dark">
+              <ImEarth className="w-16 h-16 my-4" />
+              <div>
+                <p className="mx-0 text-justify">
+                  <strong>
+                    {t('aboutUsBottomSubDesFooter')}
+                    <br />
+                    <br />
+                    {t('aboutUsBottomSubDesMoto')}
+                  </strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section >
+  );
 };
 export default AboutUsPage;

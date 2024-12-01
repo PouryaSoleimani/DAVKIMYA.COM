@@ -1,0 +1,185 @@
+[
+  {
+    "title": "titleOneSubTitleOne",
+    "src": "",
+    "description": [
+      "adhesivesDescOne",
+      "adhesivesDescTwo",
+      "adhesivesDescThree",
+      "adhesivesDescTwo",
+      "adhesivesDescFour",
+      "adhesivesDescFive"
+    ],
+    "products": ["davinylH5018"]
+  },
+  {
+    "title": "titleOneSubTitleTwo",
+    "src": "",
+    "description": ["paintAndCoat"],
+    "products": [
+      "davinylT5009",
+      "davinyT5002",
+      "davinylC5300",
+      "davinylS5000",
+      "davinylS4016",
+      "davinylP5019",
+      "davinylP4018"
+    ]
+  },
+  {
+    "title": "titleOneSubTitleThree",
+    "src": "",
+    "description": ["tapeLabelDesc"],
+    "products": [
+      "davacrylS5005",
+      "davacrylS5002",
+      "davacrylS5000",
+      "davacrylPS6025",
+      "davacrylPS5530"
+    ]
+  },
+  {
+    "title": "titleOneSubTitleFour",
+    "src": "",
+    "description": ["textileDesc"],
+    "products": [
+      "davinylC4521",
+      "davinylC4005",
+      "davinylS50012",
+      "davinylS5002"
+    ]
+  },
+  {
+    "title": "titleTwoSubTitleOne",
+    "src": "",
+    "description": [
+      "polysterDescOne",
+      "polysterDescTwo",
+      "polysterDescThree",
+      "polysterDescFour",
+      "polysterDescFive",
+      "polysterDescSix"
+    ],
+    "products": [
+      "pad2000",
+      "davapolPG310",
+      "davapolPES300",
+      "sprayPolyDesc",
+      "davaPolSPF30B2",
+      "davaPolAPG400"
+    ]
+  },
+  {
+    "title": "titleTwoSubTitleTwo",
+    "src": "",
+    "description": ["sprayPolyDesc"],
+    "products": ["davaPolSPF30B2", "davaPolAPG400"]
+  },
+  {
+    "title": "titleTwoSubTitleThree",
+    "src": "",
+    "description": ["hightDensityDesc"],
+    "products": [""]
+  },
+  {
+    "title": "titleTwoSubTitleFour",
+    "src": "",
+    "description": ["rigidPuDesc"],
+    "products": ["davaPolCD40"]
+  },
+  {
+    "title": "titleTwoSubTitleFive",
+    "src": "",
+    "description": ["industrialDesc"],
+    "products": ["davaPolPI9000", "davaPolPI1200"]
+  },
+  {
+    "title": "bioBased",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+  {
+    "title": "greenPolyol",
+    "src": "",
+    "description": [
+      "greenPolyolDescOne",
+      "greenPolyolDescTwo",
+      "greenPolyolDescThree"
+    ],
+    "products": ["davapolPi1200"]
+  },
+  {
+    "title": "lightDiffuser",
+    "src": "",
+    "description": ["lightDiffDexc"],
+    "products": ["davaLedFr"]
+  },
+  {
+    "title": "thermalConductive",
+    "src": "",
+    "description": ["thermalConductDesc"],
+    "products": ["davamId6"]
+  },
+  {
+    "title": "ppHight",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+  {
+    "title": "absCompound",
+    "src": "",
+    "description": ["plasticForDesc"],
+    "products": [""]
+  },
+  {
+    "title": "flameRetardantPA",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+  {
+    "title": "flameRetardantPPCompound",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+  {
+    "title": "glassFiber",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+  {
+    "title": "flameRetardantPP",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+  {
+    "title": "CaCO3",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+
+  {
+    "title": "titleFourSubTitleOne",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+  {
+    "title": "titleFourSubTitleTwo",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  },
+  {
+    "title": "titleFourSubTitleThree",
+    "src": "",
+    "description": [""],
+    "products": [""]
+  }
+]

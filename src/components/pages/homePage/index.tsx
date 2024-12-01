@@ -16,6 +16,7 @@ import "react-splide-ts/css";
 import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import DownloadButton from "@/components/modules/DownloadButton";
 
 // COMPONENT =================================================================================================================================================
 const HomePage = () => {
@@ -46,19 +47,19 @@ const HomePage = () => {
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX1} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href="https://davkimya.com/en/product/35" className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">Polymeric Emulsion System</a>
+              <a href={`${lng}/product/${t("productTitleOne")}`} className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleOne")}</a>
             </div>
           </div>
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX2} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href="https://davkimya.com/en/product/40" className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">Polyurethanes</a>
+              <a href={`${lng}/product/${t("productTitleTwo")}`} className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleTwo")}</a>
             </div>
           </div>
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX3} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href="https://davkimya.com/en/product/53" className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">Engineered Polymeric Compounds</a>
+              <a href={`${lng}/product/${t("productTitleThree")}`} className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleThree")}</a>
             </div>
           </div>
         </div>
@@ -74,11 +75,9 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4 shadow-xl shadow-zinc-800">
                     <span
                       className="d-flex align-items-center justify-content-center">01</span>
-                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">offer innovative</h2>
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight"> High-Quality, Consistent Products</h2>
                     <p className="text-muted text-lg">
-                      of high-performance acrylic emulsion, polyester polyols,
-                      polyurethane insulation raw materials, Engineered plastic
-                      compounds, and Mastic and sealants
+                      We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
                     </p>
                   </div>
                 </div>
@@ -86,11 +85,9 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">02</span>
-                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight ">specialize in the production</h2>
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight ">Innovative Solutions</h2>
                     <p className="text-muted text-lg">
-                      of high-performance acrylic emulsion, polyester polyols,
-                      polyurethane insulation raw materials, Engineered plastic
-                      compounds, and Mastic and sealants
+                      Our dedicated R&D team stays at the forefront of technological advancements to develop custom solutions that meet your evolving needs. We push the boundaries to help your products stand out in the market.
                     </p>
                   </div>
                 </div>
@@ -98,12 +95,9 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">03</span>
-                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Respectful</h2>
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Sustainable Practices</h2>
                     <p className="text-muted text-lg">
-                      we have developed a series of PP compounds for LED cover
-                      applications with unique properties that can bring several
-                      benefits through reduced weight, design freedom, and
-                      economic advantages
+                      We are committed to environmentally responsible production. Our processes minimize waste and incorporate eco-friendly practices, making us a partner in your sustainable supply chain.
                     </p>
                   </div>
                 </div>
@@ -111,12 +105,9 @@ const HomePage = () => {
                   <div className="position-relative box bg-white p-4">
                     <span
                       className="d-flex align-items-center justify-content-center">04</span>
-                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">produce mastic and sealants</h2>
+                    <h2 className="mt-4 mb-3 text-3xl font-semibold tracking-tight">Expert Support & Customer Service</h2>
                     <p className="text-muted text-lg">
-                      cartridges as our special finish&nbsp;products with
-                      tailor-made properties by a combination of different raw
-                      materials such as specific acrylic copolymers, silicon
-                      precursors, and silane-modified polymers
+                      Our experienced team is always available to offer technical assistance and guidance. From product selection to after-sales support, we ensure a seamless and satisfying experience.
                     </p>
                   </div>
                 </div>
@@ -163,7 +154,7 @@ const HomePage = () => {
                     How does your company ensure the quality and consistency of
                     your products?
                   </h5>
-                  <p className="short_answer short_answer_0 text-muted bg-gray p-3 mb-0">
+                  <p className={`short_answer short_answer_0 text-muted bg-gray p-3 mb-0 ${showFAQ ? " hidden" : "block"}`}>
                     Our company places a strong emphasis on quality control and
                     consistency in the manufacture of our wide range of products
                     with different applications. ...
@@ -234,7 +225,7 @@ const HomePage = () => {
                       </span>
                     </p>
 
-                    <a href="javascript:void(0)" className="primary-color" data-id="0">Close</a>
+                    <button onClick={showFaqHandler} className="primary-color" data-id="1">Close</button>
                   </div>
                 </div>
                 <div className="mb-3">
@@ -243,7 +234,7 @@ const HomePage = () => {
                     from your emulsion resin offerings?
                   </h5>
                   <p
-                    className="short_answer short_answer_1 text-muted bg-gray p-3 mb-0">
+                    className={`short_answer short_answer_1 text-muted bg-gray p-3 mb-0 ${showFAQ2 ? " hidden" : "block"}`}>
                     Our emulsion resin products find applications across various
                     industries, including: ...
                     <button className="primary-color" onClick={showFaqHandler2}>More</button>
@@ -347,7 +338,11 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
+      {/* DOWNLOAD CATALOGUE */}
+      <div id="DonwloadCatalogue" className="flex flex-wrap items-center justify-center gap-x-10 font-bold bg-zinc-300 w-fit h-fit mx-auto my-10 px-4 py-2 rounded-xl shadow ">
+        Download Our Products Catalogue
+        <DownloadButton />
+      </div>
     </>
   );
 };

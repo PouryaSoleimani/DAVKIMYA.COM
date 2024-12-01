@@ -1,0 +1,23 @@
+[
+  {
+    "title": "titleThreeSubTitleOne",
+    "subtitles": [
+      "lightDiffuser",
+      "thermalConductive",
+      "ppHight",
+      "absCompound"
+    ]
+  },
+  {
+    "title": "titleThreeSubTitleTwo",
+    "subtitles": [ "flameRetardantPA", "flameRetardantPPCompound"]
+  },
+  {
+    "title": "titleThreeSubTitleThree",
+    "subtitles": ["glassFiber", "CaCO3", "flameRetardantPP"]
+  },
+  {
+    "title": "titleTwoSubtTitleSix",
+    "subtitles": ["glassFiber", "CaCO3", "flameRetardantPP"]
+  }
+]

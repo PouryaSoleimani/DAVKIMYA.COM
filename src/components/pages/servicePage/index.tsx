@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-// @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
 import pic1 from "../../../../public/images/servicesPage/item1.jpg";
@@ -36,11 +35,8 @@ const ServicePage = () => {
           <div
             className={"d-flex align-items-center justify-content-center gap-1"}
           >
-            <Link
-              href={`/${lng}`}
-              className={"d-block primary-color fw-bold text-decoration-none"}
-            >
-              Home
+            <Link href={`/${lng}`} className={"d-block primary-color fw-bold text-decoration-none"} >
+              {t("home")}
             </Link>
             <span>/</span>
             <span className={"text-white-50"}>{t("rAndD")}</span>

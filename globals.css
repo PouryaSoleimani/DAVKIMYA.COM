@@ -13,7 +13,19 @@
     --foreground: #ededed;
   }
 }
+::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+  background-color: black;
+}
 
+::-webkit-scrollbar-track {
+  background-color: #b0aeae;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c3eb3f;
+}
 /* DAVKIMYA WEBSITE STYLES */
 @font-face {
   font-family: "TitilliumWeb-Light";
@@ -28,6 +40,10 @@
 @font-face {
   font-family: "TitilliumWeb-Regular";
   src: url("public/new-fonts/TitilliumWeb-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("public/new-fonts/calibrib.ttf") format("truetype");
 }
 body {
   /* color: var(--foreground); */
@@ -221,7 +237,7 @@ footer .col-lg-3 a {
 #faqs2,
 .index_form form,
 #contact form {
-  /* background-image: url("../img/Bg-Black-Liquid-1.png"); */
+  background-image: url("./public/images/contact-us/form-background-pattern.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -353,11 +369,10 @@ footer .col-lg-3 a:hover,
 }
 
 #description .swiper-slide:first-child {
-  /* background-image: url("../img/oil-refinery-factory-TCWZBZ3.jpg"); */
+  background-image: url("./public/images/about-us/SLIDER__1.jpg");
 }
-
 #description .swiper-slide:last-child {
-  /* background-image: url("../img/petrochemical-storage-tank-with-oil-refinery-backg-77LN7G2.jpg"); */
+  background-image: url("./public/images/about-us/SLIDER__2.jpg");
 }
 
 /* faqs */
@@ -399,7 +414,7 @@ footer .col-lg-3 a:hover,
 /* about page */
 
 #about-title {
-  /* background-image: url("../img/crude-oil-storage-tank-terminal-port-oil-terminal-L2G2QRB.jpg"); */
+  background-image: url("public/images/about-us/about-use-header.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -439,7 +454,7 @@ footer .col-lg-3 a:hover,
 
 /* faqs page */
 #faqs-title {
-  /* background-image: url("../img/oil-refinery-plant-from-industry-zone-oil-and-gas-E5HABQN-e1676866622808.jpg"); */
+  background-image: url("./public/images/faq/headerPic.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -469,7 +484,7 @@ footer .col-lg-3 a:hover,
 
 /* contact page */
 #contact-title {
-  /* background-image: url("../img/1.jpg"); */
+  background-image: url("./public/images/contact-us/contact-us-header.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2104,4 +2119,8 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 .footer_img {
   max-height: 80px;
   object-fit: contain;
+}
+
+.aboutGreenText {
+  font-family: Calibri;
 }
