@@ -1,40 +1,13 @@
-tasks:
-    Pouria: ==============================================================================================================================================
-{
-     ✔1- homePage - DONE 
-     ✔2- productPage - DONE   safheye productCategory va productPage hardo dakhele box ha balaye matn ye ax ba aspect ratio e 1:1 dashte bashan
-     ✔3- aboutUsPage - DONE 
-     ✔4- FOOTER LOCATION :  DONE  ===>    ( https://maps.app.goo.gl/PNUGCYg9GtgCNmTz9 / Dav kimya ) 
-     ✔5- HEADER DROPDOWN : DONE
-     ✔6- WHATSAPP LINK FIXED :  DONE 
-     ✔7- CONTACT US EMAILS TABLE  :  DONE  ===>  [Export@davkimya.com===> International sales manager ||  'putech@davkimya.com' ===>Chief scientific officer-Polyurethane department ||  'wbresin@davkimya.com' ===> R&D manager /Emulsion resin department ||  ]
-     ✔8 - HOME PAGE => DOWNLOAD CATALOGUE ===> DONWLOAD PDF   - DONE             
-}
-
-    Amin: ==============================================================================================================================================
-    {
-    1  sevrvicePage done
-    2  serviceDetailsPage done
-    3  blogsPage done
-    4  blogDetailsPage done
-    5  faqPage done
-    6 productCategoryPage  -> mesle davkimya.com faghat breadcrump esh kamel bashe dashte bashe ,  safheye productCategory va productPage hardo dakhele box ha balaye matn ye ax ba aspect ratio e 1:1 dashte bashan
-    7 productDetailsPage  -> mesle davkimya.com faghat breadcrump esh kamel bashe dashte bashe 
-    8 productDetailsPdfPage  -> mesle davkimya.com faghat breadcrump esh kamel bashe dashte bashe 
-}
----------------------------------------------------------------------------------------------------------------------------------------------------------
-catalog = مورد 6 – قرار دادن  فایل کاتالوگ سایت فایل PDF  کاتالوگ در صفحه Home به صورت یک گزینه قابل کلیک قرار داده شود.
-
-leftovers:{
-   ✔ 1. catalog
-   ✔ 2.whatsapp
-   ✔ 3.map footer
-   ✔ 4.emails table in contact-us
-    5.breadCrumps
-    6.build
-    7.deploy on host
-    8.fixing build issues
-    9.complete form logics
-    10.check and fix changing language functionality
-    11.add images
+tasks{
+    1.hydration
+    2.catalog mainPage
+    3.productPdf file add link pdfs
+    4.productPdfPage modal
+    5.save forms datas
+    6.sync useTranslation
+    7.fix changing languages
+    8.link social medias
+    9.searchInput
+    10.map doesn't show
+    11.remove unused files in assets and public
 }
