@@ -20,7 +20,7 @@ const SearchModal = (props: any | null) => {
                </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-               <Button onClick={props.onHide}>Close</Button>
+               <Button onClick={props.onHide} className='px-10'>Close</Button>
             </Modal.Footer>
          </Modal>
       </>
