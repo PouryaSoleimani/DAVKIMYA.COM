@@ -1,5 +1,5 @@
 tasks{
-    1.hydration
+    ✔ 1.hydration ===> BOOTSTRAP "document is not defined" ERROR IS NOW SOLVED
     2.catalog mainPage
     3.productPdf file add link pdfs
     4.productPdfPage modal
