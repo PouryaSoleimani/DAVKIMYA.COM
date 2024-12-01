@@ -10,10 +10,14 @@
   },
   {
     "title": "titleThreeSubTitleTwo",
-    "subtitles": ["", "flameRetardantPA", "flameRetardantPPCompound"]
+    "subtitles": [ "flameRetardantPA", "flameRetardantPPCompound"]
   },
   {
     "title": "titleThreeSubTitleThree",
+    "subtitles": ["glassFiber", "CaCO3", "flameRetardantPP"]
+  },
+  {
+    "title": "titleTwoSubtTitleSix",
     "subtitles": ["glassFiber", "CaCO3", "flameRetardantPP"]
   }
 ]

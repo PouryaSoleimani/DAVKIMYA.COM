@@ -5,17 +5,16 @@ import { useTranslation } from "@/core/i18n/client";
 interface NoSubTitleBoxProps {
   mainTitle: string;
   title: string;
-  id: number;
   src?: string;
 }
-const NoSubTitleBox = ({ mainTitle, title, id, src }: NoSubTitleBoxProps) => {
+const NoSubTitleBox = ({ mainTitle, title, src }: NoSubTitleBoxProps) => {
   const { t } = useTranslation();
   return (
     <div className="col-xxl-3 col-md-4 col-sm-6">
       <div className="card_category">
         <div>
           <Link
-            href={`${t(mainTitle)}/${id}`}
+            href={`${t(mainTitle)}/${t(title)}`}
             className="title_h1 tracking-tighter"
           >
             {t(title)}

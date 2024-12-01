@@ -112,9 +112,9 @@
   "polysterDescFour:": "Structural Panels: In the aerospace and automotive industries, polyurethane rigid foam is employed to create lightweight yet strong structural panels, reducing weight and improving fuel efficiency.",
   "polysterDescFive": "Adhesive Bonding: Some polyester polyols can also be used in the synthesis of one and two-component polyurethane adhesives, mastics, and sealants.",
   "polysterDescSix": "Elevate your foam and adhesive products with our versatile Polyester Polyols. Designed primarily for rigid foams, our range also includes specialized grades tailored for adhesive and shoe applications.",
-  "pad-2000": "PAD-2000",
-  "davapol-PG310": "Davapol-PG310",
-  "davapol-PES-300": "Davapol-PES 300",
+  "pad2000": "PAD-2000",
+  "davapolPG310": "Davapol-PG310",
+  "davapolPES300": "Davapol-PES 300",
   "sprayPolyDesc": "Spray Polyurethane foam (SPF) represents a revolutionary insulation and sealing solution, and our product lineup includes innovative options like water-blown spray foam and bio-based grades. When sprayed, these foams expand rapidly to form an airtight, seamless barrier that excels in thermal insulation and moisture resistance. Whether you're working on residential, commercial, or industrial projects, our SPF solutions offer unmatched versatility and performance. Elevate your sustainability goals with our biobased grade or with water-blown spray polyurethane foams. From enhancing energy efficiency to fortifying structures, our SPF products bring innovation and effectiveness to your every need.",
   "davaPolSPF30B2": "DavaPol-SPF30-B2",
   "davaPolAPG400": "Davapol-APG400",
@@ -132,5 +132,11 @@
   "flameRetardantPADesc": "Our PA 6 compounds take fire safety with advanced flame-retardant additives, they are tailored for critical applications like connectors in home appliances. These compounds offer superior fire resistance, ensuring the utmost protection for your electrical components.",
   "flameRetardantPPDesc": "Our flame-retardant PP compounds offer exceptional fire resistance without compromising on performance. These materials are the ideal choice for electronic enclosures, connectors, and housings, providing proper flame retardancy while maintaining appropriate mechanical durability.",
   "davaretFr": "DAVARET-FR",
-  "ElectronicDesc": "Step into the world of safety and innovation with our Flame Retardant Polypropylene (PP) and Polyamide (PA) compounds, engineered for the Electronic and Home Appliances industry."
+  "ElectronicDesc": "Step into the world of safety and innovation with our Flame Retardant Polypropylene (PP) and Polyamide (PA) compounds, engineered for the Electronic and Home Appliances industry.",
+"bioBased":"Bio-based Polyol for rigid spray foams",
+"greenPolyol":"Green polyol for pour-in-place rigid foams",
+"greenPolyolDescOne":"Introducing our innovative biobased formulated polyols, the heart of sustainable spray polyurethane foams and pipe insulation solutions. Commitment to environmental responsibility, these polyols combine cutting-edge technology with renewable resources to revolutionize insulation.",
+"greenPolyolDescTwo":"Our biobased formulated polyols create spray polyurethane foams that not only excel in insulation efficiency but also reduce the carbon footprint. These foams offer outstanding thermal performance while contributing to a greener, more sustainable future.",
+"greenPolyolDescThree":"Whether you're insulating buildings, pipes, or industrial equipment, our biobased polyols empower you to enhance energy efficiency while minimizing environmental impact. Elevate your insulation projects with materials that blend performance and sustainability seamlessly, setting new standards for excellence in insulation technology.",
+"davapolPi1200":"DavaPol-PI1200"
 }

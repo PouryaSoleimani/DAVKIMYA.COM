@@ -32,7 +32,7 @@ const AboutUsPage = () => {
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1"> {t("aboutUs")}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
-            <Link href="http://davkimya.com" className="d-block primary-color fw-bold text-decoration-none" >
+            <Link href={`/`} className="d-block primary-color fw-bold text-decoration-none" >
               Home
             </Link>
             <span>/</span>

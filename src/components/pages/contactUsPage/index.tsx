@@ -9,7 +9,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Table from 'react-bootstrap/Table';
 
 type Inputs = { Name: string, Email: string, Phone: number, Subject: string, Message: string, }
@@ -156,7 +156,7 @@ const ContactUsPage = () => {
               </a>
               <a href="https://twitter.com/dav"
                 className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
-                <FaTwitter className='w-7 h-7 text-white' />
+                <FaLinkedin className='w-7 h-7 text-white' />
               </a>
               <a href="https://www.instagram.com/dav/"
                 className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">

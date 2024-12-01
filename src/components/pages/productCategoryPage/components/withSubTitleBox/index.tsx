@@ -2,10 +2,13 @@ import { useTranslation } from "@/core/i18n/client";
 import Link from "next/link";
 import productData from "@/core/constants/useSubTitlesData.json";
 import { useEffect, useState } from "react";
+import { useLang } from "@/core/providers/langProvider";
 interface WithSubTitleBoxProps {
   title: string;
+  mainTitle: string;
 }
-const WithSubTitleBox = ({ title }: WithSubTitleBoxProps) => {
+const WithSubTitleBox = ({ title, mainTitle }: WithSubTitleBoxProps) => {
+  const {lng} = useLang()
   const { t } = useTranslation();
   const [selectedTitle, setSelectedTitle] = useState<string[]>();
   useEffect(() => {
@@ -17,15 +20,15 @@ const WithSubTitleBox = ({ title }: WithSubTitleBoxProps) => {
     <div className="col-xxl-3 col-md-4 col-sm-6">
       <div className="card_category">
         <div>
-          <Link href="https://davkimya.com/en/product/35" className="title_h1">
+          <Link     href={`/${lng}/product/${mainTitle}/${t(title)}`} className="title_h1">
             {t(title)}
           </Link>
           <hr />
           {selectedTitle?.map((item, index) => {
             return (
               <Link
-                href={`/product/${t(title)}/${id}`}
-                className="title_h5"
+                href={`/${lng}/product/${mainTitle}/${t(title)}`}
+                className="title_h5 my-3"
                 key={index}
               >
                 {t(item) || ""}

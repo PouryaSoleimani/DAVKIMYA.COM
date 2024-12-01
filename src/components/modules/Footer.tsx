@@ -60,21 +60,21 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="https://davkimya.com/en/about-us" className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"  >
+                    <Link href={`/${lng}/about-us`} className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
-                      <span>About us</span>
+                      <span>{t("aboutUs")}</span>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="https://davkimya.com/en/service" className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"  >
+                    <Link href={`/${lng}/service`} className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
-                      <span>R&amp;D Services</span>
+                      <span>{t("rAndD")}</span>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="https://davkimya.com/en/faqs" className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"  >
+                    <Link href={`/${lng}/faqs`} className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
-                      <span>Faqs</span>
+                      <span>{t("faqs")}</span>
                     </Link>
                   </li>
                 </ul>
@@ -84,31 +84,31 @@ const Footer = () => {
                 <span className="pb-2 h3">{t("contactUs")}</span>
                 <ul className="list-unstyled p-0 m-0 mt-4">
                   <li className="mb-2">
-                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href="https://davkimya.com/en/service/show/2"  >
+                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
                       <span>+90 534 043 36 46</span>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href="https://davkimya.com/en/service/show/1"  >
+                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
                       <span>+90 534 687 90 96</span>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href="https://davkimya.com/en/service/show/1"  >
+                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
                       <span>+90 506 503 43 38</span>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href="https://davkimya.com/en/service/show/1"    >
+                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}    >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
                       <span>+90 506 503 43 38</span>
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href="https://davkimya.com/en/service/show/1"  >
+                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
                       <span>info@davkimya.com</span>
                     </Link>

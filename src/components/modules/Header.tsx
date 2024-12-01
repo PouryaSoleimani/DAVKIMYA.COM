@@ -71,7 +71,7 @@ const Header = () => {
                         <Link href="https://www.facebook.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
                             <FaFacebook className='w-8 h-8 text-white' />
                         </Link>
-                        <Link href="https://twitter.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                        <Link href="https://linkedin.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
                             <FaLinkedin className='w-8 h-8 text-white' />
                         </Link>
                         <Link href="https://www.instagram.com/dav/" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">

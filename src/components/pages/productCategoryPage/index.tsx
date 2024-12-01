@@ -8,7 +8,7 @@ import { useTranslation } from "@/core/i18n/client";
 import { WithSubTitleBox } from "./components/withSubTitleBox";
 import { NoSubTitleBox } from "./components/noSubTitleBox";
 import productsData from "../../../core/constants/useproductsData.json";
-import { useLang } from "@/core/providers/langProvider";
+
 
 export type selectedTitle = {
   title: string;
@@ -17,7 +17,7 @@ export type selectedTitle = {
 const ProductCategoryPage = () => {
   const { t } = useTranslation();
   const { title } = useParams();
-  const { lng } = useLang();
+
 
   const productTitle = title
     ? typeof title === "string"
@@ -75,15 +75,14 @@ const ProductCategoryPage = () => {
             <span className="h3">{productTitle}</span>
           </div>
           <div className="row g-4 mt-5">
-            {productTitle === t("productTitleThree")
+            {productTitle === t("productTitleThree") 
               ? selectedTitle?.subtitles.map((item) => {
-                  return <WithSubTitleBox title={item} key={Math.random()} />;
+                  return <WithSubTitleBox title={item} key={Math.random()}  mainTitle={productTitle}/>;
                 })
-              : selectedTitle?.subtitles.map((item, index) => {
+              : selectedTitle?.subtitles.map((item) => {
                   return (
                     <NoSubTitleBox
                       mainTitle={productTitle}
-                      id={index}
                       title={item}
                       key={Math.random()}
                     />
