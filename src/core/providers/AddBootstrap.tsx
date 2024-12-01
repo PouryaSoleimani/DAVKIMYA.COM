@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 import "bootstrap/dist/css/bootstrap.min.css";
-// @ts-ignore the error in line below is beacuse of bootstrap typescript problem, igonre it code works fine
-import("bootstrap/dist/js/bootstrap.bundle.js");
+// import "bootstrap/dist/js/bootstrap.bundle.js";
+import { useEffect } from "react";
 
 const AddBootstrap = () => {
+  useEffect(() => { import('bootstrap/dist/js/bootstrap.bundle.js'); }, []);
+
   return <></>;
 };
 export { AddBootstrap };
