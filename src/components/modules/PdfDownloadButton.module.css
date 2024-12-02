@@ -7,7 +7,7 @@
   --light: #141414;
   --zinc-800: #7f7f8f;
   --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
-
+  margin: 2rem 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,7 +25,6 @@
 
 .imageContainer {
   overflow: hidden;
-  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -35,17 +34,6 @@
   height: 5rem;
   background-color: rgb(120, 12, 12);
   border-radius: 0.5rem;
-}
-
-.image_container .image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 3rem;
-  fill: var(--light);
 }
 
 .title {
@@ -59,60 +47,6 @@
   text-overflow: ellipsis;
   text-align: center;
 }
-
-.size {
-  font-size: 0.75rem;
-  color: var(--light);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.listSize {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.25rem;
-  margin-top: 0.25rem;
-}
-
-.listSize .itemList {
-  list-style: none;
-}
-
-.listSize .itemListButton {
-  cursor: pointer;
-  padding: 0.5rem;
-  background-color: var(--zinc-800);
-  font-size: 0.75rem;
-  color: var(--light);
-  border: 2px solid var(--zinc-800);
-  border-radius: 0.25rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.itemListButton:hover {
-  border: 2px solid var(--light);
-}
-
-.itemListButton:focus {
-  background-color: var(--primary);
-  border: 2px solid var(--primary-shadow);
-  -webkit-box-shadow: inset 0px 1px 4px var(--primary-shadow);
-  box-shadow: inset 0px 1px 4px var(--primary-shadow);
-}
-
 .action {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,61 +75,22 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  /* background-image: var(--bg-linear); */
-  border: 2px solid hsla(262, 18%, 57%, 0.5);
+  border: 1px solid gray;
   border-radius: 0.5rem;
   overflow: hidden;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .buttonText {
   color: var(--light);
-  font-weight: 750;
+  font-weight: 300;
   font-size: 1rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
-.buttonIcon {
-  position: absolute;
-  height: 100%;
-  width: 2.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: var(--primary-800);
-  right: -2.5rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.downloadSvg {
-  width: 1.25rem;
-  fill: var(--light);
-}
-
 .downloadButton:hover {
-  background: var(--primary-800);
+  background: #c3e843;
 }
-
-.downloadButton:hover .buttonIcon {
-  right: 0;
-  width: 100%;
-}
-
-.downloadButton:active {
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
-}
-
 .downloadButton:active .buttonIcon {
   background-color: var(--primary-shadow);
 }

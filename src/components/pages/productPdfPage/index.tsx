@@ -29,11 +29,7 @@ const ProductPdfPage = () => {
             <h1 className="fw-bold my-3 text-4xl">DAVACRYL-S4016</h1>
             <div>
               <hr />
-              {/* <button className="download_btn" data-bs-toggle="modal" data-bs-target="#examplePdfModal"   > */}
-                <PdfDownloadButton />
-                <span>Download</span>
-                <span>PDF</span>
-              {/* </button> */}
+              <PdfDownloadButton />
               <hr />
             </div>
             <p className="text-secondary">DAVACRYL-S4016</p>
