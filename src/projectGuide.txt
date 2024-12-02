@@ -1,5 +1,5 @@
 tasks{
-    1.hydration
+    ✔ 1.hydration ===> BOOTSTRAP "document is not defined" ERROR IS NOW SOLVED
     2.catalog mainPage
     3.productPdf file add link pdfs
     4.productPdfPage modal
@@ -7,7 +7,7 @@ tasks{
     6.sync useTranslation
     7.fix changing languages
     8.link social medias
-    9.searchInput
-    10.map doesn't show
-    11.remove unused files in assets and public
+    ✔ 9.searchInput - DONE
+    ✔ 10.map doesn't show
+    ✔ 11.remove unused files in assets and public - DONE
 }
