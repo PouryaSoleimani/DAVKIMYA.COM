@@ -7,7 +7,8 @@ import Form from 'react-bootstrap/Form';
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import toast, { Toaster } from 'react-hot-toast';
+import Toast from 'react-bootstrap/Toast';
+
 
 type Inputs = { name: string, email: string, phone: number | string }
 
@@ -18,18 +19,33 @@ const PdfDownloadButton = () => {
     phone: yup.number().min(8).required()
   }).required();
   const [show, setShow] = useState(false);
-
+  const [showToast, setShowToast] = useState(false)
   // FUNCTIONS
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({ resolver: yupResolver(schema), })
-  const onSubmit: SubmitHandler<Inputs> = (data) => { console.log(data); reset(); setShow(false) }
 
-  const notifySuccess = () => toast.success('You have Successfully registered');
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({ resolver: yupResolver(schema), })
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log(data);
+    reset();
+    setShow(false);
+    setShowToast(true)
+    setTimeout(() => { setShowToast(false) }, 1500);
+  }
+
+
   // RETURN =============================================================================================================================================
   return (
     <>
+      <Toast className={`${!showToast ? "hidden" : ""}`}>
+        <Toast.Header>
+          <strong className="me-auto bg-lime-400">Success</strong>
+          <small>Just Now</small>
+        </Toast.Header>
+        <Toast.Body>You have Successfully registered your E-Mail</Toast.Body>
+      </Toast>
+
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <BsFillFileEarmarkPdfFill className='text-white w-16 h-16' />

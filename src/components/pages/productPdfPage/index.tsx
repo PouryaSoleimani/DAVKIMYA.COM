@@ -4,12 +4,14 @@ import { FaArrowRight } from "react-icons/fa";
 import PdfDownloadButton from "@/components/modules/PdfDownloadButton";
 
 
+
 // COMPONENT ====================================================================================================================================================================
 const ProductPdfPage = () => {
   const { t } = useTranslation()
 
   return (
     <>
+
       <section id="post-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative"  >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1"> DAVACRYL-S4016</h1>
