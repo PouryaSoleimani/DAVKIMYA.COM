@@ -91,7 +91,7 @@ const ProductCategoryPage = () => {
                 );
               })}
             <div className="col-md-12"></div>
-          </div>
+          </div> 
         </div>
       </section>
     </>
