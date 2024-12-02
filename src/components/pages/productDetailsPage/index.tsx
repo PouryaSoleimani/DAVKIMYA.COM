@@ -29,6 +29,7 @@ const ProductDetailsPage = () => {
       : title[0].split("%20").join(" ").toString()
     : "";
 
+
   const [selectedTitle, setSelectedTitle] = useState<selectedTitle>();
 
   useEffect(() => {
@@ -68,8 +69,8 @@ const ProductDetailsPage = () => {
               </h5>
               {selectedTitle?.products.map((item) => (
                 <h2 key={Math.random()} className="product_name_h1 text-start mb-0">
-                  {/* <Link href={`/${lng}/product/${mainTitle}/${title}/product-pdf`}>{t(item)}</Link> */}
                   <Link href={`/${lng}/product/${mainTitle}/${title}/product-pdf`}>{t(item)}</Link>
+                  {/* <Link href={`/${lng}/product/${mainTitleNew}/${productTitleNew}/product-pdf`}>{t(item)}</Link> */}
                 </h2>
               ))}
             </div>
