@@ -14,7 +14,7 @@ const NoSubTitleBox = ({ mainTitle, title, src }: NoSubTitleBoxProps) => {
       <div className="card_category">
         <div>
           <Link
-            href={`${t(mainTitle)}/${t(title)}`}
+            href={`${t(mainTitle.replaceAll(" ","-"))}/${t(title).replaceAll(" ","-")}`}
             className="title_h1 tracking-tighter"
           >
             {t(title)}

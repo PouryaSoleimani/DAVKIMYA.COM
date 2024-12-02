@@ -23,8 +23,8 @@ const ProductCategoryPage = () => {
 
   const productTitle = title
     ? typeof title === "string"
-      ? title.split("%20").join(" ").toString()
-      : title[0]
+      ? title.replaceAll("-"," ")
+      : title[0].replaceAll("-"," ")
     : "";
 
   const [selectedTitle, setSelectedTitle] = useState<selectedTitle>();

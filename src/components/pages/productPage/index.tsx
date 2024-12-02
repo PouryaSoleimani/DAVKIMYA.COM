@@ -47,7 +47,7 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <Link href={`product/${t("productTitleOne")}`} className="title_h1 tracking-tighter">
+                  <Link href={`product/${t("productTitleOne").replaceAll(" ","-")}`} className="title_h1 tracking-tighter">
                     {t("productTitleOne")}
                   </Link>
                   <hr />
@@ -58,7 +58,7 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <Link href={`product/${t("productTitleTwo")}`} className="title_h1 tracking-tighter">
+                  <Link href={`product/${t("productTitleTwo").replaceAll(" ","-")}`} className="title_h1 tracking-tighter">
                     {t("productTitleTwo")}
                   </Link>
                   <hr />
@@ -69,7 +69,7 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <Link href={`product/${t("productTitleThree")}`} className="title_h1 whitespace-nowrap tracking-tighter">
+                  <Link href={`product/${t("productTitleThree").replaceAll(" ","-")}`} className="title_h1 whitespace-nowrap tracking-tighter">
                     {t("productTitleThree")}
                   </Link>
                   <hr />
@@ -80,7 +80,7 @@ const ProductPage = () => {
             <div className="col-xxl-3 col-md-4 col-sm-6">
               <div className="card_category">
                 <div >
-                  <Link href={`product/${t("productTitleFour")}`} className="title_h1 tracking-tighter">
+                  <Link href={`product/${t("productTitleFour").replaceAll(" ","-")}`} className="title_h1 tracking-tighter">
                     {t("productTitleFour")}
                   </Link>
                   <hr />

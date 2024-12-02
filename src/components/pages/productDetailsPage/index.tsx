@@ -20,13 +20,13 @@ const ProductDetailsPage = () => {
 
   const productTitle = id
     ? typeof id === "string"
-      ? id.split("%20").join(" ").toString()
-      : id[0].split("%20").join(" ").toString()
+      ? id.replaceAll("-"," ")
+      : id[0].replaceAll("-"," ")
     : "";
   const mainTitle = title
     ? typeof title === "string"
-      ? title.split("%20").join(" ").toString()
-      : title[0].split("%20").join(" ").toString()
+      ? title.replaceAll("-"," ")
+      : title[0].replaceAll("-"," ")
     : "";
 
 
@@ -48,7 +48,7 @@ const ProductDetailsPage = () => {
             <span>/</span>
             <Link href={`/`} className="text-white-50"> {t("product")}</Link>
           </div>
-        </div>
+        </div>..replaceAll(" ","-")
       </section>
 
       {/* <!-- articles --> */}
@@ -69,7 +69,7 @@ const ProductDetailsPage = () => {
               </h5>
               {selectedTitle?.products.map((item) => (
                 <h2 key={Math.random()} className="product_name_h1 text-start mb-0">
-                  <Link href={`/${lng}/product/${mainTitle}/${title}/product-pdf`}>{t(item)}</Link>
+                  <Link href={`/${lng}/product/${mainTitle.replaceAll(" ","-")}/${productTitle.replaceAll(" ","-")}/product-pdf`}>{t(item)}</Link>
                   {/* <Link href={`/${lng}/product/${mainTitleNew}/${productTitleNew}/product-pdf`}>{t(item)}</Link> */}
                 </h2>
               ))}
