@@ -25,7 +25,7 @@ const ProductPdfPage = () => {
       <section id="single-service" className="container my-5 left">
         <div className="row g-4">
           <div className="col-lg-8">
-            <h1 className="fw-bold my-3">DAVACRYL-S4016</h1>
+            <h1 className="fw-bold my-3 text-4xl">DAVACRYL-S4016</h1>
             <div>
               <hr />
               <button className="download_btn" data-bs-toggle="modal" data-bs-target="#examplePdfModal"   >
