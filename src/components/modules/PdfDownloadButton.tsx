@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import toast, { Toaster } from 'react-hot-toast';
 
 type Inputs = { name: string, email: string, phone: number | string }
 
@@ -22,9 +23,10 @@ const PdfDownloadButton = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { register, handleSubmit, formState: { errors }, } = useForm({ resolver: yupResolver(schema), })
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({ resolver: yupResolver(schema), })
+  const onSubmit: SubmitHandler<Inputs> = (data) => { console.log(data); reset(); setShow(false) }
 
+  const notifySuccess = () => toast.success('You have Successfully registered');
   // RETURN =============================================================================================================================================
   return (
     <>
