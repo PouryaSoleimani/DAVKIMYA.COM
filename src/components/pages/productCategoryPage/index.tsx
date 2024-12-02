@@ -23,8 +23,8 @@ const ProductCategoryPage = () => {
 
   const productTitle = title
     ? typeof title === "string"
-      ? title.replaceAll("-"," ")
-      : title[0].replaceAll("-"," ")
+      ? title.replaceAll("-", " ")
+      : title[0].replaceAll("-", " ")
     : "";
 
   const [selectedTitle, setSelectedTitle] = useState<selectedTitle>();
@@ -91,7 +91,7 @@ const ProductCategoryPage = () => {
                 );
               })}
             <div className="col-md-12"></div>
-          </div>
+          </div> 
         </div>
       </section>
     </>
