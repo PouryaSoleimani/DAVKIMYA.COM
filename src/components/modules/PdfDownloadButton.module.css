@@ -83,11 +83,11 @@
   margin-top: 0.25rem;
 }
 
-.listSize .item-list {
+.listSize .itemList {
   list-style: none;
 }
 
-.listSize .item-list-button {
+.listSize .itemListButton {
   cursor: pointer;
   padding: 0.5rem;
   background-color: var(--zinc-800);
@@ -99,11 +99,11 @@
   transition: all 0.3s ease-in-out;
 }
 
-.item-list-button:hover {
+.itemListButton:hover {
   border: 2px solid var(--light);
 }
 
-.item-list-button:focus {
+.itemListButton:focus {
   background-color: var(--primary);
   border: 2px solid var(--primary-shadow);
   -webkit-box-shadow: inset 0px 1px 4px var(--primary-shadow);
@@ -146,7 +146,7 @@
   transition: all 0.3s ease;
 }
 
-.button-text {
+.buttonText {
   color: var(--light);
   font-weight: 750;
   font-size: 1rem;
@@ -154,7 +154,7 @@
   transition: all 0.3s ease;
 }
 
-.button-icon {
+.buttonIcon {
   position: absolute;
   height: 100%;
   width: 2.5rem;
@@ -178,28 +178,28 @@
   fill: var(--light);
 }
 
-.download-button:hover {
+.downloadButton:hover {
   background: var(--primary-800);
 }
 
-.download-button:hover .button-text {
+.downloadButton:hover .buttonText {
   -webkit-transform: translateX(-1.25rem);
   -ms-transform: translateX(-1.25rem);
   transform: translateX(-1.25rem);
   opacity: 0;
 }
 
-.download-button:hover .button-icon {
+.downloadButton:hover .buttonIcon {
   right: 0;
   width: 100%;
 }
 
-.download-button:active {
+.downloadButton:active {
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
 
-.download-button:active .button-icon {
+.download-button:active .buttonIcon {
   background-color: var(--primary-shadow);
 }
