@@ -1,3 +1,4 @@
+"use client"
 import ProductPdfPage from "@/components/pages/productPdfPage";
 
 const Page = () => {
@@ -5,4 +6,3 @@ const Page = () => {
 };
 
 export default Page;
- 

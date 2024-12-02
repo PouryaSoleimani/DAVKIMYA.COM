@@ -18,6 +18,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DownloadButton from "@/components/modules/DownloadButton";
 
+
 // COMPONENT =================================================================================================================================================
 const HomePage = () => {
 
@@ -31,6 +32,7 @@ const HomePage = () => {
 
   return (
     <>
+
       {/* <!-- BANNER --> */}
       <Splide options={{ rewind: true, rewindByDrag: true, arrows: false, autoplay: true, loop: true, drag: true, }} aria-label="React Splide Example">
         <SplideSlide className="w-screen">
