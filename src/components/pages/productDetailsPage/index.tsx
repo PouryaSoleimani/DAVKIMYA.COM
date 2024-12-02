@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import poructsDetails from "@/core/constants/useProductsDetails.json";
 import { useLang } from "@/core/providers/langProvider";
@@ -18,24 +20,24 @@ type selectedTitle = {
 const ProductDetailsPage = () => {
   const { t } = useTranslation();
   const { lng } = useLang();
-  const { title,id } = useParams();
+  const { title, id } = useParams();
 
   const productTitle = id
     ? typeof id === "string"
       ? id.split("%20").join(" ").toString()
       : id[0].split("%20").join(" ").toString()
     : "";
-const mainTitle = title
-? typeof title === "string"
-? title.split("%20").join(" ").toString()
-: title[0].split("%20").join(" ").toString()
-: "";
+  const mainTitle = title
+    ? typeof title === "string"
+      ? title.split("%20").join(" ").toString()
+      : title[0].split("%20").join(" ").toString()
+    : "";
   const [selectedTitle, setSelectedTitle] = useState<selectedTitle>();
 
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-    poructsDetails.map((item) => {
+    poructsDetails.map((item: selectedTitle) => {
       t(item.title) === productTitle && setSelectedTitle(item);
     });
   }, []);
@@ -84,7 +86,7 @@ const mainTitle = title
             <div className="col-md-12">
               <div className="mb-3">
                 {selectedTitle?.description.map((item) => (
-                  <p>{t(item)}</p>
+                  <p key={item}>{t(item)}</p>
                 ))}
               </div>
               <hr />

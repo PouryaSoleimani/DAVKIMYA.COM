@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import Link from "next/link";
 import AOS from "aos";
@@ -75,19 +77,19 @@ const ProductCategoryPage = () => {
             <span className="h3">{productTitle}</span>
           </div>
           <div className="row g-4 mt-5">
-            {productTitle === t("productTitleThree") 
+            {productTitle === t("productTitleThree")
               ? selectedTitle?.subtitles.map((item) => {
-                  return <WithSubTitleBox title={item} key={Math.random()}  mainTitle={productTitle}/>;
-                })
+                return <WithSubTitleBox title={item} key={Math.random()} mainTitle={productTitle} />;
+              })
               : selectedTitle?.subtitles.map((item) => {
-                  return (
-                    <NoSubTitleBox
-                      mainTitle={productTitle}
-                      title={item}
-                      key={Math.random()}
-                    />
-                  );
-                })}
+                return (
+                  <NoSubTitleBox
+                    mainTitle={productTitle}
+                    title={item}
+                    key={Math.random()}
+                  />
+                );
+              })}
             <div className="col-md-12"></div>
           </div>
         </div>

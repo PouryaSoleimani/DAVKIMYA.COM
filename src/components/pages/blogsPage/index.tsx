@@ -9,7 +9,6 @@ import item5 from "@/../public/images/blogs/item5.jpg";
 import item6 from "@/../public/images/blogs/item6.jpg";
 import { useLang } from "@/core/providers/langProvider";
 import { useTranslation } from "@/core/i18n/client";
-// @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
