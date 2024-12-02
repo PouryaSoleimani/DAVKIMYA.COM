@@ -8,7 +8,7 @@ interface WithSubTitleBoxProps {
   mainTitle: string;
 }
 const WithSubTitleBox = ({ title, mainTitle }: WithSubTitleBoxProps) => {
-  const {lng} = useLang()
+  const { lng } = useLang()
   const { t } = useTranslation();
   const [selectedTitle, setSelectedTitle] = useState<string[]>();
   console.log(mainTitle);
@@ -21,14 +21,14 @@ const WithSubTitleBox = ({ title, mainTitle }: WithSubTitleBoxProps) => {
     <div className="col-xxl-3 col-md-4 col-sm-6">
       <div className="card_category">
         <div>
-          <Link     href={`/${lng}/product/${mainTitle.replaceAll(" ","-")}/${t(title).replaceAll(" ","-")}`} className="title_h1">
+          <Link href={`/${lng}/product/${mainTitle.replaceAll(" ", "-")}/${t(title).replaceAll(" ", "-")}`} className="title_h1">
             {t(title)}
           </Link>
           <hr />
           {selectedTitle?.map((item, index) => {
             return (
               <Link
-                href={`/${lng}/product/${mainTitle.replaceAll(" ","-")}/${t(title).replaceAll(" ","-")}`}
+                href={`/${lng}/product/${mainTitle.replaceAll(" ", "-")}/${t(title).replaceAll(" ", "-")}`}
                 className="title_h5 my-3"
                 key={index}
               >
