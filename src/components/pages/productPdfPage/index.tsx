@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useTranslation } from '@/core/i18n/client'
 import { FaArrowRight } from "react-icons/fa";
+import PdfDownloadButton from "@/components/modules/PdfDownloadButton";
 
 
 // COMPONENT ====================================================================================================================================================================
@@ -28,10 +29,11 @@ const ProductPdfPage = () => {
             <h1 className="fw-bold my-3 text-4xl">DAVACRYL-S4016</h1>
             <div>
               <hr />
-              <button className="download_btn" data-bs-toggle="modal" data-bs-target="#examplePdfModal"   >
+              {/* <button className="download_btn" data-bs-toggle="modal" data-bs-target="#examplePdfModal"   > */}
+                <PdfDownloadButton />
                 <span>Download</span>
                 <span>PDF</span>
-              </button>
+              {/* </button> */}
               <hr />
             </div>
             <p className="text-secondary">DAVACRYL-S4016</p>

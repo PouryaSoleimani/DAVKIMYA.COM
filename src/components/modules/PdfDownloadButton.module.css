@@ -1,11 +1,11 @@
 /* From Uiverse.io by Quer3000 */
 .card {
-  --bg-card: #27272a;
-  --primary: #6d28d9;
-  --primary-800: #4c1d95;
-  --primary-shadow: #2e1065;
-  --light: #d9d9d9;
-  --zinc-800: #18181b;
+  --bg-card: #c0c0c1;
+  --primary: #63d928;
+  --primary-800: #9dff3b;
+  --primary-shadow: #056111;
+  --light: #141414;
+  --zinc-800: #7f7f8f;
   --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
 
   position: relative;
@@ -18,19 +18,22 @@
   flex-direction: column;
   gap: 0.75rem;
   padding: 1rem;
-  width: 14rem;
+  width: 10rem;
   background-color: var(--bg-card);
   border-radius: 1rem;
 }
 
-.image_container {
+.imageContainer {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 5;
   width: 100%;
-  height: 8rem;
-  background-color: var(--primary-800);
+  height: 5rem;
+  background-color: rgb(120, 12, 12);
   border-radius: 0.5rem;
 }
 
@@ -124,7 +127,7 @@
 }
 
 /* New Download Button Styles */
-.download-button {
+.downloadButton {
   position: relative;
   width: 100%;
   height: 2.5rem;
@@ -138,7 +141,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-image: var(--bg-linear);
+  /* background-image: var(--bg-linear); */
   border: 2px solid hsla(262, 18%, 57%, 0.5);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -173,20 +176,13 @@
   transition: all 0.3s ease;
 }
 
-.download-svg {
+.downloadSvg {
   width: 1.25rem;
   fill: var(--light);
 }
 
 .downloadButton:hover {
   background: var(--primary-800);
-}
-
-.downloadButton:hover .buttonText {
-  -webkit-transform: translateX(-1.25rem);
-  -ms-transform: translateX(-1.25rem);
-  transform: translateX(-1.25rem);
-  opacity: 0;
 }
 
 .downloadButton:hover .buttonIcon {
@@ -200,6 +196,6 @@
   transform: scale(0.95);
 }
 
-.download-button:active .buttonIcon {
+.downloadButton:active .buttonIcon {
   background-color: var(--primary-shadow);
 }
