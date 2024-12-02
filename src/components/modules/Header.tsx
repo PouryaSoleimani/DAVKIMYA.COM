@@ -28,7 +28,8 @@ const Header = () => {
         window.addEventListener('resize', handleResize);
         return () => { window.removeEventListener('resize', handleResize); };
     }, []);
-
+    const myNUmber = 10;
+    console.log(myNUmber)
     const [modalShow, setModalShow] = useState(false);
 
     useEffect(() => { if (windowWidth > 1000) { setshowMenu(true); } else { setshowMenu(false); } }, [windowWidth]);
