@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaSearch, FaYoutube } from "react-icons/fa";
 import { LuMail, LuPhoneForwarded } from "react-icons/lu";
-// IMAGES
 import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
 import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
 import RussianFlag from '../../../public/Home_files/RUSSIAN__FLAG.png'
@@ -21,16 +20,16 @@ const Header = () => {
     const { t } = useTranslation()
     const [showMenu, setshowMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
+    const [modalShow, setModalShow] = useState(false);
+    //  FUNCTIONS
     const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
     const handleResize = () => { setWindowWidth(window.innerWidth); };
+
     useEffect(() => {
-        setWindowWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
+        setWindowWidth(window.innerWidth); window.addEventListener('resize', handleResize);
         return () => { window.removeEventListener('resize', handleResize); };
     }, []);
-    const myNUmber = 10;
-    console.log(myNUmber)
-    const [modalShow, setModalShow] = useState(false);
+
 
     useEffect(() => { if (windowWidth > 1000) { setshowMenu(true); } else { setshowMenu(false); } }, [windowWidth]);
 
