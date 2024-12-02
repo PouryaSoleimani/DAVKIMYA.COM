@@ -22,7 +22,7 @@ const PdfDownloadButton = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { register, handleSubmit, formState: { errors }, } = useForm<Inputs>({ resolver: yupResolver(schema), })
+  const { register, handleSubmit, formState: { errors }, } = useForm({ resolver: yupResolver(schema), })
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
   // RETURN =============================================================================================================================================
