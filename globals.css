@@ -2139,3 +2139,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
     display: flex;
   }
 }
+#dropdown-basic{
+  display: flex;
+  column-gap: 0.2rem;
+}
