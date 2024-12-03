@@ -11,10 +11,14 @@ import { WithSubTitleBox } from "./components/withSubTitleBox";
 import { NoSubTitleBox } from "./components/noSubTitleBox";
 import productsData from "../../../core/constants/useproductsData.json";
 
+type subtitle = {
+  title:string,
+  src:string
+}
 
 export type selectedTitle = {
   title: string;
-  subtitles: string[];
+  subtitles: subtitle[];
 };
 const ProductCategoryPage = () => {
   const { t } = useTranslation();
@@ -76,16 +80,17 @@ const ProductCategoryPage = () => {
           <div className="text-center">
             <span className="h3">{productTitle}</span>
           </div>
-          <div className="row g-4 mt-5">
+          <div className="row g-4 mt-5 gap-4">
             {productTitle === t("productTitleThree")
               ? selectedTitle?.subtitles.map((item) => {
-                return <WithSubTitleBox title={item} key={Math.random()} mainTitle={productTitle} />;
+                return <WithSubTitleBox title={item.title} key={Math.random()} mainTitle={productTitle} />;
               })
               : selectedTitle?.subtitles.map((item) => {
                 return (
                   <NoSubTitleBox
                     mainTitle={productTitle}
-                    title={item}
+                    title={item.title}
+                    src={item.src}
                     key={Math.random()}
                   />
                 );
