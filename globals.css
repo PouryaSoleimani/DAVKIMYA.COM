@@ -380,17 +380,17 @@ footer .col-lg-3 a:hover,
   height: 45vh;
 }
 
-#faqs .swiper-slide:first-child {
-  /* background-image: url("../img/oil-engineer-with-a-laptop-standing-next-to-an-oil-DLZ7RBS-1.jpg"); */
-}
+/* #faqs .swiper-slide:first-child { */
+/* background-image: url("../img/oil-engineer-with-a-laptop-standing-next-to-an-oil-DLZ7RBS-1.jpg"); */
+/* } */
 
-#faqs .swiper-slide:nth-child(2) {
-  /* background-image: url("../img/rear-view-of-young-engineer-wearing-white-safety-h-C3CDA2Z-1.jpg"); */
-}
+/* #faqs .swiper-slide:nth-child(2) { */
+/* background-image: url("../img/rear-view-of-young-engineer-wearing-white-safety-h-C3CDA2Z-1.jpg"); */
+/* } */
 
-#faqs .swiper-slide:nth-child(3) {
-  /* background-image: url("../img/oil-refineries-PRQY6EN.jpg"); */
-}
+/* #faqs .swiper-slide:nth-child(3) { */
+/* background-image: url("../img/oil-refineries-PRQY6EN.jpg"); */
+/* } */
 
 #faqs form::before,
 .index_form form::before,
