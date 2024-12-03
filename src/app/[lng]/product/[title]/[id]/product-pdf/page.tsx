@@ -1,3 +1,4 @@
+"use client"
 import ProductPdfPage from "@/components/pages/productPdfPage";
 
 const Page = () => {

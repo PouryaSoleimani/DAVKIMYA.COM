@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import Link from "next/link";
 import AOS from "aos";
@@ -9,10 +11,14 @@ import { WithSubTitleBox } from "./components/withSubTitleBox";
 import { NoSubTitleBox } from "./components/noSubTitleBox";
 import productsData from "../../../core/constants/useproductsData.json";
 
+type subtitle = {
+  title:string,
+  src:string
+}
 
 export type selectedTitle = {
   title: string;
-  subtitles: string[];
+  subtitles: subtitle[];
 };
 const ProductCategoryPage = () => {
   const { t } = useTranslation();
@@ -21,8 +27,8 @@ const ProductCategoryPage = () => {
 
   const productTitle = title
     ? typeof title === "string"
-      ? title.split("%20").join(" ").toString()
-      : title[0]
+      ? title.replaceAll("-", " ")
+      : title[0].replaceAll("-", " ")
     : "";
 
   const [selectedTitle, setSelectedTitle] = useState<selectedTitle>();
@@ -74,22 +80,23 @@ const ProductCategoryPage = () => {
           <div className="text-center">
             <span className="h3">{productTitle}</span>
           </div>
-          <div className="row g-4 mt-5">
-            {productTitle === t("productTitleThree") 
+          <div className="row g-4 mt-5 gap-4">
+            {productTitle === t("productTitleThree")
               ? selectedTitle?.subtitles.map((item) => {
-                  return <WithSubTitleBox title={item} key={Math.random()}  mainTitle={productTitle}/>;
-                })
+                return <WithSubTitleBox title={item.title} key={Math.random()} mainTitle={productTitle} />;
+              })
               : selectedTitle?.subtitles.map((item) => {
-                  return (
-                    <NoSubTitleBox
-                      mainTitle={productTitle}
-                      title={item}
-                      key={Math.random()}
-                    />
-                  );
-                })}
+                return (
+                  <NoSubTitleBox
+                    mainTitle={productTitle}
+                    title={item.title}
+                    src={item.src}
+                    key={Math.random()}
+                  />
+                );
+              })}
             <div className="col-md-12"></div>
-          </div>
+          </div> 
         </div>
       </section>
     </>

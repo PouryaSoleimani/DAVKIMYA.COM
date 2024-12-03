@@ -2,9 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaSearch, FaYoutube } from "react-icons/fa";
 import { LuMail, LuPhoneForwarded } from "react-icons/lu";
-// IMAGES
 import ArabicFlag from './../../../public/Home_files/ARABIC__FLAG.png'
 import TurkishFlag from '../../../public/Home_files/TURKISH__FLAG.png'
 import RussianFlag from '../../../public/Home_files/RUSSIAN__FLAG.png'
@@ -12,20 +11,25 @@ import HeaderLogo from '../../../public/images/logo/HOME__PAGE__LOGO.webp'
 import { useLang } from '@/core/providers/langProvider'
 import { useTranslation } from '@/core/i18n/client'
 import Dropdown from 'react-bootstrap/Dropdown';
+import Button from 'react-bootstrap/Button';
+import SearchModal from "./SearchModal";
 
-// COMPONENT
+// COMPONENT =====================================================================================================================================================
 const Header = () => {
     const { lng } = useLang()
     const { t } = useTranslation()
     const [showMenu, setshowMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
+    const [modalShow, setModalShow] = useState(false);
+    //  FUNCTIONS
     const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
     const handleResize = () => { setWindowWidth(window.innerWidth); };
+
     useEffect(() => {
-        setWindowWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
+        setWindowWidth(window.innerWidth); window.addEventListener('resize', handleResize);
         return () => { window.removeEventListener('resize', handleResize); };
     }, []);
+
 
     useEffect(() => { if (windowWidth > 1000) { setshowMenu(true); } else { setshowMenu(false); } }, [windowWidth]);
 
@@ -100,12 +104,10 @@ const Header = () => {
                                     <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
                                 </svg>
                             </button>
-
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" className="d-flex d-lg-none ms-4 cursor" role="search" >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-search text-white" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                                </svg>
-                            </button>
+                            <Button variant="ghost" onClick={() => setModalShow(true)} className="flex min-[1000px]:hidden items-center justify-center">
+                                <FaSearch className="text-white w-10 h-10 cursor-pointer translate-y-0" />
+                            </Button>
+                            <SearchModal show={modalShow} onHide={() => setModalShow(false)} />
                         </div>
                         {/* MENU */}
                         <div className={`${showMenu === false ? "collapse" : ""} navbar-collapse translate-y-2 lg:translate-y-3`}>
@@ -116,7 +118,7 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/about-us`}>{t("aboutUs")}</Link>
                                 </li>
-                                <Dropdown className='z-50'>
+                                <Dropdown className='z-50 m-[-2px] min-[1000px]:m-0'>
                                     <Dropdown.Toggle variant="none" id="dropdown-basic" className='flex items-center justify-center m-0 p-0 z-10 focus:outline-none px-1'>
                                         <Link className="nav-link primary-color" href={`/${lng}/product`}>{t("product")}</Link>
                                     </Dropdown.Toggle>
@@ -138,38 +140,20 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/blogs`}>{t("eventAnNews")}</Link>
                                 </li>
-
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>{t("contactUs")}</Link>
                                 </li>
                             </ul>
-                            <form className="d-none d-lg-flex cursor ms-4" role="search" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-search text-white" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                                </svg>
-                            </form>
+                            {/* <!-- SEARCH MODAL --> */}
+                            <Button variant="ghost" onClick={() => setModalShow(true)} className="hidden min-[1000px]:flex items-center justify-center">
+                                <FaSearch className="text-white w-7 h-7 cursor-pointer translate-y-0" />
+                            </Button>
+                            <SearchModal show={modalShow} onHide={() => setModalShow(false)} />
                         </div>
                     </div>
                 </nav>
             </div>
-            {/* <!-- SEARCH MODAL --> */}
-            <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered ">
-                    <div className="modal-content border border-lime-400">
-                        <div className="modal-header ">
-                            <h1 className="modal-title fs-5 w-full text-center" id="exampleModalLabel">Search</h1>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div className="modal-body">
-                            <input type="search" name="modalSearchInput" id="modalSearchInput" className='border-2 border-zinc-800 rounded-3xl w-full p-2 focus:outline-lime-500' />
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Search</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </header >
     )
 }

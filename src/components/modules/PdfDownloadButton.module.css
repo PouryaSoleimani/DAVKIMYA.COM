@@ -1,0 +1,96 @@
+/* From Uiverse.io by Quer3000 */
+.card {
+  --bg-card: #c0c0c1;
+  --primary: #63d928;
+  --primary-800: #9dff3b;
+  --primary-shadow: #056111;
+  --light: #141414;
+  --zinc-800: #7f7f8f;
+  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+  margin: 2rem 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  width: 10rem;
+  background-color: var(--bg-card);
+  border-radius: 1rem;
+}
+
+.imageContainer {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(120, 12, 12);
+  border-radius: 0.5rem;
+}
+
+.title {
+  overflow: clip;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--light);
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* New Download Button Styles */
+.downloadButton {
+  position: relative;
+  width: 100%;
+  height: 2.5rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.buttonText {
+  color: var(--light);
+  font-weight: 300;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.downloadButton:hover {
+  background: #c3e843;
+}
+.downloadButton:active .buttonIcon {
+  background-color: var(--primary-shadow);
+}

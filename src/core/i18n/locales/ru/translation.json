@@ -50,7 +50,7 @@
   "formSubject": "Предмет",
   "formSubjectNotValid": "Собайка NetFlaid",
   "formMessage": "Сообщение",
-  "formMessageNotValid" : "Сообщение недействительно",
-  "formSend" : "формаОтправить",
-  "contactUsFollow" : "Следуйте за нами"
+  "formMessageNotValid": "Сообщение недействительно",
+  "formSend": "формаОтправить",
+  "contactUsFollow": "Следуйте за нами"
 }

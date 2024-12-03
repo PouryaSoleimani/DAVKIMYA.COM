@@ -10,7 +10,7 @@ import WhatsAppLink from "@/components/modules/WhatsAppLink";
 
 
 interface paramsProps {
-  lng: string;
+  lng: string | undefined;
 }
 
 interface PageProps {
