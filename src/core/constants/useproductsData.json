@@ -2,37 +2,85 @@
   {
     "title": "productTitleOne",
     "subtitles": [
-      "titleOneSubTitleOne",
-      "titleOneSubTitleTwo",
-      "titleOneSubTitleThree",
-      "titleOneSubTitleFour"
+      {
+        "title": "titleOneSubTitleOne",
+        "src": "Sealants"
+      },
+      {
+        "title": "titleOneSubTitleTwo",
+        "src": "emulationSystem"
+      },
+      {
+        "title": "titleOneSubTitleThree",
+        "src": "label"
+      },
+      {
+        "title": "titleOneSubTitleFour",
+        "src": "textile"
+      }
     ]
   },
   {
     "title": "productTitleTwo",
     "subtitles": [
-      "titleTwoSubTitleOne",
-      "titleTwoSubTitleTwo",
-      "titleTwoSubTitleThree",
-      "titleTwoSubTitleFour",
-      "titleTwoSubTitleFive",
-      "titleTwoSubTitleSix"
+      {
+        "title": "titleTwoSubTitleOne",
+        "src": "polyol"
+      },
+      {
+        "title": "titleTwoSubTitleTwo",
+        "src": "poly"
+      },
+      {
+        "title": "titleTwoSubTitleThree",
+        "src": "foam"
+      },
+      {
+        "title": "titleTwoSubTitleFour",
+        "src": "rigidForInsultation"
+      },
+      {
+        "title": "titleTwoSubTitleFive",
+        "src": "pyramidFoam"
+      },
+      {
+        "title": "titleTwoSubTitleSix",
+        "src": "bioBased"
+      }
     ]
   },
   {
     "title": "productTitleThree",
     "subtitles": [
-      "titleThreeSubTitleOne",
-      "titleThreeSubTitleTwo",
-      "titleThreeSubTitleThree"
+      {
+        "title": "titleThreeSubTitleOne",
+        "src": ""
+      },
+      {
+        "title": "titleThreeSubTitleTwo",
+        "src": ""
+      },
+      {
+        "title": "titleThreeSubTitleThree",
+        "src": ""
+      }
     ]
   },
   {
     "title": "productTitleFour",
     "subtitles": [
-      "titleFourSubTitleOne",
-      "titleFourSubTitleTwo",
-      "titleFourSubTitleThree"
+      {
+        "title": "titleFourSubTitleOne",
+        "src": "acrylic-sealant"
+      },
+      {
+        "title": "titleFourSubTitleTwo",
+        "src": "silicon-sealants"
+      },
+      {
+        "title": "titleFourSubTitleThree",
+        "src": "polymer-sealant"
+      }
     ]
   }
 ]

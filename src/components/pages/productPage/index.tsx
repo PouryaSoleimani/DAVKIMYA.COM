@@ -51,7 +51,7 @@ const ProductPage = () => {
                     {t("productTitleOne")}
                   </Link>
                   <hr />
-                  <Image src={emulation} width={600} height={600} alt="image" className="mt-3" />
+                  <Image src={emulation} width={600} height={600} alt="image" className="mt-3 aspect-[1.4]" />
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ const ProductPage = () => {
                     {t("productTitleTwo")}
                   </Link>
                   <hr />
-                  <Image src={poly} width={600} height={600} alt="image" className="mt-3" />
+                  <Image src={poly} width={600} height={600} alt="image" className="mt-3 aspect-[1.4]" />
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ const ProductPage = () => {
                     {t("productTitleThree")}
                   </Link>
                   <hr />
-                  <Image src={compunds} width={600} height={600} alt="image" className="mt-3" />
+                  <Image src={compunds} width={600} height={600} alt="image" className="mt-3 aspect-[1.4]" />
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@ const ProductPage = () => {
                     {t("productTitleFour")}
                   </Link>
                   <hr />
-                  <Image src={sealant} width={600} height={600} alt="image" className="mt-3" />
+                  <Image src={sealant} width={600} height={600} alt="image" className="mt-3 aspect-[1.4]" />
                 </div>
               </div>
             </div>
