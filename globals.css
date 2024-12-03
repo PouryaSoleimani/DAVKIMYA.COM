@@ -2127,11 +2127,15 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 #HOMEPAGE__SEARCH__BUTTON__MOBILE {
   display: flex;
 }
+#HOMEPAGE__SEARCH__BUTTON__DESKTOP {
+  margin-bottom: 1.3rem;
+  display: none;
+}
 @media screen and (min-width: 1000px) {
   #HOMEPAGE__SEARCH__BUTTON__MOBILE {
     display: none;
   }
-}
-#HOMEPAGE__SEARCH__BUTTON__DESKTOP {
-  margin-bottom: 1.3rem;
+  #HOMEPAGE__SEARCH__BUTTON__DESKTOP {
+    display: flex;
+  }
 }
