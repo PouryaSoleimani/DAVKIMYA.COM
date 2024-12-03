@@ -8,7 +8,6 @@ import item6 from "@/../public/images/blogs/item6.jpg";
 import { useTranslation } from "@/core/i18n/client";
 import Image from "next/image";
 import Link from "next/link";
-// @ts-ignore
 import AOS from "aos";
 import { useParams } from "next/navigation";
 import "aos/dist/aos.css";

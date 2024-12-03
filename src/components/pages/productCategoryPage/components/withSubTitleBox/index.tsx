@@ -16,7 +16,7 @@ const WithSubTitleBox = ({ title, mainTitle }: WithSubTitleBoxProps) => {
     productData.map(
       (item) => item.title === title && setSelectedTitle(item.subtitles)
     );
-  }, []);
+  });
   return (
     <div className="col-xxl-3 col-md-4 col-sm-6">
       <div className="card_category">

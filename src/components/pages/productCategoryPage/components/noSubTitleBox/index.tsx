@@ -32,7 +32,6 @@ const NoSubTitleBox = ({ mainTitle, title, src }: NoSubTitleBoxProps) => {
       console.log(item.src);
       return item.src.includes(src) && setSelectedImage(item);
     });
-    
   }, [src]);
   return (
     <div className="col-xxl-3 col-md-4 col-sm-6 h-72 w-72 min-h-72 min-w-72  max-h-72 max-w-72">

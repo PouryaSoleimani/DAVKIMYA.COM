@@ -47,13 +47,16 @@ export function useTranslation(
   if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
     i18n.changeLanguage(lng);
   } else {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage);
-
+    
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       if (activeLng === i18n.resolvedLanguage) return;
       setActiveLng(i18n.resolvedLanguage);
     }, [activeLng, i18n.resolvedLanguage]);
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       if (getCookie(persistKeys.LANGUAGE) !== activeLng) return;
       setCookie(persistKeys.LANGUAGE, activeLng);
