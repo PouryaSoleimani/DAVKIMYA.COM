@@ -104,7 +104,7 @@ const Header = () => {
                                     <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
                                 </svg>
                             </button>
-                            <Button variant="ghost" onClick={() => setModalShow(true)} className="flex min-[1000px]:hidden items-center justify-center">
+                            <Button id="HOMEPAGE__SEARCH__BUTTON__MOBILE" variant="ghost" onClick={() => setModalShow(true)} className="flex min-[1000px]:hidden items-center justify-center">
                                 <FaSearch className="text-white w-10 h-10 cursor-pointer translate-y-0" />
                             </Button>
                             <SearchModal show={modalShow} onHide={() => setModalShow(false)} />
@@ -119,7 +119,7 @@ const Header = () => {
                                     <Link className="nav-link primary-color" href={`/${lng}/about-us`}>{t("aboutUs")}</Link>
                                 </li>
                                 <Dropdown className='z-50 m-[-2px] min-[1000px]:m-0'>
-                                    <Dropdown.Toggle variant="none" id="dropdown-basic" className='flex items-center justify-center m-0 p-0 z-10 focus:outline-none px-1'>
+                                    <Dropdown.Toggle variant="none" id="dropdown-basic" className='inline-flex  items-center justify-center m-0 p-0 z-10 focus:outline-none px-1'>
                                         <Link className="nav-link primary-color" href={`/${lng}/product`}>{t("product")}</Link>
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu >
@@ -145,7 +145,7 @@ const Header = () => {
                                 </li>
                             </ul>
                             {/* <!-- SEARCH MODAL --> */}
-                            <Button variant="ghost" onClick={() => setModalShow(true)} className="hidden min-[1000px]:flex items-center justify-center">
+                            <Button id="HOMEPAGE__SEARCH__BUTTON__DESKTOP" variant="ghost" onClick={() => setModalShow(true)} className="hidden min-[1000px]:flex items-center justify-center">
                                 <FaSearch className="text-white w-7 h-7 cursor-pointer translate-y-0" />
                             </Button>
                             <SearchModal show={modalShow} onHide={() => setModalShow(false)} />
