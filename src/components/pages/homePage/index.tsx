@@ -49,19 +49,19 @@ const HomePage = () => {
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX1} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href={`${lng}/product/${t("productTitleOne")}`} className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleOne")}</a>
+              <a href={`${lng}/product/${t("productTitleOne")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleOne")}</a>
             </div>
           </div>
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX2} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href={`${lng}/product/${t("productTitleTwo")}`} className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleTwo")}</a>
+              <a href={`${lng}/product/${t("productTitleTwo")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleTwo")}</a>
             </div>
           </div>
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX3} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href={`${lng}/product/${t("productTitleThree")}`} className="btn bg-lime-400 hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleThree")}</a>
+              <a href={`${lng}/product/${t("productTitleThree")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleThree")}</a>
             </div>
           </div>
         </div>
