@@ -70,7 +70,7 @@ const ServicePage = () => {
                     height={370}
                     src={pic1}
                     alt="We invite you to explore the possibilities of our customized products"
-                    className={"w-100 transition"}
+                    className={"w-100 transition aspect-[1.4]"}
                   />
                 </Link>
                 <div className={"d-flex align-items-center gap-4 my-3"}>
@@ -107,7 +107,7 @@ const ServicePage = () => {
                     height={370}
                     src={pic2}
                     alt="At Davkimya our Research and Development (R&amp;D) team"
-                    className={"w-100 transition"}
+                    className={"w-100 transition aspect-[1.4]"}
                   />
                 </Link>
                 <div className={"d-flex align-items-center gap-4 my-3"}>
