@@ -73,7 +73,7 @@ const BlogsPage = () => {
                         height={710}
                         src={item}
                         alt="What is Lorem Ipsum?"
-                        className="w-100 transition"
+                        className="w-100 transition aspect-[1.4]"
                       />
                     </Link>
                     <div className="d-flex align-items-center justify-content-center gap-4 my-3">
