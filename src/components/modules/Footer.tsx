@@ -6,7 +6,7 @@ import LOGO from "@/../public/images/logo/HOME__PAGE__LOGO.webp";
 import { useTranslation } from "@/core/i18n/client";
 import { useLang } from "@/core/providers/langProvider";
 import { FaArrowRight } from "react-icons/fa";
-
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   const { lng } = useLang();
@@ -28,7 +28,10 @@ const Footer = () => {
               offer superior performance and environmental sustainability.
             </p>
             <p></p>
-            <p>7W9R+57P, Kapaklı, Tekirdağ, Turkey</p>
+            <p className="mt-10 text-3xl underline decoration-lime-400 decoration-4 underline-offset-8">
+            <FaLocationDot />
+              7W9R+57P, Kapaklı, Tekirdağ, Turkey
+              </p>
           </div>
 
           {/* MAP */}
