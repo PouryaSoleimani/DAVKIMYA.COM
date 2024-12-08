@@ -28,6 +28,7 @@ const Footer = () => {
               offer superior performance and environmental sustainability.
             </p>
             <p></p>
+            <p>7W9R+57P, Kapaklı, Tekirdağ, Turkey</p>
           </div>
 
           {/* MAP */}
