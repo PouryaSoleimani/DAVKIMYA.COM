@@ -340,6 +340,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      
       {/* DOWNLOAD CATALOGUE */}
       <div id="DonwloadCatalogue" className="flex flex-wrap items-center justify-center gap-x-10 font-bold bg-zinc-300 w-fit h-fit mx-auto my-10 px-4 py-2 rounded-xl shadow ">
         Download Our Products Catalogue
