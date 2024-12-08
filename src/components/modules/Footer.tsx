@@ -6,7 +6,7 @@ import LOGO from "@/../public/images/logo/HOME__PAGE__LOGO.webp";
 import { useTranslation } from "@/core/i18n/client";
 import { useLang } from "@/core/providers/langProvider";
 import { FaArrowRight } from "react-icons/fa";
-
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   const { lng } = useLang();
@@ -28,6 +28,10 @@ const Footer = () => {
               offer superior performance and environmental sustainability.
             </p>
             <p></p>
+            <p className="mt-10 text-3xl underline decoration-lime-400 decoration-4 underline-offset-8 flex items-center gap-x-1">
+              <FaLocationDot className="translate-y-1 text-red-700" />
+              7W9R+57P, Kapaklı, Tekirdağ, Turkey
+            </p>
           </div>
 
           {/* MAP */}
@@ -85,24 +89,6 @@ const Footer = () => {
                 <ul className="list-unstyled p-0 m-0 mt-4">
                   <li className="mb-2">
                     <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
-                      <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
-                      <span>+90 534 043 36 46</span>
-                    </Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
-                      <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
-                      <span>+90 534 687 90 96</span>
-                    </Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
-                      <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
-                      <span>+90 506 503 43 38</span>
-                    </Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}    >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
                       <span>+90 506 503 43 38</span>
                     </Link>

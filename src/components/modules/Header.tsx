@@ -46,14 +46,6 @@ const Header = () => {
                             <span className="secondary-color">+905346879096</span>
                         </div>
                         <div className="d-flex align-items-center gap-2">
-                            <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
-                            <span className="secondary-color">+905340433646</span>
-                        </div>
-                        <div className="d-flex align-items-center gap-2">
-                            <LuPhoneForwarded className='text-[#C3EB40] w-6 h-6' />
-                            <span className="secondary-color">+905065034338</span>
-                        </div>
-                        <div className="d-flex align-items-center gap-2">
                             <LuMail className='text-[#C3EB40] w-6 h-6' />
                             <span className="secondary-color">info@davkimya.com</span>
                         </div>
@@ -72,13 +64,13 @@ const Header = () => {
                             <Image src={ArabicFlag} className="lang_menu " alt="tr" width={50} height={50} />
                         </Link>
                         {/* SOCIAL MEIDAS  */}
-                        <Link href="https://www.facebook.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                        <Link href="https://www.facebook.com/profile.php?id=61560371619609" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
                             <FaFacebook className='w-8 h-8 text-white' />
                         </Link>
-                        <Link href="https://linkedin.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                        <Link href="https://linkedin.com/company/100947619/admin/dashboard" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
                             <FaLinkedin className='w-8 h-8 text-white' />
                         </Link>
-                        <Link href="https://www.instagram.com/dav/" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                        <Link href="https://www.instagram.com/dav.kimya" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
                             <FaInstagram className='w-8 h-8 text-white' />
                         </Link>
                         <Link href="https://www.youtube.com/@dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
