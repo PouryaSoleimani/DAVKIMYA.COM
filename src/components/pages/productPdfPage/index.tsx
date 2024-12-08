@@ -40,38 +40,38 @@ const ProductPdfPage = () => {
             <div className="p-sticky">
               <h2 className="fw-bold"> Recent Product</h2>
               <div>
-                <Link href={`/en/product/DAVINYl-T5009/show/38`} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"    >
+                <Link href={"#"} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"    >
                   <FaArrowRight className="text-black ml-2 my-2" />
                   DAVINYl-T5009
                 </Link>
               </div>
               <div>
-                <Link href={`/en/product/DAVINYl-T5002/show/37`} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"     >
+                <Link href={"#"} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"     >
                   <FaArrowRight className="text-black ml-2 my-2" />
                   DAVINYl-T5002
                 </Link>
               </div>
               <div>
-                <Link href={`/en/product/DAVINYL-H5018/show/36`} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"  >
+                <Link href={"#"} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"  >
                   <FaArrowRight className="text-black ml-2 my-2" />
                   DAVINYL-H5018
                 </Link>
               </div>
               <div>
-                <Link href={`/en/product/DAVINYl-C5300/show/35`} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"                >
+                <Link href={"#"} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"                >
                   <FaArrowRight className="text-black ml-2 my-2" />
                   DAVINYl-C5300
                 </Link>
               </div>
               <div>
-                <Link href={`/en/product/DAVINYl-C5004/show/34`} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"   >
+                <Link href={"#"} className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"   >
                   <FaArrowRight className="text-black ml-2 my-2" />
                   DAVINYl-C5004
                 </Link>
               </div>
               <div>
                 <Link
-                  href={`/en/product/DAVINYl-C5000/show/33`}
+                  href={"#"}
                   className="d-flex align-items-center gap-1 cursor text-lime-400 text-decoration-none fw-bold h5 hover:text-zinc-900 duration-300"
                 >
                   <FaArrowRight className="text-black ml-2 my-2" />
