@@ -15,7 +15,7 @@
 15 - WAITING FOR PICS 
 16 - WAITING FOR TEXTS
 _______________________________
-social network links open in new tab, 
-contact-us social network links
+social network links open in new tab ==> ✔
+contact-us social network links 
 _______________________________
 ABOUT US => CHANGING TEXTS AND PICS 

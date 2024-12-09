@@ -28,7 +28,7 @@ const Footer = () => {
               offer superior performance and environmental sustainability.
             </p>
             <p></p>
-            <p className="mt-10 text-3xl underline decoration-lime-400 decoration-4 underline-offset-8 flex items-center gap-x-1">
+            <p className="mt-10 text-2xl underline decoration-lime-400 decoration-2 underline-offset-8 flex items-center gap-x-1 leading-10 tracking-tight">
               <FaLocationDot className="translate-y-1 text-red-700" />
               7W9R+57P, Kapaklı, Tekirdağ, Turkey
             </p>
