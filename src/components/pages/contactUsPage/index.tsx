@@ -46,7 +46,7 @@ const ContactUsPage = () => {
             <div className="container px-0 position-relative text-center text-lg-start">
               <div className="h3 underline decoration-2 underline-offset-8 decoration-lime-400 font-semibold tracking-tight"> {t("contactUs")}</div>
               <h1 className="my-3 text-4xl font-semibold">
-                DAV {t("petroChemichal")}
+                DAV KIMYA
               </h1>
               <SlLocationPin className="w-6 h-8 text-lime-400" />
               <p className="fw-bold border-bottom pb-3">DAV {t("petroChemichal")}</p>
