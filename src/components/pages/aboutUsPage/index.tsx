@@ -113,7 +113,7 @@ const AboutUsPage = () => {
               <Image alt="desc" src={BOTTOMLOGO} width={90} height={600} />
               <div className="text-justify">
                 <h2 className="mx-0 text-[24pt] font-bold">  {t("aboutUsBottomDescription")}</h2>
-                <p className="text-md font-semibold ">
+                <p className="text-sm font-semibold ">
                   {t('aboutUsBottomSubDesc1')}
                   {t('aboutUsBottomSubDesc2')}
                   {t('aboutUsBottomSubDesc3')}
