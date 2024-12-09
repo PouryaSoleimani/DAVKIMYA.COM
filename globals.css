@@ -2220,7 +2220,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   justify-content: center;
 }
 .scene {
-  width: 260px;
+  width: 360px;
   height: 200px;
   perspective: 1000px;
   position: relative;
@@ -2235,7 +2235,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 }
 .carousel__cell {
   position: absolute;
-  width: 240px;
+  width: 340px;
   left: 10px;
   height: 200px;
   border-radius: 15px;
