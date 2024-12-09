@@ -17,8 +17,18 @@ import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DownloadButton from "@/components/modules/DownloadButton";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
 
-
+const carousel: KeenSliderPlugin = (slider) => {
+  const z = 300;
+  function rotate() { const deg = 360 * slider.track.details.progress; slider.container.style.transform = `translateZ(-${z}px) rotateY(${-deg}deg)`; }
+  slider.on("created", () => {
+    const deg = 360 / slider.slides.length; slider.slides.forEach((element, idx) => { element.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`; });
+    rotate();
+  });
+  slider.on("detailsChanged", rotate);
+};
 // COMPONENT =================================================================================================================================================
 const HomePage = () => {
 
@@ -29,6 +39,8 @@ const HomePage = () => {
   useEffect(() => { AOS.init(); }, []);
   function showFaqHandler() { setShowFAQ(prev => !prev) }
   function showFaqHandler2() { setShowFAQ2(prev => !prev) }
+
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({ loop: true, selector: ".carousel__cell", renderMode: "custom", mode: "free-snap", }, [carousel]);
 
   return (
     <>
@@ -74,7 +86,7 @@ const HomePage = () => {
       </div>
 
       {/* <!-- WHY CHOOSE US --> */}
-      <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
+      {/* <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
         <div className="container my-5">
           <div className="row g-4">
             <div className="col-lg-7">
@@ -141,8 +153,19 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
-
+      </section> */}
+      <div className="wrapper">
+        <div className="scene">
+          <div className="carousel keen-slider" ref={sliderRef}>
+            <div className="carousel__cell number-slide1 ">1</div>
+            <div className="carousel__cell number-slide2">2</div>
+            <div className="carousel__cell number-slide3">3</div>
+            <div className="carousel__cell number-slide4">4</div>
+            <div className="carousel__cell number-slide5">5</div>
+            <div className="carousel__cell number-slide6">6</div>
+          </div>
+        </div>
+      </div>
       {/* <!-- FAQS --> */}
       <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
         <div className="row g-4">
