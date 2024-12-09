@@ -163,7 +163,7 @@ const HomePage = () => {
       {/* <!-- WHY CHOOSE US --> */}
       <h2 className="text-center font-extrabold text-4xl  underline decoration-4 decoration-lime-400 mt-20"> Why Choose Us ?</h2>
       <span className="tracking-tighter text-[17px] font-sans text-center w-full block font-semibold text-zinc-600">Welcome to DavKimya- where innovation meets sustainability</span>
-      <section className="wrapper my-20">
+      <section className="wrapper mt-20 my-40">
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>
 
