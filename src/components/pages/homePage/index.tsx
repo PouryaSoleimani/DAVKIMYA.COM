@@ -154,7 +154,7 @@ const HomePage = () => {
           </div>
         </div>
       </section> */}
-      <div className="wrapper">
+      <section className="wrapper my-20">
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>
             <div className="carousel__cell number-slide1 ">1</div>
@@ -165,7 +165,7 @@ const HomePage = () => {
             <div className="carousel__cell number-slide6">6</div>
           </div>
         </div>
-      </div>
+      </section>
       {/* <!-- FAQS --> */}
       <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
         <div className="row g-4">
