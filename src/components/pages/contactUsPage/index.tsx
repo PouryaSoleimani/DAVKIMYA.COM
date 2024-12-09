@@ -9,7 +9,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Table from 'react-bootstrap/Table';
 
 type Inputs = { Name: string, Email: string, Phone: number, Subject: string, Message: string, }
@@ -27,7 +27,6 @@ const ContactUsPage = () => {
   return (
     <>
       {/* TITLE */}
-
       <section id="contact-title" className="d-flex align-items-center top justify-content-center py-5 px-2 position-relative">
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1"> {t("contactUs")}</h1>
@@ -42,6 +41,7 @@ const ContactUsPage = () => {
       {/*//^ CONTACT INFOS ^//*/}
       <section id="contact" className="px-10 my-5 left">
         <div className="row g-4">
+
           <div className="col-lg-3 col-md-6">
             <div className="container px-0 position-relative text-center text-lg-start">
               <div className="h3 underline decoration-2 underline-offset-8 decoration-lime-400 font-semibold tracking-tight"> {t("contactUs")}</div>
@@ -61,10 +61,9 @@ const ContactUsPage = () => {
               <LuMail className='text-lime-400 my-3  w-6 h-6' />
               <p className="fw-bold mt-3"> info@davkimya.com</p>
             </div>
-
           </div>
-          <div className="col-lg-5 col-md-6 ">
 
+          <div className="col-lg-5 col-md-6 ">
             {/* //^ FORM ^// */}
             <form className="p-4 position-relative" onSubmit={handleSubmit(onSubmit)}>
               <input type="hidden" name="_token" value="TemgBZMxpotKu8QhcNPF49QQFQ00aW1XK4SZw77f" />
@@ -136,7 +135,9 @@ const ContactUsPage = () => {
                 </tbody>
               </Table>
             </div>
+
           </div>
+
           {/* //^ MAP ^// */}
           <div className="col-lg-4 col-12">
 
@@ -151,20 +152,22 @@ const ContactUsPage = () => {
               {t("contactUsFollow")}
             </h3>
             <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mt-3 socials">
-              <a href="https://www.facebook.com/dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              <Link href="https://www.facebook.com/profile.php?id=61560371619609" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center" target="_blank">
                 <FaFacebook className='w-7 h-7 text-white' />
-              </a>
-              <a href="https://twitter.com/dav"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              </Link>
+              <Link href="https://linkedin.com/company/100947619/admin/dashboard" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center" target="_blank">
                 <FaLinkedin className='w-7 h-7 text-white' />
-              </a>
-              <a href="https://www.instagram.com/dav/"
-                className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+              </Link>
+              <Link href="https://www.instagram.com/dav.kimya" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center" target="_blank">
                 <FaInstagram className='w-7 h-7 text-white' />
-              </a>
+              </Link>
+              <Link href="https://www.youtube.com/@dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center" target="_blank">
+                <FaYoutube className='w-8 h-8 text-white' />
+              </Link>
             </div>
 
           </div>
+
         </div>
       </section>
     </>
