@@ -85,13 +85,14 @@ const HomePage = () => {
         <DownloadButton />
       </div>
 
-      {/* <!-- WHY CHOOSE US --> */}
-      <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
+
+      {/* <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
         <div className="container my-5">
           <div className="row g-4">
             <div className="col-lg-7">
               <div className="row g-4">
                 <div className="col-md-6 mt-5 mt-md-0">
+
                   <div className="position-relative box bg-white p-4 shadow-xl shadow-zinc-800">
                     <span
                       className="d-flex align-items-center justify-content-center">01</span>
@@ -101,6 +102,7 @@ const HomePage = () => {
                     </p>
                   </div>
                 </div>
+
                 <div className="col-md-6 mt-5">
                   <div className="position-relative box bg-white p-4">
                     <span
@@ -111,6 +113,7 @@ const HomePage = () => {
                     </p>
                   </div>
                 </div>
+
                 <div className="col-md-6 mt-5 mt-md-0">
                   <div className="position-relative box bg-white p-4">
                     <span
@@ -121,6 +124,7 @@ const HomePage = () => {
                     </p>
                   </div>
                 </div>
+
                 <div className="col-md-6 mt-5">
                   <div className="position-relative box bg-white p-4">
                     <span
@@ -131,6 +135,7 @@ const HomePage = () => {
                     </p>
                   </div>
                 </div>
+
               </div>
             </div>
             <div className="col-lg-5">
@@ -153,20 +158,14 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      <h2 className="text-center font-extrabold text-4xl  underline decoration-4 decoration-lime-400"> Why Choose Us ?</h2>
+      </section> */}
+      
+      {/* <!-- WHY CHOOSE US --> */}
+      <h2 className="text-center font-extrabold text-4xl  underline decoration-4 decoration-lime-400 mt-20"> Why Choose Us ?</h2>
       <span className="tracking-tighter text-[17px] font-sans text-center w-full block font-semibold text-zinc-600">Welcome to DavKimya- where innovation meets sustainability</span>
       <section className="wrapper my-20">
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>
-            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
-              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
-              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
-              <p className="text-muted text-xl font-semibold mt-4">
-                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
-              </p>
-            </div>
 
             <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
               <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
@@ -177,22 +176,30 @@ const HomePage = () => {
             </div>
 
             <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
-              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
-              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">2</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">Innovative Solutions</h3>
               <p className="text-muted text-xl font-semibold mt-4">
-                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+                Our dedicated R&D team stays at the forefront of technological advancements to develop custom solutions that meet your evolving needs. We push the boundaries to help your products stand out in the market.
               </p>
             </div>
 
             <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
-              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
-              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">3</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">Sustainable Practices</h3>
               <p className="text-muted text-xl font-semibold mt-4">
-                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+                We are committed to environmentally responsible production. Our processes minimize waste and incorporate eco-friendly practices, making us a partner in your sustainable supply chain.
               </p>
             </div>
 
-            
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">4</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">Expert Support & Customer Service</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
+                Our experienced team is always available to offer technical assistance and guidance. From product selection to after-sales support, we ensure a seamless and satisfying experience.
+              </p>
+            </div>
+
+
           </div>
         </div>
       </section>

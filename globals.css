@@ -2163,7 +2163,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 }
 .scene {
   width: 457px;
-  height: 350px;
+  height: 230px;
   perspective: 1000px;
   position: relative;
   overflow: visible;
