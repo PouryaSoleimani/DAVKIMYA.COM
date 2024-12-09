@@ -113,7 +113,7 @@ const ContactUsPage = () => {
                   <tr>
                     <th>#</th>
                     <th>Email Address</th>
-                    <th>Target</th>
+                    <th>Department</th>
                   </tr>
                 </thead>
                 <tbody>
