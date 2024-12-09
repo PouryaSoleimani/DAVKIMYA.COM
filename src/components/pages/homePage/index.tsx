@@ -161,15 +161,38 @@ const HomePage = () => {
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>
             <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
-              <p className="text-start ">1</p>
-              <h3>High-Quality, Consistent Products</h3>
-              <p className="text-muted text-lg">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
                 We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
               </p>
             </div>
-            <div className="carousel__cell number-slide2">2</div>
-            <div className="carousel__cell number-slide3">3</div>
-            <div className="carousel__cell number-slide4">4</div>
+
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
+                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+              </p>
+            </div>
+
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
+                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+              </p>
+            </div>
+
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
+                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+              </p>
+            </div>
+
+            
           </div>
         </div>
       </section>
