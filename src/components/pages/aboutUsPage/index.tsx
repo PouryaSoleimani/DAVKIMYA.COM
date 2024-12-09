@@ -120,7 +120,7 @@ const AboutUsPage = () => {
                   {t('aboutUsBottomSubDesc4')}
                   {t('aboutUsBottomSubDesFooter')}
                 </p>
-                <strong className="text-2xl">{t('aboutUsBottomSubDesMoto')}</strong>
+                <strong className="text-xl">{t('aboutUsBottomSubDesMoto')}</strong>
               </div>
             </div>
           </div>
