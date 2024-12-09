@@ -114,31 +114,15 @@ const AboutUsPage = () => {
             <div className="bg-black2 p-5 text-white">
               <Image alt="desc" src={BOTTOMLOGO} width={90} height={600} />
               <div className="text-justify">
-                <p className="mx-0">
-                  <strong>
-                    <span className="text-[23pt] ">   {t("aboutUsBottomDescription")}</span>
-                    <br />
-                    <br />
-                    {t('aboutUsBottomSubDesc1')}
-                    {t('aboutUsBottomSubDesc2')}
-                    {t('aboutUsBottomSubDesc3')}
-                    {t('aboutUsBottomSubDesc4')}
-                  </strong>
+                <h2 className="mx-0 text-[24pt] font-bold">  {t("aboutUsBottomDescription")}</h2>
+                <p className="text-md font-semibold ">
+                  {t('aboutUsBottomSubDesc1')}
+                  {t('aboutUsBottomSubDesc2')}
+                  {t('aboutUsBottomSubDesc3')}
+                  {t('aboutUsBottomSubDesc4')}
+                  {t('aboutUsBottomSubDesFooter')}
                 </p>
-
-              </div>
-            </div>
-            <div className="primary-bg px-5 pt-4 pb-5 text-dark">
-              <ImEarth className="w-16 h-16 my-4" />
-              <div>
-                <p className="mx-0 text-justify">
-                  <strong>
-                    {t('aboutUsBottomSubDesFooter')}
-                    <br />
-                    <br />
-                    {t('aboutUsBottomSubDesMoto')}
-                  </strong>
-                </p>
+                <strong className="text-2xl">{t('aboutUsBottomSubDesMoto')}</strong>
               </div>
             </div>
           </div>
