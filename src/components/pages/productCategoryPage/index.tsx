@@ -12,8 +12,8 @@ import { NoSubTitleBox } from "./components/noSubTitleBox";
 import productsData from "../../../core/constants/useproductsData.json";
 
 type subtitle = {
-  title:string,
-  src:string
+  title: string,
+  src: string
 }
 
 export type selectedTitle = {
@@ -69,34 +69,22 @@ const ProductCategoryPage = () => {
       </section>
 
       {/* BOXES */}
-      <section
-        data-aos="fade-right"
-        data-aos-duration="2500"
-        id="articles"
-        className="mt-5 py-5 left"
-        data-sr-id="2"
-      >
+      <section data-aos="fade-right" data-aos-duration="2500" id="articles" className="mt-5 py-5 left" data-sr-id="2">
         <div className="container">
           <div className="text-center">
             <span className="h3">{productTitle}</span>
           </div>
-          <div className="row g-4 mt-5 gap-4">
+
+          <div className="row  mt-5 h-[30rem]">
             {productTitle === t("productTitleThree")
               ? selectedTitle?.subtitles.map((item) => {
                 return <WithSubTitleBox title={item.title} key={Math.random()} mainTitle={productTitle} />;
               })
               : selectedTitle?.subtitles.map((item) => {
-                return (
-                  <NoSubTitleBox
-                    mainTitle={productTitle}
-                    title={item.title}
-                    src={item.src}
-                    key={Math.random()}
-                  />
-                );
+                return (<NoSubTitleBox mainTitle={productTitle} title={item.title} src={item.src} key={Math.random()} />);
               })}
             <div className="col-md-12"></div>
-          </div> 
+          </div>
         </div>
       </section>
     </>
