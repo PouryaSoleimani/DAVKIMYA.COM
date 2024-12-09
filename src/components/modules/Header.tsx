@@ -64,16 +64,16 @@ const Header = () => {
                             <Image src={ArabicFlag} className="lang_menu " alt="tr" width={50} height={50} />
                         </Link>
                         {/* SOCIAL MEIDAS  */}
-                        <Link href="https://www.facebook.com/profile.php?id=61560371619609" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                        <Link href="https://www.facebook.com/profile.php?id=61560371619609" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center" target="_blank">
                             <FaFacebook className='w-8 h-8 text-white' />
                         </Link>
-                        <Link href="https://linkedin.com/company/100947619/admin/dashboard" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                        <Link href="https://linkedin.com/company/100947619/admin/dashboard" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center" target="_blank">
                             <FaLinkedin className='w-8 h-8 text-white' />
                         </Link>
-                        <Link href="https://www.instagram.com/dav.kimya" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                        <Link href="https://www.instagram.com/dav.kimya" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center" target="_blank">
                             <FaInstagram className='w-8 h-8 text-white' />
                         </Link>
-                        <Link href="https://www.youtube.com/@dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center">
+                        <Link href="https://www.youtube.com/@dav" className="d-block primary-bg transition rounded-circle p-2 d-flex align-items-center justify-content-center" target="_blank">
                             <FaYoutube className='w-8 h-8 text-white' />
                         </Link>
                     </div>

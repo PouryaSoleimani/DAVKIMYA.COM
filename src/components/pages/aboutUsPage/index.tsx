@@ -32,9 +32,7 @@ const AboutUsPage = () => {
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1"> {t("aboutUs")}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
-            <Link href={`/`} className="d-block primary-color fw-bold text-decoration-none" >
-              Home
-            </Link>
+            <Link href={`/`} className="d-block primary-color fw-bold text-decoration-none" >  Home</Link>
             <span>/</span>
             <span className="text-white-50"> {t("aboutUs")}</span>
           </div>
@@ -114,39 +112,15 @@ const AboutUsPage = () => {
             <div className="bg-black2 p-5 text-white">
               <Image alt="desc" src={BOTTOMLOGO} width={90} height={600} />
               <div className="text-justify">
-                <p className="mx-0">
-                  <strong>
-                    <span className="text-[22pt]">   {t("aboutUsBottomDescription")}</span>
-                    <br />
-                    <br />
-                    {t('aboutUsBottomSubDesc1')}
-                    <br />
-                    <br />
-                    {t('aboutUsBottomSubDesc2')}
-                  </strong>
+                <h2 className="mx-0 text-[24pt] font-bold">  {t("aboutUsBottomDescription")}</h2>
+                <p className="text-sm font-semibold ">
+                  {t('aboutUsBottomSubDesc1')}
+                  {t('aboutUsBottomSubDesc2')}
+                  {t('aboutUsBottomSubDesc3')}
+                  {t('aboutUsBottomSubDesc4')}
+                  {t('aboutUsBottomSubDesFooter')}
                 </p>
-                <br />
-                <p className="mx-0">
-                  <strong>
-                    {t('aboutUsBottomSubDesc3')}
-                    <br />
-                    <br />
-                    {t('aboutUsBottomSubDesc4')}
-                  </strong>
-                </p>
-              </div>
-            </div>
-            <div className="primary-bg px-5 pt-4 pb-5 text-dark">
-              <ImEarth className="w-16 h-16 my-4" />
-              <div>
-                <p className="mx-0 text-justify">
-                  <strong>
-                    {t('aboutUsBottomSubDesFooter')}
-                    <br />
-                    <br />
-                    {t('aboutUsBottomSubDesMoto')}
-                  </strong>
-                </p>
+                <strong className="text-xl">{t('aboutUsBottomSubDesMoto')}</strong>
               </div>
             </div>
           </div>
