@@ -17,8 +17,18 @@ import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DownloadButton from "@/components/modules/DownloadButton";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
 
-
+const carousel: KeenSliderPlugin = (slider) => {
+  const z = 300;
+  function rotate() { const deg = 360 * slider.track.details.progress; slider.container.style.transform = `translateZ(-${z}px) rotateY(${-deg}deg)`; }
+  slider.on("created", () => {
+    const deg = 360 / slider.slides.length; slider.slides.forEach((element, idx) => { element.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`; });
+    rotate();
+  });
+  slider.on("detailsChanged", rotate);
+};
 // COMPONENT =================================================================================================================================================
 const HomePage = () => {
 
@@ -29,6 +39,8 @@ const HomePage = () => {
   useEffect(() => { AOS.init(); }, []);
   function showFaqHandler() { setShowFAQ(prev => !prev) }
   function showFaqHandler2() { setShowFAQ2(prev => !prev) }
+
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({ loop: true, selector: ".carousel__cell", renderMode: "custom", mode: "free-snap", }, [carousel]);
 
   return (
     <>
@@ -143,6 +155,47 @@ const HomePage = () => {
         </div>
       </section>
 
+      <h2 className="text-center font-extrabold text-4xl  underline decoration-4 decoration-lime-400"> Why Choose Us ?</h2>
+      <span className="tracking-tighter text-[17px] font-sans text-center w-full block font-semibold text-zinc-600">Welcome to DavKimya- where innovation meets sustainability</span>
+      <section className="wrapper my-20">
+        <div className="scene">
+          <div className="carousel keen-slider" ref={sliderRef}>
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
+                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+              </p>
+            </div>
+
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
+                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+              </p>
+            </div>
+
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
+                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+              </p>
+            </div>
+
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start absolute -top-12 text-black font-extrabold bg-lime-300 py-3 px-7 rounded-full text-6xl ">1</p>
+              <h3 className="mt-10 text-3xl  font-extrabold text-black">High-Quality, Consistent Products</h3>
+              <p className="text-muted text-xl font-semibold mt-4">
+                We pride ourselves on producing top-grade emulsion resins that consistently meet the stringent quality standards of our industry. Our commitment ensures that your formulations are always reliable and high-performing.
+              </p>
+            </div>
+
+            
+          </div>
+        </div>
+      </section>
       {/* <!-- FAQS --> */}
       <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
         <div className="row g-4">
