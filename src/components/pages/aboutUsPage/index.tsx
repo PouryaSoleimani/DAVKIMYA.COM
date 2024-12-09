@@ -116,24 +116,16 @@ const AboutUsPage = () => {
               <div className="text-justify">
                 <p className="mx-0">
                   <strong>
-                    <span className="text-[22pt]">   {t("aboutUsBottomDescription")}</span>
+                    <span className="text-[23pt] ">   {t("aboutUsBottomDescription")}</span>
                     <br />
                     <br />
                     {t('aboutUsBottomSubDesc1')}
-                    <br />
-                    <br />
                     {t('aboutUsBottomSubDesc2')}
-                  </strong>
-                </p>
-                <br />
-                <p className="mx-0">
-                  <strong>
                     {t('aboutUsBottomSubDesc3')}
-                    <br />
-                    <br />
                     {t('aboutUsBottomSubDesc4')}
                   </strong>
                 </p>
+
               </div>
             </div>
             <div className="primary-bg px-5 pt-4 pb-5 text-dark">
