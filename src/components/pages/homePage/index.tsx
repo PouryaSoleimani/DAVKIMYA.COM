@@ -86,7 +86,7 @@ const HomePage = () => {
       </div>
 
       {/* <!-- WHY CHOOSE US --> */}
-      {/* <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
+      <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
         <div className="container my-5">
           <div className="row g-4">
             <div className="col-lg-7">
@@ -153,11 +153,16 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
+
+      <h2 className="text-center font-extrabold text-4xl bg-zinc-300 w-fit mx-auto py-4 px-16 rounded-xl border-2 border-lime-400"> Why Choose Us ?</h2>
       <section className="wrapper my-20">
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>
-            <div className="carousel__cell number-slide1 ">1</div>
+            <div className="carousel__cell number-slide1 flex flex-col items-start justify-start">
+              <p className="text-start ">1</p>
+              <h3>High-Quality, Consistent Products</h3>
+            </div>
             <div className="carousel__cell number-slide2">2</div>
             <div className="carousel__cell number-slide3">3</div>
             <div className="carousel__cell number-slide4">4</div>

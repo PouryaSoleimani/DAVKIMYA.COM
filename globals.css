@@ -2142,13 +2142,14 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   display: flex;
   column-gap: 0.2rem;
 }
+/* WHY CHOOSE US SLIDER */
 [class^="number-slide"],
 [class*=" number-slide"] {
   background: grey;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
+  align-items: start;
+  justify-content: start;
+  font-size: 20px;
   color: #fff;
   font-weight: 500;
   height: 200px;
@@ -2237,5 +2238,6 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   width: 240px;
   left: 10px;
   height: 200px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 1rem;
 }
