@@ -2180,7 +2180,12 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   position: absolute;
   width: 440px;
   left: 10px;
-  height: 215px;
+  height: 360px;
   border-radius: 15px;
   padding: 1rem;
+}
+@media screen and (max-width: 420px) {
+  .carousel__cell {
+    scale: 0.8;
+  }
 }
