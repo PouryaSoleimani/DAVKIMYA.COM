@@ -20,7 +20,8 @@ type serviceData = {
 };
 
 const BlogDetailsPage = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
+  const id = "1";
   const { lng } = useLang();
   const { t } = useTranslation();
   const blogId = id ? id[0] : undefined;
