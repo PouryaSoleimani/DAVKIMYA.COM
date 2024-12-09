@@ -170,8 +170,6 @@ const HomePage = () => {
             <div className="carousel__cell number-slide2">2</div>
             <div className="carousel__cell number-slide3">3</div>
             <div className="carousel__cell number-slide4">4</div>
-            <div className="carousel__cell number-slide5">5</div>
-            <div className="carousel__cell number-slide6">6</div>
           </div>
         </div>
       </section>
