@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import Link from "next/link";
 import AOS from "aos";
@@ -36,7 +38,7 @@ const ProductCategoryPage = () => {
     productsData.map((item) => {
       t(item.title) === productTitle && setSelectedTitle(item);
     });
-  }, []);
+  }, []); 
 
   return (
     <>
