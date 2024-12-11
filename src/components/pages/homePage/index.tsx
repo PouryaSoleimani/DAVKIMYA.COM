@@ -34,12 +34,12 @@ const HomePage = () => {
 
   const { lng } = useParams();
   const { t } = useTranslation();
-  const [showFAQ, setShowFAQ] = useState(false)
-  const [showFAQ2, setShowFAQ2] = useState(false)
+  // const [showFAQ, setShowFAQ] = useState(false)
+  // const [showFAQ2, setShowFAQ2] = useState(false)
+  // function showFaqHandler() { setShowFAQ(prev => !prev) }
+  // function showFaqHandler2() { setShowFAQ2(prev => !prev) }
   useEffect(() => { AOS.init(); }, []);
-  function showFaqHandler() { setShowFAQ(prev => !prev) }
-  function showFaqHandler2() { setShowFAQ2(prev => !prev) }
-
+  
   const [sliderRef] = useKeenSlider<HTMLDivElement>({ loop: true, selector: ".carousel__cell", renderMode: "custom", mode: "free-snap", }, [carousel]);
 
   return (
@@ -204,7 +204,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* <!-- FAQS --> */}
-      <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
+      {/* <section id="faqs" className="my-5 py-5 top container" data-sr-id="2">
         <div className="row g-4">
 
           <div id="FAQ____TITLE" className="col-lg-4">
@@ -405,7 +405,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
     </>
   );

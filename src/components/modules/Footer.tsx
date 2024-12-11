@@ -90,7 +90,7 @@ const Footer = () => {
                   <li className="mb-2">
                     <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
-                      <span>+90 506 503 43 38</span>
+                      <span>+905346879096</span>
                     </Link>
                   </li>
                   <li className="mb-2">

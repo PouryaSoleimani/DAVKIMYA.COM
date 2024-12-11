@@ -10,8 +10,8 @@ import { useLang } from "@/core/providers/langProvider";
 import { useTranslation } from "@/core/i18n/client";
 import Image from "next/image";
 import compunds from "@/../public/images/products__page/compunds.webp"
-import emulation from "@/../public/images/products__page/emulationSystem.webp"
-import poly from "@/../public/images/products__page/poly.webp"
+import emulation from "@/../public/images/products__page/emulationSystem.jpg"
+import poly from "@/../public/images/products__page/Spray-Foam-Cavity-Insulation.jpeg"
 import sealant from "@/../public/images/products__page/sealant.webp"
 // COMPONENT =================================================================================================================================
 const ProductPage = () => {

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import Link from "next/link";
 import AOS from "aos";
@@ -12,9 +10,9 @@ import { NoSubTitleBox } from "./components/noSubTitleBox";
 import productsData from "../../../core/constants/useproductsData.json";
 
 type subtitle = {
-  title: string,
-  src: string
-}
+  title: string;
+  src: string;
+};
 
 export type selectedTitle = {
   title: string;
@@ -23,7 +21,6 @@ export type selectedTitle = {
 const ProductCategoryPage = () => {
   const { t } = useTranslation();
   const { title } = useParams();
-
 
   const productTitle = title
     ? typeof title === "string"
@@ -69,20 +66,39 @@ const ProductCategoryPage = () => {
       </section>
 
       {/* BOXES */}
-      <section data-aos="fade-right" data-aos-duration="2500" id="articles" className="mt-5 py-5 left" data-sr-id="2">
+      <section
+        data-aos="fade-right"
+        data-aos-duration="2500"
+        id="articles"
+        className="mt-5 py-5 left  "
+        data-sr-id="2"
+      >
         <div className="container">
           <div className="text-center">
             <span className="h3">{productTitle}</span>
           </div>
 
-          <div className="row  mt-5 h-[30rem]">
+          <div className="row  mt-5  min-h-fit">
             {productTitle === t("productTitleThree")
               ? selectedTitle?.subtitles.map((item) => {
-                return <WithSubTitleBox title={item.title} key={Math.random()} mainTitle={productTitle} />;
-              })
+                  return (
+                    <WithSubTitleBox
+                      title={item.title}
+                      key={Math.random()}
+                      mainTitle={productTitle}
+                    />
+                  );
+                })
               : selectedTitle?.subtitles.map((item) => {
-                return (<NoSubTitleBox mainTitle={productTitle} title={item.title} src={item.src} key={Math.random()} />);
-              })}
+                  return (
+                    <NoSubTitleBox
+                      mainTitle={productTitle}
+                      title={item.title}
+                      src={item.src}
+                      key={Math.random()}
+                    />
+                  );
+                })}
             <div className="col-md-12"></div>
           </div>
         </div>
