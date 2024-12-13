@@ -120,11 +120,11 @@ const Header = () => {
                                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                                 <Nav className="mr-auto">
                                     <NavDropdownMenu title="Products" id="collasible-nav-dropdown">
-                                        <DropdownSubmenu href="#action/3.7" title="Text to show">
-                                            <NavDropdown.Item href="#action/8.1">Sub 1</NavDropdown.Item>
-                                            <DropdownSubmenu href="#action/3.7" title="Text to show">
-                                                <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
-                                            </DropdownSubmenu>
+                                        <DropdownSubmenu href="#action/3.7" title="Polymeric Emulsion System" className="mr-2 pr-2 flex leading-1 ">
+                                            <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
+                                        </DropdownSubmenu>
+                                        <DropdownSubmenu href="#action/3.7" title="Polyurethanes" className="mr-2 pr-2 flex leading-1 ">
+                                            <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
                                         </DropdownSubmenu>
                                     </NavDropdownMenu>
                                 </Nav>
