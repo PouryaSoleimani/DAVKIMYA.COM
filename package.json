@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@material-tailwind/react": "^2.1.10",
     "@popperjs/core": "^2.11.8",
     "@swc/core": "^1.10.0",
     "accept-language": "^3.0.20",
