@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
-const withMT = require("@material-tailwind/react/utils/withMT");
 
-
-module.exports = withMT({
+export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,4 +15,4 @@ module.exports = withMT({
     },
   },
   plugins: [],
-}) satisfies Config;
+} satisfies Config;

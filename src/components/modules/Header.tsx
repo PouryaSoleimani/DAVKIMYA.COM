@@ -14,8 +14,8 @@ import { useTranslation } from '@/core/i18n/client'
 import Dropdown from 'react-bootstrap/Dropdown';
 import Button from 'react-bootstrap/Button';
 import SearchModal from "./SearchModal";
-import { Menu, MenuHandler, MenuList, MenuItem, Button as BUTTON, } from "@material-tailwind/react";
-import { BsChevronBarUp } from "react-icons/bs";
+import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 // COMPONENT =====================================================================================================================================================
 const Header = () => {
@@ -115,49 +115,29 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/about-us`}>{t("aboutUs")}</Link>
                                 </li>
-                                <Dropdown className='z-50 m-[-2px] min-[1000px]:m-0'>
-                                    <Dropdown.Toggle variant="none" id="dropdown-basic" className='inline-flex  items-center justify-center m-0 p-0 z-10 focus:outline-none px-1'>
-                                        <Link className="nav-link primary-color" href={`/${lng}/product`}>{t("product")}</Link>
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu >
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'> All {t("product")} </Dropdown.Item>
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleOne")}</Dropdown.Item>
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleTwo")}</Dropdown.Item>
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleThree")}</Dropdown.Item>
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleFour")}</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
+
                                 {/* NEW DROPDOWN */}
-                                <Menu>
-                                    <MenuHandler>
-                                        <Button> Menu</Button>
-                                    </MenuHandler>
-                                    <MenuList>
-                                        <MenuItem>Menu Item 1</MenuItem>
-                                        <MenuItem>Menu Item 2</MenuItem>
-                                        <Menu
-                                            placement="right-start"
-                                            open={openMenu}
-                                            handler={setOpenMenu}
-                                            allowHover
-                                            offset={15}
-                                        >
-                                            <MenuHandler className="flex items-center justify-between">
-                                                <MenuItem>
-                                                    Nested Item
-                                                    <BsChevronBarUp strokeWidth={2.5} className={`h-3.5 w-3.5 transition-transform ${openMenu ? "rotate-90" : ""}`}
-                                                    />
-                                                </MenuItem>
-                                            </MenuHandler>
-                                            <MenuList>
-                                                <MenuItem>Nested Item 1</MenuItem>
-                                                <MenuItem>Nested Item 2</MenuItem>
-                                                <MenuItem>Nested Item 3</MenuItem>
-                                            </MenuList>
-                                        </Menu>
-                                        <MenuItem>Menu Item 3</MenuItem>
-                                    </MenuList>
-                                </Menu>
+                                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                                    <Navbar.Collapse id="responsive-navbar-nav">
+                                        <Nav className="mr-auto">
+                                            <Nav.Link href="#features">Features</Nav.Link>
+                                            <NavDropdownMenu title="Dropdown 1" id="collasible-nav-dropdown">
+                                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                                                <DropdownSubmenu href="#action/3.7" title="Text to show">
+                                                    <NavDropdown.Item href="#action/8.1">Sub 1</NavDropdown.Item>
+                                                    <DropdownSubmenu href="#action/3.7" title="Text to show">
+                                                        <NavDropdown.Item href="#action/9.1">
+                                                            Sub 2
+                                                        </NavDropdown.Item>
+                                                    </DropdownSubmenu>
+                                                </DropdownSubmenu>
+                                            </NavDropdownMenu>
+                                        </Nav>
+                                    </Navbar.Collapse>
+                                </Navbar>
+
 
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/service`}>{t("rAndD")}</Link>
