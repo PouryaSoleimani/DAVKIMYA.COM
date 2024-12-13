@@ -25,6 +25,7 @@
     "pm2": "^5.4.3",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.5",
+    "react-bootstrap-submenu": "^3.0.4",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.53.2",
     "react-i18next": "^15.1.1",
