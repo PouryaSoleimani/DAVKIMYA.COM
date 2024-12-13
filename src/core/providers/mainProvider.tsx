@@ -1,13 +1,16 @@
 import { ReactNode } from "react";
 import { AddBootstrap } from "./AddBootstrap";
+import { ThemeProvider } from "@material-tailwind/react"
 interface MainProviderProps {
   children: ReactNode;
 }
 const MainProvider = ({ children }: MainProviderProps) => {
   return (
     <>
-      <AddBootstrap />
-      {children}
+      <ThemeProvider>
+        <AddBootstrap />
+        {children}
+      </ThemeProvider>
     </>
   );
 };

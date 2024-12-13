@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +14,8 @@ import { useTranslation } from '@/core/i18n/client'
 import Dropdown from 'react-bootstrap/Dropdown';
 import Button from 'react-bootstrap/Button';
 import SearchModal from "./SearchModal";
-import { BsChevronBarDown } from "react-icons/bs";
+import { Menu, MenuHandler, MenuList, MenuItem, Button as BUTTON, } from "@material-tailwind/react";
+import { BsChevronBarUp } from "react-icons/bs";
 
 // COMPONENT =====================================================================================================================================================
 const Header = () => {
@@ -22,6 +24,8 @@ const Header = () => {
     const [showMenu, setshowMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
     const [modalShow, setModalShow] = useState(false);
+    const [openMenu, setOpenMenu] = React.useState(false);
+
     //  FUNCTIONS
     const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
     const handleResize = () => { setWindowWidth(window.innerWidth); };
@@ -124,46 +128,36 @@ const Header = () => {
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 {/* NEW DROPDOWN */}
-                                <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button
-                                    <BsChevronBarDown />
-                                </button>
-                                {/* <!-- Dropdown menu --> */}
-                                <div id="multi-dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                    <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButton">
-                                        <li>
-                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                        </li>
-                                        <li>
-                                            <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" className="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dropdown
-                                                <svg className="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
-                                                </svg>
-                                            </button>
-                                            <div id="doubleDropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                                                    <li>
-                                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Overview</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My downloads</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Billing</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rewards</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <Menu>
+                                    <MenuHandler>
+                                        <Button> Menu</Button>
+                                    </MenuHandler>
+                                    <MenuList>
+                                        <MenuItem>Menu Item 1</MenuItem>
+                                        <MenuItem>Menu Item 2</MenuItem>
+                                        <Menu
+                                            placement="right-start"
+                                            open={openMenu}
+                                            handler={setOpenMenu}
+                                            allowHover
+                                            offset={15}
+                                        >
+                                            <MenuHandler className="flex items-center justify-between">
+                                                <MenuItem>
+                                                    Nested Item
+                                                    <BsChevronBarUp strokeWidth={2.5} className={`h-3.5 w-3.5 transition-transform ${openMenu ? "rotate-90" : ""}`}
+                                                    />
+                                                </MenuItem>
+                                            </MenuHandler>
+                                            <MenuList>
+                                                <MenuItem>Nested Item 1</MenuItem>
+                                                <MenuItem>Nested Item 2</MenuItem>
+                                                <MenuItem>Nested Item 3</MenuItem>
+                                            </MenuList>
+                                        </Menu>
+                                        <MenuItem>Menu Item 3</MenuItem>
+                                    </MenuList>
+                                </Menu>
 
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/service`}>{t("rAndD")}</Link>

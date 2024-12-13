@@ -7,7 +7,7 @@ import Header from "@/components/modules/Header";
 import Footer from "@/components/modules/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppLink from "@/components/modules/WhatsAppLink";
-
+import { ThemeProvider } from "@material-tailwind/react";
 
 interface paramsProps {
   lng: string | undefined;
