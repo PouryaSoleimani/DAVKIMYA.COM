@@ -108,7 +108,7 @@ const Header = () => {
                         </div>
                         {/* MENU */}
                         <div className={`${showMenu === false ? "collapse" : ""} navbar-collapse translate-y-2 lg:translate-y-3`}>
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 max-h-[42px]">
+                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 ">
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color active" aria-current="page" href={`/${lng}/`}>{t("home")}</Link>
                                 </li>
