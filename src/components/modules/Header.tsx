@@ -126,6 +126,12 @@ const Header = () => {
                                         <DropdownSubmenu href="#action/3.7" title="Polyurethanes" className="mr-2 pr-2 flex leading-1 ">
                                             <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
                                         </DropdownSubmenu>
+                                        <DropdownSubmenu href="#action/3.7" title="Engineered Polymeric Compounds" className="mr-2 pr-2 flex leading-1 ">
+                                            <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
+                                        </DropdownSubmenu>
+                                        <DropdownSubmenu href="#action/3.7" title="Mastic and Sealants" className="mr-2 pr-2 flex leading-1 ">
+                                            <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
+                                        </DropdownSubmenu>
                                     </NavDropdownMenu>
                                 </Nav>
 
