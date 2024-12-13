@@ -1,9 +1,3 @@
 tasks{
-    2.catalog mainPage
-    3.productPdf file add link pdfs
-    5.save forms datas
-    6.sync useTranslation
-    7.fix changing languages
-    8.link social medias
-    9.product-pdf links
+add chakra ui submenu for product tab in header
 }

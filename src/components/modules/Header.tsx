@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +14,8 @@ import { useTranslation } from '@/core/i18n/client'
 import Dropdown from 'react-bootstrap/Dropdown';
 import Button from 'react-bootstrap/Button';
 import SearchModal from "./SearchModal";
+import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 // COMPONENT =====================================================================================================================================================
 const Header = () => {
@@ -21,6 +24,8 @@ const Header = () => {
     const [showMenu, setshowMenu] = useState(false)
     const [windowWidth, setWindowWidth] = useState(0);
     const [modalShow, setModalShow] = useState(false);
+    const [openMenu, setOpenMenu] = React.useState(false);
+
     //  FUNCTIONS
     const showMenuHandler = () => { if (window.innerWidth < 1000) { setshowMenu(prev => !prev) } else { setshowMenu(true) } }
     const handleResize = () => { setWindowWidth(window.innerWidth); };
@@ -110,42 +115,26 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/about-us`}>{t("aboutUs")}</Link>
                                 </li>
-                                <Dropdown className='z-50 m-[-2px] min-[1000px]:m-0'>
-                                    <Dropdown.Toggle variant="none" id="dropdown-basic" className='inline-flex  items-center justify-center m-0 p-0 z-10 focus:outline-none px-1'>
-                                        <Link className="nav-link primary-color" href={`/${lng}/product`}>{t("product")}</Link>
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu >
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'> All {t("product")} </Dropdown.Item>
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleOne")}</Dropdown.Item>
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleTwo")}</Dropdown.Item>
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleThree")}</Dropdown.Item>
-                                        <Dropdown.Item href={`/${lng}/product`} className='hover:bg-zinc-300 px-4 py-2'>{t("productTitleFour")}</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
-                                    {/* <li className="w-32">
-                                <MenuRoot>
-      <MenuTrigger asChild>
-        <Button variant="outline" size="sm" className="nav-link primary-color">
-        {t("product")} 
-        </Button>
-        <FaChevronDown/>
-      </MenuTrigger>
-      <MenuContent>
-        <MenuItem value="new-txt">New Text File</MenuItem>
-        <MenuItem value="new-file">New File...</MenuItem>
-        <MenuRoot positioning={{ placement: "right-start", gutter: 2 }}>
-          <MenuTriggerItem >Open Recent</MenuTriggerItem>
-          <MenuContent>
-            <MenuItem value="panda">Panda</MenuItem>
-            <MenuItem value="ark">Ark UI</MenuItem>
-            <MenuItem value="chakra">Chakra v3</MenuItem>
-          </MenuContent>
-        </MenuRoot>
-        <MenuItem value="open-file">Open File...</MenuItem>
-        <MenuItem value="export">Export</MenuItem>
-      </MenuContent>
-    </MenuRoot>
-    </li> */}
+
+                                {/* NEW DROPDOWN */}
+                                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                                <Nav className="mr-auto">
+                                    <NavDropdownMenu title="Products" id="collasible-nav-dropdown">
+                                        <DropdownSubmenu href="#action/3.7" title="Polymeric Emulsion System" className="mr-2 pr-2 flex leading-1 ">
+                                            <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
+                                        </DropdownSubmenu>
+                                        <DropdownSubmenu href="#action/3.7" title="Polyurethanes" className="mr-2 pr-2 flex leading-1 ">
+                                            <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
+                                        </DropdownSubmenu>
+                                        <DropdownSubmenu href="#action/3.7" title="Engineered Polymeric Compounds" className="mr-2 pr-2 flex leading-1 ">
+                                            <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
+                                        </DropdownSubmenu>
+                                        <DropdownSubmenu href="#action/3.7" title="Mastic and Sealants" className="mr-2 pr-2 flex leading-1 ">
+                                            <NavDropdown.Item href="#action/9.1">  Sub 2</NavDropdown.Item>
+                                        </DropdownSubmenu>
+                                    </NavDropdownMenu>
+                                </Nav>
+
 
                                 <li className="nav-item">
                                     <Link className="nav-link primary-color" href={`/${lng}/service`}>{t("rAndD")}</Link>

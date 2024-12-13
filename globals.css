@@ -2189,3 +2189,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
     scale: 0.8;
   }
 }
+#collasible-nav-dropdown {
+  color: #c3eb3f !important;
+  margin: 0 0.2rem !important;
+}
