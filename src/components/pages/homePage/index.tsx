@@ -80,10 +80,10 @@ const HomePage = () => {
       </section>
 
       {/* DOWNLOAD CATALOGUE */}
-      <div id="DonwloadCatalogue" className="flex flex-wrap items-center justify-center gap-x-10 font-bold bg-zinc-300 w-fit h-fit mx-auto my-10 px-4 py-2 rounded-xl shadow ">
+      {/* <div id="DonwloadCatalogue" className="flex flex-wrap items-center justify-center gap-x-10 font-bold bg-zinc-300 w-fit h-fit mx-auto my-10 px-4 py-2 rounded-xl shadow ">
         Download Our Products Catalogue
         <DownloadButton />
-      </div>
+      </div> */}
 
 
       {/* <section data-aos="fade-up" data-aos-duration="2000" id="choose-us" className="my-5 top py-5 position-relative" data-sr-id="0" >
