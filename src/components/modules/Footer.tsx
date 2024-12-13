@@ -113,10 +113,9 @@ const Footer = () => {
       <div className="border-top mt-5">
         <div className="d-flex flex-wrap container align-items-center justify-content-center justify-content-lg-between gap-4 py-3">
           <p className="mb-0 fw-bold text-white-50 text-center col-12">
-            Copyright 2024 © All Right Reserved for DAV / Website Designed by
-            <Link href="/" className="text-white">
-              {" "}
-              Gized Team{" "}
+            Copyright 2024 © All Right Reserved for DAV / Website Designed by{" "}
+            <Link href="/" className="text-white italic ">
+              Gized Group
             </Link>
           </p>
         </div>
