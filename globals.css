@@ -2193,6 +2193,31 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   color: #c3eb3f !important;
   margin: 0 0.2rem !important;
 }
-/* .navbar-toggler .collappsed {
-  display: none;
-} */
+.navbar-nav .dropdown-menu{
+  margin-left: 7px !important;
+}
+.dropdown-submenu-container .dropdown-menu {
+  top: -6px !important;
+  left: 97% !important;
+  margin-left: 15px !important;
+  margin-right: auto;
+  position: absolute !important;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.4em solid;
+  border-right: 0.4em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+@media screen and (min-width: 1024px) {
+  .dropdown-submenu-container .dropdown-menu {
+    top: -7px !important;
+    left: 103% !important;
+    margin-left: 2px !important; 
+    margin-right: auto;
+  }
+}
