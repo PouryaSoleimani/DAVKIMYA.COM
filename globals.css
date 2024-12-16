@@ -433,6 +433,14 @@ footer .col-lg-3 a:hover,
   background-color: #000000d6;
 }
 
+/* service details page */
+#service-details-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #00000060;
+}
+
 #about img[alt="thumbnail-about"] {
   width: 281px;
   bottom: -36px;
@@ -464,6 +472,14 @@ footer .col-lg-3 a:hover,
 #article-title,
 #post-title {
   background-image: url("./public/images/products__page/products__header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* service details page */
+#service-details-title {
+  background-image: url("./public/images/serviceDetails/banner-chemical.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

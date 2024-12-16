@@ -27,7 +27,7 @@ const ContactUsPage = () => {
   return (
     <>
       {/* TITLE */}
-      <section id="contact-title" className="d-flex align-items-center top justify-content-center py-5 px-2 position-relative">
+      <section id="contact-title" className="d-flex align-items-center top justify-content-center py-5 px-2 position-relative before:!bg-[#00000080]">
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1"> {t("contactUs")}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">

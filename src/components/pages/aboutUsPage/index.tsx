@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // ^ ABOUT US PAGE =========================================================================================================================================
 "use client";
-import { useLang } from "@/core/providers/langProvider";
 import { useTranslation } from "@/core/i18n/client";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import TOPIMAGE from "@/../public/images/about-us/TOP.jpeg";
+import BottomIMAGE from "@/../public/images/about-us/TOP.jpeg";
 import BOTTOMLOGO from "@/../public/images/about-us/BOTTOM__LOGO.webp";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -15,7 +14,6 @@ import sliderOne from "@/../public/images/about-us//SLIDER__1.jpg";
 // ^ COMPONENT =========================================================================================================================================
 const AboutUsPage = () => {
   const { t } = useTranslation();
-  const { lng } = useLang();
 
   useEffect(() => {
     AOS.init();
@@ -48,88 +46,8 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-      {/* MIDDLE PART */}
-      <div
-        id="about"
-        data-aos="fade-down"
-        data-aos-duration="3000"
-        className="my-5 top"
-      >
-        <div className="container">
-          <div className="row g-4 align-items-center">
-            <div className="col-lg-5 position-relative">
-              <Image
-                src={TOPIMAGE}
-                alt="About Us"
-                className="img-fluid"
-                width={1100}
-                height={800}
-              />
-            </div>
-            <div className="col-1"></div>
-            <div className="col-lg-6">
-              <div className="text-justify">
-                <span className="h3 text-3xl"> {t("aboutUs")}</span>
-                <div className="text-muted">
-                  <h2>
-                    <span className="text-[24px] text-zinc-900">
-                      <strong>
-                        <span className="bg-white">
-                          <p className="text-[#22222] my-3 tracking-tight font-bold font-sans">
-                            {t("davKimyaCompany")}
-                          </p>
-                        </span>
-                      </strong>
-                    </span>
-                  </h2>
-                  <div>
-                    <span className="text-[#2ecc71]">
-                      <span className="aboutGreenText text-[12px] font-semibold tracking-tight">
-                        <strong>&rdquo; </strong>
-                      </span>
-                      <span className="text-[11pt]">
-                        <span className="bg-white">
-                          <span className="text-[14pt] tracking-tight  font-[500] ">
-                            An innovative company focused on the production of
-                            advanced polymeric materials.
-                          </span>
-                        </span>
-                      </span>
-                      <span className="text-[16px]">
-                        <strong> &ldquo;</strong>
-                      </span>
-                    </span>
-                  </div>
 
-                  <div className="mt-3">
-                    <span className="bg-white">
-                      <span className="text-[13pt]">
-                        <span
-                          className="text-zinc-800 tracking-tight "
-                          style={{ wordSpacing: "8px", fontWeight: "550" }}
-                        >
-                          <p>
-                            {" "}
-                            At Dav Kimya, our mission is to offer innovative and
-                            cutting-edge formulations that offer superior
-                            performance and environmental sustainability. We
-                            specialize in the production of high-performance
-                            acrylic emulsion, polyester polyols, polyurethane
-                            insulation raw materials, Engineered plastic
-                            compounds, and Mastic and sealants.
-                          </p>
-                        </span>
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* BOTTOM */}
+      {/* Middle */}
       <div
         id="description"
         data-aos="fade-down"
@@ -151,7 +69,19 @@ const AboutUsPage = () => {
               <Image alt="desc" src={BOTTOMLOGO} width={90} height={600} />
               <div className="text-justify">
                 <h2 className="mx-0 text-[24pt] font-bold">
+                  An innovative company focused on the production of advanced
+                  polymeric materials.
+                </h2>
+                <p>
                   {" "}
+                  At Dav Kimya, our mission is to offer innovative and
+                  cutting-edge formulations that offer superior performance and
+                  environmental sustainability. We specialize in the production
+                  of high-performance acrylic emulsion, polyester polyols,
+                  polyurethane insulation raw materials, Engineered plastic
+                  compounds, and Mastic and sealants.
+                </p>
+                <h2 className="mx-0 text-[24pt] font-bold">
                   {t("aboutUsBottomDescription")}
                 </h2>
                 <p className="text-sm font-semibold ">
@@ -169,6 +99,38 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
+
+      {/* End PART */}
+      <div
+        id="about"
+        className="my-5 top"
+      >
+        <div className="container">
+          <div className="row g-4 align-items-center">
+            <div className="col-lg-5 position-relative">
+              <Image
+                src={BottomIMAGE}
+                alt="About Us"
+                className="img-fluid"
+                width={1100}
+                height={800}
+              />
+            </div>
+            <div className="col-lg-5 position-relative">
+              {/* <Image
+                src={BottomIMAGE}
+                alt="About Us"
+                className="img-fluid"
+                width={1100}
+                height={800}
+              /> */}
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
     </section>
   );
 };
