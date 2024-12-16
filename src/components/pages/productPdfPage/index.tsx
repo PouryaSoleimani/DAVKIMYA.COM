@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import PdfDownloadButton from "@/components/modules/PdfDownloadButton";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import ProductDetailsPage from "../productDetailsPage";
+
 
 // COMPONENT ====================================================================================================================================================================
 const ProductPdfPage = () => {
