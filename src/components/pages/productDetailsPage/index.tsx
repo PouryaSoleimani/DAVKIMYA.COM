@@ -44,6 +44,7 @@ const ProductDetailsPage = () => {
     AOS.refresh();
     poructsDetails.map((item: selectedTitle) => {
       t(item.title) === productTitle && setSelectedTitle(item);
+
     });
   }, []);
   return (
@@ -97,26 +98,78 @@ const ProductDetailsPage = () => {
                 ))}
               </div>
               <hr />
-              <h5 className="product_name_h5 text-center">
-                <span className="h3 px-3">Products</span>
-              </h5>
-              <div className=" w-full grid grid-cols-5 gap-4  mt-4 ">
-              {selectedTitle?.products.map((item) => (
-                <h2
-                  key={Math.random()}
-                  className="product_name_h1 text-start mb-0 w-fit whitespace-nowrap "
-                >
-                  <Link
-                    href={`/${lng}/product/${mainTitle.replaceAll(
-                      " ",
-                      "-"
-                    )}/${productTitle.replaceAll(" ", "-")}/${item.product}`}
-                  >
-                    {t(item.product)}
-                  </Link>
-                </h2>
-              ))}
+
+                {productTitle.replaceAll(" ", "-") === "Paint-and-Coating" ?(
+                  <div className="flex">
+                    <div className="col-md-6 flex flex-col items-center">
+                      <h5 className="product_name_h5 text-center">
+                        <span className="h3 px-3">Pure acrylic</span>
+                      </h5>
+                      {selectedTitle?.products.slice(0,3).map((item) => (
+                        <h2
+                          key={item.product}
+                          className="product_name_h1 text-center mb-0 w-fit whitespace-nowrap "
+                        >
+                          <Link
+                            href={`/${lng}/product/${mainTitle.replaceAll(
+                              " ",
+                              "-"
+                            )}/${productTitle.replaceAll(" ", "-")}/${
+                              item.product
+                            }`}
+                          >
+                            {t(item.product)}
+                          </Link>
+                        </h2>
+                      ))}
+                    </div>
+                    <div className="col-6 flex flex-col items-center">
+                      <h5 className="product_name_h5 text-center">
+                        <span className="h3 px-3">Styrene Acrylic</span>
+                      </h5>
+                      {selectedTitle?.products.slice(3).map((item) => (
+                        <h2
+                          key={item.product}
+                          className="product_name_h1 text-start mb-0 w-fit whitespace-nowrap "
+                        >
+                          <Link
+                            href={`/${lng}/product/${mainTitle.replaceAll(
+                              " ",
+                              "-"
+                            )}/${productTitle.replaceAll(" ", "-")}/${
+                              item.product
+                            }`}
+                          >
+                            {t(item.product)}
+                          </Link>
+                        </h2>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div  className=" w-full grid grid-cols-[repeat(5,minmax(200px,1fr)] gap-4  mt-4 ">
+                  {selectedTitle?.products.map((item) => (
+                    <div key={item.product} className="w-fit ">
+                    <h2
+                      key={item.product}
+                      className="product_name_h1 mb-0  whitespace-nowrap "
+                    >
+                      <Link
+                        href={`/${lng}/product/${mainTitle.replaceAll(
+                          " ",
+                          "-"
+                        )}/${productTitle.replaceAll(" ", "-")}/${
+                          item.product
+                        }`}
+                      >
+                        {t(item.product)}
+                      </Link>
+                    </h2>
+                    </div>
+                  ))}
               </div>
+                )}
+
             </div>
           </div>
         </div>
