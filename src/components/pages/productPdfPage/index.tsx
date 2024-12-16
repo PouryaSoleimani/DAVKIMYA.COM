@@ -7,11 +7,6 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 
-type iProducts = {
-  product:string,
-  desc:string
-}[]
-
 // COMPONENT ====================================================================================================================================================================
 const ProductPdfPage = () => {
   const { t } = useTranslation()
@@ -28,7 +23,7 @@ const ProductPdfPage = () => {
  useEffect(()=>{
   poructsDetails.map(item=>item.products.map(item=>  item.product === product &&  setSelectedProduct(item)))
 
- },[])
+ })
 
   return (
     <>

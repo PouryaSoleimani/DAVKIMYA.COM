@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "@/core/i18n/client";
-import { it } from "node:test";
 
 type selectedTitle = {
   title: string;
