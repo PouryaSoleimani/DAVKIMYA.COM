@@ -19,7 +19,6 @@ const ProductPdfPage = () => {
   const product = pdf ?
  typeof(pdf) === "string"? pdf : pdf[0] : ""
 
- const [productsArr, setproductsArr] = useState<iProducts>([])
  const [selectedProduct, setSelectedProduct] = useState<{
   product:string,
   desc:string
@@ -27,8 +26,7 @@ const ProductPdfPage = () => {
 
 
  useEffect(()=>{
-  poructsDetails.map(item=>console.log(typeof item.products))
-  // productsArr.map(item)=>setSelectedProduct()
+  poructsDetails.map(item=>item.products.map(item=>  item.product === product &&  setSelectedProduct(item)))
 
  },[])
 
@@ -37,7 +35,7 @@ const ProductPdfPage = () => {
 
       <section id="post-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative"  >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
-          <h1 className="display-1"> {product}</h1>
+          <h1 className="display-1"> {selectedProduct?.product}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
             <Link href={`/en`} className="d-block text-lime-400 fw-bold text-decoration-none"  >
               {t("home")}
@@ -51,18 +49,18 @@ const ProductPdfPage = () => {
       <section id="single-service" className="container my-5 left">
         <div className="row g-4">
           <div className="col-lg-8">
-            <h1 className="fw-bold my-3 text-4xl">{product}</h1>
+            <h1 className="fw-bold my-3 text-4xl">{selectedProduct?.product}</h1>
             <div>
               <hr />
               <p>
-              
+              {selectedProduct?.desc}
               </p>
               <hr />
 
               <PdfDownloadButton />
               <hr className="w-[165px]" />
             </div>
-            <p className="text-secondary">{product}</p>
+            <p className="text-secondary">{selectedProduct?.product}</p>
           </div>
           <div className="col-lg-4">
             <div className="p-sticky">

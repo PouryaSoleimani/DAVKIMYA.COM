@@ -101,10 +101,11 @@ const ProductDetailsPage = () => {
               <h5 className="product_name_h5 text-center">
                 <span className="h3 px-3">Products</span>
               </h5>
+              <div className=" w-full grid grid-cols-5 gap-4  mt-4 ">
               {selectedTitle?.products.map((item) => (
                 <h2
                   key={Math.random()}
-                  className="product_name_h1 text-start mb-0"
+                  className="product_name_h1 text-start mb-0 w-fit whitespace-nowrap "
                 >
                   <Link
                     href={`/${lng}/product/${mainTitle.replaceAll(
@@ -116,6 +117,7 @@ const ProductDetailsPage = () => {
                   </Link>
                 </h2>
               ))}
+              </div>
             </div>
           </div>
         </div>
