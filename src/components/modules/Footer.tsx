@@ -27,31 +27,31 @@ const Footer = () => {
           </div>
 
           {/*//!  LOGO AND DESC */}
-          <div className="col-lg-4 col-md-6 -translate-y-1 space-y-[4.5rem]">
-            <Image alt="daav" src={LOGO} className="img-fluid footer_img" width={130} height={50} />
+          <div className="col-lg-4 col-md-6 -translate-y-1 space-y-[2.8rem]">
+            <Image alt="daav" src={LOGO} className="img-fluid footer_img translate-y-1 -translate-x-12" width={190} height={50} />
             <p className="mt-4 text-white-50"></p>
-            <p className="text-xl">
+            <p className="text-xl leading-10 font-semibold pl-4">
               Dav Kimya company is an innovative company focused on the
               production of advanced polymeric materials. At Dav Kimya, our
               mission is to offer innovative and cutting-edge formulations that
               offer superior performance and environmental sustainability.
             </p>
             <p></p>
-            <p className="mt-10 text-2xl underline decoration-lime-400 decoration-2 underline-offset-8 flex items-center gap-x-1 leading-10 tracking-tight">
+            <p className="mt-10 text-2xl underline decoration-lime-400 decoration-2 underline-offset-8 flex items-center gap-x-1 leading-10 tracking-tight translate-y-1 -translate-x-2">
               <FaLocationDot className="translate-y-1 text-red-700" />
               7W9R+57P, Kapaklı, Tekirdağ, Turkey
             </p>
           </div>
 
           {/*//? LINKS AND NUMBERS */}
-          <div className="col-lg-4 col-md-6 translate-y-10">
+          <div className="col-lg-4 col-md-6 -translate-y-1">
 
             <div className="row g-4">
 
               <div className="col-lg-6">
                 <span className="pb-2 h3">Quick Links</span>
-                <ul className="list-unstyled p-0 m-0 mt-4">
-                  <li className="mb-2">
+                <ul className="list-unstyled p-0 m-0 mt-4 text-lg space-y-[17px]">
+                  <li className="mb-2 mt-10">
                     <Link href="/" className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold"   >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
                       <span>Home</span>
@@ -86,8 +86,8 @@ const Footer = () => {
 
               <div className="col-lg-6">
                 <span className="pb-2 h3">{t("contactUs")}</span>
-                <ul className="list-unstyled p-0 m-0 mt-4">
-                  <li className="mb-2">
+                <ul className="list-unstyled p-0 m-0 mt-4 text-lg space-y-[18px] ">
+                  <li className="mb-2 mt-10">
                     <Link className="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold" href={`/${lng}/contact-us`}  >
                       <FaArrowRight className="pl-1 text-lime-400 my-1.5" />
                       <span>+905346879096</span>
