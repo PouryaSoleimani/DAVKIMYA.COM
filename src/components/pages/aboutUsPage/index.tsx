@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import BottomIMAGE from "@/../public/images/about-us/TOP.jpeg";
-import BOTTOMLOGO from "@/../public/images/about-us/BOTTOM__LOGO.webp";
+import BOTTOMLOGO from "@/../public/images/about-us/BOTTOM__LOGO.png";
 import Link from "next/link";
 import { useEffect } from "react";
 import sliderOne from "@/../public/images/about-us//SLIDER__1.jpg";
@@ -65,14 +65,15 @@ const AboutUsPage = () => {
           </div>
           {/* DESCRIPTIONS */}
           <div className="col-lg-6 px-0 h-100">
-            <div className="bg-black2 p-5 text-white">
-              <Image alt="desc" src={BOTTOMLOGO} width={90} height={600} />
+            <div className="bg-[#00000080] p-5 text-white">
+              <Image alt="desc" src={BOTTOMLOGO} width={90} height={600}  />
               <div className="text-justify">
                 <h2 className="mx-0 text-[24pt] font-bold">
                   An innovative company focused on the production of advanced
                   polymeric materials.
                 </h2>
-                <p>
+   
+                <p className="text-sm font-semibold ">
                   {" "}
                   At Dav Kimya, our mission is to offer innovative and
                   cutting-edge formulations that offer superior performance and
@@ -80,20 +81,17 @@ const AboutUsPage = () => {
                   of high-performance acrylic emulsion, polyester polyols,
                   polyurethane insulation raw materials, Engineered plastic
                   compounds, and Mastic and sealants.
-                </p>
-                <h2 className="mx-0 text-[24pt] font-bold">
                   {t("aboutUsBottomDescription")}
-                </h2>
-                <p className="text-sm font-semibold ">
+
                   {t("aboutUsBottomSubDesc1")}
                   {t("aboutUsBottomSubDesc2")}
                   {t("aboutUsBottomSubDesc3")}
                   {t("aboutUsBottomSubDesc4")}
                   {t("aboutUsBottomSubDesFooter")}
                 </p>
-                <strong className="text-xl text-[#2ecc71]">
+                {/* <strong className="text-xl text-[#2ecc71]">
                   {t("aboutUsBottomSubDesMoto")}
-                </strong>
+                </strong> */}
               </div>
             </div>
           </div>

@@ -125,8 +125,8 @@ const Header = () => {
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider/>
                                         <DropdownSubmenu href="#" title="Polymeric Emulsion System" className="mr-2 pr-2 flex leading-1 ">
-                                        <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleOne").replaceAll(" ","-")}`}> {t("titleOneSubTitleOne")} </NavDropdown.Item> 
                                         <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleTwo").replaceAll(" ","-")}`}> {t("titleOneSubTitleTwo")}</NavDropdown.Item>
+                                        <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleOne").replaceAll(" ","-")}`}> {t("titleOneSubTitleOne")} </NavDropdown.Item> 
                                         <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleThree").replaceAll(" ","-")}`}> {t("titleOneSubTitleThree")} </NavDropdown.Item>
                                         <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleFour").replaceAll(" ","-")}`}>{t("titleOneSubTitleFour")} </NavDropdown.Item>
                                         </DropdownSubmenu>
