@@ -4,7 +4,7 @@
 import { useTranslation } from "@/core/i18n/client";
 import Link from "next/link";
 import { LuMail, LuPhoneForwarded } from "react-icons/lu";
-import { SlLocationPin } from "react-icons/sl";
+// import { SlLocationPin } from "react-icons/sl";
 import { FaArrowRight } from "react-icons/fa6";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
