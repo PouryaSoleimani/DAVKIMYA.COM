@@ -13,7 +13,7 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <footer className="text-white pt-2">
-      <div className=" flex items-center justify-evenly  pl-10 gap-x-10  mt-5">
+      <div className=" flex flex-col lg:flex-row  items-center justify-center lg:justify-evenly  pl-10 lg:gap-x-10  mt-5">
         {/*//& FOOTER MAIN */}
         <div className="row g-4">
 
