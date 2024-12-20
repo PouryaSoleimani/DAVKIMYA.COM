@@ -1,10 +1,10 @@
 TASKS : {
     POURYA : 
-footer align she loc bere chap (yekam ui esh morattab beshe)
-header catalogue esmesh avaz  she beshe -> online catalogue
-contact-us=> DavPetrochmical hazf she
-blog details data bargozari she
-services page -> title e banner beshe r and d 
+--- footer align she loc bere chap (yekam ui esh morattab beshe)
+--- header catalogue esmesh avaz  she beshe -> online catalogue
+--- contact-us=> DavPetrochmical hazf she
+--- blog details data bargozari she
+--- services page -> title e banner beshe r and d 
 }
     =============================================================================================================================================================================
 Amin:{

@@ -12,13 +12,22 @@ const Footer = () => {
   const { lng } = useLang();
   const { t } = useTranslation();
   return (
-    <footer className="pt-5 text-white">
-      <div className="container mt-5">
-        {/* FOOTER MAIN */}
+    <footer className="text-white pt-2">
+      <div className=" flex items-center justify-evenly  pl-10 gap-x-10  mt-5">
+        {/*//& FOOTER MAIN */}
         <div className="row g-4">
 
-          {/* LOGO AND DESC */}
-          <div className="col-lg-4 col-md-6">
+          {/*//^ MAP */}
+          <div className="col-lg-4">
+            <div style={{ width: "100%" }}>
+              {/* <Link href="https://www.gps.ie/">gps systems</Link> */}
+              <iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=41%C2%B016'04.7%22N%2027%C2%B056'26.5%22E+(Dav%20Kimya)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+              </iframe>
+            </div>
+          </div>
+
+          {/*//!  LOGO AND DESC */}
+          <div className="col-lg-4 col-md-6 -translate-y-1 space-y-[4.5rem]">
             <Image alt="daav" src={LOGO} className="img-fluid footer_img" width={130} height={50} />
             <p className="mt-4 text-white-50"></p>
             <p className="text-xl">
@@ -34,17 +43,8 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* MAP */}
-          <div className="col-lg-4">
-            <div style={{ width: "100%" }}>
-              {/* <Link href="https://www.gps.ie/">gps systems</Link> */}
-              <iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=41%C2%B016'04.7%22N%2027%C2%B056'26.5%22E+(Dav%20Kimya)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-              </iframe>
-            </div>
-          </div>
-
-          {/* LINKS AND NUMBERS */}
-          <div className="col-lg-4 col-md-6">
+          {/*//? LINKS AND NUMBERS */}
+          <div className="col-lg-4 col-md-6 translate-y-10">
 
             <div className="row g-4">
 
@@ -107,8 +107,8 @@ const Footer = () => {
 
         </div>
 
-
       </div>
+
       {/* COPYRIGHT */}
       <div className="border-top mt-5">
         <div className="d-flex flex-wrap container align-items-center justify-content-center justify-content-lg-between gap-4 py-3">
