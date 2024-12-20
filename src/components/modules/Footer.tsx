@@ -46,7 +46,7 @@ const Footer = () => {
           {/*//? LINKS AND NUMBERS */}
           <div className="col-lg-4 col-md-6 -translate-y-1">
 
-            <div className="row g-4">
+            <div className="row g-4 mt-10 px-4 py-10 lg:px-0 lg:py-0">
 
               <div className="col-lg-6">
                 <span className="pb-2 h3">Quick Links</span>
