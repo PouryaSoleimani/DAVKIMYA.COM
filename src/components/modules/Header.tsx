@@ -165,7 +165,7 @@ const Header = () => {
                                     <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>{t("contactUs")}</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://pouryasoleimani-adddesign.storage.c2.liara.space/DAV___KIMYA/DAV%20catalog.pdf">{t("Catalogue")}</Link>
+                                    <Link className="nav-link primary-color" href="https://pouryasoleimani-adddesign.storage.c2.liara.space/DAV___KIMYA/DAV%20catalog.pdf" target="_blank">{t("Catalogue")}</Link>
                                 </li>
                             </ul>
                             {/* <!-- SEARCH MODAL --> */}
