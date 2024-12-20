@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import item1 from "@/../public/images/servicesPage/item1.jpg";
-import item2 from "@/../public/images/servicesPage/item2.jpg";
+import item1 from "@/../public/images/serviceDetails/serviceBlue.jpg";
+import item2 from "@/../public/images/serviceDetails/serviceGreen.jpg";
 import { useTranslation } from "@/core/i18n/client";
 import { useLang } from "@/core/providers/langProvider";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -44,7 +43,7 @@ const BlogDetailsPage = () => {
         data-aos="fade-down"
         data-aos-duration="2500"
         data-sr-id="0"
-        id="post-title"
+        id="service-details-title"
         className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative"
       >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
@@ -134,6 +133,13 @@ const BlogDetailsPage = () => {
               Facing challenges in production or application? Our team is just a
               call away to provide solutions rooted in science and practicality.
             </p>
+            <Image
+              width={blogId === "1" ? 505 : 856}
+              height={blogId === "1" ? 336 : 459}
+              src={item2}
+              alt={"a boat"}
+              className="img-fluid w-[100%]"
+            />
             <h3 className="fw-bold my-3   ">
               Driving Innovation and Quality Together
             </h3>

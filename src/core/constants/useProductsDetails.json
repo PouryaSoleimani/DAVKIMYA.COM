@@ -9,51 +9,101 @@
       "adhesivesDescFour",
       "adhesivesDescFive"
     ],
-    "products": [
-      "davinylH5018"
-    ]
+    "products": [{ "product": "davinylH5018", "desc": " test" }]
   },
   {
     "title": "titleOneSubTitleTwo",
     "src": "",
-    "description": [
-      "paintAndCoat"
-    ],
+    "description": ["paintAndCoat"],
     "products": [
-      "davinylT5009",
-      "davinyT5002",
-      "davinylC5300",
-      "davinylS5000",
-      "davinylS4016",
-      "davinylP5019",
-      "davinylP4018"
+      {
+        "product": "davacrylP4516",
+        "desc": " DAVACRYL-P4016 is a pure acrylic APEO-free emulsion with excellent UV resistance, weathering durability, and water resistance, ideal for exterior applications. Its versatility ensures reliable performance across diverse outdoor conditions."
+      },
+      {
+        "product": "davacrylP5002",
+        "desc": " DAVACRYL-P5002 is a pure acrylic APEO-free resin specially designed for exterior paints. It features a low Tg and MFFT, providing excellent film-forming properties, outstanding water resistance, and good UV resistance, making it an ideal choice for durable and weather-resistant coatings."
+      },
+      {
+        "product": "davacrylP5018",
+        "desc": " DAVACRYL-P5018 is a pure acrylic APEO-free emulsion designed for highperformance applications. Its formulation provides exceptional UV resistance, excellent weathering durability, and superior water resistance, making it an ideal choice for exterior applications. The small particle size and strong pigment-binding capability further enhance its performance, ensuring durability and long-lasting protection in demanding environments."
+      },
+      {
+        "product": "davacrylS5000",
+        "desc": " DAVACRYL-S5000 is an APEO-free styrene acrylic resin with functional monomers to provide high flexibility, superior filler acceptance, excellent adhesion to PVC, Glass, and Cement, and excellent water resistance in the formulation of mastics, sealants, adhesives, and elastomeric coatings."
+      },
+      {
+        "product": "davacrylS5009",
+        "desc": " DAVACRYL-S5009 is a styrene acrylic copolymer emulsion with high pigment binding power, small particle size, and high scrub resistance for indoor and outdoor paints and coatings. This copolymer could provide medium to hard film texture.  \n Applications: Interior paints, tile, and concrete adhesives"
+      },
+      {
+        "product": "davacrlS5016",
+        "desc": "DAVACRYL-S5016 is a styrene acrylic copolymer emulsion with high pigment binding power, small particle size, and high scrub resistance for indoor and outdoor paints and coatings. \n Applications: Interior paints, tile, and concrete adhesives"
+      },
+      {
+        "product": "davacrlS5018",
+        "desc": "  DAVACRYL-S5018 is a styrene acrylic copolymer emulsion with high pigment binding power, small particle size, and high scrub resistance for indoor and outdoor paints and coatings. \n Applications: Interior paints, tile, and concrete adhesives"
+      },
+      {
+        "product": "davacrlS5022",
+        "desc": " DAVACRYL-S5022 is a styrene acrylic copolymer emulsion with high pigment binding power, small particle size, and high scrub resistance for indoor and outdoor paints and coatings. This copolymer could provide medium to hard film texture. Applications: Interior paints, tile, and concrete adhesives."
+      }
+     
     ]
   },
+
   {
     "title": "titleOneSubTitleThree",
     "src": "",
-    "description": [
-      "tapeLabelDesc"
-    ],
+    "description": ["tapeLabelDesc"],
     "products": [
-      "davacrylS5005",
-      "davacrylS5002",
-      "davacrylS5000",
-      "davacrylPS6025",
-      "davacrylPS5530"
+      {
+        "product": "davacrylS5005",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davacrylS5002",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davacrylS5000",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davacrylPS6025",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davacrylS5530",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      }
     ]
   },
   {
     "title": "titleOneSubTitleFour",
     "src": "",
-    "description": [
-      "textileDesc"
-    ],
+    "description": ["textileDesc"],
     "products": [
-      "davinylC4521",
-      "davinylC4005",
-      "davinylS50012",
-      "davinylS5002"
+      {
+        "product": "davinylC4521",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davinylC4005",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davinylS50012",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davinylS5002",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davacrylS5530",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      }
     ]
   },
   {
@@ -68,65 +118,93 @@
       "polysterDescSix"
     ],
     "products": [
-      "pad2000",
-      "davapolPG310",
-      "davapolPES300",
-      "sprayPolyDesc",
-      "davaPolSPF30B2",
-      "davaPolAPG400"
+      {
+        "product": "pad2000",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davapolPG310",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davapolPES300",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "sprayPolyDesc",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davaPolSPF30B2",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davaPolAPG400",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      }
     ]
   },
   {
     "title": "titleTwoSubTitleTwo",
     "src": "",
-    "description": [
-      "sprayPolyDesc"
-    ],
+    "description": ["sprayPolyDesc"],
+
     "products": [
-      "davaPolSPF30B2",
-      "davaPolAPG400"
+      {
+        "product": "davaPolSPF30B2",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davaPolAPG400",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      }
     ]
   },
   {
     "title": "titleTwoSubTitleThree",
     "src": "",
-    "description": [
-      "hightDensityDesc"
-    ],
+    "description": ["hightDensityDesc"],
     "products": [
-      ""
+      {
+        "product": "",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      }
     ]
   },
   {
     "title": "titleTwoSubTitleFour",
     "src": "",
-    "description": [
-      "rigidPuDesc"
-    ],
+    "description": ["rigidPuDesc"],
     "products": [
-      "davaPolCD40"
+      {
+        "product": "davaPolCD40",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      }
     ]
   },
   {
     "title": "titleTwoSubTitleFive",
     "src": "",
-    "description": [
-      "industrialDesc"
-    ],
+    "description": ["industrialDesc"],
     "products": [
-      "davaPolPI9000",
-      "davaPolPI1200"
+      {
+        "product": "davaPolPI9000",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      },
+      {
+        "product": "davaPolPI1200",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      }
     ]
   },
   {
     "title": "bioBased",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [  {
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "greenPolyol",
@@ -137,127 +215,120 @@
       "greenPolyolDescThree"
     ],
     "products": [
-      "davapolPi1200"
-    ]
+    {
+      "product": "davapolPi1200",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "lightDiffuser",
     "src": "",
-    "description": [
-      "lightDiffDexc"
-    ],
+    "description": ["lightDiffDexc"],
     "products": [
-      "davaLedFr"
-    ]
+      {
+        "product": "davaLedFr",
+        "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+      }
+  ]
   },
   {
     "title": "thermalConductive",
     "src": "",
-    "description": [
-      "thermalConductDesc"
-    ],
+    "description": ["thermalConductDesc"],
     "products": [
-      "davamId6"
-    ]
+    {
+      "product": "davamId6",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "ppHight",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [ {
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "absCompound",
     "src": "",
-    "description": [
-      "plasticForDesc"
-    ],
-    "products": [
-      ""
-    ]
+    "description": ["plasticForDesc"],
+    "products": [ {
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "flameRetardantPA",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [ {
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "flameRetardantPPCompound",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [ {
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "glassFiber",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [ {
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "flameRetardantPP",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [ {
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "CaCO3",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [{
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "titleFourSubTitleOne",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [{
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "titleFourSubTitleTwo",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [{
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   },
   {
     "title": "titleFourSubTitleThree",
     "src": "",
-    "description": [
-      ""
-    ],
-    "products": [
-      ""
-    ]
+    "description": [""],
+    "products": [{
+      "product": "",
+      "desc": " DAVACRYL-P4016 is an acrylic copolymer emulsion that has high pigment binding power, small particle size, and high scrub resistance to be used in primers. \n Applications: Primers"
+    }]
   }
 ]
