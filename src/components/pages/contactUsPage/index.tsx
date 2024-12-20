@@ -48,8 +48,8 @@ const ContactUsPage = () => {
               <h1 className="my-3 text-4xl font-semibold">
                 DAV KIMYA
               </h1>
-              <SlLocationPin className="w-6 h-8 text-lime-400" />
-              <p className="fw-bold border-bottom pb-3">DAV {t("petroChemichal")}</p>
+              {/* <SlLocationPin className="w-6 h-8 text-lime-400" /> */}
+              {/* <p className="fw-bold border-bottom pb-3">DAV {t("petroChemichal")}</p> */}
               <LuPhoneForwarded className='text-lime-400 my-3 w-6 h-6' />
               <p className="fw-bold mt-3">
                 +905346879096
