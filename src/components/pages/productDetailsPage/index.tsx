@@ -103,7 +103,7 @@ const ProductDetailsPage = () => {
                   <div className="flex">
                     <div className="col-md-6 flex flex-col items-center">
                       <h5 className="product_name_h5 text-center">
-                        <span className="h3 px-3">Pure acrylic</span>
+                        <span className="h3 px-3">Pure Acrylic</span>
                       </h5>
                       {selectedTitle?.products.slice(0,3).map((item) => (
                         <h2
