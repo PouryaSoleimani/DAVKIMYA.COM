@@ -4,7 +4,7 @@ TASKS : {
 --- header catalogue esmesh avaz  she beshe -> online catalogue - DONE
 --- contact-us=> DavPetrochmical hazf she - DONE
 --- blog details data bargozari she 
---- services page -> title e banner beshe r and d 
+--- services page -> title e banner beshe r and d  - DONE
 }
     =============================================================================================================================================================================
 Amin:{

@@ -48,7 +48,8 @@ const BlogDetailsPage = () => {
       >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1">
-            {t("serviceTitle1")}
+            {/* {t("serviceTitle1")} */}
+            {t("rAndD")}
             {/* {blogId === "1"
               ? serviceData[0].title
               : blogId === "2"
