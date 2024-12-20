@@ -38,7 +38,7 @@ const ProductCategoryPage = () => {
     productsData.map((item) => {
       t(item.title) === productTitle && setSelectedTitle(item);
     });
-  }, []); 
+  }, []);
 
   return (
     <>
@@ -74,6 +74,7 @@ const ProductCategoryPage = () => {
         id="articles"
         className="mt-5 py-5 left  "
         data-sr-id="2"
+        style={{ marginBottom: "7rem" }}
       >
         <div className="container">
           <div className="text-center">
@@ -83,24 +84,24 @@ const ProductCategoryPage = () => {
           <div className="row  mt-5  min-h-fit">
             {productTitle === t("productTitleThree")
               ? selectedTitle?.subtitles.map((item) => {
-                  return (
-                    <WithSubTitleBox
-                      title={item.title}
-                      key={Math.random()}
-                      mainTitle={productTitle}
-                    />
-                  );
-                })
+                return (
+                  <WithSubTitleBox
+                    title={item.title}
+                    key={Math.random()}
+                    mainTitle={productTitle}
+                  />
+                );
+              })
               : selectedTitle?.subtitles.map((item) => {
-                  return (
-                    <NoSubTitleBox
-                      mainTitle={productTitle}
-                      title={item.title}
-                      src={item.src}
-                      key={Math.random()}
-                    />
-                  );
-                })}
+                return (
+                  <NoSubTitleBox
+                    mainTitle={productTitle}
+                    title={item.title}
+                    src={item.src}
+                    key={Math.random()}
+                  />
+                );
+              })}
             <div className="col-md-12"></div>
           </div>
         </div>

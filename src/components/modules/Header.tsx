@@ -120,33 +120,33 @@ const Header = () => {
                                 <Nav className="mx-0 -translate-x-5 lg:translate-x-0">
                                     <NavDropdownMenu title="Products" id="collasible-nav-dropdown">
 
-                                        <NavDropdown.Item  href={`/${lng}/product`} className="mr-2 pr-2 flex leading-1 ">
-                                        All products
+                                        <NavDropdown.Item href={`/${lng}/product`} className="mr-2 pr-2 flex leading-1 ">
+                                            All products
                                         </NavDropdown.Item>
-                                        <NavDropdown.Divider/>
+                                        <NavDropdown.Divider />
                                         <DropdownSubmenu href="#" title="Polymeric Emulsion System" className="mr-2 pr-2 flex leading-1 ">
-                                        <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleTwo").replaceAll(" ","-")}`}> {t("titleOneSubTitleTwo")}</NavDropdown.Item>
-                                        <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleOne").replaceAll(" ","-")}`}> {t("titleOneSubTitleOne")} </NavDropdown.Item> 
-                                        <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleThree").replaceAll(" ","-")}`}> {t("titleOneSubTitleThree")} </NavDropdown.Item>
-                                        <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ","-")}/${t("titleOneSubTitleFour").replaceAll(" ","-")}`}>{t("titleOneSubTitleFour")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ", "-")}/${t("titleOneSubTitleTwo").replaceAll(" ", "-")}`}> {t("titleOneSubTitleTwo")}</NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ", "-")}/${t("titleOneSubTitleOne").replaceAll(" ", "-")}`}> {t("titleOneSubTitleOne")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ", "-")}/${t("titleOneSubTitleThree").replaceAll(" ", "-")}`}> {t("titleOneSubTitleThree")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleOne").replaceAll(" ", "-")}/${t("titleOneSubTitleFour").replaceAll(" ", "-")}`}>{t("titleOneSubTitleFour")} </NavDropdown.Item>
                                         </DropdownSubmenu>
                                         <DropdownSubmenu href="#" title="Polyurethanes" className="mr-2 pr-2 flex leading-1 ">
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ","-")}/${t("titleTwoSubTitleOne").replaceAll(" ","-")}`}>  {t("titleTwoSubTitleOne")}</NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ","-")}/${t("titleTwoSubTitleTwo").replaceAll(" ","-")}`}>  {t("titleTwoSubTitleTwo")}</NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ","-")}/${t("titleTwoSubTitleThree").replaceAll(" ","-")}`}>  {t("titleTwoSubTitleThree")}</NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ","-")}/${t("titleTwoSubTitleFour").replaceAll(" ","-")}`}>  {t("titleTwoSubTitleFour")}</NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ","-")}/${t("titleTwoSubTitleFive").replaceAll(" ","-")}`}>  {t("titleTwoSubTitleFive")}</NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ","-")}/${t("titleTwoSubTitleSix").replaceAll(" ","-")}`}>  {t("titleTwoSubTitleSix")}</NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ", "-")}/${t("titleTwoSubTitleOne").replaceAll(" ", "-")}`}>  {t("titleTwoSubTitleOne")}</NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ", "-")}/${t("titleTwoSubTitleTwo").replaceAll(" ", "-")}`}>  {t("titleTwoSubTitleTwo")}</NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ", "-")}/${t("titleTwoSubTitleThree").replaceAll(" ", "-")}`}>  {t("titleTwoSubTitleThree")}</NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ", "-")}/${t("titleTwoSubTitleFour").replaceAll(" ", "-")}`}>  {t("titleTwoSubTitleFour")}</NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ", "-")}/${t("titleTwoSubTitleFive").replaceAll(" ", "-")}`}>  {t("titleTwoSubTitleFive")}</NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleTwo").replaceAll(" ", "-")}/${t("titleTwoSubTitleSix").replaceAll(" ", "-")}`}>  {t("titleTwoSubTitleSix")}</NavDropdown.Item>
                                         </DropdownSubmenu>
                                         <DropdownSubmenu href="#" title="Engineered Polymeric Compounds" className="mr-2 pr-2 flex leading-1 ">
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleThree").replaceAll(" ","-")}/${t("titleThreeSubTitleOne").replaceAll(" ","-")}`}>   {t("titleThreeSubTitleOne")} </NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleThree").replaceAll(" ","-")}/${t("titleThreeSubTitleTwo").replaceAll(" ","-")}`}>   {t("titleThreeSubTitleTwo")} </NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleThree").replaceAll(" ","-")}/${t("titleThreeSubTitleThree").replaceAll(" ","-")}`}>   {t("titleThreeSubTitleThree")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleThree").replaceAll(" ", "-")}/${t("titleThreeSubTitleOne").replaceAll(" ", "-")}`}>   {t("titleThreeSubTitleOne")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleThree").replaceAll(" ", "-")}/${t("titleThreeSubTitleTwo").replaceAll(" ", "-")}`}>   {t("titleThreeSubTitleTwo")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleThree").replaceAll(" ", "-")}/${t("titleThreeSubTitleThree").replaceAll(" ", "-")}`}>   {t("titleThreeSubTitleThree")} </NavDropdown.Item>
                                         </DropdownSubmenu>
                                         <DropdownSubmenu href="#" title="Mastic and Sealants" className="mr-2 pr-2 flex leading-1 ">
-                                        <NavDropdown.Item href={`/${lng}/product/${t("productTitleFour").replaceAll(" ","-")}/${t("titleFourSubTitleOne").replaceAll(" ","-")}`}>   {t("titleFourSubTitleOne")} </NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleFour").replaceAll(" ","-")}/${t("titleFourSubTitleTwo").replaceAll(" ","-")}`}>   {t("titleFourSubTitleTwo")} </NavDropdown.Item>
-                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleFour").replaceAll(" ","-")}/${t("titleFourSubTitleThree").replaceAll(" ","-")}`}>   {t("titleFourSubTitleThree")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleFour").replaceAll(" ", "-")}/${t("titleFourSubTitleOne").replaceAll(" ", "-")}`}>   {t("titleFourSubTitleOne")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleFour").replaceAll(" ", "-")}/${t("titleFourSubTitleTwo").replaceAll(" ", "-")}`}>   {t("titleFourSubTitleTwo")} </NavDropdown.Item>
+                                            <NavDropdown.Item href={`/${lng}/product/${t("productTitleFour").replaceAll(" ", "-")}/${t("titleFourSubTitleThree").replaceAll(" ", "-")}`}>   {t("titleFourSubTitleThree")} </NavDropdown.Item>
                                         </DropdownSubmenu>
                                     </NavDropdownMenu>
                                 </Nav>
@@ -165,7 +165,7 @@ const Header = () => {
                                     <Link className="nav-link primary-color" href={`/${lng}/contact-us`}>{t("contactUs")}</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link primary-color" href="https://pouryasoleimani-adddesign.storage.c2.liara.space/DAV___KIMYA/TEST.pdf">{t("Catalogue")}</Link>
+                                    <Link className="nav-link primary-color" href="https://pouryasoleimani-adddesign.storage.c2.liara.space/DAV___KIMYA/DAV%20catalog.pdf">{t("Catalogue")}</Link>
                                 </li>
                             </ul>
                             {/* <!-- SEARCH MODAL --> */}

@@ -73,7 +73,7 @@ const ProductPdfPage = () => {
                 {poructsDetails.map(
                   (item) =>
                     t(item.title).replaceAll(" ", "-").toLowerCase() ===
-                      mainTitle.toLowerCase() &&
+                    mainTitle.toLowerCase() &&
                     item.products.slice(0, 6).map((productItem) => (
                       <>
                         {productItem.product !== product && (

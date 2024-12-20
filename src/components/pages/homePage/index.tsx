@@ -39,7 +39,7 @@ const HomePage = () => {
   // function showFaqHandler() { setShowFAQ(prev => !prev) }
   // function showFaqHandler2() { setShowFAQ2(prev => !prev) }
   useEffect(() => { AOS.init(); }, []);
-  
+
   const [sliderRef] = useKeenSlider<HTMLDivElement>({ loop: true, selector: ".carousel__cell", renderMode: "custom", mode: "free-snap", }, [carousel]);
 
   return (
@@ -61,19 +61,19 @@ const HomePage = () => {
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX1} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href={`${lng}/product/${t("productTitleOne").replaceAll(" ","-")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleOne")}</a>
+              <a href={`${lng}/product/${t("productTitleOne").replaceAll(" ", "-")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleOne")}</a>
             </div>
           </div>
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX2} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href={`${lng}/product/${t("productTitleTwo").replaceAll(" ","-")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleTwo")}</a>
+              <a href={`${lng}/product/${t("productTitleTwo").replaceAll(" ", "-")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleTwo")}</a>
             </div>
           </div>
           <div className="col-lg-4 position-relative">
             <Image alt="box" src={BOX3} className="img-fluid h-100 w-100" width={500} height={100} />
             <div className="position-absolute end-0 start-0 bottom-0 mb-5 px-3">
-              <a href={`${lng}/product/${t("productTitleThree").replaceAll(" ","-")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleThree")}</a>
+              <a href={`${lng}/product/${t("productTitleThree").replaceAll(" ", "-")}`} className="btn btn-success hover:bg-lime-600 duration-300 text-white mx-auto d-table">{t("productTitleThree")}</a>
             </div>
           </div>
         </div>
@@ -163,7 +163,7 @@ const HomePage = () => {
       {/* <!-- WHY CHOOSE US --> */}
       <h2 className="text-center font-extrabold text-4xl  underline decoration-4 decoration-lime-400 mt-20"> Why Choose Us ?</h2>
       <span className="tracking-tighter text-[17px] font-sans text-center w-full block font-semibold text-zinc-600">Welcome to DavKimya- where innovation meets sustainability</span>
-      <section className="wrapper mt-20 my-40">
+      <section className="wrapper mt-20 mb-[18rem]">
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>
 
