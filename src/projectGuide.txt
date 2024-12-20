@@ -1,8 +1,14 @@
 TASKS : {
     POURYA : 
-    1 - 
-    2 - 
-    3 - 
-    4 - 
+footer align she loc bere chap (yekam ui esh morattab beshe)
+header catalogue esmesh avaz  she beshe -> online catalogue
+contact-us=> DavPetrochmical hazf she
+blog details data bargozari she
+}
     =============================================================================================================================================================================
+Amin:{
+ productPdf pics
+paint banner
+downloadFile functionality
+product page pics 
 }
