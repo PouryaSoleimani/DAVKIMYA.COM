@@ -27,7 +27,7 @@ export { generateStaticParams };
 interface RootProps { children: React.ReactNode, params: { lng: any } }
 
 const RootLayout: React.FC<RootProps> = async ({ children, params }: RootProps) => {
-  const LNG = await params.lng;
+  const LNG = await params?.lng;
   return (
     <html lang={LNG} dir={dir(LNG)} >
       <head />
