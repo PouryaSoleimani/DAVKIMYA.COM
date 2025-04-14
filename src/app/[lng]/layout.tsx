@@ -24,8 +24,9 @@ const generateStaticParams = async () => {
 };
 
 export { generateStaticParams };
+interface RootProps { children: any, params: { lng: string } }
 
-const RootLayout = ({ children, params: { lng } }: PageProps) => {
+const RootLayout: React.FC<RootProps> = ({ children, params: { lng } }: PageProps) => {
   return (
     <html lang={lng} dir={dir(lng)} >
       <head />
