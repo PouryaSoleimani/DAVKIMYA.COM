@@ -29,7 +29,7 @@ interface RootProps { children: any, params: { lng: any } }
 const RootLayout: React.FC<RootProps> = async ({ children, params: { lng } }: PageProps) => {
   const LNG = await lng;
   return (
-    <html lang={lng} dir={dir(lng)} >
+    <html lang={LNG} dir={dir(LNG)} >
       <head />
       <MainProvider>
         <body className="overflow-x-hidden">
