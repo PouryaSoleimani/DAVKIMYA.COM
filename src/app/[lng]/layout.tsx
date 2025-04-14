@@ -10,14 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppLink from "@/components/modules/WhatsAppLink";
 import * as React from 'react'
 
-interface paramsProps {
-  lng: string | undefined;
-}
-
-interface PageProps {
-  children: ReactNode;
-  params: paramsProps;
-}
 
 const generateStaticParams = async () => {
   return languages.map((lng) => ({ lng }));
@@ -28,6 +20,8 @@ interface RootProps { children: React.ReactNode, params: { lng: any } }
 
 const RootLayout: React.FC<RootProps> = async ({ children, params }: RootProps) => {
   const LNG = await params?.lng;
+
+
   return (
     <html lang={LNG} dir={dir(LNG)} >
       <head />
