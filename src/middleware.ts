@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import acceptLanguage from "accept-language";
-import { fallbackLng, languages } from "@/core/i18n/settings";
+import { fallbackLng, languages } from "../src/core/i18n/settings";
 import { setCookie } from "cookies-next";
 import { persistKeys } from "./core/constants/persistKeys";
 

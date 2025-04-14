@@ -26,20 +26,11 @@ const ProductPage = () => {
   return (
     <>
       {/* TITLE */}
-      <section
-        data-aos="fade-down"
-        data-aos-duration="2500"
-        id="article-title"
-        className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative -z-10"
-        data-sr-id="0"
-      >
+      <section data-aos="fade-down" data-aos-duration="2500" id="article-title" className="d-flex top align-items-center justify-content-center py-5 px-2 position-relative -z-10" data-sr-id="0"    >
         <div className="container text-white fw-bold text-center my-5 py-5 position-relative">
           <h1 className="display-1">{t("ourProductsTitle")}</h1>
           <div className="d-flex align-items-center justify-content-center gap-1">
-            <Link
-              href="/en/"
-              className="d-block primary-color fw-bold text-decoration-none"
-            >
+            <Link href="/en/" className="d-block primary-color fw-bold text-decoration-none"      >
               {t("home")}
             </Link>
             <span>/</span>
@@ -52,75 +43,39 @@ const ProductPage = () => {
       </section>
 
       {/* BOXES */}
-      <section
-        data-aos="fade-right"
-        data-aos-duration="2500"
-        id="articles"
-        className="mt-5 py-5 left"
-        data-sr-id="2"
-      >
+      <section data-aos="fade-right" data-aos-duration="2500" id="articles" className="mt-5 py-5 left" data-sr-id="2">
         <div className="container">
           <div className="text-center">
             <span className="h3">{t("ourProductsTitle")}</span>
           </div>
 
           <div className="row g-4 mt-5">
-            <div className="col-xxl-3 col-md-4 col-sm-6">
+            <div className="col-xxl-3 col-md-4 col-sm-6 content-center">
               <div className="card_category">
                 <div>
-                  <Link
-                    href={`product/${t("productTitleOne").replaceAll(
-                      " ",
-                      "-"
-                    )}`}
-                    className="title_h1 tracking-tighter"
-                  >
+                  <Link href={`product/${t("productTitleOne").replaceAll(" ", "-")}`} className="title_h1 tracking-tighter"   >
                     {t("productTitleOne")}
                   </Link>
                   <hr />
-                  <Image
-                    src={emulation}
-                    width={600}
-                    height={600}
-                    alt="image"
-                    className="mt-3 aspect-[1.4]"
-                  />
+                  <Image src={emulation} width={600} height={600} alt="image" className="mt-3 aspect-[1.4]" />
                 </div>
               </div>
             </div>
-            <div className="col-xxl-3 col-md-4 col-sm-6">
+            <div className="col-xxl-3 col-md-4 col-sm-6 content-center">
               <div className="card_category">
                 <div>
-                  <Link
-                    href={`product/${t("productTitleTwo").replaceAll(
-                      " ",
-                      "-"
-                    )}`}
-                    className="title_h1 tracking-tighter"
-                  >
+                  <Link href={`product/${t("productTitleTwo").replaceAll(" ", "-")}`} className="title_h1 tracking-tighter"  >
                     {t("productTitleTwo")}
                   </Link>
                   <hr />
-                  <Image
-                    src={poly}
-                    width={600}
-                    height={600}
-                    alt="image"
-                    className="mt-3 aspect-[1.4]"
-                  />
+                  <Image src={poly} width={600} height={600} alt="image" className="mt-3 aspect-[1.4]" />
                 </div>
               </div>
             </div>
-            <div className="col-xxl-3 col-md-4 col-sm-6">
+            <div className="col-xxl-3 col-md-4 col-sm-6 content-center">
               <div className="card_category">
                 <div>
-                  <Link
-                    href={`product/${t("productTitleThree").replaceAll(
-                      " ",
-                      "-"
-                    )}`}
-                    className="title_h1 whitespace-nowrap tracking-tighter"
-                  >
+                  <Link href={`product/${t("productTitleThree").replaceAll(" ", "-")}`} className="title_h1 whitespace-nowrap tracking-tighter" >
                     {t("productTitleThree")}
                   </Link>
                   <hr />
@@ -134,7 +89,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xxl-3 col-md-4 col-sm-6">
+            <div className="col-xxl-3 col-md-4 col-sm-6 content-center">
               <div className="card_category">
                 <div>
                   <Link
