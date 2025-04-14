@@ -8,7 +8,7 @@ import Header from "@/components/modules/Header";
 import Footer from "@/components/modules/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WhatsAppLink from "@/components/modules/WhatsAppLink";
-
+import * as React from 'react'
 
 interface paramsProps {
   lng: string | undefined;
@@ -24,9 +24,10 @@ const generateStaticParams = async () => {
 };
 
 export { generateStaticParams };
-interface RootProps { children: any, params: { lng: string | undefined } }
+interface RootProps { children: any, params: { lng: any } }
 
-const RootLayout: React.FC<RootProps> = ({ children, params: { lng } }: PageProps) => {
+const RootLayout: React.FC<RootProps> = async ({ children, params: { lng } }: PageProps) => {
+  const LNG = await lng;
   return (
     <html lang={lng} dir={dir(lng)} >
       <head />
