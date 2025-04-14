@@ -1,6 +1,5 @@
 import { dir } from "i18next";
 import { languages } from "../../core/i18n/settings";
-import { ReactNode } from "react";
 import { MainProvider } from "@/core/providers/mainProvider";
 import './../../../globals.css'
 import "react-bootstrap-submenu/dist/index.css"
@@ -16,7 +15,7 @@ const generateStaticParams = async () => {
 };
 
 export { generateStaticParams };
-interface RootProps { children: React.ReactNode, params: { lng: any } }
+interface RootProps { children: React.ReactNode, params: { lng: string | undefined } }
 
 const RootLayout: React.FC<RootProps> = async ({ children, params }: RootProps) => {
   const LNG = await params?.lng;
